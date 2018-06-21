@@ -6,34 +6,37 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
-  <loc>http://home.deib.polimi.it/bhatti/</loc>
-  <lastmod>2016-01-21T13:46:43+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://naveedanwarbhatti.github.io/</loc>
+  <lastmod>2018-06-05T14:54:11+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://home.deib.polimi.it/bhatti/publications.html</loc>
-  <lastmod>2016-01-21T13:46:43+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://naveedanwarbhatti.github.io/publications.html</loc>
+  <lastmod>2018-06-05T14:54:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://home.deib.polimi.it/bhatti/teaching.html</loc>
-  <lastmod>2016-01-21T13:46:43+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://naveedanwarbhatti.github.io/teaching.html</loc>
+  <lastmod>2018-06-05T14:54:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://home.deib.polimi.it/bhatti/misc.html</loc>
-  <lastmod>2016-01-21T13:46:43+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://naveedanwarbhatti.github.io/misc.html</loc>
+  <lastmod>2018-06-05T14:54:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://home.deib.polimi.it/bhatti/contact.html</loc>
-  <lastmod>2016-01-21T13:46:43+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <loc>https://naveedanwarbhatti.github.io/contact.html</loc>
+  <lastmod>2018-06-05T14:54:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://naveedanwarbhatti.github.io/Naveed_CV.pdf</loc>
+  <lastmod>2018-06-05T14:54:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
