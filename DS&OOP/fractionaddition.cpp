@@ -11,7 +11,7 @@ struct Fraction
 Fraction add(Fraction a, Fraction b)
 {
 	Fraction temp;
-	temp.numerator = (a.numerator * b.denominator) + (a.numerator * b.denominator);
+	temp.numerator = (a.numerator * b.denominator) + (a.denominator * b.numerator);
 	temp.denominator = (a.denominator * b.denominator);
 	return temp;
 }
