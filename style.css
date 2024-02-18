@@ -30,3 +30,50 @@ h1.retroshadow {
   letter-spacing: .05em;
   text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
 }
+
+.citation-container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.citation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.citation-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.citation-view-all {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.citation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.citation-table th, .citation-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.citation-graph {
+    height: 200px;
+    background-color: #f4f4f4;
+    text-align: center;
+    line-height: 200px;
+    color: #666;
+}
