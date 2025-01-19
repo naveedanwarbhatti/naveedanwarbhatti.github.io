@@ -19,6 +19,121 @@
 <link rel="icon" href="Sysnet.ico" type="image/icon" /> 
 <link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
 
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header, footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a:focus {
+            background-color: #333;
+            color: #fff;
+        }
+
+        main section {
+            margin-bottom: 40px;
+        }
+
+        main h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        ul.fa-ul {
+            padding-left: 1.5em;
+        }
+
+        ul.fa-ul li {
+            margin-bottom: 1.5em;
+        }
+
+        ul.fa-ul li i {
+            color: #555;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        footer a img {
+            height: 60px;
+            width: auto;
+        }
+
+        /* Responsive Image */
+        .right-image {
+            max-width: 100%;
+            height: auto;
+            float: right;
+            margin: 0 0 20px 20px;
+        }
+
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .right-image {
+                float: none;
+                margin: 0 auto 20px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>		
 
 </head>
 <body>
@@ -42,149 +157,302 @@
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-4115-9889" href="https://orcid.org/0000-0003-4115-9889" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-4115-9889</a></div>
 
 <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en"><img src="google_scholar.png" align="right" style="padding-top:30px;height: 360px;"></a>
-<h4>Conferences (13) -------------------------------------</h4>
+
+<section>
+<h2>Conferences (13)</h2>
 <ul class="fa-ul">
-
-	<li><i class="fa-li fa fa-circle-o"></i> Ahmed Najeeb, Muhammad Rafay, Muhammad Hamad Alizai, and  <b>Naveed Anwar Bhatti</b>,"<a href="https://arxiv.org/abs/2409.16438" target="_blank"> Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping</a>",<em>In Proceedings of the 20th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS)</em>, August 2025.(Core Rank: A)<br /><br /></li>
-	
-	<li><i class="fa-li fa fa-circle-o"></i>Muhammad Sangeen, <b>Naveed Anwar Bhatti</b>, and Kashif Kifayat,"<a href="" target="_blank"> PortScout: A Communication Flow-Based Approach to Detect Port Scanning Evasion Attacks</a>",<em>IEEE International Conference on Communications (ICC)</em>, June 2025.<br /><br /></li>
-	
-	<li><i class="fa-li fa fa-circle-o"></i> Muhammad Abdullah Soomro, Muhammad Hamad Alizai, and  <b>Naveed Anwar Bhatti</b>,"<a href="https://arxiv.org/abs/2410.07202" target="_blank"> Approxify: Automating Energy-Accuracy Trade-Offs in Batteryless IoT Devices</a>",<em>IEEE Wireless Communications and Networking Conference (WCNC)</em>, March 2025.(Core Rank: B)<br /><br /></li>
-	
-	<li><i class="fa-li fa fa-circle-o"></i> Sunder Ali Ali Khowaja, Ik Hyun Lee, Parus Khuwaja, <b>Naveed Anwar Bhatti</b>, Keshav Singh, Kapal Dev,"<a href="" target="_blank"> FLEXFL: Flexible Federated Learning for Customized Network Architectures in 6G</a>",<em>IEEE Wireless Communications and Networking Conference (WCNC)</em>, March 2025.(Core Rank: B)<br /><br /></li>
-
-	<li><i class="fa-li fa fa-circle-o"></i> Chaudhry, Hassan Habib, Ramish Majeed Raja, Muhammad Azmeer Zahid, Nauman Zaffar, Muhammad Hamad Alizai, and <b>Naveed Anwar Bhatti</b>,"<a href="https://dl.acm.org/doi/10.1145/3600100.3623743" target="_blank"> From Waste to Watts: A Self-Sustaining Water Heating System Powered by a Thermoelectric Generator</a>",<em>In Proceedings of the 10th BuildSys</em>, December 2024.<br /><br /></li>
-
-    <li><i class="fa-li fa fa-circle-o"></i> Mikhail Afanasov, <b>Naveed Anwar Bhatti</b>, Dennis Campagna, Giacomo Caslini, Fabio Massimo Centonze, Koustabh Dolui, Andrea Maioli, Erica Barone, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola,"<a href="http://web.lums.edu.pk/~alizai/pubs/2020-empire-sensys.pdf" target="_blank"> Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus</a>",<em>18th ACM Conference on Embedded Networked Sensor Systems (SenSys)</em>, November 2020.(Core Rank: A*)<a href="https://youtu.be/zMxVpUo1U4s" target="_blank"><font color="red">[Teaser]</font></a>,<a href="https://youtu.be/zkBYPeiGcyQ" target="_blank"><font color="red">[Video Presentation]</font></a><br /><br /></li>
-		
-	<li><i class="fa-li fa fa-circle-o"></i> Hafiz Areeb Asad, Erik Henricus Wouters,<b> Naveed Anwar Bhatti</b>, Luca Mottola, Thiemo Voigt,"<a href="https://dl.acm.org/doi/abs/10.1145/3417308.3430267" target="_blank">On Securing Persistent State in Intermittent Computing</a>", <em>8th International Workshop on Energy Harvesting and Energy-Neutral Sensing Systems (ENSsys ’20)</em>, Novemeber 2020.<a href="https://youtu.be/qVcJtpyNWyk" target="_blank"> <font color="red">[Video Presentation]</font></a><br /><br /></li>
-
-    <li><i class="fa-li fa fa-circle-o"></i> Saad Ahmed,<b> Naveed Anwar Bhatti</b>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola,"<a href "paper-dice-camera-ready.pdf" target="_blank"> Efficient Intermittent Computing with Differential Checkpointing</a>", <em>20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</em>, June 2019. (Core Rank: B)<br /><br /></li>
-
-    <li><i class="fa-li fa fa-circle-o"></i> Saad Ahmed, Abu Bakar,<b> Naveed Anwar Bhatti</b>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola,"<a href="paper-epic-camera-ready.pdf" target="_blank"> The Betrayal of Constant Power × Time: Finding the Missing Joules of Transiently-Powered Computer</a>", <em>20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</em>, June 2019. (Core Rank: B)<br /><br /></li>
-
-	<li><i class="fa-li fa fa-circle-o"></i> <b> Naveed Anwar Bhatti </b>and Luca Mottola,"<a href="http://dl.acm.org/citation.cfm?id=3055082" target="_blank"> HarvOS: Efficient Code Instrumentation for Transiently-powered Embedded Devices</a>,", <em>16th ACM/IEEE Conference on Information Processing in Sensor Networks (IPSN 2017)</em>, April 2017. (Core Rank: A)<a href="https://www.youtube.com/watch?v=XDZZ9Pnrs2E" target="_blank"> <font color="red">[Video Presentation]</font></a>,"<br /><br /></li>
-
-    <li><i class="fa-li fa fa-circle-o"></i> <b> Naveed Anwar Bhatti </b>and Luca Mottola,"<a href="https://www.sics.se/~luca/papers/bhatti16efficient.pdf" target="_blank"> Efficient State Retention for Transiently-powered Embedded Sensing</a>,"<em>International Conference on Embedded Wireless Systems and Networks (EWSN 2016)</em>, Feb 2016. (Core Rank: B)<br /><br /></li>
-
-    <li><i class="fa-li fa fa-circle-o"></i> Osama Haq, Zainab Abaid, <b> Naveed Anwar Bhatti </b>, Zaafar Ahmed and Affan A.Syed,"<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=7249162&openedRefinements%3D*%26pageNumber%3D3%26rowsPerPage%3D100%26queryText%3D(control+plane+architecture)" target="_blank"> SDN-inspired, Real-time Botnet Detection and Flow-blocking at ISP and Enterprise-level</a>", <em>IEEE International Conference on Communications (ICC 2015)</em>, June 2015.<br /><br /></li>
-
-    <li><i class="fa-li fa fa-circle-o"></i> <b> Naveed Anwar Bhatti </b>, Affan A.Syed and Hamad Alizai, "<a href="http://dl.acm.org/citation.cfm?id=2602368" target="_blank">Sensors with Lasers: Building a WSN Power Grid</a>," <em>13th ACM/IEEE Conference on Information Processing in Sensor Networks (IPSN 2014)</em>, April
-    2014. (Core Rank: A)<br /><br /></li>
-
-</ul>	
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Ahmed Najeeb, Muhammad Rafay, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
+                        "<a href="https://arxiv.org/abs/2409.16438" target="_blank" rel="noopener noreferrer">Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping</a>",
+                        <em>In Proceedings of the 20th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS)</em>, August 2025. (Core Rank: A)
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Muhammad Sangeen, <strong>Naveed Anwar Bhatti</strong>, and Kashif Kifayat,
+                        "<a href="#" target="_blank" rel="noopener noreferrer">PortScout: A Communication Flow-Based Approach to Detect Port Scanning Evasion Attacks</a>",
+                        <em>IEEE International Conference on Communications (ICC)</em>, June 2025.
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Muhammad Abdullah Soomro, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
+                        "<a href="https://arxiv.org/abs/2410.07202" target="_blank" rel="noopener noreferrer">Approxify: Automating Energy-Accuracy Trade-Offs in Batteryless IoT Devices</a>",
+                        <em>IEEE Wireless Communications and Networking Conference (WCNC)</em>, March 2025. (Core Rank: B)
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Sunder Ali Ali Khowaja, Ik Hyun Lee, Parus Khuwaja, <strong>Naveed Anwar Bhatti</strong>, Keshav Singh, Kapal Dev,
+                        "<a href="#" target="_blank" rel="noopener noreferrer">FLEXFL: Flexible Federated Learning for Customized Network Architectures in 6G</a>",
+                        <em>IEEE Wireless Communications and Networking Conference (WCNC)</em>, March 2025. (Core Rank: B)
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Chaudhry, Hassan Habib, Ramish Majeed Raja, Muhammad Azmeer Zahid, Nauman Zaffar, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
+                        "<a href="https://dl.acm.org/doi/10.1145/3600100.3623743" target="_blank" rel="noopener noreferrer">From Waste to Watts: A Self-Sustaining Water Heating System Powered by a Thermoelectric Generator</a>",
+                        <em>In Proceedings of the 10th BuildSys</em>, December 2024.
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Mikhail Afanasov, <strong>Naveed Anwar Bhatti</strong>, Dennis Campagna, Giacomo Caslini, Fabio Massimo Centonze, Koustabh Dolui, Andrea Maioli, Erica Barone, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola,
+                        "<a href="http://web.lums.edu.pk/~alizai/pubs/2020-empire-sensys.pdf" target="_blank" rel="noopener noreferrer">Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus</a>",
+                        <em>18th ACM Conference on Embedded Networked Sensor Systems (SenSys)</em>, November 2020. (Core Rank: A*)
+                        <a href="https://youtu.be/zMxVpUo1U4s" target="_blank" rel="noopener noreferrer" style="color: red;">[Teaser]</a>,
+                        <a href="https://youtu.be/zkBYPeiGcyQ" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Hafiz Areeb Asad, Erik Henricus Wouters, <strong>Naveed Anwar Bhatti</strong>, Luca Mottola, Thiemo Voigt,
+                        "<a href="https://dl.acm.org/doi/abs/10.1145/3417308.3430267" target="_blank" rel="noopener noreferrer">On Securing Persistent State in Intermittent Computing</a>",
+                        <em>8th International Workshop on Energy Harvesting and Energy-Neutral Sensing Systems (ENSsys ’20)</em>, November 2020.
+                        <a href="https://youtu.be/qVcJtpyNWyk" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Saad Ahmed, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola,
+                        "<a href="paper-dice-camera-ready.pdf" target="_blank" rel="noopener noreferrer">Efficient Intermittent Computing with Differential Checkpointing</a>",
+                        <em>20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</em>, June 2019. (Core Rank: B)
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Saad Ahmed, Abu Bakar, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola,
+                        "<a href="paper-epic-camera-ready.pdf" target="_blank" rel="noopener noreferrer">The Betrayal of Constant Power × Time: Finding the Missing Joules of Transiently-Powered Computer</a>",
+                        <em>20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</em>, June 2019. (Core Rank: B)
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        <strong>Naveed Anwar Bhatti</strong> and Luca Mottola,
+                        "<a href="http://dl.acm.org/citation.cfm?id=3055082" target="_blank" rel="noopener noreferrer">HarvOS: Efficient Code Instrumentation for Transiently-powered Embedded Devices</a>",
+                        <em>16th ACM/IEEE Conference on Information Processing in Sensor Networks (IPSN 2017)</em>, April 2017. (Core Rank: A)
+                        <a href="https://www.youtube.com/watch?v=XDZZ9Pnrs2E" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        <strong>Naveed Anwar Bhatti</strong> and Luca Mottola,
+                        "<a href="https://www.sics.se/~luca/papers/bhatti16efficient.pdf" target="_blank" rel="noopener noreferrer">Efficient State Retention for Transiently-powered Embedded Sensing</a>",
+                        <em>International Conference on Embedded Wireless Systems and Networks (EWSN 2016)</em>, Feb 2016. (Core Rank: B)
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Osama Haq, Zainab Abaid, <strong>Naveed Anwar Bhatti</strong>, Zaafar Ahmed and Affan A. Syed,
+                        "<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=7249162&openedRefinements%3D*%26pageNumber%3D3%26rowsPerPage%3D100%26queryText%3D(control+plane+architecture)" target="_blank" rel="noopener noreferrer">SDN-inspired, Real-time Botnet Detection and Flow-blocking at ISP and Enterprise-level</a>",
+                        <em>IEEE International Conference on Communications (ICC 2015)</em>, June 2015.
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        <strong>Naveed Anwar Bhatti</strong>, Affan A. Syed and Hamad Alizai,
+                        "<a href="http://downloads.hindawi.com/journals/ijdsn/aip/526858.pdf" target="_blank" rel="noopener noreferrer">Laser based Energy Distribution Architecture for Decoupling Energy and Sensing Planes in WSN</a>",
+                        <em>International Journal of Distributed Sensor Networks (IJDSN)</em>, July 2015. (Impact Factor = 1.787)
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        <strong>Naveed Anwar Bhatti</strong>, Affan A. Syed and Hamad Alizai,
+                        "<a href="http://dl.acm.org/citation.cfm?id=2915918" target="_blank" rel="noopener noreferrer">Energy Harvesting and Wireless Transfer in Sensor Network Applications: Concepts and Experiences</a>",
+                        <em>ACM Transactions on Sensor Networks (TOSN)</em>, April 2016. (Impact Factor = 2.322)
+                    </li>
+                </ul>
+</section>
 <br>
 	
-<h4>Transactions and Journals (10) (Total Impact Factor: 37.63) ------------------------</h4>
+<section>
+<h2>Transactions and Journals (11) (Total Impact Factor: 37.63)</h2>
 <ul class="fa-ul">
-
-<li><i class="fa-li fa fa-circle-o"></i> Chaudhry, Hassan Habib, Ramish Majeed Raja, Muhammad Azmeer Zahid, Nauman Zaffar, Muhammad Hamad Alizai, and <b> Naveed Anwar Bhatti </b>,<a
-        href="https://www.cambridge.org/core/journals/data-centric-engineering/article/usagecentered-efficient-and-sustainable-an-iotdriven-transformation-of-water-heaters/BBDAB40414059D3BDBA5D3828F4F6999" target="_blank">
-	Usage-centered, efficient, and sustainable: an IoT-driven transformation of water heaters</a>", 
-		<em>Data-Centric Engineering (DCE), Cambridge Core</em>, Nov 2024.<font color="red"> (Impact Factor = 2.4)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=21101065510&tip=sid&clean=0" target="_blank"><b>(SJR = Q1)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=885501#journal_result" target="_blank"><b>(HJRS = X)</b></a>
-		<a href="kashif_sysarc.pdf" target="_blank">(PDF)</a></font><br /><br /></li>
-
-<li><i class="fa-li fa fa-circle-o"></i> Muhammad Sangeen,<b> Naveed Anwar Bhatti </b>, Kashif Kifayat, Abeer Abdullah Alsadhan and Haoda Wang"<a
-        href="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" target="_blank">
-	Blind-trust: Raising awareness of the dangers of using unsecured public Wi-Fi networks</a>", 
-		<em>Computer Communications, Elsevier</em>, July 2023.<font color="red"> (Impact Factor = 5.047)
-		<a href="https://www.sciencedirect.com/science/article/abs/pii/S0140366423002396" target="_blank"><b>(SJR = Q1)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=988389#journal_result" target="_blank"><b>(HJRS = W)</b></a></font><br /><br /></li>
-		
-
-<li><i class="fa-li fa fa-circle-o"></i> Kashif Javed,<b> Naveed Anwar Bhatti </b>, Mohammad Imran"<a
-        href="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" target="_blank">
-	MOPTIC-SM: Sleep mode-enabled multi-optimized intermittent computing for Transiently Powered Systems</a>", 
-		<em>Journal of Systems Architecture, Elsevier</em>, Feb 2023.<font color="red"> (Impact Factor = 5.836)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=12398&tip=sid&clean=0" target="_blank"><b>(SJR = Q1)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=885501#journal_result" target="_blank"><b>(HJRS = W)</b></a>
-		<a href="kashif_sysarc.pdf" target="_blank">(PDF)</a></font><br /><br /></li>
-
-<li><i class="fa-li fa fa-circle-o"></i> Dileep Kumar Soother, Sanaullah Mehran Ujjan, Kapal Dev, Sunder Ali Khowaja,<b> Naveed Anwar Bhatti </b>, Tanweer Hussain"<a
-        href="https://www.sciencedirect.com/science/article/abs/pii/S0743731521002033" target="_blank">
-	Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy</a>", 
-		<em>Elsevier Journal of Parallel and Distributed Computing</em>, November 2021.<font color="red"> (Impact Factor = 3.734)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=25621&tip=sid&clean=0" target="_blank"><b>(SJR = Q1)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=884980#journal_result" target="_blank"><b>(HJRS = W)</b></a></font><br /><br /></li>
-
-<li><i class="fa-li fa fa-circle-o"></i> Ali Akbar Shah, <b> Naveed Anwar Bhatti </b>, Kapal Dev, B.S Chowdhry"<a
-        href="https://ieeexplore.ieee.org/abstract/document/9349626" target="_blank">
-	MUHAFIZ: IoT-based Track Recording Vehicle for the Damage Analysis of the Railway Track</a>", 
-		<em>IEEE Internet of Things Journal</em>, March 2021.<font color="red"> (Impact Factor = 9.936)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=21100338350&tip=sid&clean=0" target="_blank"><b>(SJR = Q1)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=878480#journal_result" target="_blank"><b>(HJRS = W)</b></a></font><a href="shah_IoT.pdf" target="_blank">(PDF)</a><br /><br /></li>
-
-	<li><i class="fa-li fa fa-circle-o"></i> Saad Ahmed, <b> Naveed Anwar Bhatti </b>, Martina Brachmann, Muhammad Hamad Alizai"<a
-        href="https://www.sciencedirect.com/science/article/abs/pii/S1383762121000242" target="_blank">
-	A Survey on Program-state Retention for Transiently-powered Systems</a>", 
-		<em>Journal of Systems Architecture, Elsevier</em>, Jan 2021.<font color="red"> (Impact Factor = 2.552)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=12398&tip=sid&clean=0" target="_blank"><b>(SJR = Q1)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=885501#journal_result" target="_blank"><b>(HJRS = W)</b></a></font><a href="JSA_bhatti.pdf" target="_blank">(PDF)</a><br /><br /></li>
-		
-
-    <li><i class="fa-li fa fa-circle-o"></i> Saad Ahmed, Muhammad Nawaz, Abu Bakar, <b> Naveed Anwar Bhatti </b>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola "<a
-        href="https://dl.acm.org/doi/abs/10.1145/3391893" target="_blank">
-	Demystifying Energy Consumption Dynamics in Transiently-powered Computers</a>", 
-		<em>ACM Transactions on Embedded Computing Systems (TECS)</em>, November 2020.<font color="red"> (Impact Factor = 1.4)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=10300153313&tip=sid&clean=0" target="_blank"><b>(SJR = Q2)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=888227#journal_result" target="_blank"><b>(HJRS = W)</b></a></font>
-		<a href="epic_tecs.pdf" target="_blank">(PDF)</a><br /><br /></li>
-
-    <li><i class="fa-li fa fa-circle-o"></i> Saad Ahmed, <b> Naveed Anwar Bhatti </b>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola "<a
-        href="https://dl.acm.org/doi/abs/10.1145/3391903" target="_blank">
-	Fast and Energy-efficient State Checkpointing for Intermittent Computing</a>", 
-		<em>ACM Transactions on Embedded Computing Systems (TECS)</em>,  November 2020.<font color="red"> (Impact Factor = 1.4)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=10300153313&tip=sid&clean=0" target="_blank"><b>(SJR = Q2)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=888227#journal_result" target="_blank"><b>(HJRS = W)</b></a></font>
-		<a href="dice_tecs.pdf" target="_blank">(PDF)</a><br /><br /></li>
-		
-	<li><i class="fa-li fa fa-circle-o"></i> Syeda Sundus Zehra, Rehan Qureshi, Kapal Dev, Saleem Shahid, <b> Naveed Anwar Bhatti </b> "<a
-        href="https://link.springer.com/article/10.1007%2Fs11277-020-07418-8" target="_blank">
-	Comparative Analysis of Bio-Inspired Algorithms for Underwater Wireless Sensor Networks</a>", 
-		<em>Wireless Personal Communications, Springer</em>, May 2020.<font color="red"> (Impact Factor = 1.2)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=10300153313&tip=sid&clean=0" target="_blank"><b>(SJR = Q1)</b></a>
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=891255#journal_result" target="_blank"><b>(HJRS = X)</b></a></font>
-		<a href="underwater_WPC.pdf" target="_blank">(PDF)</a><br /><br /></li>
-
-	<li><i class="fa-li fa fa-circle-o"></i> <b> Naveed Anwar Bhatti </b>, Hamad Alizai, Affan A.Syed and Luca Mottola,<a
-        href="http://dl.acm.org/citation.cfm?id=2915918" target="_blank">
-	Energy Harvesting and Wireless Transfer in Sensor Network Applications: Concepts and Experiences</a>", 
-		<em>ACM Transactions on Sensor Networks (TOSN)</em>, April 2016.<font color="red"> (Impact Factor = 2.322)
-<a href="https://www.scimagojr.com/journalsearch.php?q=4700152843&tip=sid&clean=0" target="_blank"><b>(SJR = Q2)</b></a>		
-		<a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=885495#journal_result" target="_blank"><b>(HJRS = W)</b></a></font><br /><br /></li>
-
-    <li><i class="fa-li fa fa-circle-o"></i> <b> Naveed Anwar Bhatti </b>, Affan A.Syed and Hamad Alizai,"<a
-        href="http://downloads.hindawi.com/journals/ijdsn/aip/526858.pdf" target="_blank">
-	Laser based Energy Distribution Architecture for Decoupling Energy and Sensing Planes in WSN</a>", 
-		<em>International Journal of Distributed Sensor Networks (IJDSN)</em>, July 2015.<font color="red"> (Impact Factor = 1.787)
-		<a href="https://www.scimagojr.com/journalsearch.php?q=5800173381&tip=sid&clean=0" target="_blank"><b>(SJR = Q2)</b></a>
-		<a
-        href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=890663#journal_result" target="_blank"><b>(HJRS = X)</b></a></font><br /><br /></li>
-		
-</ul>	
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Chaudhry, Hassan Habib, Ramish Majeed Raja, Muhammad Azmeer Zahid, Nauman Zaffar, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
+                        "<a href="https://www.cambridge.org/core/journals/data-centric-engineering/article/usagecentered-efficient-and-sustainable-an-iotdriven-transformation-of-water-heaters/BBDAB40414059D3BDBA5D3828F4F6999" target="_blank" rel="noopener noreferrer">
+                        Usage-centered, efficient, and sustainable: an IoT-driven transformation of water heaters</a>",
+                        <em>Data-Centric Engineering (DCE), Cambridge Core</em>, Nov 2024.
+                        <span style="color: red;">
+                            (Impact Factor = 2.4)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=21101065510&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q1)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=885501#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = X)</strong></a>
+                            <a href="kashif_sysarc.pdf" target="_blank" rel="noopener noreferrer">(PDF)</a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Muhammad Sangeen, <strong>Naveed Anwar Bhatti</strong>, Kashif Kifayat, Abeer Abdullah Alsadhan and Haoda Wang,
+                        "<a href="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" target="_blank" rel="noopener noreferrer">
+                        Blind-trust: Raising awareness of the dangers of using unsecured public Wi-Fi networks</a>",
+                        <em>Computer Communications, Elsevier</em>, July 2023.
+                        <span style="color: red;">
+                            (Impact Factor = 5.047)
+                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0140366423002396" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q1)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=988389#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = W)</strong></a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Kashif Javed, <strong>Naveed Anwar Bhatti</strong>, Mohammad Imran,
+                        "<a href="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" target="_blank" rel="noopener noreferrer">
+                        MOPTIC-SM: Sleep mode-enabled multi-optimized intermittent computing for Transiently Powered Systems</a>",
+                        <em>Journal of Systems Architecture, Elsevier</em>, Feb 2023.
+                        <span style="color: red;">
+                            (Impact Factor = 5.836)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=12398&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q1)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=885501#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = W)</strong></a>
+                            <a href="kashif_sysarc.pdf" target="_blank" rel="noopener noreferrer">(PDF)</a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Dileep Kumar Soother, Sanaullah Mehran Ujjan, Kapal Dev, Sunder Ali Khowaja, <strong>Naveed Anwar Bhatti</strong>, Tanweer Hussain,
+                        "<a href="https://www.sciencedirect.com/science/article/abs/pii/S0743731521002033" target="_blank" rel="noopener noreferrer">
+                        Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy</a>",
+                        <em>Elsevier Journal of Parallel and Distributed Computing</em>, November 2021.
+                        <span style="color: red;">
+                            (Impact Factor = 3.734)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=25621&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q1)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=884980#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = W)</strong></a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Ali Akbar Shah, <strong>Naveed Anwar Bhatti</strong>, Kapal Dev, B.S Chowdhry,
+                        "<a href="https://ieeexplore.ieee.org/abstract/document/9349626" target="_blank" rel="noopener noreferrer">
+                        MUHAFIZ: IoT-based Track Recording Vehicle for the Damage Analysis of the Railway Track</a>",
+                        <em>IEEE Internet of Things Journal</em>, March 2021.
+                        <span style="color: red;">
+                            (Impact Factor = 9.936)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=21100338350&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q1)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=878480#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = W)</strong></a>
+                            <a href="shah_IoT.pdf" target="_blank" rel="noopener noreferrer">(PDF)</a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Saad Ahmed, <strong>Naveed Anwar Bhatti</strong>, Martina Brachmann, Muhammad Hamad Alizai,
+                        "<a href="https://www.sciencedirect.com/science/article/abs/pii/S1383762121000242" target="_blank" rel="noopener noreferrer">
+                        A Survey on Program-state Retention for Transiently-powered Systems</a>",
+                        <em>Journal of Systems Architecture, Elsevier</em>, Jan 2021.
+                        <span style="color: red;">
+                            (Impact Factor = 2.552)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=12398&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q1)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=885501#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = W)</strong></a>
+                            <a href="JSA_bhatti.pdf" target="_blank" rel="noopener noreferrer">(PDF)</a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Saad Ahmed, Muhammad Nawaz, Abu Bakar, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola,
+                        "<a href="https://dl.acm.org/doi/abs/10.1145/3391893" target="_blank" rel="noopener noreferrer">
+                        Demystifying Energy Consumption Dynamics in Transiently-powered Computers</a>",
+                        <em>ACM Transactions on Embedded Computing Systems (TECS)</em>, November 2020.
+                        <span style="color: red;">
+                            (Impact Factor = 1.4)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=10300153313&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q2)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=888227#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = W)</strong></a>
+                            <a href="epic_tecs.pdf" target="_blank" rel="noopener noreferrer">(PDF)</a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Saad Ahmed, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola,
+                        "<a href="https://dl.acm.org/doi/abs/10.1145/3391903" target="_blank" rel="noopener noreferrer">
+                        Fast and Energy-efficient State Checkpointing for Intermittent Computing</a>",
+                        <em>ACM Transactions on Embedded Computing Systems (TECS)</em>, November 2020.
+                        <span style="color: red;">
+                            (Impact Factor = 1.4)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=10300153313&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q2)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=888227#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = W)</strong></a>
+                            <a href="dice_tecs.pdf" target="_blank" rel="noopener noreferrer">(PDF)</a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Syeda Sundus Zehra, Rehan Qureshi, Kapal Dev, Saleem Shahid, <strong>Naveed Anwar Bhatti</strong>,
+                        "<a href="https://link.springer.com/article/10.1007%2Fs11277-020-07418-8" target="_blank" rel="noopener noreferrer">
+                        Comparative Analysis of Bio-Inspired Algorithms for Underwater Wireless Sensor Networks</a>",
+                        <em>Wireless Personal Communications, Springer</em>, May 2020.
+                        <span style="color: red;">
+                            (Impact Factor = 1.2)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=10300153313&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q1)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=891255#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = X)</strong></a>
+                            <a href="underwater_WPC.pdf" target="_blank" rel="noopener noreferrer">(PDF)</a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        <strong>Naveed Anwar Bhatti</strong>, Hamad Alizai, Affan A. Syed and Luca Mottola,
+                        "<a href="http://dl.acm.org/citation.cfm?id=2915918" target="_blank" rel="noopener noreferrer">
+                        Energy Harvesting and Wireless Transfer in Sensor Network Applications: Concepts and Experiences</a>",
+                        <em>ACM Transactions on Sensor Networks (TOSN)</em>, April 2016.
+                        <span style="color: red;">
+                            (Impact Factor = 2.322)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=4700152843&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q2)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=885495#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = W)</strong></a>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        <strong>Naveed Anwar Bhatti</strong>, Affan A. Syed and Hamad Alizai,
+                        "<a href="http://downloads.hindawi.com/journals/ijdsn/aip/526858.pdf" target="_blank" rel="noopener noreferrer">
+                        Laser based Energy Distribution Architecture for Decoupling Energy and Sensing Planes in WSN</a>",
+                        <em>International Journal of Distributed Sensor Networks (IJDSN)</em>, July 2015.
+                        <span style="color: red;">
+                            (Impact Factor = 1.787)
+                            <a href="https://www.scimagojr.com/journalsearch.php?q=5800173381&tip=sid&clean=0" target="_blank" rel="noopener noreferrer"><strong>(SJR = Q2)</strong></a>
+                            <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&id=890663#journal_result" target="_blank" rel="noopener noreferrer"><strong>(HJRS = X)</strong></a>
+                        </span>
+                    </li>
+                </ul>
+</section>	
 <br>
 
 
-<h4>Posters (3) -------------------------------------</h4>
+<section>
+<h2>Posters (3)</h2>
 <ul class="fa-ul">
-	<li><i class="fa-li fa fa-circle-o"></i> Saad Ahmed, Muhammad Hamad Alizai, Junaid Haroon Siddiqui,<b> Naveed Anwar Bhatti </b> and Luca Mottola"<a
-        href="https://dl.acm.org/citation.cfm?id=3207973" target="_blank">
-	Towards smaller checkpoints for better intermittent computing</a>", 
-		<em>IPSN 2018</em>, April 2018.<br /><br /></li>
-		
-    <li><i class="fa-li fa fa-circle-o"></i> <b> Naveed Anwar Bhatti </b> and Luca Mottola"<a
-        href="https://dl.acm.org/doi/10.5555/3108009.3108039" target="_blank">
-	Compiler-assisted Automatic Checkpointing for Transiently-powered Embedded Devices</a>", 
-		<em>EWSN 2017</em>, Feb 2017.<br /><br /></li>
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        Saad Ahmed, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, <strong>Naveed Anwar Bhatti</strong> and Luca Mottola,
+                        "<a href="https://dl.acm.org/citation.cfm?id=3207973" target="_blank" rel="noopener noreferrer">
+                        Towards smaller checkpoints for better intermittent computing</a>",
+                        <em>IPSN 2018</em>, April 2018.
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        <strong>Naveed Anwar Bhatti</strong> and Luca Mottola,
+                        "<a href="https://dl.acm.org/doi/10.5555/3108009.3108039" target="_blank" rel="noopener noreferrer">
+                        Compiler-assisted Automatic Checkpointing for Transiently-powered Embedded Devices</a>",
+                        <em>EWSN 2017</em>, Feb 2017.
+                    </li>
+                    
+                    <li>
+                        <i class="fa-li fa fa-circle-o" aria-hidden="true"></i>
+                        <strong>Naveed Anwar Bhatti</strong>,
+                        "<a href="http://dl.acm.org/citation.cfm?id=2959379" target="_blank" rel="noopener noreferrer">
+                        Back To The Future: Sustainable Transiently Powered Embedded Systems</a>",
+                        <em>IPSN</em>, April 2016.
+                        <span style="color: red;"><strong>Best PhD Forum Presentation</strong></span>
+                    </li>
+                </ul>
 
-	<li><i class="fa-li fa fa-circle-o"></i> <b> Naveed Anwar Bhatti </b>,"<a
-        href="http://dl.acm.org/citation.cfm?id=2959379" target="_blank">
-	Back To The Future: Sustainable Transiently Powered Embedded Systems</a>", 
-		<em>IPSN</em>, April 2016.<font color="red"> <b>Best PhD Forum Presentation</b></font><br /><br /></li>
-		
-</ul>	
+</section>	
 	
 
     
