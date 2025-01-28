@@ -1,25 +1,16 @@
 <html>
 <head>
-<meta name="description" content="Naveed Anwar Bhatti">
-<meta name="keywords" content="Naveed Anwar Bhatti, Sysnet Lab, Wireless Sensor Network, Cyber Physucal Systems, naveed anwar bhatti, RISE SICS">
-<meta name="author" content="Naveed Anwar Bhatti">
-<meta name="viewport" content="width=device-width">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72726316-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="description" content="Naveed Anwar Bhatti">
+    <meta name="keywords" content="Naveed Anwar Bhatti, Sysnet Lab, Wireless Sensor Network, Cyber Physical Systems, RISE SICS">
+    <meta name="author" content="Naveed Anwar Bhatti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveed Anwar Bhatti</title>
 
-  gtag('config', 'UA-72726316-2');
-</script>
-<title>Naveed Anwar Bhatti</title>
-<link rel="stylesheet" type="text/css" href="web.css" />
-<link rel="shortcut icon" href="Sysnet.ico" type="image/icon" /> 
-<link rel="icon" href="Sysnet.ico" type="image/icon" /> 
-<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="web.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="Sysnet.ico" type="image/x-icon">
 
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             font-size: 16px;
@@ -29,137 +20,180 @@
             line-height: 1.6;
             color: #333;
         }
-
         header, footer {
             text-align: center;
             margin-bottom: 20px;
         }
-
-        header img {
-            max-width: 100%;
-            height: auto;
-        }
-
         nav ul {
             list-style: none;
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            gap: 10px;
         }
-
-        nav ul li {
-            margin: 0;
-        }
-
         nav ul li a {
             text-decoration: none;
             color: #333;
-            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #fff;
             border: 1px solid #ccc;
             border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            white-space: nowrap;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
         }
-
-        nav ul li a:hover, nav ul li a:focus {
-            background-color: #333;
-            color: #fff;
+        nav ul li a:hover {
+            background: #1e3c72 !important;
+            color: white !important;
+            border-color: #1e3c72 !important;
         }
-
-        main section {
-            margin-bottom: 40px;
+         .featured-research {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
         }
-
-        main h2 {
+        .highlight-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .highlight {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+        .highlight .title {
+            flex-grow: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: calc(100% - 250px);
+        }
+        .highlight a {
+            padding: 5px 10px;
+            background: #1e3c72;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        .publication-category {
+            margin-bottom: 30px;
+        }
+        .publication-category h3 {
             border-bottom: 2px solid #ccc;
             padding-bottom: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 1.25em;
+            color: #333;
         }
-
-        ul.fa-ul {
-            padding-left: 1.5em;
+        ul.modern-bullets {
+            list-style: none;
+            padding-left: 0;
         }
-
-        ul.fa-ul li {
-            margin-bottom: 1.5em;
+        ul.modern-bullets li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.2;
+            text-align: justify;
         }
-
-        ul.fa-ul li i {
+        ul.modern-bullets li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            top: 0;
             color: #555;
+            font-size: 1.5em;
+            line-height: 1;
         }
-
         footer {
             display: flex;
-            justify-content: center;
-            gap: 40px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
             margin-top: 40px;
         }
-
-        footer a img {
-            height: 60px;
-            width: auto;
+        footer .social-links {
+            display: flex;
+            gap: 20px;
         }
-
-        /* Responsive Image */
-        .right-image {
-            max-width: 100%;
-            height: auto;
-            float: right;
-            margin: 0 0 20px 20px;
+        footer a {
+            color: #333;
         }
-
-        /* Clearfix */
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .right-image {
-                float: none;
-                margin: 0 auto 20px;
-            }
-
-            footer {
-                flex-direction: column;
-                gap: 20px;
-            }
-        }
-    </style>		
-
+    </style>
 </head>
 <body>
-<div style="width:800;margin-left:auto;margin-right:auto;">
-<font face="arial" size="3">
 
+
+
+<header>
 <center><img src="banner2.gif" height="152"></center>
+</header>
 		
-<div class="container">
-<ul id="minitabs">
+   <nav>
+        <ul id="minitabs" style="display: flex; justify-content: center; gap: 5px; padding: 10px; background: #f4f4f4; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); flex-wrap: nowrap;">
+            <li>
+                <a href="home.html" style="text-decoration: none; color: #333; display: flex; align-items: center; padding: 10px; background: #fff; border: 1px solid #ccc; border-radius: 5px; white-space: nowrap;">
+                    <i class="fa fa-home" style="margin-right: 8px;"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="publications.html" style="text-decoration: none; color: #333; display: flex; align-items: center; padding: 10px; background: #fff; border: 1px solid #ccc; border-radius: 5px; white-space: nowrap;">
+                    <i class="fa fa-book" style="margin-right: 8px;"></i> Publications
+                </a>
+            </li>
+            <li>
+                <a href="activities.html" style="text-decoration: none; color: #333; display: flex; align-items: center; padding: 10px; background: #fff; border: 1px solid #ccc; border-radius: 5px; white-space: nowrap;">
+                    <i class="fa fa-tasks" style="margin-right: 8px;"></i> Activities
+                </a>
+            </li>
+            <li>
+                <a href="misc.html" style="text-decoration: none; color: #333; display: flex; align-items: center; padding: 10px; background: #fff; border: 1px solid #ccc; border-radius: 5px; white-space: nowrap;">
+                    <i class="fa fa-th-large" style="margin-right: 8px;"></i> Misc
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" style="text-decoration: none; color: #333; display: flex; align-items: center; padding: 10px; background: #fff; border: 1px solid #ccc; border-radius: 5px; white-space: nowrap;">
+                    <i class="fa fa-envelope" style="margin-right: 8px;"></i> Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-	<li><a href="https://naveedanwarbhatti.github.io/"><i class="fa fa-home fa-fw"></i>&nbsp;Home</a></li>
-	<li><a href="publications.html"><i class="fa fa-book fa-fw"></i>&nbsp;Publications</a></li>
-	<li><a href="teaching.html"><i class="fa fa-mortar-board fa-fw"></i>&nbsp;Activities</a></li>
-	<li><a href="misc.html"><i class="fa fa-th-large fa-spin"></i>&nbsp;Miscellaneous</a></li>
-	<li><a href="contact.html"><i class="fa fa-phone-square fa-fw"></i>&nbsp;Contact</a></li>
 
-</ul>
-</div>
+<main>
 
-<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-4115-9889" href="https://orcid.org/0000-0003-4115-9889" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-4115-9889</a></div>
+
+
+<div class="featured-research">Featured Research</div>
+        <div class="highlight-container">
+			<div class="highlight">
+                <span class="title">Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping</span> <b>AsiaCCS 2025</b>
+                <a href="https://arxiv.org/abs/2409.16438" target="_blank">Read More</a>
+            </div>
+            <div class="highlight">
+                <span class="title">Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus</span> <b>SenSys 2020</b>
+                <a href="http://web.lums.edu.pk/~alizai/pubs/2020-empire-sensys.pdf" target="_blank">Read More</a>
+            </div>
+        </div>
+
 
 <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en"><img src="google_scholar.png" align="right" style="padding-top:30px;height: 360px;"></a>
 
-<section>
 
+
+
+
+<section>
   <div class="publication-category">
     <h3>Conferences (13)</h3>
     <ul class="modern-bullets">
@@ -454,54 +488,20 @@
 
 </section>
 
-<style>
-  .publication-category {
-    margin-bottom: 30px;
-  }
-
-  .publication-category h3 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    font-size: 1.25em;
-    color: #333;
-  }
-
-  ul.modern-bullets {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  ul.modern-bullets li {
-    margin-bottom: 15px; /* Reduced spacing between bullet points */
-    padding-left: 25px;
-    position: relative;
-    line-height: 1.2; /* Reduced line height for compactness */
-    text-align: justify; /* Justify bullet points */
-  }
-
-  ul.modern-bullets li::before {
-    content: "\2022"; /* Unicode for a modern bullet */
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #555;
-    font-size: 1.5em;
-    line-height: 1;
-  }
-
-</style>
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-4115-9889" href="https://orcid.org/0000-0003-4115-9889" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-4115-9889</a></div>
 
 
-
-	
+</main>
 
     
-<hr height="80%" color="#A4A4A4">
-
-<center><a href="https://lums.edu.pk/"><img src="LUMS_logo.png" height="55"></a>&nbsp &nbsp &nbsp  &nbsp <a href="https://www.sics.se/"><img src="Sysnet.ico" height="60"></a>&nbsp &nbsp &nbsp  &nbsp <a href="http://www.neslab.it/"><img src="Footer.png" height="60"></a></center>
-
-</div>
+<footer>
+        <div class="social-links">
+            <a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>&copy; 2025 Naveed Anwar Bhatti. All rights reserved.</p>
+    </footer>
 
 <!-- Default Statcounter code for DEIB Naveed
 http://home.deib.polimi.it/bhatti/ -->
