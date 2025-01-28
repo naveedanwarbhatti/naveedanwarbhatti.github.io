@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <meta name="description" content="Naveed Anwar Bhatti">
@@ -160,6 +161,53 @@
             font-size: 1.5em;
             line-height: 1;
         }
+		
+		/* Profile Image */
+    #idpic {
+  width: 35%; /* Initially take 40% width on larger screens */
+  height: auto;
+  float: right;
+  margin: 20px 0 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote style */
+.quote {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #555;
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 4px solid #ccc;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.quote .fa-quote-left,
+.quote .fa-quote-right {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.quote .fa-quote-left {
+  margin-right: 8px;
+}
+
+.quote .fa-quote-right {
+  margin-left: 8px;
+}
+
+.author {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+}
+
+
         footer {
             display: flex;
             flex-direction: column;
@@ -208,13 +256,17 @@
 
 
 <br>
-<p>
-<i class="fa fa-quote-left fa-1x pull-left fa-border"></i>
- Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world giving birth to evolution... <i class="fa fa-quote-right fa-1x fa-border"></i><br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Albert Einstein</b>
+<br>
  
-</p>
+    <!-- Quote -->
+    <div class="quote">
+      <i class="fa fa-quote-left"></i>
+      Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world giving birth to evolution...
+      <i class="fa fa-quote-right"></i>
+      <span class="author">Albert Einstein</span>
+    </div>
 
-<img id="idpic" src="ID_pic.jpg" align="right" style="max-width: 45%; height: auto; padding-left:20px;">
+<img id="idpic" src="ID_pic.jpg" alt="Profile Picture">
 
 
 <div style="max-width: 100%; text-align: justify;">
@@ -241,22 +293,17 @@ I hold an MS in Computer Science and a BS in Telecommunications from the Nationa
 </div>
 
 
-<p>
-<a href="HCIA.pdf"><img src="HCIA.png" align="left" height="50" style="padding-top:30px;"></a>
-<a href="Naveed_CV.pdf"><img src="icon512_7.png" align="left" height="50" style="padding-top:30px;"></a>
-<a href="https://scholar.google.it/citations?user=6ZB86uYAAAAJ&hl=en"><img src="gscholar.png" align="left" height="50" style="padding-top:30px;"></a>
-<a href="https://it.linkedin.com/pub/naveed-anwar-bhatti/90/498/191"><img src="LinkedIn_logo_initials.png" align="left" height="50" style="padding-top:30px;"></a>
-<a href="https://www.instagram.com/naveed.alpha.needo/?hl=en"><img src="insta.png" align="left" height="50" style="padding-top:30px;"></a>
-<br /> <br /> 
-</p>
+
 
 </main>
 
 <footer>
         <div class="social-links">
-            <a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            
             <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap fa-2x"></i></a>
             <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+			<a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         </div>
         <p>&copy; 2025 Naveed Anwar Bhatti. All rights reserved.</p>
     </footer>
