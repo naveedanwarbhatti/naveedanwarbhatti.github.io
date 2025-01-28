@@ -208,20 +208,36 @@
 }
 
 
-        footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            margin-top: 40px;
-        }
-        footer .social-links {
-            display: flex;
-            gap: 20px;
-        }
-        footer a {
-            color: #333;
-        }
+        /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #1e3c72;
+    }
+
     </style>
 </head>
 <body>
@@ -305,7 +321,7 @@ I hold an MS in Computer Science and a BS in Telecommunications from the Nationa
             <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
 			<a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         </div>
-        <p>&copy; 2025 Naveed Anwar Bhatti. All rights reserved.</p>
+        <p class="footer-note">&copy; 2025 Naveed Anwar Bhatti. All rights reserved.</p>
     </footer>
 
 <!-- Default Statcounter code for DEIB Naveed
