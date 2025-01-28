@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta name="description" content="Naveed Anwar Bhatti">
-    <meta name="keywords" content="Naveed Anwar Bhatti, Sysnet Lab, Wireless Sensor Network, Cyber Physical Systems, RISE SICS">
+    <meta name="keywords" content="Naveed Anwar Bhatti, Sysnet Lab, Wireless Sensor Network, Cyber Physical Systems, LUMS">
     <meta name="author" content="Naveed Anwar Bhatti">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naveed Anwar Bhatti</title>
@@ -32,10 +32,7 @@
             display: none;
             font-size: 24px;
             cursor: pointer;
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
+            
         }
         nav {
             background: #f4f4f4;
@@ -82,12 +79,15 @@
         @media (max-width: 600px) {
             .menu-icon {
                 display: block;
+                margin-left: auto; /* keeps it aligned right if needed */
+				align-items: center;
             }
             nav ul {
                 display: none;
                 flex-direction: column;
                 align-items: center;
                 gap: 5px;
+                margin-top: 10px; /* so it drops below the nav bar */
             }
             nav ul.show {
                 display: flex;
@@ -160,20 +160,83 @@
             font-size: 1.5em;
             line-height: 1;
         }
-        footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            margin-top: 40px;
-        }
-        footer .social-links {
-            display: flex;
-            gap: 20px;
-        }
-        footer a {
-            color: #333;
-        }
+		
+		/* Profile Image */
+    #idpic {
+  width: 35%; /* Initially take 40% width on larger screens */
+  height: auto;
+  float: right;
+  margin: 20px 0 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote style */
+.quote {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #555;
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 4px solid #ccc;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.quote .fa-quote-left,
+.quote .fa-quote-right {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.quote .fa-quote-left {
+  margin-right: 8px;
+}
+
+.quote .fa-quote-right {
+  margin-left: 8px;
+}
+
+.author {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+}
+
+
+        /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #1e3c72;
+    }
+
     </style>
 </head>
 <body>
@@ -204,7 +267,7 @@
 <main>
 
 
-
+<br>
 <div class="featured-research">Featured Research</div>
         <div class="highlight-container">
 			<div class="highlight">
@@ -527,11 +590,13 @@
     
 <footer>
         <div class="social-links">
-            <a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            
             <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap fa-2x"></i></a>
             <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+			<a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         </div>
-        <p>&copy; 2025 Naveed Anwar Bhatti. All rights reserved.</p>
+        <p class="footer-note">&copy; 2025 Naveed Anwar Bhatti. All rights reserved.</p>
     </footer>
 
 <!-- Default Statcounter code for DEIB Naveed
