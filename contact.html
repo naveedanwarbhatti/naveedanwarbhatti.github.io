@@ -1,38 +1,271 @@
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72726316-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta name="description" content="Naveed Anwar Bhatti">
+    <meta name="keywords" content="Naveed Anwar Bhatti, Sysnet Lab, Wireless Sensor Network, Cyber Physical Systems, LUMS">
+    <meta name="author" content="Naveed Anwar Bhatti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveed Anwar Bhatti</title>
 
-  gtag('config', 'UA-72726316-2');
-</script>
-<title>Naveed Anwar Bhatti</title>
-<link rel="stylesheet" type="text/css" href="web.css" />
-<meta name="viewport" content="width=device-width">
-<link rel="shortcut icon" href="Sysnet.ico" type="image/icon" /> 
-<link rel="icon" href="Sysnet.ico" type="image/icon" /> 
-<link rel="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="web.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="Sysnet.ico" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            
+        }
+        nav {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+        nav ul li {
+            flex-grow: 1;
+            text-align: center;
+			width: 100%;
+        }
+        nav ul li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            white-space: nowrap;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.3s, color 0.3s, border-color 0.3s;
+        }
+        nav ul li a:hover {
+            background: #1e3c72 !important;
+            color: white !important;
+            border-color: #1e3c72 !important;
+        }
+        @media (max-width: 600px) {
+            .menu-icon {
+                display: block;
+                margin-left: auto; /* keeps it aligned right if needed */
+				align-items: center;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+                margin-top: 10px; /* so it drops below the nav bar */
+            }
+            nav ul.show {
+                display: flex;
+            }
+        }
+         .featured-research {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .highlight-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .highlight {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+        .highlight .title {
+            flex-grow: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: calc(100% - 250px);
+        }
+        .highlight a {
+            padding: 5px 10px;
+            background: #1e3c72;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        .publication-category {
+            margin-bottom: 30px;
+        }
+        .publication-category h3 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.25em;
+            color: #333;
+        }
+        ul.modern-bullets {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.modern-bullets li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.2;
+            text-align: justify;
+        }
+        ul.modern-bullets li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #555;
+            font-size: 1.5em;
+            line-height: 1;
+        }
+		
+		/* Profile Image */
+    #idpic {
+  width: 35%; /* Initially take 40% width on larger screens */
+  height: auto;
+  float: right;
+  margin: 20px 0 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote style */
+.quote {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #555;
+  background: #f9f9f9;
+  padding: 10px;
+  border-left: 4px solid #ccc;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.quote .fa-quote-left,
+.quote .fa-quote-right {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.quote .fa-quote-left {
+  margin-right: 8px;
+}
+
+.quote .fa-quote-right {
+  margin-left: 8px;
+}
+
+.author {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+}
+
+
+        /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #1e3c72;
+    }
+
+    </style>
 </head>
 <body>
-<div style="width:800;margin-left:auto;margin-right:auto;">
-<font face="arial" size="3">
 
+
+
+<header>
 <center><img src="banner2.gif" height="152"></center>
+</header>
 		
-<div class="container">
-<ul id="minitabs">
+   <nav>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <ul id="nav-menu">
+        <li><a href="index.html"><i class="fa fa-home" style="margin-right: 8px;"></i> Home</a></li>
+        <li><a href="publications.html"><i class="fa fa-book" style="margin-right: 8px;"></i> Publications</a></li>
+        <li><a href="teaching.html"><i class="fa fa-tasks" style="margin-right: 8px;"></i> Activities</a></li>
+        <li><a href="misc.html"><i class="fa fa-th-large" style="margin-right: 8px;"></i> Misc</a></li>
+        <li><a href="contact.html"><i class="fa fa-envelope" style="margin-right: 8px;"></i> Contact</a></li>
+    </ul>
+</nav>
 
-	<li><a href="https://naveedanwarbhatti.github.io/"><i class="fa fa-home fa-fw"></i>&nbsp;Home</a></li>
-	<li><a href="publications.html"><i class="fa fa-book fa-fw"></i>&nbsp;Publications</a></li>
-	<li><a href="teaching.html"><i class="fa fa-mortar-board fa-fw"></i>&nbsp;Activities</a></li>
-	<li><a href="misc.html"><i class="fa fa-th-large fa-spin"></i>&nbsp;Miscellaneous</a></li>
-	<li><a href="contact.html"><i class="fa fa-phone-square fa-fw"></i>&nbsp;Contact</a></li>
+<script>
+    function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("show");
+    }
+</script>
 
-</ul>
-</div>
+
+<main>
 <br/>
 
 
@@ -68,13 +301,19 @@
 
 
 
-<br/>
-<br/>
-   
-<hr height=80% color=#A4A4A4>
-<center><a href="https://lums.edu.pk/"><img src="LUMS_logo.png" height="55"></a>&nbsp &nbsp &nbsp  &nbsp <a href="https://www.sics.se/"><img src="Sysnet.ico" height="60"></a>&nbsp &nbsp &nbsp  &nbsp <a href="http://www.neslab.it/"><img src="Footer.png" height="60"></a></center>
+</main>
 
-</div>	
+
+<footer>
+        <div class="social-links">
+            
+            <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+			<a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        </div>
+        <p class="footer-note">&copy; 2025 Naveed Anwar Bhatti. All rights reserved.</p>
+    </footer>
 
 <!-- Default Statcounter code for DEIB Naveed
 http://home.deib.polimi.it/bhatti/ -->
