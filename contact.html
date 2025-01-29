@@ -266,41 +266,35 @@
 
 
 <main>
-<br/>
-
-
-<table style="width:800px">
-<tr>
-  <td valign="top"><b><i class="fa fa-envelope fa-fw"></i>&nbsp;Email:</b> naveed.bhatti@lums.edu.pk <br>
-<br/>
-<br/>
-<b><i class="fa fa-university fa-fw"></i>&nbsp;Office:</b> Computer Science Deptt (SBASSE), <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp LUMS <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Lahore, Pakistan.
-<br/><br/>
-<form 
-  action=mailto:naveedanwar.bhatti@lums.edu.pk
-  method="POST"
-  enctype="multipart/form-data"
-  name="From home page">
-
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Your Name<b/>:<br>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" size="20" name="VisitorName"><br><br>
-
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <b>Your Comment<b/>:<br>
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <textarea name="VisitorComment" rows="4" cols="30">
-</textarea><br><br>
-
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="submit" value="Send">
-
-</form></td>
-  <td valign="top"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13611.785686137431!2d74.4097744!3d31.47066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391908a610715697%3A0xa58f8e89d5669a0e!2sLUMS%20-%20Lahore%20University%20of%20Management%20Sciences.!5e0!3m2!1sen!2s!4v1689239057443!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td> 
-  </tr>
-<table/>
-
-
-<br/>
-
-
-
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+        <!-- Contact Information Section -->
+        <div style="flex: 1; min-width: 300px;">
+            <h2>Contact Information</h2>
+            <p><i class="fa fa-envelope fa-fw"></i> <b>Email:</b> <a href="mailto:naveed.bhatti@lums.edu.pk">naveed.bhatti@lums.edu.pk</a></p>
+            <p><i class="fa fa-university fa-fw"></i> <b>Office: 9-G23A</b><br>Computer Science Deptt (SBASSE),<br>LUMS, Lahore, Pakistan.</p>
+            
+            <!-- Contact Form -->
+            <h3>Get in Touch</h3>
+            <form action="mailto:naveedanwar.bhatti@lums.edu.pk" method="POST" enctype="multipart/form-data">
+                <label for="name"><b>Your Name:</b></label>
+                <input type="text" id="name" name="VisitorName" style="width: 100%; padding: 8px; margin-top: 5px;">
+                
+                <label for="comment" style="margin-top: 10px;"><b>Your Comment:</b></label>
+                <textarea id="comment" name="VisitorComment" rows="4" style="width: 100%; padding: 8px; margin-top: 5px;"></textarea>
+                
+                <button type="submit" style="margin-top: 10px; padding: 10px 20px; background: #1e3c72; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Send
+                </button>
+            </form>
+        </div>
+        
+        <!-- Map Section -->
+        <div style="flex: 1; min-width: 300px; text-align: center;">
+            <h2>Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13611.785686137431!2d74.4097744!3d31.47066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391908a610715697%3A0xa58f8e89d5669a0e!2sLUMS%20-%20Lahore%20University%20of%20Management%20Sciences.!5e0!3m2!1sen!2s!4v1689239057443!5m2!1sen!2s" 
+                    width="100%" height="300" style="border:0; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
 </main>
 
 
