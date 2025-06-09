@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <meta name="description" content="Naveed Anwar Bhatti">
@@ -29,11 +28,10 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* --- CORRECTED NAVIGATION STYLES --- */
         .menu-icon {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            
+            display: none; /* Hidden by default on desktop */
         }
         nav {
             background: #f4f4f4;
@@ -43,26 +41,25 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center; /* Center the nav items on desktop */
         }
         nav ul {
             list-style: none;
             padding: 0;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: nowrap;
+            margin: 0;
+            display: flex; /* Display buttons in a row on desktop */
+            justify-content: space-around;
             width: 100%;
+            gap: 10px;
         }
         nav ul li {
             flex-grow: 1;
             text-align: center;
-			width: 100%;
         }
         nav ul li a {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80%;
             padding: 10px;
             background: #fff;
             border: 1px solid #ccc;
@@ -77,179 +74,113 @@
             color: white !important;
             border-color: #1e3c72 !important;
         }
-        @media (max-width: 600px) {
+        
+        /* --- RESPONSIVE STYLES FOR MOBILE --- */
+        @media (max-width: 768px) { /* Slightly wider breakpoint for better compatibility */
+            nav {
+                justify-content: flex-end; /* Align menu icon to the right */
+            }
             .menu-icon {
-                display: block;
-                margin-left: auto; /* keeps it aligned right if needed */
-				align-items: center;
+                display: block; /* Show menu icon on mobile */
+                font-size: 24px;
+                cursor: pointer;
             }
             nav ul {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-                margin-top: 10px; /* so it drops below the nav bar */
+                display: none; /* Hide button list by default on mobile */
+                flex-direction: column; /* Stack buttons vertically */
+                position: absolute;
+                top: 100%; /* Position dropdown below the nav bar */
+                left: 0;
+                right: 0;
+                background-color: #f4f4f4;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                padding: 10px 0;
+                z-index: 100;
             }
             nav ul.show {
-                display: flex;
+                display: flex; /* Show the list when menu is clicked */
             }
-        }
-         .featured-research {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .highlight-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .highlight {
-            background: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            overflow: hidden;
-        }
-        .highlight .title {
-            flex-grow: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: calc(100% - 250px);
-        }
-        .highlight a {
-            padding: 5px 10px;
-            background: #1e3c72;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-left: 10px;
-            flex-shrink: 0;
-        }
-        .publication-category {
-            margin-bottom: 30px;
-        }
-        .publication-category h3 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            font-size: 1.25em;
-            color: #333;
-        }
-        ul.modern-bullets {
-            list-style: none;
-            padding-left: 0;
-        }
-        ul.modern-bullets li {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-            line-height: 1.2;
-            text-align: justify;
-        }
-        ul.modern-bullets li::before {
-            content: "\2022";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #555;
-            font-size: 1.5em;
-            line-height: 1;
+            nav ul li {
+                width: 100%;
+            }
+            nav ul li a {
+                width: 90%;
+                margin: 5px auto; /* Center the buttons */
+            }
         }
 		
 		/* Profile Image */
-    #idpic {
-  width: 35%; /* Initially take 40% width on larger screens */
-  height: auto;
-  float: right;
-  margin: 20px 0 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        #idpic {
+            width: 35%;
+            height: auto;
+            float: right;
+            margin: 20px 0 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-/* Quote style */
-.quote {
-  margin-bottom: 20px;
-  font-style: italic;
-  color: #555;
-  background: #f9f9f9;
-  padding: 10px;
-  border-left: 4px solid #ccc;
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.quote .fa-quote-left,
-.quote .fa-quote-right {
-  font-size: 1.2rem;
-  color: #999;
-}
-
-.quote .fa-quote-left {
-  margin-right: 8px;
-}
-
-.quote .fa-quote-right {
-  margin-left: 8px;
-}
-
-.author {
-  display: block;
-  margin-top: 5px;
-  font-weight: bold;
-  color: #333;
-  text-align: right;
-}
-
+        /* Quote style */
+        .quote {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #555;
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #ccc;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .quote .fa-quote-left, .quote .fa-quote-right {
+            font-size: 1.2rem;
+            color: #999;
+        }
+        .quote .fa-quote-left { margin-right: 8px; }
+        .quote .fa-quote-right { margin-left: 8px; }
+        .author {
+            display: block;
+            margin-top: 5px;
+            font-weight: bold;
+            color: #333;
+            text-align: right;
+        }
 
         /* Footer */
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      padding: 20px;
-      color: #555;
-    }
-
-    .footer-note {
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-    footer a {
-      color: #333;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    footer a:hover {
-      color: #1e3c72;
-    }
-
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            clear: both; /* To handle the floated image */
+        }
+        .footer-note {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        footer a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #1e3c72;
+        }
     </style>
 </head>
 <body>
-
-
 
 <header>
 <center><img src="banner2.gif" height="152"></center>
 </header>
 		
-   <nav>
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+<nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <ul id="nav-menu">
         <li><a href="index.html"><i class="fa fa-home" style="margin-right: 8px;"></i> Home</a></li>
         <li><a href="publications.html"><i class="fa fa-book" style="margin-right: 8px;"></i> Publications</a></li>
@@ -265,14 +196,9 @@
     }
 </script>
 
-
 <main>
-
-
-
-
-<br>
-<br>
+    <br>
+    <br>
  
     <!-- Quote -->
     <div class="quote">
@@ -282,47 +208,34 @@
       <span class="author">Albert Einstein</span>
     </div>
 
-<img id="idpic" src="ID_pic.jpg" alt="Profile Picture">
+    <img id="idpic" src="ID_pic.jpg" alt="Profile Picture">
 
-
-<div style="max-width: 100%; text-align: justify;">
-<p>
-Welcome to my personal corner of the internet! I'm an innovative and passionate Assistant Professor at <a href="https://lums.edu.pk/">LUMS</a> in Lahore, Pakistan, where I endeavor to inspire the next generation of tech visionaries. Prior to this, I had the privilege of being an <a href="https://fellowship.ercim.eu/">ERCIM Alain Bensoussan</a> Post-Doctoral Fellow, working with the exceptional <em><a href="https://www.ri.se/en/person/thiemo-voigt">Thiemo Voigt</a></em> at RISE-SICS in Stockholm, Sweden.
-
- </p>
-  <p>
- At the heart of my research lies the fascinating realm of Cyber-Physical Systems (CPS), where I delve into the intricacies of transiently-powered embedded systems. Never one to shy away from a challenge, I also immerse myself in the cutting-edge fields of embedded system security and network security, particularly honing my expertise in network forensics.
-</p>
- <p>
- 
- 
- I completed my Ph.D. in Computer Science</a> from Department of Electronics, Information, and Bioengineering <a href="http://www.deib.polimi.it/">(DEIB)</a>, <a href="http://www.polimi.it/">Politecnico di Milano</a>, Italy, in February 2018,
- 
- Under the guidance of the esteemed <em><a href="https://mottola.faculty.polimi.it/">Associate Professor. Luca Mottola.</a></em>, my passion for technology and research blossomed. Prior to that, I was a Research Associate at the <a href="http://www.nu.edu.pk/">National University of Computer and Emerging Sciences'</a> <em><b>Systems and Network lab</b></em>, under the mentorship of <em><a href="https://www.linkedin.com/in/affan-ahmed-syed/?ppe=1">Associate Prof. Affan A.Syed</a></em>.
- 
- </p>
-
-<p>
-I hold an MS in Computer Science and a BS in Telecommunications from the National University of Computer and Emerging Sciences (FAST-NUCES), where I laid the foundation for my ever-evolving exploration of the digital world.
-
-</p>
-</div>
-
-
-
-
+    <div style="max-width: 100%; text-align: justify;">
+        <p>
+        Welcome to my personal corner of the internet! I'm an innovative and passionate Assistant Professor at <a href="https://lums.edu.pk/">LUMS</a> in Lahore, Pakistan, where I endeavor to inspire the next generation of tech visionaries. Prior to this, I had the privilege of being an <a href="https://fellowship.ercim.eu/">ERCIM Alain Bensoussan</a> Post-Doctoral Fellow, working with the exceptional <em><a href="https://www.ri.se/en/person/thiemo-voigt">Thiemo Voigt</a></em> at RISE-SICS in Stockholm, Sweden.
+        </p>
+        <p>
+        At the heart of my research lies the fascinating realm of Cyber-Physical Systems (CPS), where I delve into the intricacies of transiently-powered embedded systems. Never one to shy away from a challenge, I also immerse myself in the cutting-edge fields of embedded system security and network security, particularly honing my expertise in network forensics.
+        </p>
+        <p>
+        I completed my Ph.D. in Computer Science</a> from Department of Electronics, Information, and Bioengineering <a href="http://www.deib.polimi.it/">(DEIB)</a>, <a href="http://www.polimi.it/">Politecnico di Milano</a>, Italy, in February 2018,
+        Under the guidance of the esteemed <em><a href="https://mottola.faculty.polimi.it/">Associate Professor. Luca Mottola.</a></em>, my passion for technology and research blossomed. Prior to that, I was a Research Associate at the <a href="http://www.nu.edu.pk/">National University of Computer and Emerging Sciences'</a> <em><b>Systems and Network lab</b></em>, under the mentorship of <em><a href="https://www.linkedin.com/in/affan-ahmed-syed/?ppe=1">Associate Prof. Affan A.Syed</a></em>.
+        </p>
+        <p>
+        I hold an MS in Computer Science and a BS in Telecommunications from the National University of Computer and Emerging Sciences (FAST-NUCES), where I laid the foundation for my ever-evolving exploration of the digital world.
+        </p>
+    </div>
 </main>
 
 <footer>
-        <div class="social-links">
-            
-            <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap fa-2x"></i></a>
-            <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-			<a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-        </div>
-        <p class="footer-note">&copy; 2025 Naveed Anwar Bhatti. All rights reserved.</p>
-    </footer>
+    <div class="social-links">
+        <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="https://github.com/naveedanwarbhatti" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+    </div>
+    <p class="footer-note">© 2025 Naveed Anwar Bhatti. All rights reserved.</p>
+</footer>
 
 <!-- Default Statcounter code for DEIB Naveed
 http://home.deib.polimi.it/bhatti/ -->
@@ -340,10 +253,6 @@ class="statcounter"
 src="//c.statcounter.com/9665684/0/193c50ed/1/" alt="Web
 Analytics"></a></div></noscript>
 <!-- End of Statcounter Code -->
-
-</font><img id="hzDownscaled" style="position: absolute; top: -10000px;">
-
-
 
 </body>
 </html>

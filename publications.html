@@ -28,6 +28,11 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* --- CORRECTED NAVIGATION STYLES --- */
+        .menu-icon {
+            display: none;
+        }
         nav {
             background: #f4f4f4;
             padding: 10px;
@@ -36,14 +41,16 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             width: 100%;
+            gap: 10px;
         }
         nav ul li {
             flex-grow: 1;
@@ -53,11 +60,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80%;
             padding: 10px;
             background: #fff;
             border: 1px solid #ccc;
             border-radius: 5px;
+            white-space: nowrap;
             text-decoration: none;
             color: #333;
             transition: background 0.3s, color 0.3s, border-color 0.3s;
@@ -67,6 +74,40 @@
             color: white !important;
             border-color: #1e3c72 !important;
         }
+        
+        @media (max-width: 768px) {
+            nav {
+                justify-content: flex-end;
+            }
+            .menu-icon {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #f4f4f4;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                padding: 10px 0;
+                z-index: 100;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                width: 100%;
+            }
+            nav ul li a {
+                width: 90%;
+                margin: 5px auto;
+            }
+        }
+        
         .featured-research {
             text-align: center;
             margin-bottom: 10px;
@@ -134,7 +175,6 @@
             line-height: 1;
         }
 
-        /* --- Google Scholar Stats Styles --- */
         #scholar-stats-container {
             float: right;
             width: 230px; 
@@ -184,30 +224,26 @@
             padding: 8px 10px;
             border-bottom: 1px solid #ddd;
         }
-        
-        /* --- GRAPH STYLE CHANGES --- */
         #citation-graph {
             display: flex;
             justify-content: space-around;
-            height: 170px; /* Increased height */
-            padding: 25px 5px 0 5px; /* Added padding-top for label space */
+            height: 170px;
+            padding: 25px 5px 0 5px;
             position: relative;
             border: 1px solid #ddd;
             border-radius: 4px;
             overflow: hidden;
         }
         .graph-bar-item {
-            height: 100%; /* Makes the entire column a hover target */
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end; /* Pushes content to the bottom */
+            justify-content: flex-end;
             align-items: center;
             flex: 1;
             text-align: center;
             position: relative;
         }
-        /* --- END OF CHANGES --- */
-
         .graph-bar {
             width: 60%;
             background-color: #1e3c72;
@@ -219,7 +255,7 @@
         }
         .bar-label {
             position: absolute;
-            top: 0; /* Position label at the top of the container */
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
             font-size: 11px;
@@ -238,8 +274,6 @@
             font-size: 11px;
             color: #777;
         }
-
-        /* --- CORE RANK STYLES --- */
         .core-rank {
             display: inline-block;
             padding: 2px 10px;
@@ -256,11 +290,9 @@
         .core-rank.rank-a { background-color: #addd8e; border: 1px solid #89b36a; }
         .core-rank.rank-b { background-color: #d8e47a; border: 1px solid #b7c15c; }
         .core-rank.rank-c { background-color: #e09a8f; border: 1px solid #c17e73; }
-        
         .clear-float {
             clear: both;
         }
-
         footer {
             margin-top: 40px;
             text-align: center;

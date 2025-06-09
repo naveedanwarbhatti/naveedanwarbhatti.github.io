@@ -9,10 +9,6 @@
     <link rel="stylesheet" type="text/css" href="web.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="Sysnet.ico" type="image/x-icon">
-	<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
     <style>
         body {
@@ -23,15 +19,6 @@
             padding: 20px;
             line-height: 1.6;
             color: #333;
-			
-        }
-		#chartdiv {
-            flex: 1 1 60%;
-            height: 100%;
-        }
-        #country-list {
-            flex: 1 1 30%;
-            overflow-y: auto;
         }
         header {
             text-align: center;
@@ -41,11 +28,10 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* --- CORRECTED NAVIGATION STYLES --- */
         .menu-icon {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            
+            display: none; /* Hidden by default on desktop */
         }
         nav {
             background: #f4f4f4;
@@ -55,26 +41,25 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center; /* Center the nav items on desktop */
         }
         nav ul {
             list-style: none;
             padding: 0;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: nowrap;
+            margin: 0;
+            display: flex; /* Display buttons in a row on desktop */
+            justify-content: space-around;
             width: 100%;
+            gap: 10px;
         }
         nav ul li {
             flex-grow: 1;
             text-align: center;
-			width: 100%;
         }
         nav ul li a {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80%;
             padding: 10px;
             background: #fff;
             border: 1px solid #ccc;
@@ -89,222 +74,113 @@
             color: white !important;
             border-color: #1e3c72 !important;
         }
-        @media (max-width: 600px) {
+        
+        /* --- RESPONSIVE STYLES FOR MOBILE --- */
+        @media (max-width: 768px) { /* Slightly wider breakpoint for better compatibility */
+            nav {
+                justify-content: flex-end; /* Align menu icon to the right */
+            }
             .menu-icon {
-                display: block;
-                margin-left: auto; /* keeps it aligned right if needed */
-				align-items: center;
+                display: block; /* Show menu icon on mobile */
+                font-size: 24px;
+                cursor: pointer;
             }
             nav ul {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-                margin-top: 10px; /* so it drops below the nav bar */
+                display: none; /* Hide button list by default on mobile */
+                flex-direction: column; /* Stack buttons vertically */
+                position: absolute;
+                top: 100%; /* Position dropdown below the nav bar */
+                left: 0;
+                right: 0;
+                background-color: #f4f4f4;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                padding: 10px 0;
+                z-index: 100;
             }
             nav ul.show {
-                display: flex;
+                display: flex; /* Show the list when menu is clicked */
             }
-        }
-         .featured-research {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .highlight-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .highlight {
-            background: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            overflow: hidden;
-        }
-        .highlight .title {
-            flex-grow: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: calc(100% - 250px);
-        }
-        .highlight a {
-            padding: 5px 10px;
-            background: #1e3c72;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-left: 10px;
-            flex-shrink: 0;
-        }
-        .publication-category {
-            margin-bottom: 30px;
-        }
-        .publication-category h3 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            font-size: 1.25em;
-            color: #333;
-        }
-        ul.modern-bullets {
-            list-style: none;
-            padding-left: 0;
-        }
-        ul.modern-bullets li {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-            line-height: 1.2;
-            text-align: justify;
-        }
-        ul.modern-bullets li::before {
-            content: "\2022";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #555;
-            font-size: 1.5em;
-            line-height: 1;
+            nav ul li {
+                width: 100%;
+            }
+            nav ul li a {
+                width: 90%;
+                margin: 5px auto; /* Center the buttons */
+            }
         }
 		
 		/* Profile Image */
-    #idpic {
-  width: 35%; /* Initially take 40% width on larger screens */
-  height: auto;
-  float: right;
-  margin: 20px 0 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        #idpic {
+            width: 35%;
+            height: auto;
+            float: right;
+            margin: 20px 0 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-/* Quote style */
-.quote {
-  margin-bottom: 20px;
-  font-style: italic;
-  color: #555;
-  background: #f9f9f9;
-  padding: 10px;
-  border-left: 4px solid #ccc;
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.quote .fa-quote-left,
-.quote .fa-quote-right {
-  font-size: 1.2rem;
-  color: #999;
-}
-
-.quote .fa-quote-left {
-  margin-right: 8px;
-}
-
-.quote .fa-quote-right {
-  margin-left: 8px;
-}
-
-.author {
-  display: block;
-  margin-top: 5px;
-  font-weight: bold;
-  color: #333;
-  text-align: right;
-}
-
+        /* Quote style */
+        .quote {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #555;
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #ccc;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .quote .fa-quote-left, .quote .fa-quote-right {
+            font-size: 1.2rem;
+            color: #999;
+        }
+        .quote .fa-quote-left { margin-right: 8px; }
+        .quote .fa-quote-right { margin-left: 8px; }
+        .author {
+            display: block;
+            margin-top: 5px;
+            font-weight: bold;
+            color: #333;
+            text-align: right;
+        }
 
         /* Footer */
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      padding: 20px;
-      color: #555;
-    }
-
-    .footer-note {
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-    footer a {
-      color: #333;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    footer a:hover {
-      color: #1e3c72;
-    }
-	
-	/* Example: Replacing the table with a responsive grid for art work */
-        .artwork-section {
-          margin-top: 20px;
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            clear: both; /* To handle the floated image */
         }
-        .artwork-section h2 {
-          font-size: 1.25rem;
-          margin-bottom: 10px;
+        .footer-note {
+            font-size: 0.9rem;
+            color: #777;
         }
-        .artwork-gallery {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 10px;
-          justify-items: center;
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 10px;
         }
-        .artwork-gallery img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 5px;
+        footer a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
         }
-		
-		/* Example: Replacing the table with a responsive grid for logo */
-        .logo-section {
-          margin-top: 20px;
+        footer a:hover {
+            color: #1e3c72;
         }
-        .logo-section h2 {
-          font-size: 1.25rem;
-          margin-bottom: 10px;
-        }
-        .logo-gallery {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-          gap: 20px;
-          justify-items: center;
-        }
-        .logo-gallery img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 5px;
-    border: 2px solid black; /* Adds a black boundary */
-    padding: 5px; /* Optional: Adds some spacing between the image and the border */
-    background: white; /* Ensures the background is uniform */
-        }
-
     </style>
 </head>
 <body>
-
-
 
 <header>
 <center><img src="banner2.gif" height="152"></center>
 </header>
 		
-   <nav>
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+<nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <ul id="nav-menu">
         <li><a href="index.html"><i class="fa fa-home" style="margin-right: 8px;"></i> Home</a></li>
         <li><a href="publications.html"><i class="fa fa-book" style="margin-right: 8px;"></i> Publications</a></li>
