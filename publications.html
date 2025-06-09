@@ -32,6 +32,9 @@
         /* --- CORRECTED NAVIGATION STYLES --- */
         .menu-icon {
             display: none;
+            background: none;
+            border: none;
+            padding: 0;
         }
         nav {
             background: #f4f4f4;
@@ -327,7 +330,7 @@
 </header>
 		
 <nav>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <button class="menu-icon" aria-label="Menu" onclick="toggleMenu()">☰</button>
     <ul id="nav-menu">
         <li><a href="index.html"><i class="fa fa-home" style="margin-right: 8px;"></i> Home</a></li>
         <li><a href="publications.html"><i class="fa fa-book" style="margin-right: 8px;"></i> Publications</a></li>
