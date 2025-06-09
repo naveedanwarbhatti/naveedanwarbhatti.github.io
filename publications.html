@@ -105,17 +105,6 @@
             margin-left: 10px;
             flex-shrink: 0;
         }
-
-        /* --- Main Content Layout --- */
-        .main-content-wrapper {
-            display: flex;
-            flex-direction: row-reverse; /* Puts stats on the right */
-            gap: 25px; /* Space between content and stats */
-            align-items: flex-start;
-        }
-        .main-content-wrapper > section {
-            flex-grow: 1; /* Allows publications to take up remaining space */
-        }
         
         .publication-category h3 {
             border-bottom: 2px solid #ccc;
@@ -147,10 +136,11 @@
 
         /* --- Google Scholar Stats Styles --- */
         #scholar-stats-container {
-            flex-shrink: 0; /* Prevents the container from shrinking */
+            float: right;
             width: 230px; 
-            padding-left: 25px;
-            border-left: 1px solid #ddd; /* Vertical separator line */
+            margin-top: 5px; /* Adjust to align with content */
+            margin-left: 25px; /* Space to its left */
+            margin-bottom: 15px; /* Space below before text wraps */
         }
         #stats-table {
             font-size: 13px;
@@ -203,7 +193,7 @@
             position: relative;
             border: 1px solid #ddd;
             border-radius: 4px;
-            overflow: hidden; /* Prevents bars from going outside */
+            overflow: hidden;
         }
         .graph-bar-item {
             display: flex;
@@ -240,7 +230,7 @@
         }
         .year-label {
             margin-top: 5px;
-            font-size: 11px; /* Reduced font size */
+            font-size: 11px;
             color: #777;
         }
 
@@ -248,7 +238,6 @@
         .core-rank {
             display: inline-block;
             padding: 2px 10px;
-            margin-left: 8px;
             font-size: 12px;
             font-weight: bold;
             color: #212529;
@@ -262,6 +251,11 @@
         .core-rank.rank-a { background-color: #addd8e; border: 1px solid #89b36a; }
         .core-rank.rank-b { background-color: #d8e47a; border: 1px solid #b7c15c; }
         .core-rank.rank-c { background-color: #e09a8f; border: 1px solid #c17e73; }
+        
+        /* Utility class to clear the float */
+        .clear-float {
+            clear: both;
+        }
 
         footer {
             margin-top: 40px;
@@ -327,7 +321,7 @@
         </div>
     </div>
 
-    <div class="main-content-wrapper">
+    <section>
         <div id="scholar-stats-container">
             <table id="stats-table">
                 <thead><tr></tr></thead>
@@ -339,85 +333,83 @@
             </div>
         </div>
 
-        <section>
-            <div class="publication-category">
-                <h3>Conferences (14)</h3>
-                <ul class="modern-bullets">
-	
-                    <li>
-                        Abdur-Rahman Ibrahim Sayyid-Ali, Abdul Rafay, Muhammad Abdullah Soomro, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
-                        "<a href="https://dl.acm.org/doi/10.1145/3715014.3722056" target="_blank" rel="noopener noreferrer">CheckMate: LLM-Powered Approximate Intermittent Computing</a>",
-                        <em>In Proceedings of the 23rd ACM Conference on Embedded Networked Sensor Systems (ACM SenSys)</em>, May 2025. <span class="core-rank rank-as">A*</span>
-                    </li>
-                    <li>
-                        Ahmed Najeeb, Muhammad Rafay, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
-                        "<a href="https://arxiv.org/abs/2409.16438" target="_blank" rel="noopener noreferrer">Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping</a>",
-                        <em>In Proceedings of the 20th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS)</em>, August 2025. <span class="core-rank rank-a">A</span>
-                    </li>
-                    <li>
-                        Muhammad Sangeen, <strong>Naveed Anwar Bhatti</strong>, and Kashif Kifayat,
-                        "<a href="#" target="_blank" rel="noopener noreferrer">PortScout: A Communication Flow-Based Approach to Detect Port Scanning Evasion Attacks</a>",
-                        <em>IEEE International Conference on Communications (ICC)</em>, June 2025.
-                    </li>
-                    <li>
-                        Muhammad Abdullah Soomro, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
-                        "<a href="https://arxiv.org/abs/2410.07202" target="_blank" rel="noopener noreferrer">Approxify: Automating Energy-Accuracy Trade-Offs in Batteryless IoT Devices</a>",
-                        <em>IEEE Wireless Communications and Networking Conference (WCNC)</em>, March 2025. <span class="core-rank rank-b">B</span>
-                    </li>
-                    <li>
-                        Sunder Ali Ali Khowaja, Ik Hyun Lee, Parus Khuwaja, <strong>Naveed Anwar Bhatti</strong>, Keshav Singh, Kapal Dev,
-                        "<a href="#" target="_blank" rel="noopener noreferrer">FLEXFL: Flexible Federated Learning for Customized Network Architectures in 6G</a>",
-                        <em>IEEE Wireless Communications and Networking Conference (WCNC)</em>, March 2025. <span class="core-rank rank-b">B</span>
-                    </li>
-                    <li>
-                        Chaudhry, Hassan Habib, Ramish Majeed Raja, Muhammad Azmeer Zahid, Nauman Zaffar, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
-                        "<a href="https://dl.acm.org/doi/10.1145/3600100.3623743" target="_blank" rel="noopener noreferrer">From Waste to Watts: A Self-Sustaining Water Heating System Powered by a Thermoelectric Generator</a>",
-                        <em>In Proceedings of the 10th BuildSys</em>, December 2024.
-                    </li>
-                    <li>
-                        Mikhail Afanasov, <strong>Naveed Anwar Bhatti</strong>, Dennis Campagna, Giacomo Caslini, Fabio Massimo Centonze, Koustabh Dolui, Andrea Maioli, Erica Barone, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola,
-                        "<a href="http://web.lums.edu.pk/~alizai/pubs/2020-empire-sensys.pdf" target="_blank" rel="noopener noreferrer">Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus</a>",
-                        <em>18th ACM Conference on Embedded Networked Sensor Systems (SenSys)</em>, November 2020. <span class="core-rank rank-as">A*</span>
-                        <a href="https://youtu.be/zMxVpUo1U4s" target="_blank" rel="noopener noreferrer" style="color: red;">[Teaser]</a>,
-                        <a href="https://youtu.be/zkBYPeiGcyQ" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
-                    </li>
-                    <li>
-                        Hafiz Areeb Asad, Erik Henricus Wouters, <strong>Naveed Anwar Bhatti</strong>, Luca Mottola, Thiemo Voigt,
-                        "<a href="https://dl.acm.org/doi/abs/10.1145/3417308.3430267" target="_blank" rel="noopener noreferrer">On Securing Persistent State in Intermittent Computing</a>",
-                        <em>8th International Workshop on Energy Harvesting and Energy-Neutral Sensing Systems (ENSsys ’20)</em>, November 2020.
-                        <a href="https://youtu.be/qVcJtpyNWyk" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
-                    </li>
-                    <li>
-                        Saad Ahmed, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola,
-                        "<a href="paper-dice-camera-ready.pdf" target="_blank" rel="noopener noreferrer">Efficient Intermittent Computing with Differential Checkpointing</a>",
-                        <em>20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</em>, June 2019. <span class="core-rank rank-b">B</span>
-                    </li>
-                    <li>
-                        Saad Ahmed, Abu Bakar, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola,
-                        "<a href="paper-epic-camera-ready.pdf" target="_blank" rel="noopener noreferrer">The Betrayal of Constant Power × Time: Finding the Missing Joules of Transiently-Powered Computer</a>",
-                        <em>20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</em>, June 2019. <span class="core-rank rank-b">B</span>
-                    </li>
-                    <li>
-                        <strong>Naveed Anwar Bhatti</strong> and Luca Mottola,
-                        "<a href="http://dl.acm.org/citation.cfm?id=3055082" target="_blank" rel="noopener noreferrer">HarvOS: Efficient Code Instrumentation for Transiently-powered Embedded Devices</a>",
-                        <em>16th ACM/IEEE Conference on Information Processing in Sensor Networks (IPSN 2017)</em>, April 2017. <span class="core-rank rank-a">A</span>
-                        <a href="https://www.youtube.com/watch?v=XDZZ9Pnrs2E" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
-                    </li>
-                    <li>
-                        <strong>Naveed Anwar Bhatti</strong> and Luca Mottola,
-                        "<a href="https://www.sics.se/~luca/papers/bhatti16efficient.pdf" target="_blank" rel="noopener noreferrer">Efficient State Retention for Transiently-powered Embedded Sensing</a>",
-                        <em>International Conference on Embedded Wireless Systems and Networks (EWSN 2016)</em>, Feb 2016. <span class="core-rank rank-b">B</span>
-                    </li>
-                    <li>
-                        Osama Haq, Zainab Abaid, <strong>Naveed Anwar Bhatti</strong>, Zaafar Ahmed and Affan A. Syed,
-                        "<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=7249162&openedRefinements%3D*%26pageNumber%3D3%26rowsPerPage%3D100%26queryText%3D(control+plane+architecture)" target="_blank" rel="noopener noreferrer">SDN-inspired, Real-time Botnet Detection and Flow-blocking at ISP and Enterprise-level</a>",
-                        <em>IEEE International Conference on Communications (ICC 2015)</em>, June 2015.
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="publication-category">
-    <h3>Transactions and Journals (11)</h3>
+        <div class="publication-category">
+            <h3>Conferences (14)</h3>
+            <ul class="modern-bullets">
+                <li>
+                    Abdur-Rahman Ibrahim Sayyid-Ali, Abdul Rafay, Muhammad Abdullah Soomro, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
+                    "<a href="https://dl.acm.org/doi/10.1145/3715014.3722056" target="_blank" rel="noopener noreferrer">CheckMate: LLM-Powered Approximate Intermittent Computing</a>",
+                    <em>In Proceedings of the 23rd ACM Conference on Embedded Networked Sensor Systems (ACM SenSys)</em>, May 2025. <span class="core-rank rank-as">A*</span>
+                </li>
+                <li>
+                    Ahmed Najeeb, Muhammad Rafay, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
+                    "<a href="https://arxiv.org/abs/2409.16438" target="_blank" rel="noopener noreferrer">Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping</a>",
+                    <em>In Proceedings of the 20th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS)</em>, August 2025. <span class="core-rank rank-a">A</span>
+                </li>
+                <li>
+                    Muhammad Sangeen, <strong>Naveed Anwar Bhatti</strong>, and Kashif Kifayat,
+                    "<a href="#" target="_blank" rel="noopener noreferrer">PortScout: A Communication Flow-Based Approach to Detect Port Scanning Evasion Attacks</a>",
+                    <em>IEEE International Conference on Communications (ICC)</em>, June 2025.
+                </li>
+                <li>
+                    Muhammad Abdullah Soomro, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
+                    "<a href="https://arxiv.org/abs/2410.07202" target="_blank" rel="noopener noreferrer">Approxify: Automating Energy-Accuracy Trade-Offs in Batteryless IoT Devices</a>",
+                    <em>IEEE Wireless Communications and Networking Conference (WCNC)</em>, March 2025. <span class="core-rank rank-b">B</span>
+                </li>
+                <li>
+                    Sunder Ali Ali Khowaja, Ik Hyun Lee, Parus Khuwaja, <strong>Naveed Anwar Bhatti</strong>, Keshav Singh, Kapal Dev,
+                    "<a href="#" target="_blank" rel="noopener noreferrer">FLEXFL: Flexible Federated Learning for Customized Network Architectures in 6G</a>",
+                    <em>IEEE Wireless Communications and Networking Conference (WCNC)</em>, March 2025. <span class="core-rank rank-b">B</span>
+                </li>
+                <li>
+                    Chaudhry, Hassan Habib, Ramish Majeed Raja, Muhammad Azmeer Zahid, Nauman Zaffar, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>,
+                    "<a href="https://dl.acm.org/doi/10.1145/3600100.3623743" target="_blank" rel="noopener noreferrer">From Waste to Watts: A Self-Sustaining Water Heating System Powered by a Thermoelectric Generator</a>",
+                    <em>In Proceedings of the 10th BuildSys</em>, December 2024.
+                </li>
+                <li>
+                    Mikhail Afanasov, <strong>Naveed Anwar Bhatti</strong>, Dennis Campagna, Giacomo Caslini, Fabio Massimo Centonze, Koustabh Dolui, Andrea Maioli, Erica Barone, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola,
+                    "<a href="http://web.lums.edu.pk/~alizai/pubs/2020-empire-sensys.pdf" target="_blank" rel="noopener noreferrer">Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus</a>",
+                    <em>18th ACM Conference on Embedded Networked Sensor Systems (SenSys)</em>, November 2020. <span class="core-rank rank-as">A*</span>
+                    <a href="https://youtu.be/zMxVpUo1U4s" target="_blank" rel="noopener noreferrer" style="color: red;">[Teaser]</a>,
+                    <a href="https://youtu.be/zkBYPeiGcyQ" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
+                </li>
+                <li>
+                    Hafiz Areeb Asad, Erik Henricus Wouters, <strong>Naveed Anwar Bhatti</strong>, Luca Mottola, Thiemo Voigt,
+                    "<a href="https://dl.acm.org/doi/abs/10.1145/3417308.3430267" target="_blank" rel="noopener noreferrer">On Securing Persistent State in Intermittent Computing</a>",
+                    <em>8th International Workshop on Energy Harvesting and Energy-Neutral Sensing Systems (ENSsys ’20)</em>, November 2020.
+                    <a href="https://youtu.be/qVcJtpyNWyk" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
+                </li>
+                <li>
+                    Saad Ahmed, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola,
+                    "<a href="paper-dice-camera-ready.pdf" target="_blank" rel="noopener noreferrer">Efficient Intermittent Computing with Differential Checkpointing</a>",
+                    <em>20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</em>, June 2019. <span class="core-rank rank-b">B</span>
+                </li>
+                <li>
+                    Saad Ahmed, Abu Bakar, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola,
+                    "<a href="paper-epic-camera-ready.pdf" target="_blank" rel="noopener noreferrer">The Betrayal of Constant Power × Time: Finding the Missing Joules of Transiently-Powered Computer</a>",
+                    <em>20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools for Embedded Systems (LCTES)</em>, June 2019. <span class="core-rank rank-b">B</span>
+                </li>
+                <li>
+                    <strong>Naveed Anwar Bhatti</strong> and Luca Mottola,
+                    "<a href="http://dl.acm.org/citation.cfm?id=3055082" target="_blank" rel="noopener noreferrer">HarvOS: Efficient Code Instrumentation for Transiently-powered Embedded Devices</a>",
+                    <em>16th ACM/IEEE Conference on Information Processing in Sensor Networks (IPSN 2017)</em>, April 2017. <span class="core-rank rank-a">A</span>
+                    <a href="https://www.youtube.com/watch?v=XDZZ9Pnrs2E" target="_blank" rel="noopener noreferrer" style="color: red;">[Video Presentation]</a>
+                </li>
+                <li>
+                    <strong>Naveed Anwar Bhatti</strong> and Luca Mottola,
+                    "<a href="https://www.sics.se/~luca/papers/bhatti16efficient.pdf" target="_blank" rel="noopener noreferrer">Efficient State Retention for Transiently-powered Embedded Sensing</a>",
+                    <em>International Conference on Embedded Wireless Systems and Networks (EWSN 2016)</em>, Feb 2016. <span class="core-rank rank-b">B</span>
+                </li>
+                <li>
+                    Osama Haq, Zainab Abaid, <strong>Naveed Anwar Bhatti</strong>, Zaafar Ahmed and Affan A. Syed,
+                    "<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&arnumber=7249162&openedRefinements%3D*%26pageNumber%3D3%26rowsPerPage%3D100%26queryText%3D(control+plane+architecture)" target="_blank" rel="noopener noreferrer">SDN-inspired, Real-time Botnet Detection and Flow-blocking at ISP and Enterprise-level</a>",
+                    <em>IEEE International Conference on Communications (ICC 2015)</em>, June 2015.
+                </li>
+            </ul>
+        </div>
+        
+        <div class="publication-category clear-float">
+            <h3>Transactions and Journals (11)</h3>
     <ul class="modern-bullets">
       <li>
         
@@ -569,10 +561,10 @@
                         </span>
                     </li>
                </ul>
-  </div>
+        </div>
 
-  <div class="publication-category">
-    <h3>Posters (3)</h3>
+        <div class="publication-category">
+            <h3>Posters (3)</h3>
     <ul class="modern-bullets">
       <li>
         
@@ -600,10 +592,8 @@
                     </li>
                 </ul>
   </div>
-
-</section>
-    </div>
-
+    </section>
+    
     <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-4115-9889" href="https://orcid.org/0000-0003-4115-9889" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-4115-9889</a></div>
 </main>
     
