@@ -26,21 +26,25 @@ h5 {
     font-size: 16px; /* Optional: Adjust size to distinguish it from list items */
 }
 
-.container {	
-	margin: 0 0 10px 0;
-	width:800;
-	margin-left:auto;
-	margin-right:auto;
-	background: #fff;
-		
-	}
+.container {
+    margin: 0 auto 10px auto;
+    max-width: 800px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #minitabs {
 	margin-left: 0;
         margin-right:0;
-        text-align:center;
-	width:780;
-	padding: 10px 0 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0 20px 0;
 	border-bottom: 1px solid #A4A4A4;
         border-top: 1px solid #A4A4A4;
   
@@ -157,4 +161,25 @@ h1 {
       7px 7px 0px rgba(0, 0, 0, 0.2);
 
 }
+}.banner {
+    display: block;
+    margin: 0 auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-red { color: red; }
+.text-grey { color: grey; }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
 }
