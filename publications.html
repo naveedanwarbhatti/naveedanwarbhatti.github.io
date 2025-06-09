@@ -138,9 +138,9 @@
         #scholar-stats-container {
             float: right;
             width: 230px; 
-            margin-top: 5px; /* Adjust to align with content */
-            margin-left: 25px; /* Space to its left */
-            margin-bottom: 15px; /* Space below before text wraps */
+            margin-top: 5px;
+            margin-left: 25px;
+            margin-bottom: 15px;
         }
         #stats-table {
             font-size: 13px;
@@ -184,25 +184,30 @@
             padding: 8px 10px;
             border-bottom: 1px solid #ddd;
         }
+        
+        /* --- GRAPH STYLE CHANGES --- */
         #citation-graph {
             display: flex;
-            align-items: flex-end;
             justify-content: space-around;
-            height: 150px;
-            padding: 10px 5px 0 5px;
+            height: 170px; /* Increased height */
+            padding: 25px 5px 0 5px; /* Added padding-top for label space */
             position: relative;
             border: 1px solid #ddd;
             border-radius: 4px;
             overflow: hidden;
         }
         .graph-bar-item {
+            height: 100%; /* Makes the entire column a hover target */
             display: flex;
             flex-direction: column;
+            justify-content: flex-end; /* Pushes content to the bottom */
             align-items: center;
             flex: 1;
             text-align: center;
             position: relative;
         }
+        /* --- END OF CHANGES --- */
+
         .graph-bar {
             width: 60%;
             background-color: #1e3c72;
@@ -214,7 +219,7 @@
         }
         .bar-label {
             position: absolute;
-            top: -18px;
+            top: 0; /* Position label at the top of the container */
             left: 50%;
             transform: translateX(-50%);
             font-size: 11px;
@@ -252,7 +257,6 @@
         .core-rank.rank-b { background-color: #d8e47a; border: 1px solid #b7c15c; }
         .core-rank.rank-c { background-color: #e09a8f; border: 1px solid #c17e73; }
         
-        /* Utility class to clear the float */
         .clear-float {
             clear: both;
         }
@@ -607,10 +611,9 @@
     <p class="footer-note">© 2025 Naveed Anwar Bhatti. All rights reserved.</p>
 </footer>
 
-<!-- Script to render the stats -->
 <script type="text/javascript" src="scripts/renderStats.js"></script>
 
-<!-- Default Statcounter code for DEIB Naveed http://home.deib.polimi.it/bhatti/ -->
+<!-- Statcounter -->
 <script type="text/javascript">
 var sc_project=9665684; 
 var sc_invisible=1; 
@@ -618,7 +621,6 @@ var sc_security="193c50ed";
 </script>
 <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
 <noscript><div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/9665684/0/193c50ed/1/" alt="Web Analytics"></a></div></noscript>
-<!-- End of Statcounter Code -->
 
 </body>
 </html>
