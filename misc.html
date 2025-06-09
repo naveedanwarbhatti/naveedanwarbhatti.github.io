@@ -31,7 +31,7 @@
 
         /* --- CORRECTED NAVIGATION STYLES --- */
         .menu-icon {
-            display: none; /* Hidden by default on desktop */
+            display: none;
         }
         nav {
             background: #f4f4f4;
@@ -41,13 +41,13 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            justify-content: center; /* Center the nav items on desktop */
+            justify-content: center;
         }
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex; /* Display buttons in a row on desktop */
+            display: flex;
             justify-content: space-around;
             width: 100%;
             gap: 10px;
@@ -75,21 +75,20 @@
             border-color: #1e3c72 !important;
         }
         
-        /* --- RESPONSIVE STYLES FOR MOBILE --- */
-        @media (max-width: 768px) { /* Slightly wider breakpoint for better compatibility */
+        @media (max-width: 768px) {
             nav {
-                justify-content: flex-end; /* Align menu icon to the right */
+                justify-content: flex-end;
             }
             .menu-icon {
-                display: block; /* Show menu icon on mobile */
+                display: block;
                 font-size: 24px;
                 cursor: pointer;
             }
             nav ul {
-                display: none; /* Hide button list by default on mobile */
-                flex-direction: column; /* Stack buttons vertically */
+                display: none;
+                flex-direction: column;
                 position: absolute;
-                top: 100%; /* Position dropdown below the nav bar */
+                top: 100%;
                 left: 0;
                 right: 0;
                 background-color: #f4f4f4;
@@ -98,60 +97,36 @@
                 z-index: 100;
             }
             nav ul.show {
-                display: flex; /* Show the list when menu is clicked */
+                display: flex;
             }
             nav ul li {
                 width: 100%;
             }
             nav ul li a {
                 width: 90%;
-                margin: 5px auto; /* Center the buttons */
+                margin: 5px auto;
             }
         }
-		
-		/* Profile Image */
-        #idpic {
-            width: 35%;
-            height: auto;
-            float: right;
-            margin: 20px 0 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
 
-        /* Quote style */
-        .quote {
-            margin-bottom: 20px;
-            font-style: italic;
-            color: #555;
-            background: #f9f9f9;
-            padding: 10px;
-            border-left: 4px solid #ccc;
-            display: inline-block;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .quote .fa-quote-left, .quote .fa-quote-right {
-            font-size: 1.2rem;
-            color: #999;
-        }
-        .quote .fa-quote-left { margin-right: 8px; }
-        .quote .fa-quote-right { margin-left: 8px; }
-        .author {
-            display: block;
-            margin-top: 5px;
-            font-weight: bold;
+        .publication-category h3 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.25em;
             color: #333;
-            text-align: right;
         }
-
-        /* Footer */
+        ul.fa-ul {
+            list-style-type: none;
+            padding-left: 2em;
+        }
+        ul.fa-ul li {
+            margin-bottom: 10px;
+        }
         footer {
             margin-top: 40px;
             text-align: center;
             padding: 20px;
             color: #555;
-            clear: both; /* To handle the floated image */
         }
         .footer-note {
             font-size: 0.9rem;
@@ -195,6 +170,7 @@
         document.getElementById("nav-menu").classList.toggle("show");
     }
 </script>
+
 
 
 <main>
