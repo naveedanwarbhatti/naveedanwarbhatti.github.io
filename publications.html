@@ -237,6 +237,47 @@
       color: #1e3c72;
     }
 
+    /* Google Scholar metrics table */
+    .gsc_rsb_st {
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    .gsc_rsb_sth, .gsc_rsb_std {
+      padding: 4px 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+    .gsc_rsb_sth {
+      text-align: left;
+    }
+    .gsc_rsb_std {
+      text-align: right;
+    }
+
+    /* Google Scholar citation histogram */
+    .gsc_md_hist_w {
+      position: relative;
+      width: 440px;
+      height: 220px;
+    }
+    .gsc_md_hist_b {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .gsc_g_a {
+      position: absolute;
+      bottom: 0;
+      width: 32px;
+      background-color: #4d89f9;
+    }
+    .gsc_g_t {
+      position: absolute;
+      bottom: -20px;
+      font-size: 11px;
+    }
+
     </style>
 </head>
 <body>
@@ -283,7 +324,7 @@
 
 <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en"><img src="google_scholar.png" align="right" style="padding-top:30px;height: 500px;"></a>
 
-<table id="stats-table" style="margin-top:20px;border-collapse:collapse;" class="gsc_rsb_s gsc_prf_pnl">
+<table id="gsc_rsb_st" class="gsc_rsb_st gsc_prf_pnl">
   <thead>
     <tr>
       <th class="gsc_rsb_sth"></th>
@@ -293,6 +334,8 @@
   </thead>
   <tbody id="stats-table-body"></tbody>
 </table>
+
+<div id="citation-history" style="margin-top:20px;"></div>
 
 
 

@@ -46,10 +46,16 @@ def parse_publications(soup: BeautifulSoup):
     return pubs
 
 
+def parse_citation_history(soup: BeautifulSoup) -> str:
+    hist = soup.find("div", class_="gsc_md_hist_w")
+    return str(hist) if hist else ""
+
+
 def main():
     soup = fetch_page(PROFILE_URL)
     metrics = parse_metrics(soup)
     pubs = parse_publications(soup)
+    hist_html = parse_citation_history(soup)
 
     with open("publications_stats.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -60,6 +66,10 @@ def main():
         writer = csv.writer(f)
         writer.writerow(["Title", "Authors", "Venue", "Year", "Citations"])
         writer.writerows(pubs)
+
+    if hist_html:
+        with open("citation_history.html", "w", encoding="utf-8") as f:
+            f.write(hist_html)
 
 
 if __name__ == "__main__":
