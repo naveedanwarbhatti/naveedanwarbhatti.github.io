@@ -1,52 +1,148 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://naveedanwarbhatti.github.io/</loc>
-  <lastmod>2019-04-23T07:09:10+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://naveedanwarbhatti.github.io/publications.html</loc>
-  <lastmod>2019-04-23T07:09:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://naveedanwarbhatti.github.io/teaching.html</loc>
-  <lastmod>2019-04-23T07:09:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://naveedanwarbhatti.github.io/misc.html</loc>
-  <lastmod>2019-04-23T07:09:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://naveedanwarbhatti.github.io/contact.html</loc>
-  <lastmod>2019-04-23T07:09:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://naveedanwarbhatti.github.io/Naveed_CV.pdf</loc>
-  <lastmod>2019-04-23T07:09:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://naveedanwarbhatti.github.io/paper-dice-camera-ready.pdf</loc>
-  <lastmod>2019-04-23T07:09:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://naveedanwarbhatti.github.io/paper-epic-camera-ready.pdf</loc>
-  <lastmod>2019-04-23T07:09:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<?xml version="1.0" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/</loc>
+    <lastmod>2025-06-10T02:08:07+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/Form-S_1-1.pdf</loc>
+    <lastmod>2019-08-07T10:29:01+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/HCIA.pdf</loc>
+    <lastmod>2020-12-26T12:29:13+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC.html</loc>
+    <lastmod>2019-11-27T17:29:00+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture1(ITC).pdf</loc>
+    <lastmod>2019-10-30T10:50:24+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture12(ITC).pdf</loc>
+    <lastmod>2019-12-24T08:31:05+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture2(ITC).pdf</loc>
+    <lastmod>2019-10-31T18:27:50+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture3(ITC).pdf</loc>
+    <lastmod>2019-11-06T13:33:58+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture4(ITC).pdf</loc>
+    <lastmod>2019-11-09T15:11:36+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture5(ITC).pdf</loc>
+    <lastmod>2019-11-17T17:59:46+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture6(ITC).pdf</loc>
+    <lastmod>2019-11-20T15:25:42+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture7(ITC).pdf</loc>
+    <lastmod>2019-11-23T10:16:39+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/ITC/Lecture8(ITC).pdf</loc>
+    <lastmod>2019-11-27T17:29:00+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/JSA_bhatti.pdf</loc>
+    <lastmod>2021-02-19T12:24:23+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/Naveed_CV.pdf</loc>
+    <lastmod>2024-12-30T18:30:19+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/SCYDES.pdf</loc>
+    <lastmod>2024-06-06T12:16:05+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/blog.html</loc>
+    <lastmod>2017-01-26T17:26:59+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/contact.html</loc>
+    <lastmod>2025-06-10T02:08:07+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/css3-text-shadow-effects/index.html</loc>
+    <lastmod>2018-05-16T11:15:21+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/dice_tecs.pdf</loc>
+    <lastmod>2020-05-13T10:52:11+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/epic_tecs.pdf</loc>
+    <lastmod>2020-05-13T10:52:11+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/kashif_sysarc.pdf</loc>
+    <lastmod>2023-04-27T13:00:23+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/misc.html</loc>
+    <lastmod>2025-06-10T02:10:12+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/paper-dice-camera-ready.pdf</loc>
+    <lastmod>2019-05-09T09:56:14+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/paper-epic-camera-ready.pdf</loc>
+    <lastmod>2019-05-09T10:04:50+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/pitchIn.html</loc>
+    <lastmod>2023-05-18T12:07:34+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/pitchIn.pdf</loc>
+    <lastmod>2023-05-18T11:58:16+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/publications.html</loc>
+    <lastmod>2025-06-10T02:08:07+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/shah_IoT.pdf</loc>
+    <lastmod>2021-03-10T13:37:40+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/teaching.html</loc>
+    <lastmod>2025-06-10T02:08:07+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/thesis/160644_160564_BSCS_VIII_(A).pdf</loc>
+    <lastmod>2020-09-09T10:57:13+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/thesis/Etoile.pdf</loc>
+    <lastmod>2021-07-09T10:31:57+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/thesis/Report-FYP-III.pdf</loc>
+    <lastmod>2021-07-07T11:47:47+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/thesis/Responsify.pdf</loc>
+    <lastmod>2022-12-22T15:21:49+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/thesis/laser.pdf</loc>
+    <lastmod>2022-06-28T12:53:27+05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://naveedanwarbhatti.github.io/underwater_WPC.pdf</loc>
+    <lastmod>2020-05-13T11:58:08+05:00</lastmod>
+  </url>
 </urlset>
+
