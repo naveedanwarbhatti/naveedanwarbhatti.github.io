@@ -9,36 +9,32 @@ function renderStatsTable(text) {
     const headerLine = lines.shift();
     const headers = headerLine.split(',');
 
-    // Update table header
     const thead_tr = document.querySelector('#stats-table thead tr');
     if (thead_tr) {
-        thead_tr.innerHTML = ''; // Clear existing headers
+        thead_tr.innerHTML = '';
         headers.forEach(headerText => {
             const th = document.createElement('th');
             th.className = 'gsc_rsb_sth';
-            th.textContent = headerText || ''; // Handle empty header for the first column
+            th.textContent = headerText || '';
             thead_tr.appendChild(th);
         });
     }
 
-    // Update table body
     const tbody = document.getElementById('stats-table-body');
     if (!tbody) return;
-    tbody.innerHTML = ''; // Clear existing rows
+    tbody.innerHTML = '';
     lines.forEach(line => {
         const parts = line.split(',');
         const tr = document.createElement('tr');
         
-        // Create link for the metric name (e.g., Citations)
         const metricTd = document.createElement('td');
         const metricLink = document.createElement('a');
-        metricLink.href = 'https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en'; // Link to profile
+        metricLink.href = 'https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en';
         metricLink.target = '_blank';
         metricLink.textContent = parts[0];
         metricTd.appendChild(metricLink);
         tr.appendChild(metricTd);
 
-        // Add the other cells (All, Since YYYY)
         for (let i = 1; i < parts.length; i++) {
             const td = document.createElement('td');
             td.textContent = parts[i];
@@ -55,11 +51,11 @@ function renderStatsTable(text) {
 function renderCitationGraph(text) {
     const lines = text.trim().split(/\r?\n/);
     if (lines.length < 2) return;
-    lines.shift(); // remove header
+    lines.shift(); 
 
     const graphContainer = document.getElementById('citation-graph');
     if (!graphContainer) return;
-    graphContainer.innerHTML = ''; // Clear previous content
+    graphContainer.innerHTML = '';
 
     const historyData = lines.map(line => {
         const [year, citations] = line.split(',');
@@ -68,8 +64,12 @@ function renderCitationGraph(text) {
 
     if (historyData.length === 0) return;
 
+    // --- CHANGED HERE: REVERSE THE ORDER FOR ASCENDING YEARS ---
+    historyData.reverse();
+
     const maxCitations = Math.max(...historyData.map(d => d.citations));
-    const graphHeight = 140; // Max height of a bar in pixels
+    // --- CHANGED HERE: REDUCED HEIGHT FOR BUFFER ---
+    const graphHeight = 135; 
 
     historyData.forEach(data => {
         const barItem = document.createElement('div');
@@ -99,23 +99,15 @@ function renderCitationGraph(text) {
  * Main function to load all scholar-related data.
  */
 function loadScholarData() {
-    // Fetch and render the stats table
     fetch('publications_stats.csv')
-        .then(res => {
-            if (!res.ok) throw new Error(`Failed to load publications_stats.csv: ${res.statusText}`);
-            return res.text();
-        })
+        .then(res => res.ok ? res.text() : Promise.reject(`Failed to load publications_stats.csv`))
         .then(text => renderStatsTable(text))
         .catch(e => console.error(e));
 
-    // Fetch and render the citation graph
     fetch('citation_history.csv')
         .then(res => {
-            if (res.status === 404) {
-                console.log('citation_history.csv not found, skipping graph.');
-                return null;
-            }
-            if (!res.ok) throw new Error(`Failed to load citation_history.csv: ${res.statusText}`);
+            if (res.status === 404) return null;
+            if (!res.ok) return Promise.reject(`Failed to load citation_history.csv`);
             return res.text();
         })
         .then(text => {
@@ -126,5 +118,4 @@ function loadScholarData() {
         .catch(e => console.error(e));
 }
 
-// Run the function after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', loadScholarData);
