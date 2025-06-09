@@ -45,7 +45,7 @@ function renderStatsTable(text) {
 }
 
 /**
- * Renders the citation history graph from CSV data.
+ * Renders the citation history graph from CSV data for the last 8 years.
  * @param {string} text - The CSV data as a string.
  */
 function renderCitationGraph(text) {
@@ -62,16 +62,20 @@ function renderCitationGraph(text) {
         return { year, citations: parseInt(citations, 10) || 0 };
     });
 
-    if (historyData.length === 0) return;
+    // --- NEW: Slice the array to get only the last 8 years ---
+    // The CSV from the scraper is sorted newest-to-oldest, so slice(0, 8) gets the 8 most recent years.
+    const recentHistory = historyData.slice(0, 8);
 
-    // --- CHANGED HERE: REVERSE THE ORDER FOR ASCENDING YEARS ---
-    historyData.reverse();
+    if (recentHistory.length === 0) return;
 
-    const maxCitations = Math.max(...historyData.map(d => d.citations));
-    // --- CHANGED HERE: REDUCED HEIGHT FOR BUFFER ---
+    // Reverse the recent history for ascending year display on the graph (oldest on left)
+    recentHistory.reverse();
+
+    const maxCitations = Math.max(...recentHistory.map(d => d.citations));
     const graphHeight = 135; 
 
-    historyData.forEach(data => {
+    // Iterate over the sliced and reversed data
+    recentHistory.forEach(data => {
         const barItem = document.createElement('div');
         barItem.className = 'graph-bar-item';
 
