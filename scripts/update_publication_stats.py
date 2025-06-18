@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import re
 
-PROFILE_URL = "https://scholar.google.com.pk/citations?hl=en&user=6ZB86uYAAAAJ"
+PROFILE_URL = "https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100 Safari/537.36"
