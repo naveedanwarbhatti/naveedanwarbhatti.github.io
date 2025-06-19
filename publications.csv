@@ -1,11 +1,11 @@
 Title,Authors,Venue,Year,Citations
-Energy harvesting and wireless transfer in sensor network applications: Concepts and experiences,"NA Bhatti, MH Alizai, AA Syed, L Mottola","ACM Transactions on Sensor Networks (TOSN) 12 (3), 1-40, 2016",2016,188
-HarvOS: Efficient code instrumentation for transiently-powered embedded sensing,"NA Bhatti, L Mottola","Int. Conf. Information Processing in Sensor Networks (IPSN). The Association …, 2017",2017,157
+Energy harvesting and wireless transfer in sensor network applications: Concepts and experiences,"NA Bhatti, MH Alizai, AA Syed, L Mottola","ACM Transactions on Sensor Networks (TOSN) 12 (3), 1-40, 2016",2016,187
+HarvOS: Efficient code instrumentation for transiently-powered embedded sensing,"NA Bhatti, L Mottola","Int. Conf. Information Processing in Sensor Networks (IPSN). The Association …, 2017",2017,158
 Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus,"M Afanasov, NA Bhatti, D Campagna, G Caslini, FM Centonze, K Dolui, ...","ACM Conference on Embedded Networked Sensor Systems, 2020",2020,105
-Efficient Intermittent Computing with Differential Checkpointing,"S Ahmed, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools …, 2019",2019,84
-Efficient State Retention for Transiently-powered Embedded Sensing.,"NA Bhatti, L Mottola","International Conference on Embedded Wireless Systems and Networks (EWSN …, 2016",2016,73
-MUHAFIZ: IoT-based track recording vehicle for the damage analysis of the railway track,"AA Shah, NA Bhatti, K Dev, BS Chowdhry","IEEE Internet of Things Journal (IoT) 8 (11), 9397-9406, 2021",2021,50
-Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy,"DK Soother, SM Ujjan, K Dev, SA Khowaja, NA Bhatti, T Hussain","Journal of Parallel and Distributed Computing 160, 90-99, 2021",2021,43
+Efficient Intermittent Computing with Differential Checkpointing,"S Ahmed, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools …, 2019",2019,85
+Efficient State Retention for Transiently-powered Embedded Sensing.,"NA Bhatti, L Mottola","International Conference on Embedded Wireless Systems and Networks (EWSN …, 2016",2016,74
+MUHAFIZ: IoT-based track recording vehicle for the damage analysis of the railway track,"AA Shah, NA Bhatti, K Dev, BS Chowdhry","IEEE Internet of Things Journal (IoT) 8 (11), 9397-9406, 2021",2021,51
+Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy,"DK Soother, SM Ujjan, K Dev, SA Khowaja, NA Bhatti, T Hussain","Journal of Parallel and Distributed Computing 160, 90-99, 2021",2021,45
 Comparative Analysis of Bio‑Inspired Algorithms for Underwater Wireless Sensor Networks,"SS Zehra, R Qureshi, K Dev, S Shahid, NA Bhatti","Wireless Personal Communications (WPC), Springer, 2020",2020,35
 The Betrayal of Constant Power× Time: Finding the Missing Joules of Transiently-Powered Computers,"S Ahmed, A Bakar, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","20th ACM SIGPLAN / SIGBED 2019 Conference on Languages, Compilers, and Tools …, 2019",2019,33
 Fast and Energy-efficient State Checkpointing for Intermittent Computing,"S Ahmed, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","ACM Transactions on Embedded Computing Systems (TECS), 2020",2020,24

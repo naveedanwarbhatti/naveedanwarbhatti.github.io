@@ -2,19 +2,64 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import re
+import random
+import time
 
 PROFILE_URL = "https://scholar.google.com.pk/citations?hl=en&user=6ZB86uYAAAAJ"
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100 Safari/537.36"
-}
+# A list of common user agents to rotate through for each request
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
+]
 
-def fetch_page(url: str) -> BeautifulSoup:
-    """Fetches and parses a URL, returning a BeautifulSoup object."""
-    resp = requests.get(url, headers=HEADERS, timeout=30)
-    resp.raise_for_status()
-    return BeautifulSoup(resp.text, "html.parser")
+def get_headers() -> dict:
+    """
+    Returns a dictionary of headers to mimic a real browser.
+    A random User-Agent is chosen for each request.
+    """
+    return {
+        "User-Agent": random.choice(USER_AGENTS),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://www.google.com/",
+        "DNT": "1",  # Do Not Track
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1"
+    }
 
+def fetch_page(url: str, max_retries: int = 3, delay: int = 5) -> BeautifulSoup:
+    """
+    Fetches and parses a URL, returning a BeautifulSoup object.
+    Includes retries with exponential backoff to handle temporary blocks.
+    """
+    for attempt in range(max_retries):
+        try:
+            print(f"Attempt {attempt + 1} of {max_retries} to fetch {url}...")
+            resp = requests.get(url, headers=get_headers(), timeout=30)
+
+            # Check for block pages that might return a 200 OK status
+            if "Our systems have detected unusual traffic" in resp.text:
+                raise requests.exceptions.RequestException("Blocked by Google Scholar (CAPTCHA or error page)")
+
+            resp.raise_for_status()  # Raises HTTPError for bad responses (4xx or 5xx)
+            return BeautifulSoup(resp.text, "html.parser")
+
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching page: {e}")
+            if attempt < max_retries - 1:
+                wait_time = delay * (2 ** attempt)  # Exponential backoff: 5s, 10s, 20s
+                print(f"Waiting {wait_time} seconds before retrying...")
+                time.sleep(wait_time)
+            else:
+                print("Max retries reached. Failing.")
+                raise  # Re-raise the last exception if all retries fail
+    return None
 
 def parse_metrics(soup: BeautifulSoup):
     """Parses the main citation metrics (Citations, h-index, i10-index)."""
@@ -53,65 +98,69 @@ def parse_publications(soup: BeautifulSoup):
 def parse_citation_history_from_main_page(soup: BeautifulSoup):
     """
     Parses the year-by-year citation history directly from the graph
-    on the main profile page. This is more reliable than a second request.
+    on the main profile page.
     """
     history = []
     graph_container = soup.find("div", class_="gsc_md_hist_b")
     if not graph_container:
         return history
 
-    # Get the years and the citation counts
     years = [y.get_text(strip=True) for y in graph_container.select(".gsc_g_t")]
     counts = [c.get_text(strip=True) for c in graph_container.select(".gsc_g_al")]
     
-    # Combine them into a list of [year, count]
-    # We zip them together and reverse the list to have the most recent year first
     history = list(zip(years, counts))
     history.reverse()
-
     return history
 
 
 def main():
     """Main function to scrape all data and write to CSV files."""
-    print("Fetching data from Google Scholar...")
-    
-    # Scrape the main profile page just once
-    profile_soup = fetch_page(PROFILE_URL)
-    
-    # --- Parse Metrics ---
-    metrics = parse_metrics(profile_soup)
-    header_cells = profile_soup.select("#gsc_rsb_st th")
-    metric_headers = [h.get_text(strip=True) for h in header_cells]
-    if not metric_headers:
-        metric_headers = ["Metric", "All", "Since 2020"] # Fallback
-
-    with open("publications_stats.csv", "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(metric_headers)
-        writer.writerows(metrics)
-    print("Successfully wrote publications_stats.csv")
-
-    # --- Parse Publications ---
-    pubs = parse_publications(profile_soup)
-    with open("publications.csv", "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["Title", "Authors", "Venue", "Year", "Citations"])
-        writer.writerows(pubs)
-    print("Successfully wrote publications.csv")
-
-    # --- Parse Citation History (New Method) ---
-    history = parse_citation_history_from_main_page(profile_soup)
-    if history:
-        with open("citation_history.csv", "w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow(["Year", "Citations"])
-            writer.writerows(history)
-        print("Successfully wrote citation_history.csv")
-    else:
-        print("Could not find citation history data on the main page.")
+    try:
+        print("Fetching data from Google Scholar...")
+        profile_soup = fetch_page(PROFILE_URL)
         
-    print("\nAll tasks completed.")
+        if not profile_soup:
+            print("Failed to fetch profile page after multiple retries.")
+            return
+
+        # --- Parse Metrics ---
+        metrics = parse_metrics(profile_soup)
+        header_cells = profile_soup.select("#gsc_rsb_st th")
+        metric_headers = [h.get_text(strip=True) for h in header_cells]
+        if not metric_headers:
+            metric_headers = ["Metric", "All", "Since 2020"] # Fallback
+
+        with open("publications_stats.csv", "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(metric_headers)
+            writer.writerows(metrics)
+        print("Successfully wrote publications_stats.csv")
+
+        # --- Parse Publications ---
+        pubs = parse_publications(profile_soup)
+        with open("publications.csv", "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["Title", "Authors", "Venue", "Year", "Citations"])
+            writer.writerows(pubs)
+        print("Successfully wrote publications.csv")
+
+        # --- Parse Citation History ---
+        history = parse_citation_history_from_main_page(profile_soup)
+        if history:
+            with open("citation_history.csv", "w", newline="", encoding="utf-8") as f:
+                writer = csv.writer(f)
+                writer.writerow(["Year", "Citations"])
+                writer.writerows(history)
+            print("Successfully wrote citation_history.csv")
+        else:
+            print("Could not find citation history data on the main page.")
+            
+        print("\nAll tasks completed.")
+
+    except Exception as e:
+        print(f"\nAn unexpected error occurred: {e}")
+        # Exit with a non-zero status code to indicate failure in the workflow
+        exit(1)
 
 if __name__ == "__main__":
     main()
