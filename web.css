@@ -28,7 +28,8 @@ body {
   font-family: var(--font-sans);
   color: var(--text);
   background: linear-gradient(160deg, #f7fbff 0%, #e6f1fc 45%, #f9fdff 100%);
-  line-height: 1.7;
+  font-size: 0.94rem;
+  line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -52,9 +53,9 @@ a:focus {
 }
 
 main {
-  width: min(1100px, 92%);
+  width: min(1040px, 92%);
   margin: 0 auto;
-  padding: 2rem 0 5rem;
+  padding: 1.5rem 0 4rem;
   flex: 1;
 }
 
@@ -69,15 +70,15 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-size: clamp(2.1rem, 3.6vw, 2.8rem);
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.6rem, 2.6vw, 2rem);
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2.3vw, 1.6rem);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
 }
 
 p {
@@ -96,13 +97,13 @@ p {
 }
 
 .nav-container {
-  width: min(1100px, 92%);
+  width: min(1040px, 92%);
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 0;
-  gap: 1rem;
+  padding: 0.7rem 0;
+  gap: 0.75rem;
   position: relative;
 }
 
@@ -118,11 +119,11 @@ p {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: 0.015em;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .brand-role {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-muted);
   letter-spacing: 0.05em;
@@ -163,7 +164,7 @@ p {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
 }
@@ -175,8 +176,8 @@ p {
 .nav-links a {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.55rem 0.95rem;
+  gap: 0.35rem;
+  padding: 0.5rem 0.9rem;
   font-weight: 500;
   color: var(--text);
   border-radius: 999px;
@@ -185,7 +186,7 @@ p {
 
 .nav-links a i {
   color: var(--accent);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .nav-links a:hover,
@@ -208,7 +209,7 @@ p {
 }
 
 .hero {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   background: linear-gradient(135deg, rgba(207, 231, 255, 0.6), rgba(255, 255, 255, 0.92));
   border-radius: var(--radius-lg);
   padding: clamp(2.5rem, 5vw, 4rem);
@@ -221,34 +222,34 @@ p {
 .hero-text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .hero-eyebrow {
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.2em;
   color: var(--accent);
   font-weight: 600;
 }
 
 .hero-lead {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   color: var(--text);
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
-  padding: 0.7rem 1.4rem;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 999px;
   font-weight: 600;
   border: none;
@@ -294,7 +295,7 @@ p {
   font-weight: 600;
   white-space: nowrap;
   letter-spacing: 0.01em;
-  font-size: clamp(1.9rem, 3.1vw, 2.6rem);
+  font-size: clamp(1.75rem, 2.8vw, 2.4rem);
 }
 
 .hero-portrait {
@@ -312,49 +313,49 @@ p {
 
 .portrait-frame img {
   border-radius: 24px;
-  width: clamp(180px, 26vw, 220px);
+  width: clamp(170px, 24vw, 210px);
 }
 
 .content-section {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .section-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  max-width: 780px;
+  gap: 0.5rem;
+  max-width: 760px;
 }
 
 .section-title {
-  font-size: clamp(1.65rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
   margin: 0;
 }
 
 .section-intro {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .content-card {
   background: var(--surface);
   border-radius: var(--radius-lg);
-  padding: clamp(1.8rem, 3vw, 2.4rem);
+  padding: clamp(1.6rem, 2.7vw, 2.1rem);
   box-shadow: var(--shadow);
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .feature-card {
   background: var(--surface);
   border-radius: var(--radius-md);
-  padding: 1.6rem;
-  box-shadow: 0 18px 35px rgba(31, 77, 108, 0.08);
+  padding: 1.4rem;
+  box-shadow: 0 16px 32px rgba(31, 77, 108, 0.08);
   border: 1px solid rgba(79, 163, 199, 0.15);
 }
 
@@ -364,7 +365,7 @@ p {
 
 .feature-card p {
   margin: 0;
-  font-size: 0.98rem;
+  font-size: 0.92rem;
 }
 
 .spotlight-card {
@@ -375,7 +376,7 @@ p {
 .quote-card {
   background: linear-gradient(135deg, rgba(79, 163, 199, 0.15), rgba(255, 255, 255, 0.95));
   border-radius: var(--radius-lg);
-  padding: clamp(2rem, 4vw, 3rem);
+  padding: clamp(1.8rem, 3.6vw, 2.6rem);
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
@@ -394,9 +395,9 @@ p {
 .quote-card blockquote {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
   color: var(--primary-strong);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .quote-card figcaption {
@@ -412,10 +413,10 @@ p {
 .cta-card {
   background: linear-gradient(135deg, #dbefff, #f6fbff);
   border-radius: var(--radius-lg);
-  padding: clamp(2rem, 4vw, 3rem);
+  padding: clamp(1.8rem, 3.6vw, 2.6rem);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.85rem;
   align-items: flex-start;
   box-shadow: var(--shadow);
 }
@@ -423,14 +424,14 @@ p {
 .cta-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 
 .contact-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.6rem;
   align-items: flex-start;
 }
 
@@ -438,7 +439,7 @@ p {
   flex: 1 1 280px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .contact-panel h2 {
@@ -468,13 +469,13 @@ footer {
 }
 
 .footer-container {
-  width: min(1100px, 92%);
+  width: min(1040px, 92%);
   margin: 0 auto;
-  padding: 2.5rem 0 2rem;
+  padding: 2rem 0 1.8rem;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1.2rem;
 }
 
 .social-links {
@@ -484,8 +485,8 @@ footer {
 }
 
 .social-links a {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -504,7 +505,7 @@ footer {
 
 .footer-note {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 0;
 }
 
@@ -736,7 +737,7 @@ footer {
 
 .logo-section,
 .artwork-section {
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
 }
 
 .logo-section h2,
@@ -747,8 +748,8 @@ footer {
 .logo-gallery,
 .artwork-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
 }
 
 .logo-gallery img,
@@ -775,9 +776,9 @@ form input,
 form textarea {
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  padding: 0.7rem 0.9rem;
+  padding: 0.65rem 0.85rem;
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 0.95rem;
   background: rgba(255, 255, 255, 0.9);
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
@@ -794,16 +795,20 @@ form button {
 }
 
 .page-hero {
-  margin-top: 3rem;
+  margin-top: 2.6rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(140deg, rgba(207, 231, 255, 0.65), rgba(255, 255, 255, 0.95));
-  padding: clamp(2.2rem, 4vw, 3rem);
+  background: linear-gradient(140deg, rgba(207, 231, 255, 0.6), rgba(255, 255, 255, 0.95));
+  padding: clamp(2rem, 3.6vw, 2.7rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   box-shadow: var(--shadow);
 }
 
 .page-hero p {
   max-width: 720px;
   margin-bottom: 0;
+  font-size: 0.95rem;
 }
 
 blockquote {
