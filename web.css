@@ -740,30 +740,31 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.2rem 0.65rem;
+  width: 2.6rem;
+  padding: 0.25rem 0;
   font-size: 0.75rem;
   font-weight: 600;
   margin-left: 0.35rem;
 }
 
 .rank-as {
-  background: #1f845f;
-  color: #fff;
+  background: #85fa7d;
+  color: #1b1b1b;
 }
 
 .rank-a {
-  background: #276fbf;
-  color: #fff;
+  background: #c4fa7d;
+  color: #1b1b1b;
 }
 
 .rank-b {
-  background: #7c4dff;
-  color: #fff;
+  background: #faf27d;
+  color: #1b1b1b;
 }
 
 .rank-c {
-  background: #ff7f50;
-  color: #fff;
+  background: #fac17d;
+  color: #1b1b1b;
 }
 
 .logo-section,
