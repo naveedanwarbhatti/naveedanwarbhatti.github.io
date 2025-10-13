@@ -363,6 +363,16 @@ p {
   margin-bottom: 0.6rem;
 }
 
+.feature-card .project-title {
+  display: block;
+}
+
+.feature-card .project-venue {
+  display: block;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
 .feature-card p {
   margin: 0;
   font-size: 0.92rem;
