@@ -690,7 +690,28 @@ footer {
 .publication-category h3 {
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
-  color: var(--primary-strong);
+  color: #000;
+}
+
+.category-divider {
+  border: none;
+  border-top: 2px solid rgba(31, 77, 108, 0.2);
+  margin: 2.5rem 0 2rem;
+}
+
+.category-conferences .modern-bullets li {
+  border-left: 4px solid #e1fad4;
+  padding-left: 1.05rem;
+}
+
+.category-journals .modern-bullets li {
+  border-left: 4px solid #d4f4fa;
+  padding-left: 1.05rem;
+}
+
+.category-posters .modern-bullets li {
+  border-left: 4px solid #fadad4;
+  padding-left: 1.05rem;
 }
 
 .modern-bullets {
