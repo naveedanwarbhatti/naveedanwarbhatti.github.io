@@ -544,13 +544,14 @@ footer {
 #scholar-stats-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  align-items: stretch;
+  gap: 1.25rem;
 }
 
 #stats-table {
   border-collapse: collapse;
-  width: 320px;
-  min-width: 280px;
+  width: clamp(220px, 28vw, 260px);
+  min-width: 220px;
   background: var(--surface);
   box-shadow: var(--shadow);
   border-radius: var(--radius-md);
@@ -559,10 +560,11 @@ footer {
 
 #stats-table th,
 #stats-table td {
-  padding: 0.85rem 1rem;
+  padding: 0.65rem 0.85rem;
   border-bottom: 1px solid var(--border);
   color: var(--text);
   text-align: left;
+  font-size: 0.95rem;
 }
 
 #stats-table tbody tr:last-child td {
@@ -576,6 +578,8 @@ footer {
   border-radius: var(--radius-md);
   padding: 1.4rem;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
 }
 
 .citation-graph-title {
@@ -585,8 +589,61 @@ footer {
 }
 
 #citation-graph {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
   width: 100%;
-  height: 320px;
+  flex: 1;
+  min-height: 220px;
+}
+
+.graph-bar-item {
+  flex: 1 1 0;
+  max-width: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-muted);
+}
+
+.graph-bar {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 168, 82, 0.9), rgba(255, 210, 150, 0.85));
+  border-radius: var(--radius-sm);
+  transition: transform 0.2s ease;
+}
+
+.graph-bar-item:hover .graph-bar {
+  transform: translateY(-4px);
+}
+
+.bar-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-strong);
+}
+
+.year-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  #scholar-stats-container {
+    flex-direction: column;
+  }
+
+  #citation-graph {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .graph-bar-item {
+    max-width: 2.75rem;
+  }
 }
 
 .featured-research {
@@ -605,7 +662,7 @@ footer {
 }
 
 .highlight {
-  background: linear-gradient(135deg, rgba(79, 163, 199, 0.18), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(135deg, rgba(255, 183, 77, 0.2), rgba(255, 248, 235, 0.95));
   border-radius: var(--radius-md);
   padding: 1.25rem;
   display: flex;
