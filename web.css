@@ -1216,9 +1216,12 @@ blockquote {
 @media (max-width: 960px) {
   .brand {
     gap: 0.6rem;
+	align-items: center;
   }
 
   .brand-divider {
+	display: inline-block;
+    align-self: stretch;
     min-height: 40px;
   }
 
