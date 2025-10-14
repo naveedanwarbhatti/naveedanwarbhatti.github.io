@@ -767,9 +767,56 @@ footer {
   color: #1b1b1b;
 }
 
+
+.misc-page main {
+  padding: 1rem 0 3rem;
+}
+
+.misc-page .content-card {
+  padding: clamp(1.2rem, 2.1vw, 1.7rem);
+}
+
+.misc-page .content-card-intro {
+  margin: 0 0 0.9rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.misc-page .section-subheading {
+  margin: 0.4rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.misc-page .section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+  margin: 1.2rem 0 0.8rem;
+}
+
+.misc-page .section-heading i {
+  color: var(--accent);
+  font-size: 0.9em;
+}
+
+.misc-page .section-subheading i {
+  color: var(--accent);
+}
+
+.misc-page .section-divider {
+  border: none;
+  border-top: 1px solid rgba(31, 77, 108, 0.18);
+  margin: 1.1rem 0;
+}
+
 .logo-section,
 .artwork-section {
-  margin-top: 2.2rem;
+  margin-top: 2rem;
 }
 
 .logo-section h2,
