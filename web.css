@@ -109,9 +109,15 @@ p {
 
 .brand {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   color: var(--primary-strong);
   text-decoration: none;
+  gap: 0.85rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
   gap: 0.1rem;
 }
 
@@ -120,14 +126,32 @@ p {
   font-weight: 600;
   letter-spacing: 0.015em;
   font-size: 1.15rem;
+  line-height: 1.1;
 }
 
 .brand-role {
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 600;
   color: var(--text-muted);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+.brand-divider {
+  align-self: stretch;
+  width: 2px;
+  min-height: 48px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(44, 107, 148, 0.8) 0%,
+    rgba(44, 107, 148, 0.25) 100%
+  );
+}
+
+.brand-logo {
+  height: 34px;
+  width: auto;
 }
 
 .primary-nav {
@@ -1035,6 +1059,18 @@ blockquote {
 }
 
 @media (max-width: 960px) {
+  .brand {
+    gap: 0.6rem;
+  }
+
+  .brand-divider {
+    min-height: 40px;
+  }
+
+  .brand-logo {
+    height: 29px;
+  }
+
   .menu-toggle {
     display: inline-flex;
     flex-direction: column;
@@ -1067,6 +1103,27 @@ blockquote {
 }
 
 @media (max-width: 600px) {
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .brand-role {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+  }
+
+  .brand-divider {
+    min-height: 32px;
+  }
+
+  .brand-logo {
+    height: 24px;
+  }
+
   .hero {
     padding: 2rem;
   }
