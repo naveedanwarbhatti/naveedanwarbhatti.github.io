@@ -1267,6 +1267,10 @@ blockquote {
     align-items: flex-start;
   }
 
+  .brand-name {
+    font-size: clamp(1.1rem, 6.4vw, 1.35rem);
+  }
+
   .brand-text {
     align-items: flex-start;
   }
