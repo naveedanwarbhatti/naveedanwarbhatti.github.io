@@ -1264,7 +1264,7 @@ blockquote {
 
   .brand {
     gap: 0.45rem;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .brand-name {
@@ -1276,11 +1276,13 @@ blockquote {
   }
 
   .brand-divider {
-    display: none;
+    display: inline-block;
+    align-self: stretch;
+    min-height: 36px;
   }
 
   .brand-logo {
-    height: 27.5px;
+    height: 30px;
   }
 
   .hero {
