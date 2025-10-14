@@ -110,15 +110,22 @@ p {
 .brand {
   display: flex;
   align-items: center;
-  color: var(--primary-strong);
-  text-decoration: none;
   gap: 0.85rem;
+  color: var(--primary-strong);
+}
+
+.brand-home {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
+  align-items: flex-start;
 }
 
 .brand-name {
@@ -130,11 +137,13 @@ p {
 }
 
 .brand-role {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  width: 100%;
+  text-align: center;
 }
 
 .brand-divider {
@@ -147,6 +156,12 @@ p {
     rgba(44, 107, 148, 0.8) 0%,
     rgba(44, 107, 148, 0.25) 100%
   );
+}
+
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .brand-logo {
