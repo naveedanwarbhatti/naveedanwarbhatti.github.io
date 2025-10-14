@@ -341,6 +341,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 }
 
 .portrait-frame {
@@ -353,6 +354,40 @@ p {
 .portrait-frame img {
   border-radius: 24px;
   width: clamp(170px, 24vw, 210px);
+}
+
+.role-banner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  background: linear-gradient(180deg, rgba(79, 163, 199, 0.15), rgba(79, 163, 199, 0.55));
+  color: var(--primary-strong);
+  padding: 1.5rem 0.65rem;
+  border-radius: 999px;
+  box-shadow: 0 18px 36px rgba(31, 77, 108, 0.18);
+  letter-spacing: 0.35em;
+}
+
+.role-banner span {
+  letter-spacing: 0.35em;
+}
+
+@media (max-width: 640px) {
+  .hero-portrait {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .role-banner {
+    writing-mode: horizontal-tb;
+    padding: 0.5rem 1.5rem;
+    letter-spacing: 0.3em;
+  }
 }
 
 .content-section {
