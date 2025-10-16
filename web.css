@@ -1571,7 +1571,16 @@ footer {
 }
 
 .misc-page .video-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.misc-page .video-item {
+  display: flex;
+  width: 100%;
+}
+
+.misc-page .video-item .embed-wrapper {
+  width: 100%;
 }
 
 .misc-page .map-layout {
