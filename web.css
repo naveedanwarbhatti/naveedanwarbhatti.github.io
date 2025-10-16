@@ -534,7 +534,7 @@ p {
 .activity-header {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1.5rem;
 }
 
