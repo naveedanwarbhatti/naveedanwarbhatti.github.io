@@ -27,6 +27,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const paperPanels = document.querySelectorAll('.paper-panel[data-url]');
+
+  paperPanels.forEach((panel) => {
+    const { url, target = '_self', rel = '' } = panel.dataset;
+    if (!url) {
+      return;
+    }
+
+    const openLink = (forcedTarget) => {
+      const finalTarget = forcedTarget ?? target;
+
+      if (!finalTarget || finalTarget === '_self') {
+        window.location.assign(url);
+        return;
+      }
+
+      const newWindow = window.open(url, finalTarget);
+      if (newWindow && rel.includes('noopener')) {
+        newWindow.opener = null;
+      }
+    };
+
+    panel.addEventListener('click', (event) => {
+      const targetElement = event.target;
+      if (targetElement instanceof Element && targetElement.closest('a')) {
+        return;
+      }
+      if (event.metaKey || event.ctrlKey) {
+        openLink('_blank');
+        return;
+      }
+      openLink();
+    });
+
+    panel.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') {
+        return;
+      }
+      event.preventDefault();
+      openLink();
+    });
+
+    panel.addEventListener('auxclick', (event) => {
+      if (event.button !== 1) {
+        return;
+      }
+      event.preventDefault();
+      openLink('_blank');
+    });
+  });
+
   const NAME_FULL = 'Naveed Anwar Bhatti';
   const NAME_SHORT = 'Naveed Bhatti';
   const nameNodes = [];
@@ -53,26 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
     nameNodes.push({ node, original: node.nodeValue });
   }
 
-  if (!nameNodes.length) {
-    return;
+  if (nameNodes.length) {
+    const applyNameVariant = () => {
+      const useShort = window.innerWidth <= 640;
+      nameNodes.forEach(({ node, original }) => {
+        node.nodeValue = useShort
+          ? original.replaceAll(NAME_FULL, NAME_SHORT)
+          : original;
+      });
+    };
+
+    applyNameVariant();
+
+    let resizeTimeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(applyNameVariant, 150);
+    };
+
+    window.addEventListener('resize', handleResize);
   }
-
-  const applyNameVariant = () => {
-    const useShort = window.innerWidth <= 640;
-    nameNodes.forEach(({ node, original }) => {
-      node.nodeValue = useShort
-        ? original.replaceAll(NAME_FULL, NAME_SHORT)
-        : original;
-    });
-  };
-
-  applyNameVariant();
-
-  let resizeTimeout;
-  const handleResize = () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(applyNameVariant, 150);
-  };
-
-  window.addEventListener('resize', handleResize);
 });
