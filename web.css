@@ -1134,6 +1134,38 @@ footer {
   font-weight: 600;
   color: var(--primary-strong);
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.stats-title-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  display: block;
+  border-radius: 0;
+}
+
+.stats-title-text {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.stats-title-main {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.stats-title-source {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.82em;
+  color: var(--primary-strong);
+  opacity: 0.85;
 }
 
 .highlight-container {
