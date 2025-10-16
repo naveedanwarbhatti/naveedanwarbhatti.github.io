@@ -1349,21 +1349,6 @@ footer {
   margin: 2.5rem 0 2rem;
 }
 
-.category-conferences .modern-bullets li {
-  border-left: 4px solid #e1fad4;
-  padding-left: 1.05rem;
-}
-
-.category-journals .modern-bullets li {
-  border-left: 4px solid #d4f4fa;
-  padding-left: 1.05rem;
-}
-
-.category-posters .modern-bullets li {
-  border-left: 4px solid #fadad4;
-  padding-left: 1.05rem;
-}
-
 .modern-bullets {
   list-style: none;
   padding: 0;
@@ -1372,17 +1357,93 @@ footer {
   gap: 1rem;
 }
 
-.modern-bullets li {
+.modern-bullets .paper-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
   background: var(--surface);
   border: 1px solid rgba(79, 163, 199, 0.18);
   border-radius: var(--radius-md);
-  padding: 1rem 1.25rem;
+  padding: 1rem 1.3rem 1.1rem 1.7rem;
   box-shadow: 0 12px 24px rgba(31, 77, 108, 0.08);
   color: var(--text);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.modern-bullets a {
+.modern-bullets .paper-panel::before {
+  content: "";
+  position: absolute;
+  top: 0.85rem;
+  bottom: 0.85rem;
+  left: 0.9rem;
+  width: 0.35rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--panel-accent-strong, var(--accent)), var(--panel-accent-soft, rgba(79, 163, 199, 0.35)));
+  transition: transform 0.25s ease, width 0.25s ease, box-shadow 0.25s ease;
+}
+
+.modern-bullets .paper-panel:hover,
+.modern-bullets .paper-panel:focus-visible {
+  transform: translateX(6px);
+  box-shadow: 0 18px 32px rgba(31, 77, 108, 0.14);
+  border-color: rgba(79, 163, 199, 0.28);
+}
+
+.modern-bullets .paper-panel:hover::before,
+.modern-bullets .paper-panel:focus-visible::before {
+  transform: translateX(-6px);
+  width: 0.55rem;
+  box-shadow: 0 0 0 4px var(--panel-accent-glow, rgba(79, 163, 199, 0.12));
+}
+
+.modern-bullets .paper-panel:focus-visible {
+  box-shadow: 0 0 0 3px rgba(79, 163, 199, 0.25), 0 18px 32px rgba(31, 77, 108, 0.14);
+}
+
+.paper-title strong {
+  display: block;
   font-weight: 600;
+  color: var(--primary-strong);
+  transition: color 0.25s ease;
+}
+
+.modern-bullets .paper-panel:hover .paper-title strong,
+.modern-bullets .paper-panel:focus-visible .paper-title strong {
+  color: var(--accent);
+}
+
+.modern-bullets .paper-panel .pub-meta,
+.modern-bullets .paper-panel .pub-authors {
+  margin: 0;
+}
+
+.modern-bullets .paper-panel .pub-meta {
+  color: var(--text-muted);
+}
+
+.modern-bullets .paper-panel .pub-meta a {
+  font-weight: 600;
+}
+
+.category-conferences .modern-bullets .paper-panel {
+  --panel-accent-soft: #e1fad4;
+  --panel-accent-strong: #79c88d;
+  --panel-accent-glow: rgba(121, 200, 141, 0.25);
+}
+
+.category-journals .modern-bullets .paper-panel {
+  --panel-accent-soft: #d4f4fa;
+  --panel-accent-strong: #63bfd3;
+  --panel-accent-glow: rgba(99, 191, 211, 0.25);
+}
+
+.category-posters .modern-bullets .paper-panel {
+  --panel-accent-soft: #fadad4;
+  --panel-accent-strong: #f2997f;
+  --panel-accent-glow: rgba(242, 153, 127, 0.25);
 }
 
 .core-rank {
