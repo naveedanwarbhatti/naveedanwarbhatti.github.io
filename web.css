@@ -1794,6 +1794,9 @@ footer {
   box-shadow: 0 24px 60px rgba(15, 42, 71, 0.45);
   z-index: 999;
   pointer-events: none;
+  max-width: min(90vw, 70rem);
+  max-height: 90vh;
+  overflow: hidden;
 }
 
 .designwork-item:hover .designwork-popup {
@@ -1804,8 +1807,8 @@ footer {
   display: block;
   width: auto;
   height: auto;
-  max-width: none;
-  max-height: none;
+  max-width: min(88vw, 68rem);
+  max-height: 88vh;
 }
 
 iframe {
