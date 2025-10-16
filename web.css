@@ -859,7 +859,7 @@ footer {
 }
 
 .highlight:hover {
-  background: linear-gradient(135deg, rgba(255, 182, 88, 0.28), rgba(255, 242, 217, 0.98));
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.4), rgba(255, 210, 150, 0.98));
   box-shadow: 0 22px 36px rgba(31, 77, 108, 0.16);
   transform: translateY(-2px);
 }
