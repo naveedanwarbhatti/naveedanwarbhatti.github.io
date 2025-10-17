@@ -1045,8 +1045,9 @@ footer {
 
 #scholar-stats-container {
   display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
-  gap: 1.1rem;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 0.38fr);
+  column-gap: 0;
+  row-gap: 1.1rem;
   align-items: stretch;
 }
 
@@ -1056,7 +1057,6 @@ footer {
   border: 1px solid rgba(79, 163, 199, 0.16);
   box-shadow: 0 16px 32px rgba(31, 77, 108, 0.08);
   overflow: hidden;
-  overflow-x: auto;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1066,8 +1066,9 @@ footer {
 #stats-table {
   border-collapse: collapse;
   width: 100%;
-  min-width: 320px;
+  min-width: 0;
   flex: 1;
+  table-layout: fixed;
 }
 
 #stats-table th,
@@ -1077,6 +1078,7 @@ footer {
   color: var(--text);
   text-align: left;
   font-size: 0.9rem;
+  word-break: break-word;
 }
 
 #stats-table thead th {
@@ -1125,15 +1127,15 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 0.45rem;
+  gap: 0.35rem;
   width: 100%;
   flex: 1;
   min-height: 200px;
 }
 
 .graph-bar-item {
-  flex: 0 0 1.95rem;
-  max-width: 1.95rem;
+  flex: 0 0 1.5rem;
+  max-width: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1167,6 +1169,7 @@ footer {
 @media (max-width: 640px) {
   #scholar-stats-container {
     grid-template-columns: 1fr;
+    column-gap: 0;
   }
 
   .stats-table-card,
@@ -1177,7 +1180,7 @@ footer {
 
   #citation-graph {
     justify-content: center;
-    gap: 0.45rem;
+    gap: 0.35rem;
   }
 
   .graph-bar-item {
@@ -1188,7 +1191,7 @@ footer {
 
 @media (max-width: 480px) {
   #scholar-stats-container {
-    gap: 0.75rem;
+    row-gap: 0.75rem;
   }
 
   .stats-table-card,
@@ -1363,7 +1366,8 @@ footer {
   }
 
   #scholar-stats-container {
-    gap: clamp(0.85rem, 3.8vw, 1.2rem);
+    column-gap: 0;
+    row-gap: clamp(0.85rem, 3.8vw, 1.2rem);
   }
 
   .stats-table-card,
@@ -1434,7 +1438,7 @@ footer {
   }
 
   #scholar-stats-container {
-    gap: clamp(0.65rem, 4vw, 0.9rem);
+    row-gap: clamp(0.65rem, 4vw, 0.9rem);
   }
 
   .stats-table-card,
