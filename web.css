@@ -1234,12 +1234,19 @@ footer {
 
   #citation-graph {
     justify-content: center;
-    gap: 0.35rem;
+    gap: clamp(0.25rem, 3vw, 0.35rem);
   }
 
   .graph-bar-item {
-    flex-basis: 2.5rem;
-    max-width: 2.5rem;
+    flex-basis: clamp(0.85rem, 6vw, 1.2rem);
+    max-width: clamp(0.85rem, 6vw, 1.2rem);
+    gap: clamp(0.25rem, 3.2vw, 0.35rem);
+  }
+
+  .year-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -1470,13 +1477,21 @@ footer {
   }
 
   .feature-stats-wrapper {
+    grid-template-columns: 1fr;
     margin-bottom: 1.65rem;
+    row-gap: clamp(0.6rem, 4.5vw, 0.95rem);
+    overflow: visible;
   }
 
   .panel-featured,
   .panel-stats {
     padding: clamp(0.85rem, 5vw, 1.1rem) clamp(0.75rem, 5.5vw, 1.2rem);
     gap: clamp(0.65rem, 4.5vw, 0.9rem);
+  }
+
+  .panel-stats {
+    border-left: none;
+    border-top: 1px solid rgba(79, 163, 199, 0.18);
   }
 
   .featured-research,
@@ -1519,11 +1534,13 @@ footer {
   #citation-graph {
     min-height: clamp(140px, 50vw, 180px);
     padding-bottom: 0.25rem;
+    gap: clamp(0.25rem, 3vw, 0.35rem);
   }
 
   .graph-bar-item {
-    flex: 0 0 clamp(1.35rem, 8vw, 1.9rem);
-    max-width: clamp(1.35rem, 8vw, 1.9rem);
+    flex: 0 0 clamp(0.85rem, 6vw, 1.2rem);
+    max-width: clamp(0.85rem, 6vw, 1.2rem);
+    gap: clamp(0.25rem, 3vw, 0.35rem);
   }
 
   .bar-label {
@@ -1532,6 +1549,24 @@ footer {
 
   .year-label {
     font-size: clamp(0.58rem, 3vw, 0.7rem);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-top: 0.1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  #citation-graph {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: clamp(0.2rem, 3.5vw, 0.3rem);
+  }
+
+  .graph-bar-item {
+    flex: 0 0 clamp(0.75rem, 7vw, 1.05rem);
+    max-width: clamp(0.75rem, 7vw, 1.05rem);
   }
 }
 
