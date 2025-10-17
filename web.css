@@ -1445,7 +1445,7 @@ footer {
   #stats-table th,
   #stats-table td {
     font-size: clamp(0.82rem, 3vw, 0.92rem);
-    padding: 0.5rem clamp(1rem, 3.8vw, 1.35rem) 0.5rem clamp(0.65rem, 2.8vw, 0.85rem);
+    padding: 0.4rem clamp(0.7rem, 2.6vw, 0.95rem);
   }
 
   .citation-graph-title {
