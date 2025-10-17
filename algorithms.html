@@ -72,67 +72,149 @@
                         <p class="activity-intro">Each lecture highlights a core theme of the course with a direct download to the accompanying PDF.</p>
                     </div>
                 </header>
-                <div class="lecture-grid">
-                    <article class="lecture-card">
-                        <h3>Lecture 1 &mdash; Algorithmic Thinking</h3>
-                        <p>Course overview, algorithmic problem solving, and analyzing computational models.</p>
-                        <a class="lecture-link" href="algo/Lecture1.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 2 &mdash; Asymptotic Analysis</h3>
-                        <p>Big-O notation, growth rates, and comparing algorithm efficiency.</p>
-                        <a class="lecture-link" href="algo/Lecture2.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 3 &mdash; Recurrences &amp; Divide &amp; Conquer</h3>
-                        <p>Master theorem, recurrence trees, and classic divide-and-conquer strategies.</p>
-                        <a class="lecture-link" href="algo/Lecture3.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 4 &mdash; Sorting &amp; Selection</h3>
-                        <p>Quick sort, merge sort, and linear-time selection algorithms.</p>
-                        <a class="lecture-link" href="algo/Lecture4.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 5 &mdash; Greedy Algorithms</h3>
-                        <p>Greedy-choice property, matroids, and interval scheduling.</p>
-                        <a class="lecture-link" href="algo/Lecture5.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 6 &mdash; Dynamic Programming</h3>
-                        <p>Optimal substructure, overlapping subproblems, and classic DP exemplars.</p>
-                        <a class="lecture-link" href="algo/Lecture6.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 7 &mdash; Graph Traversal</h3>
-                        <p>Breadth-first search, depth-first search, and connected components.</p>
-                        <a class="lecture-link" href="algo/Lecture7.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 8 &mdash; Minimum Spanning Trees</h3>
-                        <p>Kruskal's and Prim's algorithms with cut and cycle properties.</p>
-                        <a class="lecture-link" href="algo/Lecture8.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 9 &mdash; Shortest Paths</h3>
-                        <p>Dijkstra's algorithm, Bellman-Ford, and detecting negative cycles.</p>
-                        <a class="lecture-link" href="algo/Lecture9.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 10 &mdash; Network Flow</h3>
-                        <p>Max-flow min-cut theorem, Ford-Fulkerson, and applications.</p>
-                        <a class="lecture-link" href="algo/Lecture10.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 11 &mdash; NP-Completeness</h3>
-                        <p>Polynomial-time reductions, SAT, and classic NP-complete problems.</p>
-                        <a class="lecture-link" href="algo/Lecture11.pdf" download>Download lecture</a>
-                    </article>
-                    <article class="lecture-card">
-                        <h3>Lecture 12 &mdash; Approximation &amp; Randomization</h3>
-                        <p>Approximation ratios, randomized algorithms, and probabilistic analysis.</p>
-                        <a class="lecture-link" href="algo/Lecture12.pdf" download>Download lecture</a>
-                    </article>
+                <div class="lecture-table-wrapper">
+                    <table class="lecture-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Lecture Topic</th>
+                                <th scope="col">Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 1 — Algorithmic Thinking &amp; Course Foundations</strong>
+                                    <ul>
+                                        <li>Course logistics, expectations, and a problem-solving mindset.</li>
+                                        <li>Mathematical models of computation and RAM cost measures.</li>
+                                        <li>Worked example analyzing iterative algorithms step-by-step.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture01-algorithmic-thinking.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 2 — Asymptotic Analysis</strong>
+                                    <ul>
+                                        <li>Formal definitions of Big-O, Big-Omega, and Big-Theta.</li>
+                                        <li>Comparing polynomial, exponential, and logarithmic growth.</li>
+                                        <li>Using limits and dominant terms to classify runtime.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture02-asymptotic-analysis.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 3 — Recurrences &amp; Divide and Conquer</strong>
+                                    <ul>
+                                        <li>Setting up recurrences for recursive algorithms.</li>
+                                        <li>Recurrence tree method and substitution proofs.</li>
+                                        <li>Divide-and-conquer exemplars: merge sort and binary search.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture03-recurrences-divide-conquer.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 4 — Sorting &amp; Selection</strong>
+                                    <ul>
+                                        <li>Stable vs. unstable sorting and decision-tree lower bounds.</li>
+                                        <li>Detailed traces of merge sort and quick sort.</li>
+                                        <li>Linear-time selection via the median-of-medians approach.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture04-sorting-selection.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 5 — Greedy Strategies</strong>
+                                    <ul>
+                                        <li>Greedy-choice property and matroid intuition.</li>
+                                        <li>Exchange arguments for interval scheduling optimality.</li>
+                                        <li>Minimum spanning tree case studies with Kruskal and Prim.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture05-greedy-strategies.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 6 — Dynamic Programming</strong>
+                                    <ul>
+                                        <li>Optimal substructure, overlapping subproblems, and memoization.</li>
+                                        <li>Constructing DP tables with longest common subsequence.</li>
+                                        <li>0/1 knapsack example with iterative tabulation.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture06-dynamic-programming.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 7 — Graph Traversal Fundamentals</strong>
+                                    <ul>
+                                        <li>Graph representations: adjacency lists versus matrices.</li>
+                                        <li>Breadth-first search tree construction and distances.</li>
+                                        <li>Depth-first search, timestamps, and classification of edges.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture07-graph-traversal.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 8 — Minimum Spanning Trees</strong>
+                                    <ul>
+                                        <li>Cut property proof and safe edge selection.</li>
+                                        <li>Prim’s algorithm with priority queue implementation notes.</li>
+                                        <li>Kruskal’s algorithm, union-find, and cycle detection.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture08-minimum-spanning-trees.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 9 — Single-Source Shortest Paths</strong>
+                                    <ul>
+                                        <li>Relaxation framework and correctness invariants.</li>
+                                        <li>Dijkstra’s algorithm on weighted graphs without negatives.</li>
+                                        <li>Bellman-Ford algorithm and negative cycle detection.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture09-shortest-paths.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 10 — Network Flow Algorithms</strong>
+                                    <ul>
+                                        <li>Flow conservation, capacity constraints, and residual graphs.</li>
+                                        <li>Ford-Fulkerson method with augmenting path search.</li>
+                                        <li>Max-flow min-cut theorem and bipartite matching application.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture10-network-flow.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 11 — NP-Completeness Primer</strong>
+                                    <ul>
+                                        <li>Complexity classes P, NP, co-NP, and verifiers.</li>
+                                        <li>Reduction patterns from SAT to independent set and clique.</li>
+                                        <li>Cook-Levin theorem intuition and consequences for practice.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture11-np-completeness.pdf" download>Download PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Lecture 12 — Approximation &amp; Randomization</strong>
+                                    <ul>
+                                        <li>Defining approximation ratios and performance guarantees.</li>
+                                        <li>Randomized rounding and expectation-based analysis.</li>
+                                        <li>Case studies: vertex cover approximation and randomized quicksort.</li>
+                                    </ul>
+                                </td>
+                                <td class="download-cell"><a class="lecture-link" href="algo/lecture12-approximation-randomization.pdf" download>Download PDF</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
