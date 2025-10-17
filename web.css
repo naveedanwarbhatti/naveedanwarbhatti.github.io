@@ -1126,7 +1126,7 @@ footer {
 
 #stats-table th,
 #stats-table td {
-  padding: 0.45rem 0.4rem;
+  padding: 0.45rem clamp(0.9rem, 2.4vw, 1.35rem) 0.45rem clamp(0.55rem, 1.8vw, 0.75rem);
   border-bottom: 1px solid var(--border);
   color: var(--text);
   text-align: left;
@@ -1301,11 +1301,12 @@ footer {
   font-weight: 600;
   color: var(--primary-strong);
   margin: 0;
+  margin-right: clamp(0.5rem, 1.8vw, 1.15rem);
   display: flex;
   align-items: center;
   gap: 0.55rem;
   flex-wrap: wrap;
-  
+
 }
 
 .stats-title-icon {
@@ -1437,7 +1438,7 @@ footer {
   #stats-table th,
   #stats-table td {
     font-size: clamp(0.82rem, 3vw, 0.92rem);
-    padding: 0.5rem clamp(0.75rem, 3.5vw, 1rem);
+    padding: 0.5rem clamp(1rem, 3.8vw, 1.35rem) 0.5rem clamp(0.65rem, 2.8vw, 0.85rem);
   }
 
   .citation-graph-title {
@@ -1508,7 +1509,7 @@ footer {
   #stats-table th,
   #stats-table td {
     font-size: clamp(0.74rem, 3.4vw, 0.85rem);
-    padding: 0.45rem clamp(0.6rem, 4vw, 0.85rem);
+    padding: 0.45rem clamp(0.9rem, 4.8vw, 1.2rem) 0.45rem clamp(0.55rem, 3.6vw, 0.75rem);
   }
 
   .citation-graph-title {
