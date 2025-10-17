@@ -1098,7 +1098,7 @@ footer {
 
 #scholar-stats-container {
   display: grid;
-  grid-template-columns: minmax(0, 0.50fr) minmax(0, 0.50fr);
+  grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
   column-gap: 1.5rem;
   row-gap: 1.1rem;
   align-items: stretch;
