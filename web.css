@@ -1126,7 +1126,7 @@ footer {
 
 #stats-table th,
 #stats-table td {
-  padding: 0.55rem 0.6rem;
+  padding: 0.45rem 0.4rem;
   border-bottom: 1px solid var(--border);
   color: var(--text);
   text-align: left;
