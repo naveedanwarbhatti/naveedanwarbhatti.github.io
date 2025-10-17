@@ -1045,7 +1045,7 @@ footer {
 
 #scholar-stats-container {
   display: grid;
-  grid-template-columns: minmax(0, 0.62fr) minmax(0, 0.38fr);
+  grid-template-columns: minmax(0, 0.40fr) minmax(0, 0.60fr);
   column-gap: 0;
   row-gap: 1.1rem;
   align-items: stretch;
@@ -1115,6 +1115,7 @@ footer {
   display: flex;
   flex-direction: column;
   height: 100%;
+  
 }
 
 .citation-graph-title {
