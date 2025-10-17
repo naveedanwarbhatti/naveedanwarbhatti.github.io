@@ -593,6 +593,59 @@ p {
   color: var(--text-muted);
 }
 
+.lecture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.lecture-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-md);
+  padding: clamp(1rem, 2.6vw, 1.4rem);
+  border: 1px solid rgba(79, 163, 199, 0.16);
+  box-shadow: 0 16px 28px rgba(31, 77, 108, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lecture-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--primary-strong);
+}
+
+.lecture-card p {
+  margin: 0;
+  color: var(--text-muted);
+  flex-grow: 1;
+}
+
+.lecture-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: var(--primary-strong);
+  text-decoration: none;
+}
+
+.lecture-link::after {
+  content: "\f019";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.lecture-link:hover::after,
+.lecture-link:focus::after {
+  transform: translateX(3px);
+}
+
 .panel-divider {
   height: 1px;
   background: linear-gradient(90deg, rgba(79, 163, 199, 0), rgba(79, 163, 199, 0.35), rgba(79, 163, 199, 0));
@@ -791,6 +844,10 @@ p {
   }
 
   .student-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .lecture-grid {
     grid-template-columns: 1fr;
   }
 }
