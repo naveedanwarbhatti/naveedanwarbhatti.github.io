@@ -1262,7 +1262,7 @@ footer {
   border: 1px solid rgba(79, 163, 199, 0.18);
   box-shadow: 0 32px 55px rgba(31, 77, 108, 0.12);
   margin: clamp(1.1rem, 3vw, 1.7rem) 0 clamp(1.8rem, 4vw, 2.2rem);
-  column-gap: clamp(0.9rem, 2.5vw, 1.5rem);
+  
   overflow: hidden;
 }
 
@@ -1272,16 +1272,19 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 0.95rem;
+  
 }
 
 .panel-featured {
   background: rgba(255, 255, 255, 0.95);
   max-width: 100%;
+  
 }
 
 .panel-stats {
   background: #B5DBFF;
   border-left: 1px solid rgba(79, 163, 199, 0.18);
+  
 }
 
 .featured-research {
@@ -1302,6 +1305,7 @@ footer {
   align-items: center;
   gap: 0.55rem;
   flex-wrap: wrap;
+  column-gap: clamp(0.9rem, 2.5vw, 1.5rem);
 }
 
 .stats-title-icon {
