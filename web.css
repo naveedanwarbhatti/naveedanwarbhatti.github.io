@@ -1126,16 +1126,16 @@ footer {
 
 #stats-table th,
 #stats-table td {
-  padding: 0.45rem clamp(0.9rem, 2.4vw, 1.35rem) 0.45rem clamp(0.55rem, 1.8vw, 0.75rem);
+  padding: 0.35rem clamp(0.7rem, 2vw, 1.05rem) 0.35rem clamp(0.45rem, 1.4vw, 0.6rem);
   border-bottom: 1px solid var(--border);
   color: var(--text);
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   word-break: break-word;
 }
 
 #stats-table thead th {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
