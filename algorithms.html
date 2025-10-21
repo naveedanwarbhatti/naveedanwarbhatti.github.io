@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lecture materials and key topics for Algorithms (CS-310) by Naveed Anwar Bhatti.">
+    <meta name="keywords" content="Algorithms, CS-310, Naveed Anwar Bhatti, lecture notes, divide and conquer, dynamic programming, graphs, flows, NP-completeness, approximation">
+    <meta name="author" content="Naveed Anwar Bhatti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms (CS-310) | Naveed Anwar Bhatti</title>
+    <meta property="og:title" content="Algorithms (CS-310) | Naveed Anwar Bhatti">
+    <meta property="og:description" content="Downloadable lecture slides for Algorithms (CS-310) with corrected topics aligned to each PDF.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naveedanwarbhatti.github.io/algorithms.html">
+    <meta property="og:image" content="https://naveedanwarbhatti.github.io/ID_pic.jpg">
+    <meta property="og:image:width" content="668">
+    <meta property="og:image:height" content="1066">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Algorithms (CS-310) | Naveed Anwar Bhatti">
+    <meta name="twitter:description" content="Downloadable lecture slides for Algorithms (CS-310) with corrected topics aligned to each PDF.">
+    <meta name="twitter:image" content="https://naveedanwarbhatti.github.io/ID_pic.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="web.css">
+    <link rel="icon" href="Sysnet.ico" type="image/x-icon">
+    <script src="scripts/site.js" defer></script>
+</head>
+<body class="algorithms-page">
+<header class="site-header">
+    <div class="nav-container">
+        <div class="brand">
+            <a class="brand-home" href="index.html">
+                <div class="brand-text">
+                    <span class="brand-name">Naveed Anwar Bhatti</span>
+                    <span class="brand-role">Assistant Professor</span>
+                </div>
+            </a>
+            <span class="brand-divider" aria-hidden="true"></span>
+            <a class="brand-logo-link" href="https://lums.edu.pk/" target="_blank" rel="noopener">
+                <img class="brand-logo" src="LUMS_logo.png" alt="LUMS logo">
+            </a>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </button>
+        <nav class="primary-nav">
+            <ul id="primary-navigation" class="nav-links">
+                <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="publications.html"><i class="fa fa-book"></i><span>Publications</span></a></li>
+                <li><a class="active" href="teaching.html"><i class="fa fa-tasks"></i><span>Activities</span></a></li>
+                <li><a href="misc.html"><i class="fa fa-th-large"></i><span>Misc</span></a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <h1>Algorithms (CS-310)</h1>
+        <p>Lecture slides and downloadable notes. Topics below are corrected to match the linked PDFs.</p>
+    </section>
+
+    <section class="content-section">
+        <div class="content-card">
+            <header class="activity-header">
+                <span class="activity-icon" aria-hidden="true"><i class="fa fa-chalkboard"></i></span>
+                <div>
+                    <h2>Lecture Collection</h2>
+                    <p class="activity-intro">Each lecture highlights a core theme with a direct download to the accompanying PDF.</p>
+                </div>
+            </header>
+            <div class="lecture-table-wrapper">
+                <table class="lecture-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Lecture Topic</th>
+                        <th scope="col">Download</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <strong>Lecture 1 — Algorithmic Thinking &amp; Course Foundations</strong>
+                            <ul>
+                                <li>Course logistics and problem-solving mindset.</li>
+                                <li>Models of computation; RAM cost measures.</li>
+                                <li>Warm-up analysis of simple iterative algorithms.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture01.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 2 — Stable Matching I (Gale–Shapley)</strong>
+                            <ul>
+                                <li>Stable marriage problem; preferences and stability.</li>
+                                <li>Gale–Shapley algorithm and termination.</li>
+                                <li>Optimality and absence of blocking pairs.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture02.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 3 — Stable Matching II (Proofs &amp; Properties)</strong>
+                            <ul>
+                                <li>Correctness proofs and invariants.</li>
+                                <li>Rural hospitals theorem; strategic issues.</li>
+                                <li>Extensions and variations.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture03.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 4 — Asymptotic Analysis</strong>
+                            <ul>
+                                <li>Big-O, Big-Ω, Big-Θ definitions and usage.</li>
+                                <li>Growth rates: poly vs. exp vs. log.</li>
+                                <li>Limits/dominant terms for runtime classification.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture04.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 5 — Graphs I: Representations &amp; Basics</strong>
+                            <ul>
+                                <li>Adjacency lists vs. matrices; directed/undirected.</li>
+                                <li>Degrees, paths, cycles, trees.</li>
+                                <li>Cost models for graph algorithms.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture05.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 6 — Graphs II: BFS &amp; Intro to DFS</strong>
+                            <ul>
+                                <li>BFS trees, distances, and layers.</li>
+                                <li>DFS basics, recursion/timestamps.</li>
+                                <li>Running-time analysis on list/matrix reps.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture06.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 7 — Graphs III: BFS Applications &amp; Bipartiteness</strong>
+                            <ul>
+                                <li>Testing bipartiteness with BFS.</li>
+                                <li>Shortest paths in unweighted graphs.</li>
+                                <li>Connected components and structure.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture07.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 8 — Graphs IV: Depth-First Search (DFS) &amp; Applications</strong>
+                            <ul>
+                                <li>Parenthesis theorem; edge classification.</li>
+                                <li>DFS trees/forests; recursion insights.</li>
+                                <li>Typical DFS applications and analyses.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture08.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 9 — Graphs V: Strongly Connected Components</strong>
+                            <ul>
+                                <li>Kosaraju/Tarjan approaches and intuition.</li>
+                                <li>Reverse graph, finishing times, condensation DAG.</li>
+                                <li>Linear-time implementations.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture09.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 10 — Graphs VI: Topological Ordering &amp; DAG Algorithms</strong>
+                            <ul>
+                                <li>Topological sort via DFS finishing times.</li>
+                                <li>Linear-time DAG processing patterns.</li>
+                                <li>Applications to scheduling and DP on DAGs.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture10.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 11 — Divide &amp; Conquer: Counting Inversions</strong>
+                            <ul>
+                                <li>Merge-sort-based inversion counting.</li>
+                                <li>Correctness and O(n log n) analysis.</li>
+                                <li>Related divide-and-conquer patterns.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture11.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 12 — Recurrences &amp; Lower Bounds (Master Theorem I)</strong>
+                            <ul>
+                                <li>Substitution and recursion-tree methods.</li>
+                                <li>Master Theorem cases and examples.</li>
+                                <li>Decision-tree lower bound for sorting.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture12.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 13 — Master Theorem II (Proof &amp; Applications)</strong>
+                            <ul>
+                                <li>Proof ideas and boundary cases.</li>
+                                <li>Applying MT to common recurrences.</li>
+                                <li>Pitfalls and non-MT recurrences.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture13.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 14 — Greedy Algorithms (Interval Scheduling, etc.)</strong>
+                            <ul>
+                                <li>Greedy-choice property &amp; exchange arguments.</li>
+                                <li>Interval scheduling and variants.</li>
+                                <li>Proof patterns and counter-examples.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture14.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 15 — Single-Source Shortest Paths (Dijkstra)</strong>
+                            <ul>
+                                <li>Relaxation framework and invariants.</li>
+                                <li>Priority-queue implementation details.</li>
+                                <li>Limits: non-negative weights only.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture15.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 16 — Minimum Spanning Trees (Kruskal, Union–Find, Prim)</strong>
+                            <ul>
+                                <li>Cut property; safe edges.</li>
+                                <li>Kruskal with union-by-rank &amp; path compression.</li>
+                                <li>Prim’s algorithm overview.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture16.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 17 — Dynamic Programming I (Fundamentals)</strong>
+                            <ul>
+                                <li>Optimal substructure; overlapping subproblems.</li>
+                                <li>Memoization vs. tabulation; Fibonacci examples.</li>
+                                <li>State design and transitions.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture17.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 18 — Dynamic Programming II (Weighted Interval Scheduling)</strong>
+                            <ul>
+                                <li>Recurrence design and correctness.</li>
+                                <li>Binary-search precomputation (p(j)).</li>
+                                <li>O(n log n) implementation details.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture18.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 19 — <em>TBD — confirm slide deck topic</em></strong>
+                            <ul>
+                                <li>This entry reflects the current PDF, whose topic wasn’t clear from the opening slide.</li>
+                                <li>Replace with the precise topic once verified.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture19.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 20 — <em>TBD — confirm slide deck topic</em></strong>
+                            <ul>
+                                <li>This entry reflects the current PDF, whose topic wasn’t clear from the opening slide.</li>
+                                <li>Replace with the precise topic once verified.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture20.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 21 — Network Flows (Max-Flow / Min-Cut)</strong>
+                            <ul>
+                                <li>Flow conservation and residual networks.</li>
+                                <li>Ford–Fulkerson / Edmonds–Karp.</li>
+                                <li>Max-flow min-cut theorem; basic applications.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture21.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 22 — NP-Completeness (Reductions &amp; Classics)</strong>
+                            <ul>
+                                <li>P, NP, verifiers; reductions technique.</li>
+                                <li>From SAT to CLIQUE/IS/VC, etc.</li>
+                                <li>Implications for practice and heuristics.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture22.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 23 — Approximation Algorithms (Ratios &amp; Techniques)</strong>
+                            <ul>
+                                <li>Approximation ratios and guarantees.</li>
+                                <li>Greedy/rounding examples (e.g., vertex cover).</li>
+                                <li>When to approximate and why.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture23.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 24 — Parameterized &amp; Exact Exponential Algorithms</strong>
+                            <ul>
+                                <li>Fixed-parameter tractability, kernels, branching.</li>
+                                <li>Measure-and-conquer refinements.</li>
+                                <li>Case studies: FPT for vertex cover, etc.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture24.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 25 — Course Synthesis &amp; Exam Preparation</strong>
+                            <ul>
+                                <li>Design paradigms recap and common pitfalls.</li>
+                                <li>Proof strategies and problem-solving checklists.</li>
+                                <li>Practice exam pointers and further study.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture25.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p>&copy; <span id="current-year"></span> Naveed Anwar Bhatti. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="teaching.html">Activities</a>
+            <a href="misc.html">Misc</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

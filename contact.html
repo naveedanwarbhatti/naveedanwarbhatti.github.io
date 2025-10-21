@@ -11,11 +11,13 @@
     <meta property="og:description" content="Contact information, office location, and a direct message form for Naveed Anwar Bhatti at LUMS.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://naveedanwarbhatti.github.io/contact.html">
-    <meta property="og:image" content="https://naveedanwarbhatti.github.io/icon512_7.png">
+    <meta property="og:image" content="https://naveedanwarbhatti.github.io/ID_pic.jpg">
+    <meta property="og:image:width" content="668">
+    <meta property="og:image:height" content="1066">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact | Naveed Anwar Bhatti">
     <meta name="twitter:description" content="Contact information, office location, and a direct message form for Naveed Anwar Bhatti at LUMS.">
-    <meta name="twitter:image" content="https://naveedanwarbhatti.github.io/icon512_7.png">
+    <meta name="twitter:image" content="https://naveedanwarbhatti.github.io/ID_pic.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -72,14 +74,47 @@
                         <p><i class="fa fa-university fa-fw"></i> <strong>Office: 9-G23A</strong><br>Computer Science Deptt (SBASSE),<br>LUMS, Lahore, Pakistan.</p>
 
                         <h3>Get in touch</h3>
-                        <form class="contact-form" action="mailto:naveedanwar.bhatti@lums.edu.pk" method="POST" enctype="multipart/form-data">
+                        <form class="contact-form" action="https://formsubmit.co/naveed.bhatti@lums.edu.pk" method="POST">
+                            <input type="hidden" name="_subject" value="New message from naveedanwarbhatti.github.io">
+
                             <label for="name"><strong>Your Name:</strong></label>
-                            <input type="text" id="name" name="VisitorName">
+                            <input
+                                type="text"
+                                id="name"
+                                name="VisitorName"
+                                autocomplete="name"
+                                required
+                                maxlength="80"
+                                aria-describedby="name-help"
+                            >
+                            <p class="form-hint" id="name-help">Please enter your full name so I know how to address you.</p>
+
+                            <label for="email"><strong>Email Address:</strong></label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="VisitorEmail"
+                                autocomplete="email"
+                                required
+                                maxlength="120"
+                                aria-describedby="email-help"
+                            >
+                            <p class="form-hint" id="email-help">I'll use this email to reply to your message.</p>
 
                             <label for="comment"><strong>Your Comment:</strong></label>
-                            <textarea id="comment" name="VisitorComment" rows="4"></textarea>
+                            <textarea
+                                id="comment"
+                                name="VisitorComment"
+                                rows="5"
+                                autocomplete="off"
+                                required
+                                maxlength="1200"
+                                aria-describedby="comment-help"
+                            ></textarea>
+                            <p class="form-hint" id="comment-help">Share any details about collaborations, supervision, or speaking opportunities.</p>
 
                             <button class="button primary" type="submit">Send</button>
+                            <p class="form-note" role="status">Thanks for reaching out! I typically respond within two business days.</p>
                         </form>
                     </div>
 
