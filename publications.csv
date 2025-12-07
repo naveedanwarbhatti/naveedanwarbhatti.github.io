@@ -1,6 +1,6 @@
 Title,Authors,Venue,Year,Citations
 Energy harvesting and wireless transfer in sensor network applications: Concepts and experiences,"NA Bhatti, MH Alizai, AA Syed, L Mottola","ACM Transactions on Sensor Networks (TOSN) 12 (3), 1-40, 2016",2016,194
-HarvOS: Efficient code instrumentation for transiently-powered embedded sensing,"NA Bhatti, L Mottola","International Conference on Information Processing in Sensor Networks (IPSN), 2017",2017,163
+HarvOS: Efficient code instrumentation for transiently-powered embedded sensing,"NA Bhatti, L Mottola","International Conference on Information Processing in Sensor Networks (IPSN), 2017",2017,164
 Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus,"M Afanasov, NA Bhatti, D Campagna, G Caslini, FM Centonze, K Dolui, ...","ACM Conference on Embedded Networked Sensor Systems (SenSys), 2020",2020,118
 Efficient Intermittent Computing with Differential Checkpointing,"S Ahmed, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","ACM SIGPLAN / SIGBED Conference on Languages, Compilers, and Tools for …, 2019",2019,88
 Efficient State Retention for Transiently-powered Embedded Sensing.,"NA Bhatti, L Mottola","International Conference on Embedded Wireless Systems and Networks (EWSN …, 2016",2016,73
@@ -18,4 +18,4 @@ Blind-trust: Raising awareness of the dangers of using unsecured public Wi-Fi ne
 Towards smaller checkpoints for better intermittent computing,"S Ahmed, MH Alizai, JH Siddiqui, NA Bhatti, L Mottola","International Conference on Information Processing in Sensor Networks (IPSN …, 2018",2018,11
 MOPTIC-SM: Sleep mode-enabled multi-optimized intermittent computing for transiently powered systems,"K Javed, NA Bhatti, M Imran","Journal of Systems Architecture, 102850, 2023",2023,3
 System support for transiently-powered embedded sensing systems,NA Bhatti,"Italy, 2018",2018,2
-Shepard: Dynamic Placement of Microservices in the Edge-Cloud Continuum,"F Asghar, T Fatima, JH Siddiqui, NA Bhatti, MH Alizai","International Conference on Mobile and Ubiquitous Systems (MobiQuitous), 43-62, 2023",2023,1
+FLEXFL: Flexible Federated Learning for Customized Network Architectures in 6G,"SA Khowaja, IH Lee, P Khuwaja, NA Bhatti, K Singh, K Dev","IEEE Wireless Communications and Networking Conference (WCNC), 01-06, 2025",2025,1
