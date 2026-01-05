@@ -1,9 +1,12 @@
+import argparse
+import csv
+import random
+import re
+import time
+from pathlib import Path
+
 import requests
 from bs4 import BeautifulSoup
-import csv
-import re
-import random
-import time
 
 PROFILE_URL = "https://scholar.google.com.pk/citations?hl=en&user=6ZB86uYAAAAJ"
 
@@ -33,6 +36,10 @@ def get_headers() -> dict:
         "Upgrade-Insecure-Requests": "1"
     }
 
+class ProxyBlockedError(requests.exceptions.HTTPError):
+    """Raised when Google Scholar blocks the request (HTTP 403 or CAPTCHA page)."""
+
+
 def fetch_page(url: str, max_retries: int = 3, delay: int = 5) -> BeautifulSoup:
     """
     Fetches and parses a URL, returning a BeautifulSoup object.
@@ -45,11 +52,16 @@ def fetch_page(url: str, max_retries: int = 3, delay: int = 5) -> BeautifulSoup:
 
             # Check for block pages that might return a 200 OK status
             if "Our systems have detected unusual traffic" in resp.text:
-                raise requests.exceptions.RequestException("Blocked by Google Scholar (CAPTCHA or error page)")
+                raise ProxyBlockedError("Blocked by Google Scholar (CAPTCHA or error page)")
+
+            if resp.status_code == 403:
+                raise ProxyBlockedError("Received HTTP 403 from Google Scholar")
 
             resp.raise_for_status()  # Raises HTTPError for bad responses (4xx or 5xx)
             return BeautifulSoup(resp.text, "html.parser")
 
+        except ProxyBlockedError:
+            raise
         except requests.exceptions.RequestException as e:
             print(f"Error fetching page: {e}")
             if attempt < max_retries - 1:
@@ -113,12 +125,52 @@ def parse_citation_history_from_main_page(soup: BeautifulSoup):
     return history
 
 
+def parse_local_html(path: Path) -> BeautifulSoup:
+    """Load a local HTML snapshot of the Scholar profile."""
+    with path.open("r", encoding="utf-8") as f:
+        return BeautifulSoup(f.read(), "html.parser")
+
+
+def build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="Fetch Google Scholar stats and write CSV outputs.")
+    parser.add_argument(
+        "--html-file",
+        type=Path,
+        help=(
+            "Path to a locally saved HTML snapshot of the Google Scholar profile. "
+            "Useful when the network is blocked."
+        ),
+    )
+    parser.add_argument(
+        "--prefer-html",
+        action="store_true",
+        help="Use the local HTML snapshot first; fall back to the network only if it is missing.",
+    )
+    return parser
+
+
 def main():
     """Main function to scrape all data and write to CSV files."""
+    parser = build_arg_parser()
+    args = parser.parse_args()
+
     try:
         print("Fetching data from Google Scholar...")
-        profile_soup = fetch_page(PROFILE_URL)
-        
+        profile_soup = None
+
+        if args.html_file and args.prefer_html:
+            print(f"Loading Scholar data from local snapshot: {args.html_file}")
+            profile_soup = parse_local_html(args.html_file)
+        else:
+            try:
+                profile_soup = fetch_page(PROFILE_URL)
+            except ProxyBlockedError as e:
+                if args.html_file:
+                    print(f"Network access blocked ({e}). Falling back to local HTML snapshot: {args.html_file}")
+                    profile_soup = parse_local_html(args.html_file)
+                else:
+                    raise
+
         if not profile_soup:
             print("Failed to fetch profile page after multiple retries.")
             return
