@@ -361,14 +361,14 @@ p {
 
 .section-nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: 0 auto;
   width: min(1040px, 92%);
   padding: 0.5rem 0 0.75rem;
 }
 
 .section-nav.section-nav-bottom {
-  justify-content: center;
+  justify-content: flex-start;
   padding-bottom: 0;
 }
 
@@ -390,6 +390,17 @@ p {
   transform: translateY(-1px);
   box-shadow: 0 16px 28px rgba(37, 95, 133, 0.24);
   background: linear-gradient(135deg, rgba(37, 95, 133, 1), rgba(79, 163, 199, 1));
+}
+
+@media (max-width: 640px) {
+  .section-nav {
+    width: 100%;
+    padding: 0.5rem 1rem 0.75rem;
+  }
+
+  .teaching-nav-button {
+    width: 100%;
+  }
 }
 
 
