@@ -789,6 +789,33 @@ p {
   margin-bottom: 0.3rem;
 }
 
+.course-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 0.65rem;
+  padding: 0.25rem 0.65rem 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(79, 163, 199, 0.18), rgba(111, 196, 169, 0.18));
+  color: var(--primary-strong);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(79, 163, 199, 0.24);
+  box-shadow: 0 10px 25px rgba(31, 77, 108, 0.14);
+  position: relative;
+  top: -1px;
+}
+
+.course-badge i {
+  font-size: 0.82rem;
+  color: #2c7e9d;
+}
+
+.course-badge span {
+  line-height: 1;
+}
+
 .funding-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
