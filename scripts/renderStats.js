@@ -57,24 +57,33 @@ function renderCitationGraph(text) {
     if (!graphContainer) return;
     graphContainer.innerHTML = '';
 
-    const historyData = lines.map(line => {
-        const [year, citations] = line.split(',');
-        return { year, citations: parseInt(citations, 10) || 0 };
+    const parsedHistory = lines
+        .map(line => {
+            const [year, citations] = line.split(',');
+            const yearNum = parseInt(year, 10);
+            const citationNum = parseInt(citations, 10);
+            return { year: yearNum, citations: Number.isFinite(citationNum) ? citationNum : 0 };
+        })
+        .filter(entry => Number.isFinite(entry.year));
+
+    if (!parsedHistory.length) return;
+
+    const dedupedHistory = new Map();
+    parsedHistory.forEach(({ year, citations }) => {
+        const existing = dedupedHistory.get(year);
+        dedupedHistory.set(year, Math.max(existing ?? 0, citations));
     });
 
-    // --- NEW: Slice the array to get only the last 8 years ---
-    // The CSV from the scraper is sorted newest-to-oldest, so slice(0, 8) gets the 8 most recent years.
-    const recentHistory = historyData.slice(0, 8);
+    const sortedHistory = Array.from(dedupedHistory.entries())
+        .map(([year, citations]) => ({ year, citations }))
+        .sort((a, b) => a.year - b.year);
 
-    if (recentHistory.length === 0) return;
-
-    // Reverse the recent history for ascending year display on the graph (oldest on left)
-    recentHistory.reverse();
+    const recentHistory = sortedHistory.slice(-8);
+    if (!recentHistory.length) return;
 
     const maxCitations = Math.max(...recentHistory.map(d => d.citations));
     const graphHeight = 135; 
 
-    // Iterate over the sliced and reversed data
     recentHistory.forEach(data => {
         const barItem = document.createElement('div');
         barItem.className = 'graph-bar-item';
@@ -86,11 +95,11 @@ function renderCitationGraph(text) {
 
         const barLabel = document.createElement('span');
         barLabel.className = 'bar-label';
-        barLabel.textContent = data.citations;
+        barLabel.textContent = data.citations.toString();
         
         const yearLabel = document.createElement('div');
         yearLabel.className = 'year-label';
-        yearLabel.textContent = data.year;
+        yearLabel.textContent = data.year.toString();
 
         barItem.appendChild(barLabel);
         barItem.appendChild(bar);
