@@ -61,7 +61,7 @@
 
 <main>
     <section class="page-hero">
-        <h1>Algorithms (CS-310)</h1>
+        <h1>Computer Organization and Assembly Language (CS-223)</h1>
         
     </section>
 
@@ -79,303 +79,125 @@
                     <tbody>
                     <tr>
                         <td>
-                            <strong>Lecture 1: Introduction to Algorithms + First Problem (Stable Matching)</strong>
+                            <strong>Lecture 1: Course Intro and What Assembly Is</strong>
                             <ul>
-                                <li>Explains what an algorithm is and why we study algorithms (efficiency, correctness, problem-solving mindset).</li>
-                                <li>Introduces the TA–course matching problem as a motivating example.</li>
-                                <li>Defines “unstable pairs” and uses the idea of stability to show what a “good” matching should prevent.</li>
+                                <li>Covers course logistics (grading, rules, and how the class will run).</li>
+                                <li>Introduces what “computer organization vs. computer architecture” means and where this course fits.</li>
+                                <li>Explains what assembly language is, how it relates to machine language, and why learning it matters.</li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture01.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture01.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 2: Stable Matching — Moving Toward an Algorithm</strong>
+                            <strong>Lecture 2: Data Representation and Boolean Logic Basics</strong>
                             <ul>
-                                <li>Builds the stable matching model more formally using preference lists for both sides.</li>
-                                <li>Develops the proposal-based process (courses propose to TAs) as a concrete algorithmic approach.</li>
-                                <li>Uses examples to illustrate how assignments change until stability is reached (no unstable pair remains).</li>
+                                <li>Explains how computers represent numbers in binary (and how to convert between decimal, binary, and hex).</li>
+                                <li>Covers integer sizes and how signed vs. unsigned values are stored.</li>
+                                <li>Introduces Boolean/bit-level thinking that underpins low-level programming.</li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture02.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture02.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 3: Gale–Shapley Deferred Acceptance + Correctness Ideas</strong>
+                            <strong>Lecture 3: x86 Processor Architecture (How the CPU and Memory Work)</strong>
                             <ul>
-                                <li>Presents the Gale–Shapley (deferred acceptance) algorithm explicitly in pseudocode form.</li>
-                                <li>Discusses why the algorithm terminates and why the output is stable (proof ideas/structure).</li>
-                                <li>Explores “deceit/manipulation” scenarios (e.g., “Evil Alice”) to highlight strategic behavior concerns.</li>
+                                <li>Breaks down a basic microcomputer: CPU, memory, buses, and I/O devices.</li>
+                                <li>Introduces the IA-32 (32-bit x86) execution environment (registers, instruction cycle, and memory access).</li>
+                                <li>Compares memory-management modes (real vs protected) and gives an overview of 64-bit processors and system I/O. </li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture03.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture03.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 4: Running Time Analysis + Asymptotic Growth (Big-O Thinking)</strong>
+                            <strong>Lecture 4: Assembly Language Fundamentals (Core Instructions and Addressing)</strong>
                             <ul>
-                                <li>Compares empirical analysis vs mathematical models vs asymptotic analysis of algorithms.</li>
-                                <li>Introduces asymptotic order-of-growth and Big-O style reasoning (ignore constants/lower-order terms).</li>
-                                <li>Uses loop-based examples (e.g., searching for pairs/triples with sum zero) to show how n, n², n³ arise</li>
+                                <li>Teaches instruction structure and operand types (immediate, register, memory).</li>
+                                <li>Focuses on data movement and basic arithmetic (e.g., MOV and add/sub patterns).</li>
+                                <li>Introduces addressing ideas (including indirect addressing) plus basic control flow like JMP/LOOP and a look toward 64-bit programming. </li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture04.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture04.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 5: Graph Basics + Representations</strong>
+                            <strong>Lecture 5: Procedures and the Runtime Stack</strong>
                             <ul>
-                                <li>Introduces graphs through applications (transportation, communication, etc.) and core terminology (nodes/edges).</li>
-                                <li>Compares adjacency matrix vs adjacency list (space/time tradeoffs).</li>
-                                <li>Covers cycles and trees as fundamental graph structures you’ll build on later.</li>
+                                <li>Explains what the stack is and why it matters (PUSH/POP and how the stack grows).</li>
+                                <li>Shows how procedures work using CALL and RET (including nested calls).</li>
+                                <li>Introduces procedure design basics like parameters, preserving registers, and good documentation habits.</li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture05.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture05.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 6: Breadth-First Search (BFS)</strong>
+                            <strong>Lecture 6: Conditional Processing (Making Decisions in Assembly)</strong>
                             <ul>
-                                <li>Defines BFS as exploring a graph “one layer at a time” from a start node (L0, L1, L2, …).</li>
-                                <li>Presents the queue-based BFS procedure that tracks explored status, distance, and parent pointers.</li>
-                                <li>Emphasizes BFS outputs (shortest-path distances in unweighted graphs and a BFS tree).</li>
+                                <li>Reviews CPU flags and how bitwise/compare instructions affect them.</li>
+                                <li>Teaches conditional jumps and conditional loop instructions.</li>
+                                <li>Builds up to higher-level logic patterns like conditional structures and finite-state machines.</li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture06.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture06.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 7: Connected Components + Bipartite Testing with BFS</strong>
+                            <strong>Lecture 7: MASM Control-Flow Directives (.IF / .WHILE / .REPEAT)</strong>
                             <ul>
-                                <li>Uses graph traversal to find all nodes reachable from a start node and extend this to connected components.</li>
-                                <li>Introduces bipartite graphs and explains how BFS levels support bipartite testing.</li>
-                                <li>Connects bipartiteness to cycle structure (why odd cycles break bipartiteness; level-based reasoning).</li>
+                                <li>Shows how MASM lets you write readable IF/ELSE logic using “runtime expressions.”.</li>
+                                <li>Explains how signed vs. unsigned comparisons change which jumps get generated.</li>
+                                <li>Introduces structured looping directives like .REPEAT/.UNTIL and .WHILE/.ENDW</li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture07.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture07.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 8: Depth-First Search (DFS) + Timestamps</strong>
+                            <strong>Lecture 8: Advanced Procedures I (Stack Frames and Parameters)</strong>
                             <ul>
-                                <li>Introduces DFS as exploring “deep first” with recursive (or stack-based) traversal.</li>
-                                <li>Presents the standard DFS framework with colors (WHITE/GRAY/BLACK) and discovery/finish times.</li>
-                                <li>Builds the DFS forest concept that supports later tools like edge classification and ordering.</li>
+                                <li>Introduces the idea of a stack frame (the reserved stack space used while a procedure runs).</li>
+                                <li>Focuses on passing arguments on the stack (by value and by reference).</li>
+                                <li>Covers the basics of local variables and stack-frame setup/teardown concepts.</li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture08.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture08.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 9: Strongly Connected Components (SCCs) + Topological Sorting Setup</strong>
+                            <strong>Lecture 9: Advanced Procedures II</strong>
                             <ul>
-                                <li>Defines strong connectivity and strong components in directed graphs.</li>
-                                <li>Gives an SCC algorithm based on DFS finishing times and the reversed graph (DFS, reverse edges, DFS in decreasing finish time order).</li>
-                                <li>Connects DFS structure to DAG concepts and topological sorting ideas (ordering by dependencies).</li>
+                                <li>Extends advanced procedure concepts to include recursion (procedures calling themselves).</li>
+                                <li>Introduces MASM tools like INVOKE/ADDR/PROC/PROTO for cleaner procedure calls and declarations.</li>
+                                <li>Discusses how to organize larger programs across multiple modules/files.</li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture09.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture09.pdf" download>Download PDF</a></td>
                     </tr>
 
                     <tr>
                         <td>
-                            <strong>Lecture 10: DFS Edge Classification + Topological Ordering + Divide-and-Conquer (Merge Sort)</strong>
+                            <strong>Lecture 10: Locality, Memory Hierarchies, and Cache Basics</strong>
                             <ul>
-                                <li>Practices classifying DFS edges (back/forward/cross) to interpret structure in directed graphs.</li>
-                                <li>Works through topological ordering examples and what it means for a valid order to exist.</li>
-                                <li>Introduces divide-and-conquer and applies it to merge sort (divide, recurse, merge/combine).</li>
+                                <li>Explains temporal vs. spatial locality (why programs often reuse nearby/recent data).</li>
+                                <li>Introduces memory hierarchies and the basic purpose of caches (small/fast vs big/slow memory).</li>
+                                <li>Covers cache hits vs. misses and core cache design ideas like placement and replacement.</li>
                             </ul>
                         </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture10.pdf" download>Download PDF</a></td>
+                        <td class="download-cell"><a class="lecture-link" href="coal/Lecture10.pdf" download>Download PDF</a></td>
                     </tr>
 
-                    <tr>
-                        <td>
-                            <strong>Lecture 11: Divide-and-Conquer (Counting Inversions & Closest Pair)</strong>
-                            <ul>
-                                <li>Defines an inversion as a pair (i, j) where i < j but Ai > Aj, and the goal is to count inversions efficiently.</li>
-                                <li>Uses a divide-and-conquer strategy (split, recursively count, then combine) to count “split inversions” during the merge step.</li>
-                                <li>Also applies divide-and-conquer to the closest-pair-of-points problem using a “strip” check (only a constant number of nearby candidates per point).</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture11.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 12: Sorting Lower Bounds + Master Theorem (Statement & Examples)</strong>
-                            <ul>
-                                <li>Models comparison sorting with a decision/comparison tree where each leaf corresponds to one input ordering.</li>
-                                <li>Proves any deterministic comparison-based sorting needs Ω(n log n) comparisons (since there are n! orderings and the tree must have at least n! reachable leaves).</li>
-                                <li>Introduces the Master Theorem statement for recurrences of the form T(n) = aT(n/b) + f(n), with its 3 main cases.</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture12.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 13: Master Theorem (Proof via Recursion Tree)</strong>
-                            <ul>
-                                <li>Restates the Master Theorem and its three-case breakdown for T(n) = aT(n/b) + f(n).</li>
-                                <li>Builds the proof intuition using recursion trees (tracking work per level and number of subproblems).</li>
-                                <li>Expresses total work as a level-by-level sum (a series over j = 0 to log_b n), which leads to the final asymptotic bounds.</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture13.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 14: Greedy Scheduling (Interval Scheduling & Interval Partitioning)</strong>
-                            <ul>
-                                <li>Studies greedy algorithms through scheduling problems, focusing on picking locally best choices that lead to global optimality.</li>
-                                <li>Interval Scheduling: the earliest-finish-time-first (EFTF) algorithm is proven optimal (with a correctness proof by induction) and runs in Θ(n log n) due to sorting.</li>
-                                <li>Interval Partitioning: implements earliest-start-time-first using a priority queue keyed by current finish times, achieving O(n log n). </li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture14.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 15: Single-Source Shortest Paths with Dijkstra’s Algorithm</strong>
-                            <ul>
-                                <li>Formulates the single-source shortest path problem: compute shortest distances from a source s to all vertices in a weighted graph.</li>
-                                <li>Presents Dijkstra’s method: repeatedly extract the vertex with smallest tentative distance and relax its outgoing edges (works for nonnegative edge weights).</li>
-                                <li>Proves correctness via an induction-style argument that once a vertex is “settled,” its distance is final.</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture15.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 16: Minimum Spanning Trees (Cut Property, Kruskal, Prim)</strong>
-                            <ul>
-                                <li>Defines spanning trees and the Minimum Spanning Tree (MST) problem: connect all vertices with minimum total edge weight.</li>
-                                <li>Uses the cut property idea (“safe” light edges across a cut) to justify greedy MST construction.</li>
-                                <li>Covers two classic greedy MST algorithms: Kruskal’s (add edges in increasing weight if no cycle) and Prim’s (grow one tree by repeatedly adding the cheapest crossing edge).</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture16.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 17: Dynamic Programming (Motivation, Fibonacci, Memoization)</strong>
-                            <ul>
-                                <li>Defines dynamic programming as solving problems by combining solutions to smaller subproblems, typically by storing/reusing results.</li>
-                                <li>Shows naive Fibonacci recursion causes exponential blowup (≈ 2^n) due to repeated subcomputations.</li>
-                                <li>Introduces memoization: compute a subproblem once, store it, and look it up later to reduce time dramatically (e.g., Fibonacci becomes linear-time).</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture17.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 18: Weighted Interval Scheduling (DP Recurrence)</strong>
-                            <ul>
-                                <li>Upgrades interval scheduling by adding weights/values to jobs and maximizing total value, not just the count of jobs. </li>
-                                <li>Builds the key recurrence using p(j) (the last job compatible with j): OPT(j) = max(vj + OPT(p(j)), OPT(j−1)).</li>
-                                <li>Translates the recurrence into a dynamic programming algorithm (after sorting by finish time).</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture18.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 19: Implementing DP (Memoization & Bottom-Up for Weighted Interval Scheduling)</em></strong>
-                            <ul>
-                                <li>Starts from the WIS recurrence and implements it efficiently using memoization (top-down caching of OPT(j)).</li>
-                                <li>Also shows a bottom-up approach: fill OPT(1..n) iteratively so each OPT(j) is computed once. </li>
-								<li>Analyzes total runtime as sorting + predecessor computation + DP evaluation (overall O(n log n) + O(n)). </li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture19.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 20: Advanced DP (Segmented Least Squares) + Bellman-Ford</em></strong>
-                            <ul>
-                                <li>Segmented least squares: partition points into line segments to minimize total error plus a fixed penalty C per segment.</li>
-                                <li>Uses a DP recurrence with an algorithm that tries all segment start points. </li>
-								 <li>Bellman-Ford: handles shortest paths even with negative edge weights by repeatedly relaxing all edges and can detect negative cycles. </li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture20.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 21: Network Flow Basics — Max-Flow / Min-Cut Setup</strong>
-                            <ul>
-                                <li>Wraps up quiz material (fractional knapsack idea: sort by value/weight and fill greedily; segmented least squares speed-up via precomputing errors).</li>
-                                <li>Introduces a flow network model (directed graph with capacities), with a source s and sink t, and the goal of sending as much flow as possible.</li>
-                                <li>Defines the two core constraints for feasible flow: capacity limits on edges and flow conservation at intermediate vertices (no “storing” flow), then motivates min-cut as a way to reason about optimality.</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture21.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 22: Residual Networks, Augmenting Paths, and Ford–Fulkerson</strong>
-                            <ul>
-                                <li>Shows why a naive/greedy choice of an s–t path can get stuck before reaching maximum flow.</li>
-                                <li>Introduces the residual network idea (forward residual capacity + backward edges that “cancel” existing flow) to enable fixing earlier choices.</li>
-                                <li>Defines augmenting paths and uses them to build the Ford–Fulkerson method; connects this to the max-flow/min-cut relationship and demonstrates step-by-step augmentation.</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture22.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 23: Edmond–Karp Max Flow + Intro to Polynomial-Time Reductions</strong>
-                            <ul>
-                                <li>Explains the Ford–Fulkerson runtime issue (can take many iterations depending on capacities / poor path choices).</li>
-                                <li>Presents Edmond–Karp: always choose the shortest augmenting path (by number of edges) using BFS, giving a polynomial-time bound.</li>
-                                <li>Shifts to computational intractability: classifies problem types (decision/optimization/search) and defines polynomial-time reductions to compare hardness, with example reductions (e.g., vertex cover vs independent set style relationships).</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture23.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 24: Efficient Certification and the Definition of NP</strong>
-                            <ul>
-                                <li>Defines class P (decision problems solvable in polynomial time) vs class NP (decision problems verifiable in polynomial time).</li>
-                                <li>Explains certificates and verifiers with standard examples like Independent Set and Vertex Cover (what the certificate looks like and what the verifier checks).</li>
-                                <li>Discusses the big question P = NP? and briefly situates problems beyond NP (where even verification isn’t polynomial-time).</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture24.pdf" download>Download PDF</a></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <strong>Lecture 25: NP-Hard vs NP-Complete + SAT as the Starting Point</strong>
-                            <ul>
-                                <li>Distinguishes NP-hard (everything in NP reduces to it) from NP-complete (NP-hard AND in NP).</li>
-                                <li>Outlines the standard blueprint to prove NP-complete: (1) show the problem is in NP (give certificate/verifier), (2) reduce a known NP-complete problem to it.</li>
-                                <li>Introduces SAT foundations: Cook–Levin (Circuit-SAT is NP-complete) and the route to 3-SAT NP-completeness (show 3-SAT ∈ NP and reduce Circuit-SAT to 3-SAT).</li>
-                            </ul>
-                        </td>
-                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture25.pdf" download>Download PDF</a></td>
-                    </tr>
+                    
 
                     </tbody>
                 </table>
