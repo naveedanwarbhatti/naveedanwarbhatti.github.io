@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lecture materials and key topics for Algorithms (CS-310) by Naveed Anwar Bhatti.">
+    <meta name="keywords" content="Algorithms, CS-310, Naveed Anwar Bhatti, lecture notes, divide and conquer, dynamic programming, graphs, flows, NP-completeness, approximation">
+    <meta name="author" content="Naveed Anwar Bhatti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms (CS-310) | Naveed Anwar Bhatti</title>
+    <meta property="og:title" content="Algorithms (CS-310) | Naveed Anwar Bhatti">
+    <meta property="og:description" content="Downloadable lecture slides for Algorithms (CS-310) with corrected topics aligned to each PDF.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naveedanwarbhatti.github.io/algorithms.html">
+    <meta property="og:image" content="https://naveedanwarbhatti.github.io/ID_pic.jpg">
+    <meta property="og:image:width" content="668">
+    <meta property="og:image:height" content="1066">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Algorithms (CS-310) | Naveed Anwar Bhatti">
+    <meta name="twitter:description" content="Downloadable lecture slides for Algorithms (CS-310) with corrected topics aligned to each PDF.">
+    <meta name="twitter:image" content="https://naveedanwarbhatti.github.io/ID_pic.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="web.css">
+    <link rel="icon" href="Sysnet.ico" type="image/x-icon">
+    <script src="scripts/site.js" defer></script>
+</head>
+<body class="algorithms-page">
+<header class="site-header">
+    <div class="nav-container">
+        <div class="brand">
+            <a class="brand-home" href="index.html">
+                <div class="brand-text">
+                    <span class="brand-name">Naveed Anwar Bhatti</span>
+                    <span class="brand-role">Assistant Professor</span>
+                </div>
+            </a>
+            <span class="brand-divider" aria-hidden="true"></span>
+            <a class="brand-logo-link" href="https://lums.edu.pk/" target="_blank" rel="noopener">
+                <img class="brand-logo" src="LUMS_logo.png" alt="LUMS logo">
+            </a>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </button>
+        <nav class="primary-nav">
+            <ul id="primary-navigation" class="nav-links">
+                <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="publications.html"><i class="fa fa-book"></i><span>Publications</span></a></li>
+                <li><a class="active" href="teaching.html"><i class="fa fa-tasks"></i><span>Activities</span></a></li>
+                <li><a href="misc.html"><i class="fa fa-th-large"></i><span>Misc</span></a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="section-nav section-nav-top">
+        <a class="button teaching-nav-button" href="teaching.html#teaching" aria-label="Back to Teaching section">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <span>Back to Teaching</span>
+        </a>
+    </div>
+    <section class="page-hero">
+        <h1>Object Oriented Programming (CS-210)</h1>
+        
+    </section>
+
+    <section class="content-section">
+        <div class="content-card">
+           
+            <div class="lecture-table-wrapper">
+                <table class="lecture-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Lecture Topic</th>
+                        <th scope="col">Download</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <strong>Lecture 1: Course overview and the Object-Oriented (OO) model</strong>
+                            <ul>
+                                <li>Introduces the course (object-oriented model, classes, inheritance, polymorphism, etc.) and how the course will be graded.</li>
+                                <li>Explains what a “model” is (an abstraction used to understand a system before building it) and why abstraction matters.</li>
+                                <li>Defines an object using three key ideas: state (attributes), behavior (operations/methods), and identity (what makes it uniquely itself).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture01.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 2: Abstraction, classes, and user-defined data types in C++</strong>
+                            <ul>
+                                <li>Revisits abstraction and emphasizes: “capture only the details relevant to the current perspective,” to manage complexity.</li>
+                                <li>Introduces classes (grouping objects with the same structure/behavior) and shows simple class representations (state + behavior).</li>
+                                <li>Moves into C++ “user-defined data types” like typedef and struct, including how to create/use structures and basic memory ideas (e.g., dynamic allocation).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture02.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 3: C++ classes: access control, member functions, constructors, and overloading</strong>
+                            <ul>
+                                <li>Explains how to design classes in C++ using private/protected/public access specifiers and class definitions.</li>
+                                <li>Shows how to write member functions inside/outside the class using the scope resolution operator (::) and introduces inline functions.</li>
+                                <li>Introduces constructors (including default constructors) and connects the idea of function overloading to constructor overloading.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture03.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 4: Copy constructors, shallow vs deep copy, and the this pointer</strong>
+                            <ul>
+                                <li>Explains when a copy constructor is called (e.g., object creation from another object, passing by value).</li>
+                                <li>Compares shallow copy vs deep copy, especially when objects contain pointer/reference-type members.</li>
+                                <li>Introduces the this pointer and why it’s needed (member functions must know which object instance they are operating on).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture04.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 5: Separating interface vs implementation, and const member functions </strong>
+                            <ul>
+                                <li>Defines a class’s interface (public methods) and argues for keeping interface separate from implementation (header .h vs source .cpp).</li>
+                                <li>Demonstrates the common multi-file C++ structure (e.g., Rectangle.h, Rectangle.cpp, main.cpp).</li>
+                                <li>Introduces const member functions to enforce “read-only” behavior and catch accidental state changes at compile time.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture05.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 6: Member initializer lists, constant data members, and constant objects</strong>
+                            <ul>
+                                <li>Shows why const data members must be initialized using a member initializer list (not assigned inside the constructor body).</li>
+                                <li>Explains the order of initialization rule: members initialize in the order they are declared in the class (not the order listed).</li>
+                                <li>Covers const objects and the rule that they can only call const member functions, encouraging safer class design.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture06.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 7: Static variables, static data members, and static member functions</strong>
+                            <ul>
+                                <li>Explains static local variables: initialized once, keep their value across calls, and live for the entire program lifetime.</li>
+                                <li>Introduces static data members (class variables) shared across all objects, defined outside the class, and accessible via ClassName::member.</li>
+                                <li>Shows typical uses like tracking the number of objects created, and introduces static member functions (which can’t access non-static members).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture07.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 8: Arrays of objects, pointers to objects, and a Date-class case study</strong>
+                            <ul>
+                                <li>Explains why arrays of objects generally require a default constructor (or an explicit initializer list for each element).</li>
+                                <li>Covers pointers to objects and how object pointers use -> to call member functions and can support dynamic allocation patterns.</li>
+                                <li>Applies concepts in a case study: designing a Date class with day/month/year plus a static shared “ExamDate,” and defining its interfaces/files.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture08.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 9: Composition vs aggregation (object reuse with lifetime rules)</strong>
+                            <ul>
+                                <li>Frames OOP as “code reuse,” including using an object of one class inside another.</li>
+                                <li>Distinguishes composition (strong “owns-a” relationship: part’s lifetime depends on the whole) from aggregation (weak “has-a” relationship: the part can outlive the whole).</li>
+                                <li>Connects the idea to C++ design: composition often uses a direct member object, while aggregation often uses a pointer/reference to a borrowed object.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture09.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 10: Friend functions and friend classes</strong>
+                            <ul>
+                                <li>Explains the access problem: private/protected members normally can’t be accessed outside the class—except by friends.</li>
+                                <li>Shows how to declare friend functions and friend classes so external code can access internal members when necessary.</li>
+                                <li>Emphasizes caution: “friend” weakens encapsulation, so it should be used only when there’s no cleaner alternative.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture10.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 11: Operator Overloading Fundamentals</strong>
+                            <ul>
+                                <li>Explains what operators are (unary vs. binary) and what “operator overloading” means for classes (user-defined types).</li>
+                                <li>Shows why overloading is useful: it lets operators like +, -, <, > work naturally with your own class objects instead of messy function calls.</li>
+                                <li>Lays out the key rules/limits: you can’t change operator precedence/associativity, and you can’t invent brand-new operators.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture11.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 12: Overloading the Assignment Operator (=) for Safe Copying</strong>
+                            <ul>
+                                <li>Focuses on what happens when you do bar = foo, including “member-wise copy” and why it can be dangerous with pointers.</li>
+                                <li>Demonstrates how dynamic memory (e.g., new int) can lead to memory leaks or incorrect sharing if you rely on the default assignment behavior.</li>
+                                <li>Introduces writing an overloaded operator= (often using references) so assignment copies data correctly and safely for pointer-based objects.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture12.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 13: Stream Insertion/Extraction (<<, >>) Operator Overloading</strong>
+                            <ul>
+                                <li>Explains that << and >> are used by the iostream library for cout (ostream) and cin (istream), and can be overloaded for your own classes.</li>
+                                <li>Shows the common pattern of implementing operator << (usually as a friend) so objects can be printed with cout << obj.</li>
+                                <li>Explains why the function returns ostream & (to allow chaining like cout << a << b) and why references help avoid unnecessary copying. </li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture13.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 14: Overloading Special and Unary Operators (Including ++ / --)</strong>
+                            <ul>
+                                <li>Covers overloading “special” operators for classes (like the subscript []) and how they’re used to make objects feel like built-in types.</li>
+                                <li>Explains how to overload unary operators such as increment/decrement and what behavior you’re trying to model in your class.</li>
+                                <li>Distinguishes prefix vs postfix forms using different signatures (e.g., operator++() vs operator++(int)) and shows member-function vs friend-function approaches. </li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture14.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 15: Typecasting and Type Conversion (Built-in and User-defined)</strong>
+                            <ul>
+                                <li>Defines type conversion and contrasts implicit conversion (done automatically by the compiler) vs explicit conversion (forced by the programmer).</li>
+                                <li>Explains user-defined conversions: (1) other type → your class via a single-argument constructor, and (2) your class → other type via a conversion operator.</li>
+                                <li>Shows how explicit prevents unwanted implicit conversions (both for constructors and conversion operators), forcing you to convert deliberately.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture15.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 16: Inheritance Basics and Access Control</strong>
+                            <ul>
+                                <li>Defines inheritance as extending an existing (base/parent) class into a new (derived/child) class.</li>
+                                <li>Clarifies what is and isn’t inherited (e.g., not constructors/destructors, not operator=, not private members).</li>
+                                <li>Explains public/protected/private inheritance and how each affects member accessibility in the derived class.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture16.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 17: Inheritance in Memory and Constructor Order</strong>
+                            <ul>
+                                <li>Explains that a derived-class object contains an “anonymous” base-class part inside it (base members + derived members).</li>
+                                <li>Shows constructor order: when you create a derived object, the base-class constructor runs first, then the derived-class constructor.</li>
+                                <li>Introduces base-class initialization syntax so a derived constructor can explicitly call a specific base constructor (especially when the base has parameters).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture17.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 18: Types of Inheritance in C++</strong>
+                            <ul>
+                                <li>Lists the major inheritance forms supported (single, multiple, multilevel, hybrid, hierarchical, multipath).</li>
+                                <li>Explains what each form means conceptually (e.g., “single” = one base class; “multiple” = more than one base class).</li>
+                                <li>Reinforces the concepts with simple class-diagram style examples showing how classes relate in each inheritance type.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture18.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 19: Overriding vs Overloading (and Using Scope Resolution)</em></strong>
+                            <ul>
+                                <li>Defines overriding: a derived class replaces a base-class function by providing the same signature (same name/parameters).</li>
+                                <li>Contrasts with overloading: happens within one class by changing parameter lists; trying to “duplicate” the same signature is an error.</li>
+								<li>Shows how to call the base version with the scope operator (e.g., Parent::myFunction()), and highlights ambiguity problems in multiple/diamond inheritance.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture19.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 20: Copy Constructor and Assignment Operator in Inheritance</em></strong>
+                            <ul>
+                                <li>Explains the default behavior: when copying a derived object, the base part is copied first, then the derived part.</li>
+                                <li>Introduces shallow vs deep copy issues (especially with pointer members) and why you often need custom copy logic. </li>
+								 <li>Covers assignment operator behavior in inheritance: base assignment first, then derived—plus why you may need to explicitly call the base-class operator= when writing your own.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="oop/Lecture20.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 21: Polymorphism with virtual functions (run-time binding)</strong>
+                            <ul>
+                                <li>Explains polymorphism as “different objects responding differently to the same message,” so the caller doesn’t need to know the exact derived type.</li>
+                                <li>Compares static (compile-time) binding vs dynamic (run-time) binding, and shows how virtual functions enable run-time binding through base pointers/references.</li>
+                                <li>Introduces pure virtual functions and abstract classes (interfaces), plus why virtual destructors matter in inheritance hierarchies.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture21.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 22: Generic programming with function templates</strong>
+                            <ul>
+                                <li>Motivates generic programming: avoid writing the same function many times for different data types (e.g., int vs float comparisons).</li>
+                                <li>Introduces function templates and how the compiler generates type-specific versions from one template definition.</li>
+                                <li>Covers explicit type parameterization and template specialization when a general template doesn’t work correctly for certain types (e.g., C-strings).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture22.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 23: Templates with multiple type parameters and user-defined types</strong>
+                            <ul>
+                                <li>Shows templates that take more than one type parameter (e.g., T and U) and why that’s useful.</li>
+                                <li>Demonstrates using templates with user-defined classes, as long as the needed operators (like +) exist for that type.</li>
+                                <li>Explains when to use function overloading vs templates (different operation by type → overload; same operation across types → template).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture23.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 24: Class templates and how to implement them</strong>
+                            <ul>
+                                <li>Introduces class templates to avoid duplicating near-identical classes (example: complex numbers for float vs double).</li>
+                                <li>Shows how to create objects from a class template by plugging in a concrete type (built-in or user-defined).</li>
+                                <li>Covers common pitfalls: defining template member functions outside the class, and using default type parameters.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture24.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 25: Templates with inheritance + intro to the STL</strong>
+                            <ul>
+                                <li>Explains how templates work with inheritance, friend functions, and static members (each template instantiation gets its own static copy).</li>
+                                <li>Introduces the Standard Template Library (STL) and its three main parts: containers, iterators, and algorithms.</li>
+                                <li>Surveys STL container types (sequence vs associative vs adapters) and gives examples like vector/deque/set/map plus iterator-based loops and algorithms like sort.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture25.pdf" download>Download PDF</a></td>
+                    </tr>
+					
+					<tr>
+                        <td>
+                            <strong>Lecture 26: Error handling approaches (before exceptions)</strong>
+                            <ul>
+                                <li>Compares error-handling strategies: abnormal termination, graceful termination, returning error codes, and exception handling as options.</li>
+                                <li>Demonstrates how division-by-zero can crash a program if not checked, and how “graceful termination” can at least stop safely.</li>
+                                <li>Shows returning an error code (e.g., true/false) so the program can recover (like re-prompting for valid input) instead of exiting.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture25.pdf" download>Download PDF</a></td>
+                    </tr>
+					
+					<tr>
+                        <td>
+                            <strong>Lecture 27: Exception handling in C++ (try/throw/catch)</strong>
+                            <ul>
+                                <li>Explains why return-code error handling can make code messy (lots of nested checks mixed with core logic).</li>
+                                <li>Introduces exceptions: put risky code in try, signal problems with throw, and handle them with one or more catch blocks.</li>
+                                <li>Covers stack unwinding: when an exception is thrown, the program exits scopes safely and local objects are cleaned up as control moves to a handler.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture25.pdf" download>Download PDF</a></td>
+                    </tr>
+					
+					<tr>
+                        <td>
+                            <strong>Lecture 28: File handling with fstream</strong>
+                            <ul>
+                                <li>Introduces file streams: ifstream (read), ofstream (write), fstream (read/write), and common functions like getline, eof, and close.</li>
+                                <li>Explains file open modes (input/output/append/truncate/binary) and what each mode does.</li>
+                                <li>Walks through examples of writing records to a file and then reading/searching the file line-by-line.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture25.pdf" download>Download PDF</a></td>
+                    </tr>
+					
+					<tr>
+                        <td>
+                            <strong>Practice Session 1: Inheritance and operator overloading practice</strong>
+                            <ul>
+                                <li>Practices overriding: mother/daughter classes both define display() with different messages, showing how derived functions can replace base behavior.</li>
+                                <li>Practices calling the base version explicitly using scope resolution (calling the mother’s display() from a daughter object).</li>
+                                <li>Designs a Counter class that overloads prefix/postfix ++ and uses a static counter to track how many objects currently exist.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture25.pdf" download>Download PDF</a></td>
+                    </tr>
+					
+					<tr>
+                        <td>
+                            <strong>Practice Session 2: Pointers, static, copy constructor, friend access, object lifetime</strong>
+                            <ul>
+                                <li>Fixes common syntax/logic mistakes involving objects vs pointers (. vs ->, new, dereferencing, and delete).</li>
+                                <li>Reinforces key concepts with questions on static members, copy constructors, and friend classes (what can be accessed and why).</li>
+                                <li>Tests understanding of constructor/destructor order by predicting output when objects are created in and out of nested scopes.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="algo/Lecture25.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-nav section-nav-bottom">
+        <a class="button teaching-nav-button" href="teaching.html#teaching" aria-label="Back to Teaching section">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <span>Back to Teaching</span>
+        </a>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p>&copy; <span id="current-year"></span> Naveed Anwar Bhatti. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="teaching.html">Activities</a>
+            <a href="misc.html">Misc</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
