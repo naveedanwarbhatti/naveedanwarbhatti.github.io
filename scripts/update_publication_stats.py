@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 
 PROFILE_URL = "https://scholar.google.com.pk/citations?hl=en&user=6ZB86uYAAAAJ"
 SERPAPI_URL = "https://serpapi.com/search.json"
-SERPAPI_KEY_ENV = "SERPAPI_API_KEY"
+SERPAPI_KEY_ENV = "040622a2632e7d21a1260c0c9727819eabbd72a5ac4dac8bf2614cfa2d1909b3"
 
 # A list of common user agents to rotate through for each request
 USER_AGENTS = [
