@@ -359,6 +359,50 @@ p {
   transform: translateY(-2px);
 }
 
+.section-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: min(1040px, 92%);
+  padding: 0.5rem 0 0.75rem;
+}
+
+.section-nav.section-nav-bottom {
+  justify-content: flex-start;
+  padding-bottom: 0;
+}
+
+.teaching-nav-button {
+  background: linear-gradient(135deg, rgba(37, 95, 133, 0.92), rgba(79, 163, 199, 0.9));
+  color: #fff;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 12px 24px rgba(37, 95, 133, 0.22);
+}
+
+.teaching-nav-button i {
+  font-size: 0.92rem;
+}
+
+.teaching-nav-button:hover,
+.teaching-nav-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(37, 95, 133, 0.24);
+  background: linear-gradient(135deg, rgba(37, 95, 133, 1), rgba(79, 163, 199, 1));
+}
+
+@media (max-width: 640px) {
+  .section-nav {
+    width: 100%;
+    padding: 0.5rem 1rem 0.75rem;
+  }
+
+  .teaching-nav-button {
+    width: 100%;
+  }
+}
+
 
 .hero-title {
   font-family: var(--font-display);
@@ -743,6 +787,33 @@ p {
 
 .timeline-content p {
   margin-bottom: 0.3rem;
+}
+
+.course-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-right: 0.65rem;
+  padding: 0.25rem 0.65rem 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(79, 163, 199, 0.18), rgba(111, 196, 169, 0.18));
+  color: var(--primary-strong);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(79, 163, 199, 0.24);
+  box-shadow: 0 10px 25px rgba(31, 77, 108, 0.14);
+  position: relative;
+  top: -1px;
+}
+
+.course-badge i {
+  font-size: 0.82rem;
+  color: #2c7e9d;
+}
+
+.course-badge span {
+  line-height: 1;
 }
 
 .funding-grid {
