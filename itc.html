@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Lecture materials and key topics for Algorithms (CS-310) by Naveed Anwar Bhatti.">
+    <meta name="keywords" content="Algorithms, CS-310, Naveed Anwar Bhatti, lecture notes, divide and conquer, dynamic programming, graphs, flows, NP-completeness, approximation">
+    <meta name="author" content="Naveed Anwar Bhatti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms (CS-310) | Naveed Anwar Bhatti</title>
+    <meta property="og:title" content="Algorithms (CS-310) | Naveed Anwar Bhatti">
+    <meta property="og:description" content="Downloadable lecture slides for Algorithms (CS-310) with corrected topics aligned to each PDF.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naveedanwarbhatti.github.io/algorithms.html">
+    <meta property="og:image" content="https://naveedanwarbhatti.github.io/ID_pic.jpg">
+    <meta property="og:image:width" content="668">
+    <meta property="og:image:height" content="1066">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Algorithms (CS-310) | Naveed Anwar Bhatti">
+    <meta name="twitter:description" content="Downloadable lecture slides for Algorithms (CS-310) with corrected topics aligned to each PDF.">
+    <meta name="twitter:image" content="https://naveedanwarbhatti.github.io/ID_pic.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="web.css">
+    <link rel="icon" href="Sysnet.ico" type="image/x-icon">
+    <script src="scripts/site.js" defer></script>
+</head>
+<body class="algorithms-page">
+<header class="site-header">
+    <div class="nav-container">
+        <div class="brand">
+            <a class="brand-home" href="index.html">
+                <div class="brand-text">
+                    <span class="brand-name">Naveed Anwar Bhatti</span>
+                    <span class="brand-role">Assistant Professor</span>
+                </div>
+            </a>
+            <span class="brand-divider" aria-hidden="true"></span>
+            <a class="brand-logo-link" href="https://lums.edu.pk/" target="_blank" rel="noopener">
+                <img class="brand-logo" src="LUMS_logo.png" alt="LUMS logo">
+            </a>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </button>
+        <nav class="primary-nav">
+            <ul id="primary-navigation" class="nav-links">
+                <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="publications.html"><i class="fa fa-book"></i><span>Publications</span></a></li>
+                <li><a class="active" href="teaching.html"><i class="fa fa-tasks"></i><span>Activities</span></a></li>
+                <li><a href="misc.html"><i class="fa fa-th-large"></i><span>Misc</span></a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="section-nav section-nav-top">
+        <a class="button teaching-nav-button" href="teaching.html#teaching" aria-label="Back to Teaching section">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <span>Back to Teaching</span>
+        </a>
+    </div>
+    <section class="page-hero">
+        <h1>Introduction to Computing (CS-156)</h1>
+        
+    </section>
+
+    <section class="content-section">
+        <div class="content-card">
+           
+            <div class="lecture-table-wrapper">
+                <table class="lecture-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Lecture Topic</th>
+                        <th scope="col">Download</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <strong>Lecture 1: Introduction to IT and Computers </strong>
+                            <ul>
+                                <li>Explains what “information technology” is and how it combines computer technology with communication technology.</li>
+                                <li>Shows common real-world uses of computers (e.g., education, health, banking, government).</li>
+                                <li>Introduces how computers are classified (single vs multi-user; microcomputers, mainframes, etc.) and outlines course expectations.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture01.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 2: Number Systems and Bases</strong>
+                            <ul>
+                                <li>Introduces number systems and the idea of a “base/radix” (how many symbols a system uses).</li>
+                                <li>Covers the main systems used in computing: decimal, binary, octal, and hexadecimal.</li>
+                                <li>Explains why binary matters for computers and why we need to understand base conversions.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture02.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 3: Conversions, Digit Positions, and Data Units</strong>
+                            <ul>
+                                <li>Practices converting numbers from decimal to binary/octal/hex (and working with remainders).</li>
+                                <li>Explains digit positions (least significant digit vs most significant digit) and how place value works.</li>
+                                <li>Defines bits, bytes, and words, and connects them to storage sizes (KB, MB, GB, TB).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture03.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 4: Binary Arithmetic and an Intro to Negative Numbers</strong>
+                            <ul>
+                                <li>Teaches binary addition rules (including carrying) with worked examples.</li>
+                                <li>Teaches binary multiplication using the same “shift and add” idea as decimal multiplication.</li>
+                                <li>Introduces the problem of representing negative numbers in binary and why special methods are needed.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture04.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 5: One’s Complement vs Two’s Complement (Negative Numbers Done Properly)</strong>
+                            <ul>
+                                <li>Explains one’s complement (flip bits) and two’s complement (flip bits + add one) for negative numbers.</li>
+                                <li>Shows how addition works with these systems, including what to do with carries.</li>
+                                <li>Summarizes why you can’t guess a number’s meaning without knowing the representation method.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture05.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 6: Getting Started with C++ (Languages, Tools, and First Program)</strong>
+                            <ul>
+                                <li>Compares machine language, assembly, and high-level languages, and gives brief history of C and C++.</li>
+                                <li>Explains the basic C++ workflow (edit → preprocess → compile → link → load → execute).</li>
+                                <li>Walks through a simple C++ program using main, #include, comments, and output with cout.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture06.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 7: Variables, Data Types, Constants, and User Input</strong>
+                            <ul>
+                                <li>Defines variables as named storage in memory, and shows how to declare and assign them.</li>
+                                <li>Introduces common data types (int, float, double, char, bool) and what they store.</li>
+                                <li>Teaches reading input with cin, and explains why double is often safer than float for calculations.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture07.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 8: C++ Operators (Doing Work with Values)</strong>
+                            <ul>
+                                <li>Covers arithmetic operators like + - * / % and the increment/decrement operators ++ and --.</li>
+                                <li>Covers assignment operators like =, +=, -=, *=, /=, and %= for updating variables.</li>
+                                <li>Covers comparison and logical operators to build true/false conditions in programs.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture08.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 9: Decision Making in C++ (if/else and switch)</strong>
+                            <ul>
+                                <li>Introduces comparison conditions (e.g., <, <=, ==, !=) used to make decisions.</li>
+                                <li>Explains if, else if, and else for running different code based on a condition.</li>
+                                <li>Introduces switch for choosing between many options (with case, break, and default).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture09.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 10: Loops in C++ (while and do-while)</strong>
+                            <ul>
+                                <li>Explains why loops matter: they repeat code and reduce manual work and mistakes.</li>
+                                <li>Teaches the while loop (check condition first, then run repeatedly while true).</li>
+                                <li>Teaches the do-while loop (run once first, then repeat only if the condition stays true).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture10.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 11: C++ Practice: Decisions, Loops, and Simple Input</strong>
+                            <ul>
+                                <li>Uses if/else to solve common problems like finding the maximum of 2 or 3 numbers and checking even vs odd.</li>
+                                <li>Repeats the even/odd check using a switch statement to show an alternative decision method.</li>
+                                <li>Practices while loops and basic input parsing (like reading 1/2), plus simple ASCII/character tasks (alphabet check, next letter).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture11.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 12: For Loops and Nested Loops</strong>
+                            <ul>
+                                <li>Explains the for loop structure (initialization, condition, update all in one line).</li>
+                                <li>Shows how to print sequences (0–10, even numbers, odd numbers) using for loops.</li>
+                                <li>Introduces nested loops and uses them to print patterns (like squares of * and number patterns).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture12.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 13: One-Dimensional Arrays</strong>
+                            <ul>
+                                <li>Defines an array as a group of same-type values under one name (like int a[10]).</li>
+                                <li>Explains indexing (starts at 0) and how arrays sit in continuous memory, with examples using loops to access values.</li>
+								<li>Highlights key warnings: you can’t assign arrays directly (a=b is illegal) and C++ does no bounds checking (going past the end can break things).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture13.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 14: Strings as Character Arrays</strong>
+                            <ul>
+                                <li>Explains that a C++ “string” here means a char array ending with '\0' (null terminator).</li>
+                                <li>Shows different ways to initialize and edit strings, and why missing '\0' causes messy output.</li>
+                                <li>Covers reading strings (why cin stops at spaces) and introduces common string functions like copy, join, length, and compare. </li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture14.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 15: 2D Arrays and Functions Basics</strong>
+                            <ul>
+                                <li>Introduces two-dimensional arrays as rows and columns (like a table), including how to declare and fill them using nested loops.</li>
+                                <li>Explains what functions are (a reusable block of code) and how to declare, define, and call them.</li>
+                                <li>Gives reasons to use functions: split big problems into smaller parts, easier testing/debugging, and cleaner code.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture15.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 16: Scope and Function Overloading </strong>
+                            <ul>
+                                <li>Defines scope: where a variable/name can be used (local inside a block vs global for the whole program).</li>
+                                <li>Explains name precedence: a local variable with the same name as a global one “wins” inside its block.</li>
+                                <li>Introduces function overloading: same function name, but different parameters (number and/or types).</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture16.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 17: Memory Addresses, References, and Pointers</strong>
+                            <ul>
+                                <li>Explains that every variable lives at a memory address, which you can view using &.</li>
+                                <li>Introduces references (an alias to an existing variable) and the main rules (set once, can’t be null).</li>
+                                <li>Introduces pointers (store addresses), how to read/change values using * (dereference), and the idea of pass-by-value vs pass-by-reference.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture17.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>Lecture 18: Arrays with Pointers, Sorting, Type Conversion, and Dynamic Memory</strong>
+                            <ul>
+                                <li>Shows how to pass arrays into functions, and connects arrays with pointer-style access (like A[i] vs *(A+i)).</li>
+                                <li>Introduces sorting, especially bubble sort, and why sorting makes tasks like searching easier.</li>
+                                <li>Covers type casting (implicit vs explicit) and dynamic memory (new/delete vs malloc/free), including an example idea for allocating a 2D array.</li>
+                            </ul>
+                        </td>
+                        <td class="download-cell"><a class="lecture-link" href="itc/Lecture18.pdf" download>Download PDF</a></td>
+                    </tr>
+
+                    
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-nav section-nav-bottom">
+        <a class="button teaching-nav-button" href="teaching.html#teaching" aria-label="Back to Teaching section">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <span>Back to Teaching</span>
+        </a>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p>&copy; <span id="current-year"></span> Naveed Anwar Bhatti. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="teaching.html">Activities</a>
+            <a href="misc.html">Misc</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
