@@ -89,7 +89,7 @@ function renderCitationGraph(text) {
   if (!recentHistory.length) return;
 
   const maxCitations = Math.max(...recentHistory.map(d => d.citations));
-  const graphHeight = 120;
+  const graphHeight = 108;
 
   recentHistory.forEach(data => {
     const barItem = document.createElement('div');
