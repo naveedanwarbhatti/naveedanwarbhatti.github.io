@@ -27,7 +27,102 @@
     <script src="/scripts/site.js" defer></script>
 
     <style>
-        /* Publications page: ranking summary (manual snapshot) */
+        /* Publications page: clean stats + ranking layout */
+        .stats-rank-wrapper{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:18px;
+            margin-top:8px;
+            align-items:stretch;
+        }
+        @media (max-width: 980px){
+            .stats-rank-wrapper{ grid-template-columns:1fr; }
+        }
+
+        .pub-panel{
+            border-radius:18px;
+            background:rgba(255,255,255,.88);
+            border:1px solid rgba(0,0,0,.08);
+            padding:16px;
+            box-shadow:0 10px 28px rgba(0,0,0,.06);
+            display:flex;
+            flex-direction:column;
+            min-height:420px;
+        }
+        .pub-panel-header{
+            display:flex;
+            align-items:flex-start;
+            justify-content:space-between;
+            gap:12px;
+            margin-bottom:14px;
+        }
+
+        /* Stats (Google Scholar) */
+        #scholar-stats-container.stats-stack{
+            display:flex;
+            flex-direction:column;
+            gap:14px;
+            flex:1;
+        }
+        .stats-table-card,
+        .citation-graph-container{
+            background:rgba(0,0,0,.02);
+            border:1px solid rgba(0,0,0,.06);
+            border-radius:14px;
+            padding:12px;
+        }
+        .stats-table-card{ overflow:auto; }
+        #stats-table{
+            width:100%;
+            border-collapse:collapse;
+            font-size:.93rem;
+        }
+        #stats-table thead th{
+            text-align:left;
+            padding:4px 0 8px;
+            font-weight:800;
+            color:rgba(0,0,0,.65);
+        }
+        #stats-table tbody td{
+            padding:10px 0;
+            font-weight:700;
+            border-top:1px dashed rgba(0,0,0,.10);
+        }
+        #stats-table tbody tr:first-child td{ border-top:none; }
+
+        .citation-graph-title{
+            font-weight:900;
+            font-size:.96rem;
+            margin-bottom:8px;
+        }
+        #citation-graph{
+            display:flex;
+            align-items:flex-end;
+            gap:10px;
+            height:170px;
+            padding:6px 2px 4px;
+        }
+        .graph-bar-item{
+            flex:1;
+            min-width:18px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:6px;
+        }
+        .graph-bar{
+            width:100%;
+            border-radius:10px;
+            background:rgba(60, 130, 245, 0.55);
+        }
+        .bar-label,
+        .year-label{
+            font-size:.78rem;
+            font-weight:800;
+            color:rgba(0,0,0,.55);
+        }
+
+        /* Action button (DBLP) */
         .stats-action-link{
             display:inline-flex;
             align-items:center;
@@ -38,7 +133,7 @@
             background:rgba(46, 204, 113, 0.12);
             color:#1f7a3a;
             text-decoration:none;
-            font-weight:600;
+            font-weight:700;
             font-size:0.9rem;
             white-space:nowrap;
             transition:transform .08s ease, background .2s ease;
@@ -49,33 +144,8 @@
         }
         .stats-action-link i{ font-size:0.95em; }
 
-        .rank-summary-card{
-            margin-top:16px;
-            padding:14px 14px 12px;
-            border-radius:14px;
-            background:rgba(255,255,255,.70);
-            border:1px solid rgba(0,0,0,.08);
-            box-shadow:0 8px 24px rgba(0,0,0,.06);
-        }
-        .rank-summary-header{
-            display:flex;
-            align-items:flex-start;
-            justify-content:space-between;
-            gap:12px;
-            margin-bottom:10px;
-            flex-wrap:wrap;
-        }
-        .rank-summary-title{
-            font-weight:800;
-            font-size:1.05rem;
-            letter-spacing:-.01em;
-            line-height:1.2;
-        }
-        .rank-summary-subtitle{
-            margin-top:3px;
-            color:rgba(0,0,0,.58);
-            font-size:.85rem;
-        }
+        /* Ranking Summary */
+        .rank-panel #rank-summary{ flex:1; }
         .rank-sections{
             display:grid;
             grid-template-columns:1fr;
@@ -83,13 +153,14 @@
         }
         .rank-section{
             padding:12px;
-            border-radius:12px;
-            background:rgba(0,0,0,.03);
+            border-radius:14px;
+            background:rgba(0,0,0,.02);
             border:1px solid rgba(0,0,0,.06);
         }
         .rank-section h4{
             margin:0 0 10px;
             font-size:0.95rem;
+            font-weight:900;
         }
         .rank-row{
             display:grid;
@@ -145,25 +216,14 @@
         .rank-count{
             justify-self:end;
             color:rgba(0,0,0,.72);
-            font-weight:700;
+            font-weight:800;
             font-size:.92rem;
-        }
-        .rank-footnote{
-            margin-top:10px;
-            font-size:.82rem;
-            color:rgba(0,0,0,.55);
         }
         .rank-loading{
             color:rgba(0,0,0,.55);
             font-size:.9rem;
         }
-        .rank-footnote code{
-            font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-size:.82em;
-            background:rgba(0,0,0,.05);
-            padding:2px 6px;
-            border-radius:8px;
-        }
+
     </style>
 
 </head>
@@ -206,57 +266,45 @@
         <section class="content-section">
             <div class="content-card">
 
-                <section class="feature-stats-wrapper">
-                    <div class="panel-featured">
-                        <div class="featured-research">Featured Research</div>
-                        <div class="highlight-container">
-                            <a class="highlight" href="https://dl.acm.org/doi/10.1145/3715014.3722056" target="_blank" rel="noopener">
-                                <span class="title">CheckMate: LLM-Powered Approximate Intermittent Computing</span>
-                                <span class="highlight-meta">SenSys 2025</span>
-                            </a>
-                            <a class="highlight" href="https://dl.acm.org/doi/pdf/10.1145/3708821.3710825" target="_blank" rel="noopener">
-                                <span class="title">Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping</span>
-                                <span class="highlight-meta">AsiaCCS 2025</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="panel-stats">
-                        <div class="stats-title">
-                            <img class="stats-title-icon" src="/assets/img/google_scholar.png" alt="Google Scholar icon">
-                            <div class="stats-title-text">
-                                <span class="stats-title-main">Statistics</span>
-                                <span class="stats-title-source">(powered by Google Scholar)</span>
+                <section class="stats-rank-wrapper">
+                    <div class="pub-panel stats-panel">
+                        <div class="pub-panel-header">
+                            <div class="stats-title">
+                                <img class="stats-title-icon" src="/assets/img/google_scholar.png" alt="Google Scholar icon">
+                                <div class="stats-title-text">
+                                    <span class="stats-title-main">Statistics</span>
+                                    <span class="stats-title-source">(powered by Google Scholar)</span>
+                                </div>
                             </div>
                         </div>
-                        <div id="scholar-stats-container">
+
+                        <div id="scholar-stats-container" class="stats-stack">
                             <div class="stats-table-card">
                                 <table id="stats-table">
                                     <thead><tr></tr></thead>
                                     <tbody id="stats-table-body"></tbody>
                                 </table>
                             </div>
+
                             <div class="citation-graph-container">
                                 <div class="citation-graph-title">Citations per year</div>
                                 <div id="citation-graph"></div>
                             </div>
                         </div>
-                            <div class="rank-summary-card" aria-label="Ranking summary">
-                                <div class="rank-summary-header">
-                                    <div>
-                                        <div class="rank-summary-title">Ranking Summary</div>
-                                        <div class="rank-summary-subtitle">Manual snapshot of venue quality for published papers.</div>
-                                    </div>
-                                    <a class="stats-action-link" href="https://dblp.org/pid/146/7880.html" target="_blank" rel="noopener" aria-label="Open DBLP profile">
-                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                                        DBLP profile
-                                    </a>
-                                </div>
-                                <div id="rank-summary">
-                                    <div class="rank-loading">Loading ranking summary…</div>
-                                </div>
-                                <div class="rank-footnote">Edit <code>/data/ranking_summary.csv</code> to update counts. No automation.</div>
-                            </div>
+                    </div>
 
+                    <div class="pub-panel rank-panel" aria-label="Ranking summary">
+                        <div class="pub-panel-header rank-header">
+                            <div class="rank-summary-title">Ranking Summary</div>
+                            <a class="stats-action-link" href="https://dblp.org/pid/146/7880.html" target="_blank" rel="noopener" aria-label="Open DBLP profile">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                DBLP profile
+                            </a>
+                        </div>
+
+                        <div id="rank-summary">
+                            <div class="rank-loading">Loading ranking summary…</div>
+                        </div>
                     </div>
                 </section>
 

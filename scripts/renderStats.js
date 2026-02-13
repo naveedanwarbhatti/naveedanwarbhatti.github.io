@@ -266,12 +266,12 @@ function loadRankingSummary() {
  * Main function to load all scholar-related data.
  */
 function loadScholarData() {
-  fetch('publications_stats.csv')
+  fetch('/data/publications_stats.csv')
     .then(res => res.ok ? res.text() : Promise.reject('Failed to load publications_stats.csv'))
     .then(text => renderStatsTable(text))
     .catch(e => console.error(e));
 
-  fetch('citation_history.csv')
+  fetch('/data/citation_history.csv')
     .then(res => {
       if (res.status === 404) return null;
       if (!res.ok) return Promise.reject('Failed to load citation_history.csv');
