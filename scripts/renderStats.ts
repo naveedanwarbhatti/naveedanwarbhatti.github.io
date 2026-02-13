@@ -5,7 +5,7 @@ interface MetricRow {
 }
 
 function loadStats() {
-    fetch('publications_stats.csv')
+    fetch('/data/publications_stats.csv')
         .then(res => res.text())
         .then(text => {
             const lines = text.trim().split(/\r?\n/);
