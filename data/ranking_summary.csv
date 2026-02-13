@@ -1,0 +1,12 @@
+# Manual ranking summary for /pages/publications.html
+# Format: type,rank,count
+# type: conference|journal
+type,rank,count
+conference,A*,5
+conference,A,4
+conference,B,3
+conference,C,1
+journal,Q1,5
+journal,Q2,5
+journal,Q3,0
+journal,Q4,0
