@@ -26,15 +26,63 @@
     <link rel="icon" href="/assets/img/Sysnet.ico" type="image/x-icon">
     <script src="/scripts/site.js" defer></script>
 
+    
     <style>
-        /* Inline visual helper for the GSVR tool card (kept minimal to match existing styling) */
-        .tool-visual { margin-top: 0.85rem; }
-        .tool-visual img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 16px;
-            border: 1px solid rgba(0,0,0,0.12);
+        /* Elegant "Tool for the Community" feature card */
+        .community-tool { margin-top: 0.5rem; }
+        .community-tool-card{
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 1.35rem;
+            align-items: center;
+            padding: 1.25rem 1.25rem;
+            border-radius: 22px;
+            border: 1px solid rgba(0,0,0,0.08);
+            background: rgba(255,255,255,0.75);
+            box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+            backdrop-filter: blur(8px);
+        }
+        @media (max-width: 900px){
+            .community-tool-card{ grid-template-columns: 1fr; }
+        }
+        .community-tool-title{ margin: 0 0 0.35rem 0; font-weight: 700; }
+        .community-tool-lede{ margin: 0 0 0.85rem 0; }
+        .community-tool-pills{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.15rem 0 0.95rem;
+            padding: 0;
+            list-style: none;
+        }
+        .community-tool-pills li{
+            padding: 0.35rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            border: 1px solid rgba(0,0,0,0.10);
+            background: rgba(0, 122, 204, 0.07);
+        }
+        .community-tool-visual{
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.10);
+            background: rgba(255,255,255,0.65);
+        }
+        .community-tool-visual img{
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
             display: block;
+        }
+        .community-tool-caption{
+            margin: 0;
+            padding: 0.65rem 0.85rem 0.8rem;
+            font-size: 0.92rem;
+            color: rgba(0,0,0,0.62);
+        }
+        /* Icon alignment inside existing pill buttons */
+        .resource-tag .tool-icon{
+            margin-right: 0.45rem;
         }
     </style>
 </head>
@@ -82,6 +130,7 @@
                 <a class="tab-link" href="#teaching"><i class="fa fa-chalkboard-user" aria-hidden="true"></i><span>Teaching</span></a>
                 <a class="tab-link" href="#funding"><i class="fa fa-lightbulb" aria-hidden="true"></i><span>Funding</span></a>
                 <a class="tab-link" href="#service"><i class="fa fa-handshake" aria-hidden="true"></i><span>Service</span></a>
+                <a class="tab-link" href="#tool-community"><i class="fa fa-wrench" aria-hidden="true"></i><span>Tools</span></a>
                 <a class="tab-link" href="#mentoring"><i class="fa fa-people-group" aria-hidden="true"></i><span>Mentoring</span></a>
                 <a class="tab-link" href="#outreach"><i class="fa fa-microphone" aria-hidden="true"></i><span>Outreach</span></a>
             </nav>
@@ -263,28 +312,7 @@
                         </div>
                     </header>
                     <ul class="activity-timeline">
-
-                        <li>
-                            <div class="timeline-label">Tooling</div>
-                            <div class="timeline-content">
-                                <p><strong>Google Scholar Venue Ranker (GSVR)</strong> &mdash; a free Chrome extension that overlays historical CORE conference tiers (A*, A, B, C) and SCImago Journal Rank (SJR) quartiles (Q1&ndash;Q4) directly on Google Scholar profile pages, helping researchers quickly interpret venue context at a glance.</p>
-                                <ul class="muted-text" style="margin: 0.35rem 0 0.75rem 1.1rem;">
-                                    <li>Year-aware CORE ranks and SJR quartiles for each publication.</li>
-                                    <li>DBLP-assisted venue matching for reliable mapping.</li>
-                                    <li>Summary panel that aggregates ranks across the publication list.</li>
-                                </ul>
-                                <div class="resource-tray">
-                                    <a class="resource-tag" href="https://chromewebstore.google.com/detail/google-scholar-venue-rank/egohghgpljdhkmcmllhncfndmkeilpfb" target="_blank" rel="noopener">Chrome Extension</a>
-                                    <a class="resource-tag" href="https://github.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker" target="_blank" rel="noopener">Source on GitHub</a>
-                                </div>
-                                <div class="tool-visual">
-                                    <img src="https://raw.githubusercontent.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker/main/GSVR/images/Screenshot.png"
-                                         alt="Google Scholar Venue Ranker (GSVR) showing CORE ranks and SJR quartiles on a Google Scholar profile"
-                                         loading="lazy">
-                                </div>
-                            </div>
-                        </li>
-					    <li>
+<li>
                             <div class="timeline-label">2024-2025</div>
                             <div class="timeline-content">
                                 <p><strong>Distinguished Reviewers</strong>, <a href="https://dl.acm.org/journal/tiot/editorial-board#distinguished-reviewers">ACM Transactions on Internet of Things (TIoT)</a>.</p>
@@ -391,7 +419,54 @@
 
                 <div class="panel-divider" role="presentation"></div>
 
-                <section id="awards" class="activity-panel">
+                                <section id="tool-community" class="activity-panel">
+                    <header class="activity-header">
+                        <span class="activity-icon" aria-hidden="true"><i class="fa fa-wrench"></i></span>
+                        <div>
+                            <h2>Tool for the Community</h2>
+                            <p class="activity-intro">A lightweight, open-source utility that saves time for researchers during evaluation, hiring, and self-assessment.</p>
+                        </div>
+                    </header>
+
+                    <div class="community-tool">
+                        <div class="community-tool-card">
+                            <div>
+                                <h3 class="community-tool-title">Google Scholar Venue Ranker (GSVR)</h3>
+                                <p class="community-tool-lede muted-text">
+                                    A free Chrome extension that augments Google Scholar profiles with <strong>year-aware CORE conference tiers</strong> and
+                                    <strong>SJR journal quartiles</strong>, so venue context is visible instantly—no manual lookups.
+                                </p>
+
+                                <ul class="community-tool-pills">
+                                    <li>CORE tiers (A*, A, B, C)</li>
+                                    <li>SJR quartiles (Q1–Q4)</li>
+                                    <li>DBLP-assisted matching</li>
+                                    <li>Rank summary panel</li>
+                                </ul>
+
+                                <div class="resource-tray" aria-label="Tool links">
+                                    <a class="resource-tag" href="https://chromewebstore.google.com/detail/google-scholar-venue-rank/egohghgpljdhkmcmllhncfndmkeilpfb"
+                                       target="_blank" rel="noopener">
+                                        <i class="fa-brands fa-chrome tool-icon" aria-hidden="true"></i><span>Install Chrome Extension</span>
+                                    </a>
+                                    <a class="resource-tag" href="https://github.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker"
+                                       target="_blank" rel="noopener">
+                                        <i class="fa-brands fa-github tool-icon" aria-hidden="true"></i><span>View on GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="community-tool-visual">
+                                <img src="https://raw.githubusercontent.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker/main/GSVR/images/Screenshot.png"
+                                     alt="Google Scholar Venue Ranker showing inline venue badges and a ranking summary panel on a Google Scholar profile"
+                                     loading="lazy">
+                                <p class="community-tool-caption">Inline rank badges + a summary breakdown panel integrated into Google Scholar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+<section id="awards" class="activity-panel">
                     <header class="activity-header">
                         <span class="activity-icon" aria-hidden="true"><i class="fa fa-trophy"></i></span>
                         <div>
