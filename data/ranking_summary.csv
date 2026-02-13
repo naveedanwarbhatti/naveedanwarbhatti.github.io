@@ -2,7 +2,7 @@
 # Format: type,rank,count
 # type: conference|journal
 type,rank,count
-conference,A*,5
+conference,A*,7
 conference,A,4
 conference,B,3
 conference,C,1
