@@ -1,404 +1,648 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teaching, Funding &amp; Service | Naveed Anwar Bhatti</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Courses, funding, and service contributions led by Naveed Anwar Bhatti at LUMS and beyond.">
+    <meta name="keywords" content="Naveed Anwar Bhatti, LUMS, Cyber Physical Systems, Intermittent Computing, Embedded Security">
+    <meta name="author" content="Naveed Anwar Bhatti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Teaching | Naveed Anwar Bhatti</title>
+    <meta property="og:title" content="Activities & Teaching | Naveed Anwar Bhatti">
+    <meta property="og:description" content="Courses, funding, and service contributions led by Naveed Anwar Bhatti at LUMS and beyond.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naveedanwarbhatti.github.io/pages/teaching.html">
+    <meta property="og:image" content="https://naveedanwarbhatti.github.io/assets/img/ID_pic.jpg">
+    <meta property="og:image:width" content="668">
+    <meta property="og:image:height" content="1066">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Activities & Teaching | Naveed Anwar Bhatti">
+    <meta name="twitter:description" content="Courses, funding, and service contributions led by Naveed Anwar Bhatti at LUMS and beyond.">
+    <meta name="twitter:image" content="https://naveedanwarbhatti.github.io/assets/img/ID_pic.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/web.css">
+    <link rel="icon" href="/assets/img/Sysnet.ico" type="image/x-icon">
+    <script src="/scripts/site.js" defer></script>
 
-  <!-- Keep your existing site styling if present -->
-  <link rel="stylesheet" href="web.css" />
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Bootstrap for quick, consistent visuals -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-        crossorigin="anonymous">
-
-  <style>
-    :root{ --card-radius: 16px; }
-    body{
-      background: linear-gradient(180deg, rgba(245,247,250,1) 0%, rgba(255,255,255,1) 25%);
-    }
-    .hero{ padding: 3.25rem 0 2rem; }
-    .hero h1{ font-weight: 800; letter-spacing: -0.02em; }
-    .subtle{ color: rgba(0,0,0,.65); }
-    .section{ scroll-margin-top: 88px; padding-top: 2.5rem; }
-    .pill-nav a{ text-decoration: none; }
-    .pill-nav .btn{ border-radius: 999px; font-weight: 600; }
-    .card{ border-radius: var(--card-radius); }
-    .badge-soft{
-      background: rgba(13,110,253,.10);
-      color: rgba(13,110,253,1);
-      border: 1px solid rgba(13,110,253,.15);
-      font-weight: 600;
-    }
-    .list-tight li{ margin-bottom: .35rem; }
-    .muted-link a{ color: inherit; text-decoration: none; border-bottom: 1px dashed rgba(0,0,0,.25); }
-    .muted-link a:hover{ border-bottom-color: rgba(0,0,0,.6); }
-    .callout{
-      background: rgba(255, 193, 7, .08);
-      border: 1px solid rgba(255, 193, 7, .22);
-      border-radius: var(--card-radius);
-      padding: 1rem 1.25rem;
-    }
-    .shadow-soft{ box-shadow: 0 10px 30px rgba(0,0,0,.06); }
-    .ratio-16x9{
-      aspect-ratio: 16 / 9;
-      width: 100%;
-      overflow: hidden;
-      border-radius: calc(var(--card-radius) - 2px);
-      border: 1px solid rgba(0,0,0,.06);
-      background: #fff;
-    }
-    .ratio-16x9 img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    footer{ padding: 2.5rem 0 3rem; color: rgba(0,0,0,.55); }
-  </style>
+    <style>
+        /* Inline visual helper for the GSVR tool card (kept minimal to match existing styling) */
+        .tool-visual { margin-top: 0.85rem; }
+        .tool-visual img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.12);
+            display: block;
+        }
+    </style>
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Naveed Anwar Bhatti</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMain">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="teaching.html">Activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="misc.html">Misc</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container">
-    <header class="hero">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-8">
-          <h1 class="display-5 mb-2">Teaching, Funding &amp; Service</h1>
-          <p class="lead subtle mb-0">
-            Cultivating curiosity in the classroom while leading research initiatives and serving the broader systems community.
-          </p>
-        </div>
-        <div class="col-lg-4">
-          <div class="callout shadow-soft">
-            <div class="fw-semibold mb-1">Academic leadership at a glance</div>
-            <div class="small subtle">
-              A snapshot of the courses I teach, the projects I lead, and the communities I help shape around embedded systems,
-              cybersecurity, and the Internet of Things.
+    <header class="site-header">
+        <div class="nav-container">
+            <div class="brand">
+                <a class="brand-home" href="/">
+                    <div class="brand-text">
+                        <span class="brand-name">Naveed Anwar Bhatti</span>
+                        <span class="brand-role">Assistant Professor</span>
+                    </div>
+                </a>
+                <span class="brand-divider" aria-hidden="true"></span>
+                <a class="brand-logo-link" href="https://lums.edu.pk/" target="_blank" rel="noopener">
+                    <img class="brand-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">
+                </a>
             </div>
-          </div>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+            <nav class="primary-nav">
+                <ul id="primary-navigation" class="nav-links">
+                    <li><a href="/"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li><a href="/pages/publications.html"><i class="fa fa-book"></i><span>Publications</span></a></li>
+                    <li><a class="active" href="/pages/teaching.html"><i class="fa fa-tasks"></i><span>Activities</span></a></li>
+                    <li><a href="/pages/misc.html"><i class="fa fa-th-large"></i><span>Misc</span></a></li>
+                    <li><a href="/pages/contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-
-      <div class="pill-nav d-flex flex-wrap gap-2 mt-4">
-        <a href="#teaching" class="btn btn-outline-primary btn-sm">Teaching</a>
-        <a href="#funding" class="btn btn-outline-primary btn-sm">Funding</a>
-        <a href="#service" class="btn btn-outline-primary btn-sm">Service</a>
-        <a href="#mentoring" class="btn btn-outline-primary btn-sm">Mentoring</a>
-        <a href="#outreach" class="btn btn-outline-primary btn-sm">Outreach</a>
-      </div>
-
-      <div class="row g-3 mt-3">
-        <div class="col-md-6 col-lg-3">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-start">
-                <div>
-                  <div class="fw-semibold">Teaching</div>
-                  <div class="small subtle">14 distinct undergraduate &amp; graduate courses taught or coordinated across Pakistan and Europe.</div>
-                </div>
-                <span class="badge badge-soft">14</span>
-              </div>
-              <a class="stretched-link" href="#teaching" aria-label="See teaching highlights"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <div class="fw-semibold">Research Funding</div>
-              <div class="small subtle">Rs. 24+ million in competitive funding to power sustainable IoT, cybersecurity, and human-centric computing.</div>
-              <a class="stretched-link" href="#funding" aria-label="Explore funded projects"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <div class="fw-semibold">Recognition</div>
-              <div class="small subtle">International fellowships and best-paper accolades celebrating impact in the embedded systems community.</div>
-              <a class="stretched-link" href="#awards" aria-label="View awards"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <div class="fw-semibold">Mentoring</div>
-              <div class="small subtle">Guiding Ph.D., M.Sc., and undergraduate researchers toward resilient, human-centered technology solutions.</div>
-              <a class="stretched-link" href="#mentoring" aria-label="Meet the mentees"></a>
-            </div>
-          </div>
-        </div>
-      </div>
     </header>
 
-    <section id="teaching" class="section">
-      <h2 class="mb-3">Teaching</h2>
-      <div class="card shadow-soft">
-        <div class="card-body">
-          <ul class="list-tight mb-0">
-            <li><span class="fw-semibold">2026, 2025 &amp; 2024</span> — Topics in IoT (CS-677) — Graduate seminar style course.</li>
-            <li><span class="fw-semibold">2025, 2024 &amp; 2023</span> — Operating Systems (CS-370)</li>
-            <li><span class="fw-semibold">2023</span> — Algorithms (CS-310) <span class="muted-link">(<a href="algo/" target="_blank" rel="noopener">Slides</a>)</span></li>
-            <li><span class="fw-semibold">2023</span> — Computer Organization and Assembly Language (CS-223) <span class="muted-link">(<a href="oop/" target="_blank" rel="noopener">Slides</a>)</span></li>
-            <li><span class="fw-semibold">2023, 2021 &amp; 2020</span> — Object Oriented Programming (CS-210) <span class="muted-link">(<a href="oop/" target="_blank" rel="noopener">Slides</a>)</span></li>
-            <li><span class="fw-semibold">2022</span> — Embedded Systems Security (CyS-367)</li>
-            <li><span class="fw-semibold">2022</span> — Critical Infrastructure Security (CyS-697)</li>
-            <li><span class="fw-semibold">2022 &amp; 2021</span> — Research Methodology (CS-692)</li>
-            <li><span class="fw-semibold">2021</span> — Cyber Security Tool Development (CyS-353)</li>
-            <li><span class="fw-semibold">2020</span> — Embedded Systems (CS-602)</li>
-            <li><span class="fw-semibold">2020</span> — Drone and Autonomous Vehicle Security (CS-634)</li>
-            <li><span class="fw-semibold">2023, 2021 &amp; 2020</span> — Introduction to Computing (CS-156) <span class="muted-link">(<a href="itc/" target="_blank" rel="noopener">Slides</a>)</span></li>
-            <li><span class="fw-semibold">2019</span> — OOP and Data Structures (CS-200)</li>
-            <li><span class="fw-semibold">2013 – 2011</span> — Teaching Assistant — EE522 Advanced Embedded Systems, FAST-NUCES.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <main>
+        <section class="page-hero">
+            <h1>Teaching, Funding &amp; Service</h1>
+            <p>Cultivating curiosity in the classroom while leading research initiatives and serving the broader systems community.</p>
+        </section>
 
-    <section id="funding" class="section">
-      <h2 class="mb-3">Funding</h2>
-      <div class="row g-3">
-        <div class="col-lg-4">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <h3 class="h5 mb-1">Cleanify: AI-Based Waste Management</h3>
-              <div class="small subtle mb-2">NRPU Research Fund · Rs. 9.5 Million · Principal Investigator (2024 – 2026)</div>
-              <div class="subtle mb-3">Battery-less IoT for sustainable urban services.</div>
-              <a class="btn btn-sm btn-outline-primary" href="https://youtu.be/" target="_blank" rel="noopener">Video</a>
+        <section class="content-section">
+            <nav class="section-tabs" aria-label="Activity shortcuts">
+                <a class="tab-link" href="#teaching"><i class="fa fa-chalkboard-user" aria-hidden="true"></i><span>Teaching</span></a>
+                <a class="tab-link" href="#funding"><i class="fa fa-lightbulb" aria-hidden="true"></i><span>Funding</span></a>
+                <a class="tab-link" href="#service"><i class="fa fa-handshake" aria-hidden="true"></i><span>Service</span></a>
+                <a class="tab-link" href="#mentoring"><i class="fa fa-people-group" aria-hidden="true"></i><span>Mentoring</span></a>
+                <a class="tab-link" href="#outreach"><i class="fa fa-microphone" aria-hidden="true"></i><span>Outreach</span></a>
+            </nav>
+
+            <div class="section-header">
+                <h2 class="section-title">Academic leadership at a glance</h2>
+                <p class="section-intro">A snapshot of the courses I teach, the projects I lead, and the communities I help shape around embedded systems, cybersecurity, and the Internet of Things.</p>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <h3 class="h5 mb-1">SCYDES: Self Cyber Defense Evaluation System</h3>
-              <div class="small subtle mb-2">NCCS Research Fund · Rs. 14.972 Million · Principal Investigator (2021 – 2023)</div>
-              <div class="subtle mb-3">Automation for cyber ranges and national preparedness.</div>
-              <a class="btn btn-sm btn-outline-primary" href="#" onclick="return false;">Closure Certificate</a>
+
+            <div class="overview-grid">
+                <article class="overview-card">
+                    <span class="overview-icon" aria-hidden="true"><i class="fa fa-chalkboard"></i></span>
+                    <h3>Teaching</h3>
+                    <p>14 distinct undergraduate and graduate courses taught or coordinated across Pakistan and Europe.</p>
+                    <a class="overview-link" href="#teaching">See teaching highlights</a>
+                </article>
+                <article class="overview-card">
+                    <span class="overview-icon" aria-hidden="true"><i class="fa fa-flask"></i></span>
+                    <h3>Research Funding</h3>
+                    <p>Rs. 24+ million in competitive funding to power sustainable IoT, cybersecurity, and human-centric computing.</p>
+                    <a class="overview-link" href="#funding">Explore funded projects</a>
+                </article>
+                <article class="overview-card">
+                    <span class="overview-icon" aria-hidden="true"><i class="fa fa-award"></i></span>
+                    <h3>Recognition</h3>
+                    <p>International fellowships and best-paper accolades celebrating impact in the embedded systems community.</p>
+                    <a class="overview-link" href="#awards">View awards</a>
+                </article>
+                <article class="overview-card">
+                    <span class="overview-icon" aria-hidden="true"><i class="fa fa-graduation-cap"></i></span>
+                    <h3>Mentoring</h3>
+                    <p>Guiding Ph.D., M.Sc., and undergraduate researchers toward resilient, human-centered technology solutions.</p>
+                    <a class="overview-link" href="#mentoring">Meet the mentees</a>
+                </article>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <h3 class="h5 mb-1">ReCyP:HER</h3>
-              <div class="small subtle mb-2">Erasmus+ Research Fund · Research Associate (2021 – 2024)</div>
-              <div class="subtle mb-0">Human-centered cybersecurity capacity building for Pakistan.</div>
+        </section>
+
+        <section class="content-section">
+            <div class="content-card">
+                <section id="teaching" class="activity-panel">
+                    <header class="activity-header">
+                        <span class="activity-icon" aria-hidden="true"><i class="fa fa-chalkboard-user"></i></span>
+                        <div>
+                            <h2>Teaching</h2>
+                            
+                        </div>
+                    </header>
+                    <ul class="activity-timeline">
+                        <li>
+                            <div class="timeline-label">2026, 2025 &amp; 2024</div>
+                            <div class="timeline-content">
+                                <p><strong>Topics in IoT (CS-677)</strong> &mdash; Graduate seminar style course.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2025, 2024 &amp; 2023</div>
+                            <div class="timeline-content">
+                                <p><strong>Operating Systems (CS-370)</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2023</div>
+                            <div class="timeline-content">
+                                <p><a class="course-badge" href="/pages/algorithms.html" aria-label="Lecture slides available for Algorithms (CS-310)"><i class="fa fa-file-lines" aria-hidden="true"></i><span>Slides</span></a><strong><a href="/pages/algorithms.html">Algorithms (CS-310)</a></strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2023</div>
+                            <div class="timeline-content">
+                                <p><a class="course-badge" href="/pages/coal.html" aria-label="Lecture slides available for Computer Organization and Assembly Language (CS-223)"><i class="fa fa-file-lines" aria-hidden="true"></i><span>Slides</span></a><strong><a href="/pages/coal.html">Computer Organization and Assembly Language (CS-223)</a></strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2023, 2021 &amp; 2020</div>
+                            <div class="timeline-content">
+                                <p><a class="course-badge" href="/pages/oop.html" aria-label="Lecture slides available for Object Oriented Programming (CS-210)"><i class="fa fa-file-lines" aria-hidden="true"></i><span>Slides</span></a><strong><a href="/pages/oop.html">Object Oriented Programming (CS-210)</a></strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2022</div>
+                            <div class="timeline-content">
+                                <p><strong>Embedded Systems Security (CyS-367)</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2022</div>
+                            <div class="timeline-content">
+                                <p><strong>Critical Infrastructure Security (CyS-697)</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2022 &amp; 2021</div>
+                            <div class="timeline-content">
+                                <p><strong>Research Methodology (CS-692)</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2021</div>
+                            <div class="timeline-content">
+                                <p><strong>Cyber Security Tool Development (CyS-353)</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2020</div>
+                            <div class="timeline-content">
+                                <p><strong>Embedded Systems (CS-602)</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2020</div>
+                            <div class="timeline-content">
+                                <p><strong>Drone and Autonomous Vehicle Security (CS-634)</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2023, 2021 &amp; 2020</div>
+                            <div class="timeline-content">
+                                <p><a class="course-badge" href="/pages/itc.html" aria-label="Lecture slides available for Introduction to Computing (CS-156)"><i class="fa fa-file-lines" aria-hidden="true"></i><span>Slides</span></a><strong><a href="/pages/itc.html">Introduction to Computing (CS-156)</a></strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>OOP and Data Structures (CS-200)</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2013 &ndash; 2011</div>
+                            <div class="timeline-content">
+                                <p><strong>Teaching Assistant &mdash; EE522 Advanced Embedded Systems</strong>, FAST-NUCES.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="panel-divider" role="presentation"></div>
+
+                <section id="funding" class="activity-panel">
+                    <header class="activity-header">
+                        <span class="activity-icon" aria-hidden="true"><i class="fa fa-flask"></i></span>
+                        <div>
+                            <h2>Funding</h2>
+                            
+                        </div>
+                    </header>
+                    <div class="funding-grid">
+                        <article class="funding-card">
+                            <h3>Cleanify: AI-Based Waste Management</h3>
+                            <p class="funding-meta">NRPU Research Fund &middot; <strong>Rs. 9.5 Million</strong> &middot; Principal Investigator (2024 &ndash; 2026)</p>
+                            <p class="muted-text">Battery-less IoT for sustainable urban services.</p>
+                            <div class="resource-tray">
+                                <a class="resource-tag resource-tag--video" href="https://youtu.be/N8W5BROo5SU">Video</a>
+                            </div>
+                        </article>
+                        <article class="funding-card">
+                            <h3>SCYDES: Self Cyber Defense Evaluation System</h3>
+                            <p class="funding-meta">NCCS Research Fund &middot; <strong>Rs. 14.972 Million</strong> &middot; Principal Investigator (2021 &ndash; 2023)</p>
+                            <p class="muted-text">Automation for cyber ranges and national preparedness.</p>
+                            <div class="resource-tray">
+                                <a class="resource-tag" href="/assets/pdf/SCYDES.pdf">Closure Certificate</a>
+                            </div>
+                        </article>
+                        <article class="funding-card">
+                            <h3>ReCyP:HER</h3>
+                            <p class="funding-meta">Erasmus+ Research Fund &middot; Research Associate (2021 &ndash; 2024)</p>
+                            <p class="muted-text">Human-centered cybersecurity capacity building for Pakistan.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <div class="panel-divider" role="presentation"></div>
+
+                <section id="service" class="activity-panel">
+                    <header class="activity-header">
+                        <span class="activity-icon" aria-hidden="true"><i class="fa fa-handshake"></i></span>
+                        <div>
+                            <h2>Service to the Community</h2>
+                            <p class="activity-intro">Peer review, editorial support, and program committee leadership across premier venues.</p>
+                        </div>
+                    </header>
+                    <ul class="activity-timeline">
+
+                        <li>
+                            <div class="timeline-label">Tooling</div>
+                            <div class="timeline-content">
+                                <p><strong>Google Scholar Venue Ranker (GSVR)</strong> &mdash; a free Chrome extension that overlays historical CORE conference tiers (A*, A, B, C) and SCImago Journal Rank (SJR) quartiles (Q1&ndash;Q4) directly on Google Scholar profile pages, helping researchers quickly interpret venue context at a glance.</p>
+                                <ul class="muted-text" style="margin: 0.35rem 0 0.75rem 1.1rem;">
+                                    <li>Year-aware CORE ranks and SJR quartiles for each publication.</li>
+                                    <li>DBLP-assisted venue matching for reliable mapping.</li>
+                                    <li>Summary panel that aggregates ranks across the publication list.</li>
+                                </ul>
+                                <div class="resource-tray">
+                                    <a class="resource-tag" href="https://chromewebstore.google.com/detail/google-scholar-venue-rank/egohghgpljdhkmcmllhncfndmkeilpfb" target="_blank" rel="noopener">Chrome Extension</a>
+                                    <a class="resource-tag" href="https://github.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker" target="_blank" rel="noopener">Source on GitHub</a>
+                                </div>
+                                <div class="tool-visual">
+                                    <img src="https://raw.githubusercontent.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker/main/GSVR/images/Screenshot.png"
+                                         alt="Google Scholar Venue Ranker (GSVR) showing CORE ranks and SJR quartiles on a Google Scholar profile"
+                                         loading="lazy">
+                                </div>
+                            </div>
+                        </li>
+					    <li>
+                            <div class="timeline-label">2024-2025</div>
+                            <div class="timeline-content">
+                                <p><strong>Distinguished Reviewers</strong>, <a href="https://dl.acm.org/journal/tiot/editorial-board#distinguished-reviewers">ACM Transactions on Internet of Things (TIoT)</a>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2024</div>
+                            <div class="timeline-content">
+                                <p><strong>Technical Program Committee</strong>, <a href="https://www.enssys.org/2024/tpc.php">ACM ENSsys 2024</a>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2022</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, Elsevier <em>Computers &amp; Security</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2021</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, <em>ACM Computing Surveys</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2020</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, <em>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, <em>IEEE Transactions on Vehicular Technology (TVT)</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, <em>IEEE Transactions on Very Large Scale Integration Systems (TVLSI)</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>TPC Member</strong>, <a href="http://www.icpads2019.cn/tpc.html">IEEE ICPADS 2019</a>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>TPC Member</strong>, <a href="https://algo2019.ak.in.tum.de/index.php/menue-algosensors/algosensors-overview">Springer AlgoSensor 2019</a>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>TPC Member</strong>, <a href="https://sites.google.com/view/ISIoT2019/home/organizing-committee">IEEE ISIOT 2019</a>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>TPC Member</strong>, <a href="https://conferences.computer.org/iotDI/2019/#organizers">ACM/IEEE IoTDI 2019 Posters &amp; Demos</a>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019 &amp; 2018</div>
+                            <div class="timeline-content">
+                                <p><strong>Web &amp; Social Chair</strong>, ACM/IEEE <a href="http://ipsn.acm.org/2019/organization.html">IPSN 2019</a> &amp; <a href="http://ipsn.acm.org/2018/organization.html">IPSN 2018</a>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, <em>Springer Swarm Intelligence</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, <em>IET Electronic Letters</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2019, 2018 &amp; 2016</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, <em>IEEE Transactions on Sensor Networks (TOSN)</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2015</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, <em>International Journal of Distributed Sensor Networks (IJDSN)</em>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2015</div>
+                            <div class="timeline-content">
+                                <p><strong>Reviewer</strong>, ACM Internetware 2015.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="panel-divider" role="presentation"></div>
+
+                <section id="awards" class="activity-panel">
+                    <header class="activity-header">
+                        <span class="activity-icon" aria-hidden="true"><i class="fa fa-trophy"></i></span>
+                        <div>
+                            <h2>Awards &amp; Achievements</h2>
+                            <p class="activity-intro">Recognitions for scholarship, leadership, and community impact.</p>
+                        </div>
+                    </header>
+                    <ul class="activity-timeline">
+                        <li>
+                            <div class="timeline-label">2022</div>
+                            <div class="timeline-content">
+                                <p><strong>Vice Chancellor Commendation Award</strong>, Air University &mdash; Best Faculty.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2018</div>
+                            <div class="timeline-content">
+                                <p><strong>ERCIM Alain Bensoussan Postdoctoral Fellowship</strong>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2016</div>
+                            <div class="timeline-content">
+                                <p><strong>Best Ph.D. Forum Presentation</strong>, IPSN 2016.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2014</div>
+                            <div class="timeline-content">
+                                <p><strong>Indigenous Ph.D. Scholarship</strong>, Politecnico di Milano.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2013</div>
+                            <div class="timeline-content">
+                                <p><strong>Gold Medal</strong>, FAST-NUCES MSc Class of 2011.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="panel-divider" role="presentation"></div>
+
+                <section id="mentoring" class="activity-panel">
+                    <header class="activity-header">
+                        <span class="activity-icon" aria-hidden="true"><i class="fa fa-people-group"></i></span>
+                        <div>
+                            <h2>Mentoring &amp; Supervision</h2>
+                            <p class="activity-intro">Coaching scholars to explore resilient, secure, and human-aware computing.</p>
+                        </div>
+                    </header>
+                    <div class="student-columns">
+                        <div class="student-level">
+                            <h3>Ph.D. Researchers</h3>
+                            <ul class="student-list">
+                                <li>
+                                    <p><strong>Muhammad Tahir</strong> &mdash; LUMS (2024 &ndash; 2028, in progress)</p>
+                                    <p class="muted-text">Thesis: <a href="">Privacy-Preserving Smart Glasses</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="student-level">
+                            <h3>M.Sc. Graduates</h3>
+                            <ul class="student-list">
+                                <li>
+                                    <p><strong>Asra Masood</strong> &mdash; Air University (2023)</p>
+                                    <p class="muted-text">Thesis: <a href="">FireFlow: Firewall State Synchronization using BGP Flowspec</a></p>
+                                </li>
+                                <li>
+                                    <p><strong>Kashif Javed</strong> &mdash; Air University (2022)</p>
+                                    <p class="muted-text">Thesis: <a href="/assets/pdf/kashif_sysarc.pdf">MOPTIC-SM: Sleep Mode-enabled Multi-optimized Intermittent Computing for Transiently Powered Systems</a></p>
+                                </li>
+                                <li>
+                                    <p><strong>Dragoș Perju</strong> &mdash; KTH Royal Institute of Technology (2019)</p>
+                                    <p class="muted-text">Thesis: <a href="https://kth.diva-portal.org/smash/get/diva2:1343695/FULLTEXT01.pdf">Applying Memoization as an Approximation Technique for Transiently Powered Embedded Systems</a></p>
+                                </li>
+                                <li>
+                                    <p><strong>Erik Henricus Wouters</strong> &mdash; KTH Royal Institute of Technology (2019)</p>
+                                    <p class="muted-text">Thesis: <a href="https://www.diva-portal.org/smash/get/diva2:1333932/FULLTEXT01.pdf">Securing Intermittent Computing</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="student-level">
+                        <h3>Undergraduate Capstone Projects</h3>
+                        <div class="student-year-group">
+                            <h4 class="student-year">2025</h4>
+                            <ul class="student-list">
+                                <li>
+                                    <p><strong>Abdur-Rahman Ibrahim Sayyid-Ali</strong> &mdash; LUMS</p>
+                                    <p class="muted-text">CheckMate: <a href="https://arxiv.org/pdf/2411.17732">LLM-Powered Approximate Intermittent Computing</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="student-year-group">
+                            <h4 class="student-year">2024</h4>
+                            <ul class="student-list">
+                                <li>
+                                    <p><strong>Muhammad Abdullah Soomro</strong> &mdash; LUMS</p>
+                                    <p class="muted-text">Approxify: <a href="https://arxiv.org/pdf/2410.07202">Automating Energy-Accuracy Trade-offs in Batteryless IoT Devices</a></p>
+                                    <div class="resource-tray">
+                                        <a class="resource-tag" href="/thesis/ewsn24_poster-ID.pptx.jpg">Poster</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>Ahmed Najeeb &amp; Abdul Rafay</strong> &mdash; LUMS</p>
+                                    <p class="muted-text">Glitch in Time: <a href="https://arxiv.org/pdf/2409.16438">Exploiting Temporal Misalignment of IMU for Eavesdropping</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="student-year-group">
+                            <h4 class="student-year">2022</h4>
+                            <ul class="student-list">
+                                <li>
+                                    <p><strong>Abdullah Khalid</strong> &mdash; Air University</p>
+                                    <p class="muted-text">VOICE SABER: <a href="/thesis/laser.pdf">Attacking Virtual Voice Assistants using Laser</a></p>
+                                    <div class="resource-tray">
+                                        <a class="resource-tag resource-tag--video" href="/thesis/laser.mp4">Video</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>Afeefa Ahmed &amp; Asima Tahir</strong> &mdash; Air University</p>
+                                    <p class="muted-text">Responsify: <a href="/thesis/Responsify.pdf">PPID Spoofing and Automated Incident Response</a></p>
+                                    <div class="resource-tray">
+                                        <a class="resource-tag" href="/thesis/ppid.jpeg">Poster</a>
+                                        <a class="resource-tag resource-tag--video" href="/thesis/responsify.mp4">Video</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="student-year-group">
+                            <h4 class="student-year">2021</h4>
+                            <ul class="student-list">
+                                <li>
+                                    <p><strong>Ans Nadeem &amp; Rabeea Ahmed</strong> &mdash; Air University</p>
+                                    <p class="muted-text">Cleanify: <a href="/thesis/Cleanify.jpeg">Batteryless Waste Management System</a></p>
+                                    <div class="resource-tray">
+                                        <a class="resource-tag resource-tag--video" href="/thesis/Cleanify.mp4">Video</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>Arooba Sehar &amp; Kanwal Naz</strong> &mdash; Air University</p>
+                                    <p class="muted-text">Etoile: <a href="/thesis/Etoile.pdf">IoT-based Sustainable Health Monitoring of Livestock</a></p>
+                                    <div class="resource-tray">
+                                        <a class="resource-tag resource-tag--video" href="/thesis/Etoile.mp4">Video</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>Minahil Ejaz &amp; Iqra Bibi</strong> &mdash; Air University</p>
+                                    <p class="muted-text">Sustainable Water Flow Monitoring: <a href="/thesis/Report-FYP-III.pdf">System Design</a></p>
+                                    <div class="resource-tray">
+                                        <a class="resource-tag resource-tag--video" href="/thesis/Prototype.mp4">Video</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="student-year-group">
+                            <h4 class="student-year">2020</h4>
+                            <ul class="student-list">
+                                <li>
+                                    <p><strong>Aizaz Ali &amp; Zubair Bin Hamid</strong> &mdash; Air University</p>
+                                    <p class="muted-text">Smart Parking System for Air University: <a href="/thesis/160644_160564_BSCS_VIII_(A).pdf">Design &amp; Deployment</a></p>
+                                    <div class="resource-tray">
+                                        <a class="resource-tag resource-tag--video" href="/thesis/spark1.mp4">Video</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="panel-divider" role="presentation"></div>
+
+                <section id="outreach" class="activity-panel">
+                    <header class="activity-header">
+                        <span class="activity-icon" aria-hidden="true"><i class="fa fa-microphone"></i></span>
+                        <div>
+                            <h2>Workshops &amp; Talks</h2>
+                            <p class="activity-intro">Sharing knowledge through tutorials, guest lectures, and maker-style engagements.</p>
+                        </div>
+                    </header>
+                    <ul class="activity-timeline">
+                        <li>
+                            <div class="timeline-label">2018</div>
+                            <div class="timeline-content">
+                                <p>Tutorial on Transiently Powered Embedded Systems &mdash; IPSN 2018, Porto, Portugal.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2017</div>
+                            <div class="timeline-content">
+                                <p>Invited talk on Transiently Powered Embedded Systems &mdash; RISE-SICS, Stockholm, Sweden.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2016</div>
+                            <div class="timeline-content">
+                                <p>Internet of Things Workshop &mdash; ComSys Lab, RWTH Aachen, Germany.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2015</div>
+                            <div class="timeline-content">
+                                <p>Interactive lecture on Embedded Sensing &mdash; Politecnico di Milano (Campus Bovisa).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2015</div>
+                            <div class="timeline-content">
+                                <p>Aerial drone showcase &mdash; Polifactory, Politecnico di Milano.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2013</div>
+                            <div class="timeline-content">
+                                <p>Tutorial labs on TelosB, mbed, and MSP430 platforms &mdash; EE522 Advanced Embedded Systems, FAST-NUCES.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-label">2012</div>
+                            <div class="timeline-content">
+                                <p>Workshop on Bro NIDS deployment &mdash; CS411 Network Security, FAST-NUCES.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="small subtle mt-2">
-        (Tip: if you already have a specific YouTube link and a closure certificate URL in the original page, paste them into the buttons above.)
-      </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="service" class="section">
-      <h2 class="mb-3">Service to the Community</h2>
-      <p class="subtle">Peer review, editorial support, and program committee leadership across premier venues.</p>
-
-      <!-- NEW: Academic tooling / community service -->
-      <div class="card shadow-soft mb-3">
-        <div class="card-body">
-          <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
-            <div>
-              <h3 class="h5 mb-1">Open-source tool for the academic community</h3>
-              <div class="subtle">
-                <span class="fw-semibold">Google Scholar Venue Ranker (GSVR)</span> adds CORE conference tiers and SJR journal quartiles directly on Google Scholar profile pages,
-                helping researchers quickly interpret venue prestige while evaluating publication lists.
-              </div>
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/naveedanwarbhatti" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
-            <div class="d-flex gap-2 flex-wrap">
-              <a class="btn btn-sm btn-primary" href="https://chromewebstore.google.com/detail/google-scholar-venue-rank/egohghgpljdhkmcmllhncfndmkeilpfb" target="_blank" rel="noopener">
-                Install Chrome Extension
-              </a>
-              <a class="btn btn-sm btn-outline-primary" href="https://github.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker" target="_blank" rel="noopener">
-                View on GitHub
-              </a>
-            </div>
-          </div>
-
-          <div class="row g-3 mt-3 align-items-center">
-            <div class="col-lg-6">
-              <ul class="list-tight mb-0">
-                <li>Shows <span class="fw-semibold">historical CORE ranks (A*, A, B, C)</span> for conferences/workshops by publication year.</li>
-                <li>Adds <span class="fw-semibold">SJR quartiles (Q1–Q4)</span> for journals by publication year.</li>
-                <li>Includes a <span class="fw-semibold">summary panel</span> that aggregates ranks across publications for quick scanning.</li>
-                <li>Uses <span class="fw-semibold">DBLP-assisted venue matching</span> to disambiguate venue names.</li>
-              </ul>
-              <div class="small subtle mt-2">
-                If you use Google Scholar regularly for hiring, promotion, or self-assessment, this extension saves time and reduces manual lookups.
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="ratio-16x9 shadow-soft">
-                <img
-                  src="https://github.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker/raw/main/GSVR/images/Screenshot.png"
-                  alt="Google Scholar Venue Ranker (GSVR) screenshot showing venue rank badges and a summary panel"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
+            <p class="footer-note">© 2025 Naveed Anwar Bhatti. All rights reserved.</p>
         </div>
-      </div>
-
-      <div class="card shadow-soft">
-        <div class="card-body">
-          <ul class="list-tight mb-0">
-            <li><span class="fw-semibold">2024-2025</span> — Distinguished Reviewers, ACM Transactions on Internet of Things (TIoT).</li>
-            <li><span class="fw-semibold">2024</span> — Technical Program Committee, ACM ENSsys 2024.</li>
-            <li><span class="fw-semibold">2022</span> — Reviewer, Elsevier Computers &amp; Security.</li>
-            <li><span class="fw-semibold">2021</span> — Reviewer, ACM Computing Surveys.</li>
-            <li><span class="fw-semibold">2020</span> — Reviewer, Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT).</li>
-            <li><span class="fw-semibold">2019</span> — Reviewer, IEEE Transactions on Vehicular Technology (TVT).</li>
-            <li><span class="fw-semibold">2019</span> — Reviewer, IEEE Transactions on Very Large Scale Integration Systems (TVLSI).</li>
-            <li><span class="fw-semibold">2019</span> — TPC Member, IEEE ICPADS 2019.</li>
-            <li><span class="fw-semibold">2019</span> — TPC Member, Springer AlgoSensor 2019.</li>
-            <li><span class="fw-semibold">2019</span> — TPC Member, IEEE ISIOT 2019.</li>
-            <li><span class="fw-semibold">2019</span> — TPC Member, ACM/IEEE IoTDI 2019 Posters &amp; Demos.</li>
-            <li><span class="fw-semibold">2019 &amp; 2018</span> — Web &amp; Social Chair, ACM/IEEE IPSN 2019 &amp; IPSN 2018.</li>
-            <li><span class="fw-semibold">2019</span> — Reviewer, Springer Swarm Intelligence.</li>
-            <li><span class="fw-semibold">2019</span> — Reviewer, IET Electronic Letters.</li>
-            <li><span class="fw-semibold">2019, 2018 &amp; 2016</span> — Reviewer, IEEE Transactions on Sensor Networks (TOSN).</li>
-            <li><span class="fw-semibold">2015</span> — Reviewer, International Journal of Distributed Sensor Networks (IJDSN).</li>
-            <li><span class="fw-semibold">2015</span> — Reviewer, ACM Internetware 2015.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="awards" class="section">
-      <h2 class="mb-3">Awards &amp; Achievements</h2>
-      <div class="card shadow-soft">
-        <div class="card-body">
-          <ul class="list-tight mb-0">
-            <li><span class="fw-semibold">2022</span> — Vice Chancellor Commendation Award, Air University — Best Faculty.</li>
-            <li><span class="fw-semibold">2018</span> — ERCIM Alain Bensoussan Postdoctoral Fellowship.</li>
-            <li><span class="fw-semibold">2016</span> — Best Ph.D. Forum Presentation, IPSN 2016.</li>
-            <li><span class="fw-semibold">2014</span> — Indigenous Ph.D. Scholarship, Politecnico di Milano.</li>
-            <li><span class="fw-semibold">2013</span> — Gold Medal, FAST-NUCES MSc Class of 2011.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="mentoring" class="section">
-      <h2 class="mb-3">Mentoring &amp; Supervision</h2>
-      <p class="subtle">Coaching scholars to explore resilient, secure, and human-aware computing.</p>
-
-      <div class="row g-3">
-        <div class="col-lg-6">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <h3 class="h5 mb-2">Ph.D. Researchers</h3>
-              <ul class="list-tight mb-0">
-                <li>Muhammad Tahir — LUMS (2024 – 2028, in progress)<br><span class="small subtle">Thesis: Privacy-Preserving Smart Glasses</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="card shadow-soft h-100">
-            <div class="card-body">
-              <h3 class="h5 mb-2">M.Sc. Graduates</h3>
-              <ul class="list-tight mb-0">
-                <li>Asra Masood — Air University (2023)<br><span class="small subtle">Thesis: FireFlow: Firewall State Synchronization using BGP Flowspec</span></li>
-                <li>Kashif Javed — Air University (2022)<br><span class="small subtle">Thesis: MOPTIC-SM: Sleep Mode-enabled Multi-optimized Intermittent Computing for Transiently Powered Systems</span></li>
-                <li>Dragoș Perju — KTH Royal Institute of Technology (2019)<br><span class="small subtle">Thesis: Applying Memoization as an Approximation Technique for Transiently Powered Embedded Systems</span></li>
-                <li>Erik Henricus Wouters — KTH Royal Institute of Technology (2019)<br><span class="small subtle">Thesis: Securing Intermittent Computing</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card shadow-soft mt-3">
-        <div class="card-body">
-          <h3 class="h5 mb-2">Undergraduate Capstone Projects</h3>
-
-          <div class="fw-semibold mt-2">2025</div>
-          <ul class="list-tight">
-            <li>Abdur-Rahman Ibrahim Sayyid-Ali — LUMS<br><span class="small subtle">CheckMate: LLM-Powered Approximate Intermittent Computing</span></li>
-          </ul>
-
-          <div class="fw-semibold mt-2">2024</div>
-          <ul class="list-tight">
-            <li>Muhammad Abdullah Soomro — LUMS<br><span class="small subtle">Approxify: Automating Energy-Accuracy Trade-offs in Batteryless IoT Devices</span></li>
-            <li>Ahmed Najeeb &amp; Abdul Rafay — LUMS<br><span class="small subtle">Glitch in Time: Exploiting Temporal Misalignment of IMU for Eavesdropping</span></li>
-          </ul>
-
-          <div class="fw-semibold mt-2">2022</div>
-          <ul class="list-tight">
-            <li>Abdullah Khalid — Air University<br><span class="small subtle">VOICE SABER: Attacking Virtual Voice Assistants using Laser</span></li>
-            <li>Afeefa Ahmed &amp; Asima Tahir — Air University<br><span class="small subtle">Responsify: PPID Spoofing and Automated Incident Response</span></li>
-          </ul>
-
-          <div class="fw-semibold mt-2">2021</div>
-          <ul class="list-tight mb-0">
-            <li>Ans Nadeem &amp; Rabeea Ahmed — Air University<br><span class="small subtle">Cleanify: Batteryless Waste Management System</span></li>
-            <li>Arooba Sehar &amp; Kanwal Naz — Air University<br><span class="small subtle">Etoile: IoT-based Sustainable Health Monitoring of Livestock</span></li>
-            <li>Minahil Ejaz &amp; Iqra Bibi — Air University<br><span class="small subtle">Sustainable Water Flow Monitoring: System Design</span></li>
-            <li>Aizaz Ali &amp; Zubair Bin Hamid — Air University<br><span class="small subtle">Smart Parking System for Air University: Design &amp; Deployment</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="outreach" class="section">
-      <h2 class="mb-3">Workshops &amp; Talks</h2>
-      <p class="subtle">Sharing knowledge through tutorials, guest lectures, and maker-style engagements.</p>
-
-      <div class="card shadow-soft">
-        <div class="card-body">
-          <ul class="list-tight mb-0">
-            <li><span class="fw-semibold">2018</span> — Tutorial on Transiently Powered Embedded Systems — IPSN 2018, Porto, Portugal.</li>
-            <li><span class="fw-semibold">2017</span> — Invited talk on Transiently Powered Embedded Systems — RISE-SICS, Stockholm, Sweden.</li>
-            <li><span class="fw-semibold">2016</span> — Internet of Things Workshop — ComSys Lab, RWTH Aachen, Germany.</li>
-            <li><span class="fw-semibold">2015</span> — Interactive lecture on Embedded Sensing — Politecnico di Milano (Campus Bovisa).</li>
-            <li><span class="fw-semibold">2015</span> — Aerial drone showcase — Polifactory, Politecnico di Milano.</li>
-            <li><span class="fw-semibold">2013</span> — Tutorial labs on TelosB, mbed, and MSP430 platforms — EE522 Advanced Embedded Systems, FAST-NUCES.</li>
-            <li><span class="fw-semibold">2012</span> — Workshop on Bro NIDS deployment — CS411 Network Security, FAST-NUCES.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <footer class="mt-4">
-      <div class="border-top pt-4 d-flex flex-wrap gap-2 justify-content-between align-items-center">
-        <div>© 2025 Naveed Anwar Bhatti. All rights reserved.</div>
-        <div class="small">
-          <span class="subtle">Quick links:</span>
-          <a class="ms-2" href="https://github.com/naveedanwarbhatti" target="_blank" rel="noopener">GitHub</a>
-          <a class="ms-2" href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
-        </div>
-      </div>
     </footer>
-  </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-          crossorigin="anonymous"></script>
+    <!-- Default Statcounter code for DEIB Naveed -->
+    <script type="text/javascript">
+    var sc_project=9665684;
+    var sc_invisible=1;
+    var sc_security="193c50ed";
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/9665684/0/193c50ed/1/" alt="Web Analytics"></a></div></noscript>
+    <!-- End of Statcounter Code -->
 </body>
 </html>
