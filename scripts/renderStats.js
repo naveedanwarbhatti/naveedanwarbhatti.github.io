@@ -89,11 +89,13 @@ function renderCitationGraph(text) {
   if (!recentHistory.length) return;
 
   const maxCitations = Math.max(...recentHistory.map(d => d.citations));
-  const graphHeight = 135;
+  const graphHeight = 120;
 
   recentHistory.forEach(data => {
     const barItem = document.createElement('div');
     barItem.className = 'graph-bar-item';
+    barItem.style.flex = '1 1 0';
+    barItem.style.minWidth = '0';
 
     const bar = document.createElement('div');
     bar.className = 'graph-bar';
