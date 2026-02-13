@@ -2,19 +2,17 @@
 """Update Google Scholar metrics + citation history (exactly as shown on your public profile).
 
 Google Scholar has no official public API for author metrics. This script fetches the public
-profile HTML and parses the exact numbers shown there.
+profile HTML and parses the exact numbers shown there (metrics table + citation chart).
 
-Default outputs (repo root, to match your current site file layout):
-- publications_stats.csv   (metrics table: citations, h-index, i10-index; All + Since X)
-- citation_history.csv     (citations per year from the Scholar bar chart)
-- publications.csv         (title/authors/venue/year/citations; best-effort via pagination)
-
-You can change the output folder with --out-dir.
+Outputs (written to --out-dir, default: data/):
+- data/publications_stats.csv   (metrics: citations, h-index, i10-index; All + Since X)
+- data/citation_history.csv     (citations per year from the Scholar bar chart)
+- data/publications.csv         (title/authors/venue/year/citations; best-effort via pagination)
 
 Reliability notes:
 - Scholar may intermittently block automated requests (CAPTCHA / "not a robot").
-- By default, if blocked, the script will NOT fail the run; it will keep existing CSVs unchanged.
-  Use --strict to fail when blocked.
+- Default behavior is non-strict: if blocked, the script exits 0 and leaves existing CSVs unchanged.
+  Use --strict to fail the run when blocked.
 """
 
 from __future__ import annotations
@@ -139,6 +137,7 @@ def parse_metrics(soup: BeautifulSoup) -> ScholarMetrics:
 
 
 def parse_citation_history(soup: BeautifulSoup) -> Tuple[Tuple[str, str], ...]:
+    # Scholar citation graph: year labels (.gsc_g_t) and counts (.gsc_g_al)
     years = [s.get_text(strip=True) for s in soup.select("span.gsc_g_t")]
     cites = [s.get_text(strip=True) for s in soup.select("span.gsc_g_al")]
 
@@ -191,6 +190,7 @@ def fetch_all_publications(
     max_pages: int = 20,
     sleep_seconds: float = 1.5,
 ) -> Tuple[Tuple[str, str, str, str, str], ...]:
+    """Best-effort pagination of publications using cstart/pagesize."""
     user_id = extract_user_id(profile_url)
     if not user_id:
         return tuple()
@@ -253,13 +253,16 @@ def write_csv(path: Path, headers: Iterable[str], rows: Iterable[Iterable[str]])
 def main() -> int:
     ap = argparse.ArgumentParser(description="Fetch exact Google Scholar author stats and write CSV outputs.")
     ap.add_argument("--profile-url", default=DEFAULT_PROFILE_URL, help="Public Google Scholar profile URL.")
-    ap.add_argument("--out-dir", default=".", help="Output directory (default: repo root). Use e.g. 'data' if desired.")
+    ap.add_argument("--out-dir", default="data", help="Output directory (default: data).")
+
     ap.add_argument("--html-file", type=Path, help="Optional: local HTML snapshot (used if provided).")
     ap.add_argument("--prefer-html", action="store_true", help="Prefer local snapshot over network.")
     ap.add_argument("--strict", action="store_true", help="Fail when Scholar blocks or parsing fails.")
+
     ap.add_argument("--pagesize", type=int, default=100, help="Publications pagesize (default: 100).")
     ap.add_argument("--max-pages", type=int, default=20, help="Max pages to paginate publications (default: 20).")
     ap.add_argument("--sleep", type=float, default=1.5, help="Sleep seconds between pages (default: 1.5).")
+
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)
