@@ -91,7 +91,7 @@ function renderCitationGraph(text) {
   const maxCitations = Math.max(...recentHistory.map(d => d.citations));
   const containerHeight = graphContainer.clientHeight || 100;
   // Reserve vertical space for value + year labels and small gaps.
-  const graphHeight = Math.max(46, containerHeight - 34);
+  const graphHeight = Math.max(40, containerHeight - 34);
 
   recentHistory.forEach(data => {
     const barItem = document.createElement('div');
