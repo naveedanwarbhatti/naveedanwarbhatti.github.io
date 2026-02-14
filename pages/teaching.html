@@ -33,52 +33,85 @@
         .community-tool-card{
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            gap: 1.35rem;
+            gap: 1.5rem;
             align-items: center;
-            padding: 1.25rem 1.25rem;
+            padding: 1.5rem;
             border-radius: 22px;
-            border: 1px solid rgba(0,0,0,0.08);
-            background: rgba(255,255,255,0.75);
-            box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+            border: 1px solid rgba(15, 54, 81, 0.12);
+            background:
+                radial-gradient(circle at 88% 16%, rgba(72, 124, 255, 0.12), transparent 44%),
+                radial-gradient(circle at 18% 88%, rgba(0, 179, 134, 0.1), transparent 45%),
+                rgba(255,255,255,0.95);
+            box-shadow: 0 16px 38px rgba(12, 45, 67, 0.12);
             backdrop-filter: blur(8px);
         }
         @media (max-width: 900px){
             .community-tool-card{ grid-template-columns: 1fr; }
         }
-        .community-tool-title{ margin: 0 0 0.35rem 0; font-weight: 700; }
-        .community-tool-lede{ margin: 0 0 0.85rem 0; }
-        .community-tool-pills{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 0.15rem 0 0.95rem;
+        .community-tool-title{
+            margin: 0 0 0.45rem 0;
+            font-weight: 700;
+            font-size: clamp(1.45rem, 1.8vw, 2rem);
+            color: #123f62;
+        }
+        .community-tool-lede{ margin: 0 0 0.95rem 0; }
+        .community-tool-highlights{
+            display: grid;
+            gap: 0.6rem;
+            margin: 0.2rem 0 1rem;
             padding: 0;
             list-style: none;
         }
-        .community-tool-pills li{
-            padding: 0.35rem 0.65rem;
-            border-radius: 999px;
-            font-size: 0.92rem;
-            border: 1px solid rgba(0,0,0,0.10);
-            background: rgba(0, 122, 204, 0.07);
+        .community-tool-highlights li{
+            display: flex;
+            gap: 0.55rem;
+            align-items: flex-start;
+            color: #27485f;
+            line-height: 1.45;
+        }
+        .community-tool-highlights i{
+            margin-top: 0.18rem;
+            color: #1ca76f;
+            font-size: 0.95rem;
         }
         .community-tool-visual{
             border-radius: 20px;
-            overflow: hidden;
             border: 1px solid rgba(0,0,0,0.10);
-            background: rgba(255,255,255,0.65);
+            background: linear-gradient(160deg, rgba(253, 236, 241, 0.85), rgba(235, 245, 255, 0.72));
+            padding: 0.9rem;
         }
         .community-tool-visual img{
             width: 100%;
-            height: 320px;
-            object-fit: cover;
+            height: auto;
+            max-height: 360px;
+            object-fit: contain;
             display: block;
+            border-radius: 12px;
+            border: 1px solid rgba(11, 42, 72, 0.08);
+            box-shadow: 0 8px 18px rgba(18, 53, 82, 0.12);
         }
         .community-tool-caption{
             margin: 0;
-            padding: 0.65rem 0.85rem 0.8rem;
+            padding: 0.85rem 0.3rem 0.15rem;
             font-size: 0.92rem;
             color: rgba(0,0,0,0.62);
+        }
+        .community-tool-links .resource-tag{
+            font-weight: 700;
+            border-color: transparent;
+            color: #fff;
+        }
+        .community-tool-links .resource-tag:hover,
+        .community-tool-links .resource-tag:focus-visible{
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 16px rgba(10, 37, 58, 0.2);
+        }
+        .community-tool-links .resource-tag.install-link{
+            background: linear-gradient(135deg, #ff8f00, #ff5e00);
+        }
+        .community-tool-links .resource-tag.github-link{
+            background: linear-gradient(135deg, #7b2ff7, #3f5efb);
         }
         /* Icon alignment inside existing pill buttons */
         .resource-tag .tool-icon{
@@ -437,19 +470,18 @@
                                     <strong>SJR journal quartiles</strong>, so venue context is visible instantly—no manual lookups.
                                 </p>
 
-                                <ul class="community-tool-pills">
-                                    <li>CORE tiers (A*, A, B, C)</li>
-                                    <li>SJR quartiles (Q1–Q4)</li>
-                                    <li>DBLP-assisted matching</li>
-                                    <li>Rank summary panel</li>
+                                <ul class="community-tool-highlights">
+                                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span><strong>Year-aware venue quality context:</strong> CORE conference tiers (A*, A, B, C) and SJR quartiles (Q1–Q4) are shown inline while browsing.</span></li>
+                                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span><strong>Smarter venue matching:</strong> DBLP-assisted name resolution helps map venue names to the right conference or journal entries.</span></li>
+                                    <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span><strong>Instant profile-level snapshot:</strong> A compact ranking summary panel shows the overall distribution at a glance.</span></li>
                                 </ul>
 
-                                <div class="resource-tray" aria-label="Tool links">
-                                    <a class="resource-tag" href="https://chromewebstore.google.com/detail/google-scholar-venue-rank/egohghgpljdhkmcmllhncfndmkeilpfb"
+                                <div class="resource-tray community-tool-links" aria-label="Tool links">
+                                    <a class="resource-tag install-link" href="https://chromewebstore.google.com/detail/google-scholar-venue-rank/egohghgpljdhkmcmllhncfndmkeilpfb"
                                        target="_blank" rel="noopener">
                                         <i class="fa-brands fa-chrome tool-icon" aria-hidden="true"></i><span>Install Chrome Extension</span>
                                     </a>
-                                    <a class="resource-tag" href="https://github.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker"
+                                    <a class="resource-tag github-link" href="https://github.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker"
                                        target="_blank" rel="noopener">
                                         <i class="fa-brands fa-github tool-icon" aria-hidden="true"></i><span>View on GitHub</span>
                                     </a>
