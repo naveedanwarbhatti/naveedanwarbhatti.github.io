@@ -34,7 +34,7 @@
             display:grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
-            align-items: stretch;
+            align-items: start;
             margin-top: 8px;
         }
         @media (max-width: 980px){
@@ -50,7 +50,7 @@
             box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
             display: flex;
             flex-direction: column;
-            height: 100%;
+            height: auto;
         }
 
         /* tighter left stats panel */
@@ -96,24 +96,24 @@
             background: rgba(255,255,255,0.92);
             border: 1px solid rgba(15, 23, 42, 0.08);
             border-radius: 14px;
-            padding: 8px;
+            padding: 6px;
         }
 
         #stats-table{
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.81rem;
+            font-size: 0.78rem;
         }
         #stats-table thead th{
             text-align: left;
             color: rgba(15, 23, 42, 0.70);
             font-weight: 850;
             letter-spacing: 0.04em;
-            padding: 6px 5px;
+            padding: 4px 5px;
             border-bottom: 1px solid rgba(15, 23, 42, 0.10);
         }
         #stats-table tbody td{
-            padding: 7px 5px;
+            padding: 5px 5px;
             border-bottom: 1px solid rgba(15, 23, 42, 0.08);
             font-weight: 700;
             color: #0f172a;
@@ -139,11 +139,11 @@
         /* Bars: full-width, evenly distributed */
         #citation-graph{
             display:flex;
-            gap: 8px;
+            gap: 6px;
             justify-content: space-between;
             align-items: flex-end;
             width: 100%;
-            height: clamp(84px, 11.5vw, 96px);
+            height: clamp(60px, 7.5vw, 70px);
             padding: 0 2px 2px;
         }
         .graph-bar-item{
@@ -152,7 +152,7 @@
             display:flex;
             flex-direction: column;
             align-items: center;
-            gap: 3px;
+            gap: 2px;
         }
         .graph-bar{
             width: 100%;
@@ -163,13 +163,13 @@
         .bar-label{
             font-weight: 850;
             color: rgba(15, 23, 42, 0.55);
-            font-size: 0.68rem;
+            font-size: 0.62rem;
             line-height: 1;
         }
         .year-label{
             font-weight: 850;
             color: rgba(15, 23, 42, 0.60);
-            font-size: 0.68rem;
+            font-size: 0.62rem;
             line-height: 1;
         }
 
