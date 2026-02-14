@@ -33,8 +33,8 @@
         .stats-rank-grid{
             display:grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px;
-            align-items: start;
+            gap: 14px;
+            align-items: stretch;
             margin-top: 8px;
         }
         @media (max-width: 980px){
@@ -45,21 +45,24 @@
         .panel-ranking{
             background: rgba(255,255,255,0.94);
             border: 1px solid rgba(15, 23, 42, 0.10);
-            border-radius: 20px;
-            padding: 14px;
+            border-radius: 16px;
+            padding: 10px;
             box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         /* tighter left stats panel */
-        .panel-scholars{ padding: 12px; }
+        .panel-scholars{ padding: 10px; }
 
 
         /* ===== Scholar stats (left) ===== */
         .stats-title{
             display:flex;
             align-items:center;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 8px;
         }
         .stats-title-icon{
             width: 26px;
@@ -69,14 +72,14 @@
         .stats-title-main{
             font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
             font-weight: 800;
-            font-size: 1.22rem;
+            font-size: 1.08rem;
             color: #0f172a;
         }
         .stats-title-source{
             color: rgba(15, 23, 42, 0.62);
             font-weight: 650;
             margin-left: 6px;
-            font-size: 0.98rem;
+            font-size: 0.86rem;
         }
 
         /* Force vertical stack even if global CSS targets the ID */
@@ -92,25 +95,25 @@
         .citation-graph-container{
             background: rgba(255,255,255,0.92);
             border: 1px solid rgba(15, 23, 42, 0.08);
-            border-radius: 18px;
-            padding: 10px;
+            border-radius: 14px;
+            padding: 8px;
         }
 
         #stats-table{
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.88rem;
+            font-size: 0.81rem;
         }
         #stats-table thead th{
             text-align: left;
             color: rgba(15, 23, 42, 0.70);
             font-weight: 850;
             letter-spacing: 0.04em;
-            padding: 7px 6px;
+            padding: 6px 5px;
             border-bottom: 1px solid rgba(15, 23, 42, 0.10);
         }
         #stats-table tbody td{
-            padding: 8px 6px;
+            padding: 7px 5px;
             border-bottom: 1px solid rgba(15, 23, 42, 0.08);
             font-weight: 700;
             color: #0f172a;
@@ -130,17 +133,17 @@
             font-weight: 800;
             color: #0f172a;
             margin-bottom: 4px;
-            font-size: 0.96rem;
+            font-size: 0.90rem;
         }
 
         /* Bars: full-width, evenly distributed */
         #citation-graph{
             display:flex;
-            gap: 10px;
+            gap: 8px;
             justify-content: space-between;
             align-items: flex-end;
             width: 100%;
-            height: clamp(96px, 13vw, 112px);
+            height: clamp(84px, 11.5vw, 96px);
             padding: 0 2px 2px;
         }
         .graph-bar-item{
@@ -153,20 +156,20 @@
         }
         .graph-bar{
             width: 100%;
-            border-radius: 10px;
+            border-radius: 8px;
             background: rgba(59, 130, 246, 0.55);
             box-shadow: inset 0 -1px 0 rgba(255,255,255,0.35);
         }
         .bar-label{
             font-weight: 850;
             color: rgba(15, 23, 42, 0.55);
-            font-size: 0.72rem;
+            font-size: 0.68rem;
             line-height: 1;
         }
         .year-label{
             font-weight: 850;
             color: rgba(15, 23, 42, 0.60);
-            font-size: 0.72rem;
+            font-size: 0.68rem;
             line-height: 1;
         }
 
@@ -176,26 +179,26 @@
             align-items:center;
             justify-content: space-between;
             gap: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .rank-summary-title{
             font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
             font-weight: 800;
             color: #0f172a;
-            font-size: 1.08rem;
+            font-size: 1.00rem;
         }
         .stats-action-link{
             display:inline-flex;
             align-items:center;
-            gap:8px;
-            padding:6px 10px;
+            gap:6px;
+            padding:5px 9px;
             border-radius:999px;
             border:1px solid rgba(46, 204, 113, 0.22);
             background:rgba(46, 204, 113, 0.12);
             color:#1f7a3a;
             text-decoration:none;
             font-weight:800;
-            font-size:0.85rem;
+            font-size:0.78rem;
             white-space:nowrap;
             transition:transform .08s ease, background .2s ease;
         }
@@ -207,27 +210,27 @@
         .rank-sections{
             display:flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
         .rank-section{
             background: rgba(248, 250, 252, 0.78);
             border: 1px solid rgba(15, 23, 42, 0.08);
-            border-radius: 18px;
-            padding: 10px;
+            border-radius: 14px;
+            padding: 8px;
         }
         .rank-section h4{
-            margin: 0 0 8px;
+            margin: 0 0 6px;
             font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
             font-weight: 800;
-            font-size: 0.96rem;
+            font-size: 0.88rem;
             color: #0f172a;
         }
         .rank-row{
             display:grid;
-            grid-template-columns: 46px 1fr 74px;
+            grid-template-columns: 40px 1fr 64px;
             align-items:center;
-            gap: 8px;
-            margin-bottom: 8px;
+            gap: 6px;
+            margin-bottom: 6px;
         }
         .rank-row:last-child{ margin-bottom: 0; }
 
@@ -235,16 +238,16 @@
             display:flex;
             align-items:center;
             justify-content:center;
-            height: 26px;
-            width: 46px;
-            border-radius: 12px;
+            height: 22px;
+            width: 40px;
+            border-radius: 10px;
             font-weight: 950;
-            font-size: 0.90rem;
+            font-size: 0.80rem;
             border: 1px solid rgba(15, 23, 42, 0.10);
             color: #0f172a;
         }
         .rank-bar-track{
-            height: 9px;
+            height: 7px;
             background: rgba(15, 23, 42, 0.10);
             border-radius: 999px;
             overflow:hidden;
@@ -257,7 +260,7 @@
             text-align:right;
             font-weight: 850;
             color: rgba(15, 23, 42, 0.72);
-            font-size: 0.84rem;
+            font-size: 0.76rem;
             white-space: nowrap;
         }
 
