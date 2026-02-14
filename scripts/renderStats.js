@@ -118,6 +118,32 @@ function renderCitationGraph(text) {
 
     graphContainer.appendChild(barItem);
   });
+
+  syncStatisticsPanelHeight();
+}
+
+/**
+ * Shrinks the citation graph (if needed) so the Statistics panel ends where
+ * the Ranking Summary panel ends.
+ */
+function syncStatisticsPanelHeight() {
+  const scholarsPanel = document.querySelector('.panel-scholars');
+  const rankingPanel = document.querySelector('.panel-ranking');
+  const graphContainer = document.getElementById('citation-graph');
+
+  if (!scholarsPanel || !rankingPanel || !graphContainer) return;
+
+  // Reset any previous inline height before measuring.
+  graphContainer.style.height = '';
+
+  const overflow = Math.ceil(scholarsPanel.getBoundingClientRect().height - rankingPanel.getBoundingClientRect().height);
+  if (overflow <= 0) return;
+
+  const currentGraphHeight = graphContainer.getBoundingClientRect().height;
+  const minGraphHeight = 72;
+  const targetHeight = Math.max(minGraphHeight, Math.floor(currentGraphHeight - overflow));
+
+  graphContainer.style.height = `${targetHeight}px`;
 }
 
 /**
@@ -260,7 +286,10 @@ function loadRankingSummary() {
 
   fetch('/data/ranking_summary.csv')
     .then(res => res.ok ? res.text() : Promise.reject('Failed to load /data/ranking_summary.csv'))
-    .then(text => renderRankingSummary(text))
+    .then(text => {
+      renderRankingSummary(text);
+      syncStatisticsPanelHeight();
+    })
     .catch(() => {
       // Keep the placeholder text already in the HTML if fetch fails.
     });
@@ -283,6 +312,7 @@ function loadScholarData() {
     })
     .then(text => {
       if (text) renderCitationGraph(text);
+      else syncStatisticsPanelHeight();
     })
     .catch(e => console.error(e));
 
@@ -290,3 +320,4 @@ function loadScholarData() {
 }
 
 document.addEventListener('DOMContentLoaded', loadScholarData);
+window.addEventListener('resize', syncStatisticsPanelHeight);
