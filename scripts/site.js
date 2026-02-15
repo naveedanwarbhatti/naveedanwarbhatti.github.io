@@ -1,4 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const bindClickablePanel = (panel, options = {}) => {
+    const {
+      url,
+      target = '_self',
+      rel = '',
+      blockedSelector = 'a',
+    } = options;
+
+    if (!url) {
+      return;
+    }
+
+    const openLink = (forcedTarget) => {
+      const finalTarget = forcedTarget ?? target;
+
+      if (!finalTarget || finalTarget === '_self') {
+        window.location.assign(url);
+        return;
+      }
+
+      const newWindow = window.open(url, finalTarget);
+      if (newWindow && rel.includes('noopener')) {
+        newWindow.opener = null;
+      }
+    };
+
+    panel.addEventListener('click', (event) => {
+      const targetElement = event.target;
+      if (targetElement instanceof Element && targetElement.closest(blockedSelector)) {
+        return;
+      }
+      if (event.metaKey || event.ctrlKey) {
+        openLink('_blank');
+        return;
+      }
+      openLink();
+    });
+
+    panel.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') {
+        return;
+      }
+      event.preventDefault();
+      openLink();
+    });
+
+    panel.addEventListener('auxclick', (event) => {
+      if (event.button !== 1) {
+        return;
+      }
+      event.preventDefault();
+      openLink('_blank');
+    });
+  };
+
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-navigation');
 
@@ -31,50 +86,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   paperPanels.forEach((panel) => {
     const { url, target = '_self', rel = '' } = panel.dataset;
-    if (!url) {
+    bindClickablePanel(panel, { url, target, rel, blockedSelector: 'a' });
+  });
+
+  const mentoringPanels = document.querySelectorAll('#mentoring .student-list li');
+
+  mentoringPanels.forEach((panel) => {
+    const primaryLink = panel.querySelector('a:not(.resource-tag)');
+    const href = primaryLink?.getAttribute('href') ?? '';
+
+    if (!href || href.trim() === '' || href.trim() === '#') {
       return;
     }
 
-    const openLink = (forcedTarget) => {
-      const finalTarget = forcedTarget ?? target;
+    panel.classList.add('is-clickable-panel');
+    panel.setAttribute('tabindex', '0');
+    panel.setAttribute('role', 'link');
 
-      if (!finalTarget || finalTarget === '_self') {
-        window.location.assign(url);
-        return;
-      }
+    const target = primaryLink.getAttribute('target') || '_self';
+    const rel = primaryLink.getAttribute('rel') || '';
 
-      const newWindow = window.open(url, finalTarget);
-      if (newWindow && rel.includes('noopener')) {
-        newWindow.opener = null;
-      }
-    };
-
-    panel.addEventListener('click', (event) => {
-      const targetElement = event.target;
-      if (targetElement instanceof Element && targetElement.closest('a')) {
-        return;
-      }
-      if (event.metaKey || event.ctrlKey) {
-        openLink('_blank');
-        return;
-      }
-      openLink();
-    });
-
-    panel.addEventListener('keydown', (event) => {
-      if (event.key !== 'Enter' && event.key !== ' ') {
-        return;
-      }
-      event.preventDefault();
-      openLink();
-    });
-
-    panel.addEventListener('auxclick', (event) => {
-      if (event.button !== 1) {
-        return;
-      }
-      event.preventDefault();
-      openLink('_blank');
+    bindClickablePanel(panel, {
+      url: href,
+      target,
+      rel,
+      blockedSelector: 'a',
     });
   });
 
