@@ -899,6 +899,21 @@ p {
   box-shadow: 0 16px 24px rgba(31, 77, 108, 0.12);
 }
 
+.mentoring-kpi-card--phd {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.18));
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.mentoring-kpi-card--ms {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.22), rgba(16, 185, 129, 0.2));
+  border-color: rgba(14, 165, 233, 0.32);
+}
+
+.mentoring-kpi-card--bs {
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.22), rgba(239, 68, 68, 0.18));
+  border-color: rgba(249, 115, 22, 0.34);
+}
+
 .kpi-label {
   margin: 0;
   color: var(--text-muted);
