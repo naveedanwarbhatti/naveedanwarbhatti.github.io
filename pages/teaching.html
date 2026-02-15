@@ -117,6 +117,21 @@
         .resource-tag .tool-icon{
             margin-right: 0.45rem;
         }
+
+        .teaching-hero p {
+            max-width: none;
+            white-space: nowrap;
+        }
+
+        .teaching-tabs {
+            justify-content: center;
+        }
+
+        @media (max-width: 960px) {
+            .teaching-hero p {
+                white-space: normal;
+            }
+        }
     </style>
 </head>
 <body>
@@ -153,13 +168,13 @@
     </header>
 
     <main>
-        <section class="page-hero">
+        <section class="page-hero teaching-hero">
             <h1>Teaching, Funding &amp; Service</h1>
             <p>Cultivating curiosity in the classroom while leading research initiatives and serving the broader systems community.</p>
         </section>
 
         <section class="content-section">
-            <nav class="section-tabs" aria-label="Activity shortcuts">
+            <nav class="section-tabs teaching-tabs" aria-label="Activity shortcuts">
                 <a class="tab-link" href="#teaching"><i class="fa fa-chalkboard-user" aria-hidden="true"></i><span>Teaching</span></a>
                 <a class="tab-link" href="#funding"><i class="fa fa-lightbulb" aria-hidden="true"></i><span>Funding</span></a>
                 <a class="tab-link" href="#service"><i class="fa fa-handshake" aria-hidden="true"></i><span>Service</span></a>
