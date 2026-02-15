@@ -984,6 +984,19 @@ p {
   padding: 0.75rem 0.9rem;
   border: 1px solid rgba(79, 163, 199, 0.14);
   box-shadow: 0 10px 18px rgba(31, 77, 108, 0.08);
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#mentoring .student-list li.is-clickable-panel {
+  cursor: pointer;
+}
+
+#mentoring .student-list li.is-clickable-panel:hover,
+#mentoring .student-list li.is-clickable-panel:focus-visible {
+  background: rgba(79, 163, 199, 0.2);
+  border-color: rgba(37, 95, 133, 0.35);
+  box-shadow: 0 14px 24px rgba(31, 77, 108, 0.14);
+  transform: translateY(-1px);
 }
 
 .student-year-group {
