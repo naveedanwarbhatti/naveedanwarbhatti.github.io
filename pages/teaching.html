@@ -131,10 +131,20 @@
         }
 
         .institution-logo {
-            width: 1rem;
-            height: 1rem;
+            width: auto;
+            height: 1em;
             object-fit: contain;
             vertical-align: middle;
+            display: inline-block;
+        }
+
+        .institution-logo.lums-logo {
+            height: 3em;
+        }
+
+        .institution-logo.air-logo,
+        .institution-logo.kth-logo {
+            height: 1.2em;
         }
     </style>
 </head>
@@ -555,7 +565,7 @@
                             <h3>Ph.D. Researchers</h3>
                             <ul class="student-list">
                                 <li>
-                                    <p><strong>Muhammad Tahir</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">LUMS</span> (2024 &ndash; 2028, in progress)</p>
+                                    <p><strong>Muhammad Tahir</strong> - <span class="institution-badge"><img class="institution-logo lums-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo"></span> (2024 &ndash; 2028, in progress)</p>
                                     <p class="muted-text">Thesis: <a href="">Privacy-Preserving Smart Glasses</a></p>
                                 </li>
                             </ul>
@@ -564,19 +574,19 @@
                             <h3>M.Sc. Graduates</h3>
                             <ul class="student-list">
                                 <li>
-                                    <p><strong>Asra Masood</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span> (2023)</p>
+                                    <p><strong>Asra Masood</strong> - <span class="institution-badge"><img class="institution-logo air-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span> (2023)</p>
                                     <p class="muted-text">Thesis: <a href="">FireFlow: Firewall State Synchronization using BGP Flowspec</a></p>
                                 </li>
                                 <li>
-                                    <p><strong>Kashif Javed</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span> (2022)</p>
+                                    <p><strong>Kashif Javed</strong> - <span class="institution-badge"><img class="institution-logo air-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span> (2022)</p>
                                     <p class="muted-text">Thesis: <a href="/assets/pdf/kashif_sysarc.pdf">MOPTIC-SM: Sleep Mode-enabled Multi-optimized Intermittent Computing for Transiently Powered Systems</a></p>
                                 </li>
                                 <li>
-                                    <p><strong>Dragoș Perju</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/kth_logo.svg" alt="KTH logo">KTH Royal Institute of Technology</span> (2019)</p>
+                                    <p><strong>Dragoș Perju</strong> - <span class="institution-badge"><img class="institution-logo kth-logo" src="/assets/img/kth_logo.svg" alt="KTH logo">KTH Royal Institute of Technology</span> (2019)</p>
                                     <p class="muted-text">Thesis: <a href="https://kth.diva-portal.org/smash/get/diva2:1343695/FULLTEXT01.pdf">Applying Memoization as an Approximation Technique for Transiently Powered Embedded Systems</a></p>
                                 </li>
                                 <li>
-                                    <p><strong>Erik Henricus Wouters</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/kth_logo.svg" alt="KTH logo">KTH Royal Institute of Technology</span> (2019)</p>
+                                    <p><strong>Erik Henricus Wouters</strong> - <span class="institution-badge"><img class="institution-logo kth-logo" src="/assets/img/kth_logo.svg" alt="KTH logo">KTH Royal Institute of Technology</span> (2019)</p>
                                     <p class="muted-text">Thesis: <a href="https://www.diva-portal.org/smash/get/diva2:1333932/FULLTEXT01.pdf">Securing Intermittent Computing</a></p>
                                 </li>
                             </ul>
@@ -590,12 +600,12 @@
                                 <h4 class="student-year">2026</h4>
                                 <ul class="student-list">
                                     <li>
-                                        <p><strong>Yaha Khawaja, Shirin Rehman, Eman Nabeel, Sana Humayun, &amp; Eruj Javed</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">LUMS</span></p>
+                                        <p><strong>Yaha Khawaja, Shirin Rehman, Eman Nabeel, Sana Humayun, &amp; Eruj Javed</strong> - <span class="institution-badge"><img class="institution-logo lums-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo"></span></p>
                                         <p class="muted-text"><a href="https://dl.acm.org/doi/10.1145/3715014.3722056">See Me If You Can: A Multi-Layer Protocol for Bystander Privacy with Consent-Based Restoration</a></p>
                                     </li>
 									
 									<li>
-                                        <p><strong>Muhammad Taimor, Amna Iftikhar, Khuzaima bin Gulzar, &amp; Muneeb ur Rehman</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">LUMS</span></p>
+                                        <p><strong>Muhammad Taimor, Amna Iftikhar, Khuzaima bin Gulzar, &amp; Muneeb ur Rehman</strong> - <span class="institution-badge"><img class="institution-logo lums-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo"></span></p>
                                         <p class="muted-text"><a href="">Cleanify: Batteryless Waste Management System</a></p>
                                     </li>
                                 </ul>
@@ -604,15 +614,15 @@
                                 <h4 class="student-year">2025</h4>
                                 <ul class="student-list">
                                     <li>
-                                        <p><strong>Abdur-Rahman Ibrahim Sayyid-Ali</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">LUMS</span></p>
+                                        <p><strong>Abdur-Rahman Ibrahim Sayyid-Ali</strong> - <span class="institution-badge"><img class="institution-logo lums-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo"></span></p>
                                         <p class="muted-text">CheckMate: <a href="https://dl.acm.org/doi/10.1145/3715014.3722056">LLM-Powered Approximate Intermittent Computing</a></p>
                                     </li>
                                     <li>
-                                        <p><strong>Mohammad Shaharyar Ahsan, Areeba Shahzad Shaikh, &amp; Maham Zahid</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">LUMS</span></p>
+                                        <p><strong>Mohammad Shaharyar Ahsan, Areeba Shahzad Shaikh, &amp; Maham Zahid</strong> - <span class="institution-badge"><img class="institution-logo lums-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo"></span></p>
                                         <p class="muted-text"><a href="https://arxiv.org/abs/2602.08701">LLM-Enhanced Wearables for Comprehensible Health Guidance in LMICs</a></p>
                                     </li>
                                     <li>
-                                        <p><strong>Muhammad Saad Ali, Daanish U. Khan, &amp; Laiba Intizar Ahmad</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">LUMS</span></p>
+                                        <p><strong>Muhammad Saad Ali, Daanish U. Khan, &amp; Laiba Intizar Ahmad</strong> - <span class="institution-badge"><img class="institution-logo lums-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo"></span></p>
                                         <p class="muted-text"><a href="https://arxiv.org/abs/2602.08593">Kissan-Dost: Bridging the Last Mile in Smallholder Precision Agriculture with Conversational IoT</a></p>
                                     </li>
                                 </ul>
@@ -621,14 +631,14 @@
                             <h4 class="student-year">2024</h4>
                             <ul class="student-list">
                                 <li>
-                                    <p><strong>Muhammad Abdullah Soomro</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">LUMS</span></p>
+                                    <p><strong>Muhammad Abdullah Soomro</strong> - <span class="institution-badge"><img class="institution-logo lums-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo"></span></p>
                                     <p class="muted-text">Approxify: <a href="https://ieeexplore.ieee.org/document/10978153/">Automating Energy-Accuracy Trade-offs in Batteryless IoT Devices</a></p>
                                     <div class="resource-tray">
                                         <a class="resource-tag" href="/thesis/ewsn24_poster-ID.pptx.jpg">Poster</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <p><strong>Ahmed Najeeb &amp; Abdul Rafay</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo">LUMS</span></p>
+                                    <p><strong>Ahmed Najeeb &amp; Abdul Rafay</strong> - <span class="institution-badge"><img class="institution-logo lums-logo" src="/assets/img/LUMS_logo.png" alt="LUMS logo"></span></p>
                                     <p class="muted-text">Glitch in Time: <a href="https://dl.acm.org/doi/10.1145/3708821.3710825">Exploiting Temporal Misalignment of IMU for Eavesdropping</a></p>
                                 </li>
                             </ul>
@@ -637,14 +647,14 @@
                             <h4 class="student-year">2022</h4>
                             <ul class="student-list">
                                 <li>
-                                    <p><strong>Abdullah Khalid</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
+                                    <p><strong>Abdullah Khalid</strong> - <span class="institution-badge"><img class="institution-logo air-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
                                     <p class="muted-text">VOICE SABER: <a href="/thesis/laser.pdf">Attacking Virtual Voice Assistants using Laser</a></p>
                                     <div class="resource-tray">
                                         <a class="resource-tag resource-tag--video" href="/thesis/laser.mp4">Video</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <p><strong>Afeefa Ahmed &amp; Asima Tahir</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
+                                    <p><strong>Afeefa Ahmed &amp; Asima Tahir</strong> - <span class="institution-badge"><img class="institution-logo air-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
                                     <p class="muted-text">Responsify: <a href="/thesis/Responsify.pdf">PPID Spoofing and Automated Incident Response</a></p>
                                     <div class="resource-tray">
                                         <a class="resource-tag" href="/thesis/ppid.jpeg">Poster</a>
@@ -657,21 +667,21 @@
                             <h4 class="student-year">2021</h4>
                             <ul class="student-list">
                                 <li>
-                                    <p><strong>Ans Nadeem &amp; Rabeea Ahmed</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
+                                    <p><strong>Ans Nadeem &amp; Rabeea Ahmed</strong> - <span class="institution-badge"><img class="institution-logo air-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
                                     <p class="muted-text">Cleanify: <a href="/thesis/Cleanify.jpeg">Batteryless Waste Management System</a></p>
                                     <div class="resource-tray">
                                         <a class="resource-tag resource-tag--video" href="/thesis/Cleanify.mp4">Video</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <p><strong>Arooba Sehar &amp; Kanwal Naz</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
+                                    <p><strong>Arooba Sehar &amp; Kanwal Naz</strong> - <span class="institution-badge"><img class="institution-logo air-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
                                     <p class="muted-text">Etoile: <a href="/thesis/Etoile.pdf">IoT-based Sustainable Health Monitoring of Livestock</a></p>
                                     <div class="resource-tray">
                                         <a class="resource-tag resource-tag--video" href="/thesis/Etoile.mp4">Video</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <p><strong>Minahil Ejaz &amp; Iqra Bibi</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
+                                    <p><strong>Minahil Ejaz &amp; Iqra Bibi</strong> - <span class="institution-badge"><img class="institution-logo air-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
                                     <p class="muted-text">Sustainable Water Flow Monitoring: <a href="/thesis/Report-FYP-III.pdf">System Design</a></p>
                                     <div class="resource-tray">
                                         <a class="resource-tag resource-tag--video" href="/thesis/Prototype.mp4">Video</a>
@@ -683,7 +693,7 @@
                             <h4 class="student-year">2020</h4>
                             <ul class="student-list">
                                 <li>
-                                    <p><strong>Aizaz Ali &amp; Zubair Bin Hamid</strong> - <span class="institution-badge"><img class="institution-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
+                                    <p><strong>Aizaz Ali &amp; Zubair Bin Hamid</strong> - <span class="institution-badge"><img class="institution-logo air-logo" src="/assets/img/aulogo.png" alt="Air University logo">Air University</span></p>
                                     <p class="muted-text">Smart Parking System for Air University: <a href="/thesis/160644_160564_BSCS_VIII_(A).pdf">Design &amp; Deployment</a></p>
                                     <div class="resource-tray">
                                         <a class="resource-tag resource-tag--video" href="/thesis/spark1.mp4">Video</a>
