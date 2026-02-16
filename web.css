@@ -2145,6 +2145,13 @@ footer {
   background: var(--surface);
 }
 
+.designwork-caption {
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
 .designwork-item::before {
   content: "";
   position: fixed;
