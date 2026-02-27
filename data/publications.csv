@@ -1,11 +1,11 @@
 Title,Authors,Venue,Year,Citations
 Energy harvesting and wireless transfer in sensor network applications: Concepts and experiences,"NA Bhatti, MH Alizai, AA Syed, L Mottola","ACM Transactions on Sensor Networks (TOSN) 12 (3), 1-40, 2016",2016,192
-HarvOS: Efficient code instrumentation for transiently-powered embedded sensing,"NA Bhatti, L Mottola","International Conference on Information Processing in Sensor Networks (IPSN), 2017",2017,166
+HarvOS: Efficient code instrumentation for transiently-powered embedded sensing,"NA Bhatti, L Mottola","International Conference on Information Processing in Sensor Networks (IPSN), 2017",2017,167
 Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus,"M Afanasov, NA Bhatti, D Campagna, G Caslini, FM Centonze, K Dolui, ...","ACM Conference on Embedded Networked Sensor Systems (SenSys), 2020",2020,123
 Efficient Intermittent Computing with Differential Checkpointing,"S Ahmed, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","ACM SIGPLAN / SIGBED Conference on Languages, Compilers, and Tools for …, 2019",2019,92
 Efficient State Retention for Transiently-powered Embedded Sensing.,"NA Bhatti, L Mottola","International Conference on Embedded Wireless Systems and Networks (EWSN …, 2016",2016,74
 MUHAFIZ: IoT-based track recording vehicle for the damage analysis of the railway track,"AA Shah, NA Bhatti, K Dev, BS Chowdhry","IEEE Internet of Things Journal (IoT) 8 (11), 9397-9406, 2021",2021,58
-Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy,"DK Soother, SM Ujjan, K Dev, SA Khowaja, NA Bhatti, T Hussain","Journal of Parallel and Distributed Computing 160, 90-99, 2021",2021,55
+Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy,"DK Soother, SM Ujjan, K Dev, SA Khowaja, NA Bhatti, T Hussain","Journal of Parallel and Distributed Computing 160, 90-99, 2021",2021,56
 Comparative Analysis of Bio‑Inspired Algorithms for Underwater Wireless Sensor Networks,"SS Zehra, R Qureshi, K Dev, S Shahid, NA Bhatti","Wireless Personal Communications (WPC), Springer, 2020",2020,41
 The Betrayal of Constant Power× Time: Finding the Missing Joules of Transiently-Powered Computers,"S Ahmed, A Bakar, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","ACM SIGPLAN / SIGBED Conference on Languages, Compilers, and Tools for …, 2019",2019,38
 Fast and Energy-efficient State Checkpointing for Intermittent Computing,"S Ahmed, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","ACM Transactions on Embedded Computing Systems (TECS), 2020",2020,28
@@ -19,15 +19,15 @@ Towards smaller checkpoints for better intermittent computing,"S Ahmed, MH Aliza
 MOPTIC-SM: Sleep mode-enabled multi-optimized intermittent computing for transiently powered systems,"K Javed, NA Bhatti, M Imran","Journal of Systems Architecture, 102850, 2023",2023,3
 Embedded Sensing through Energy Harvesting at the Mithræum of Circus Maximus,"M Afanasov, N Anwar Bhatti, K Dolui, L Mottola","EUT Edizioni Università di Trieste, 2022",2022,2
 System support for transiently-powered embedded sensing systems,NA Bhatti,"Italy, 2018",2018,2
+Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping,"A Najeeb, A Rafay, NA Bhatti, MH Alizai","ACM ASIA Conference on Computer and Communications Security (AsiaCCS), 2025",2025,1
 FLEXFL: Flexible Federated Learning for Customized Network Architectures in 6G,"SA Khowaja, IH Lee, P Khuwaja, NA Bhatti, K Singh, K Dev","IEEE Wireless Communications and Networking Conference (WCNC), 01-06, 2025",2025,1
 Approxify: Automating Energy-Accuracy Trade-offs in Batteryless IoT Devices,"M Abdullah Soomro, NA Bhatti, M Hamad Alizai","IEEE Wireless Communications and Networking Conference (WCNC), 2025",2025,1
 Shepard: Dynamic Placement of Microservices in the Edge-Cloud Continuum,"F Asghar, T Fatima, JH Siddiqui, NA Bhatti, MH Alizai","International Conference on Mobile and Ubiquitous Systems (MobiQuitous), 43-62, 2023",2023,1
 Are LLM Web Search Engines Sustainable? A Web-Measurement Study of Real-Time Fetching,"ARI Sayyid-Ali, DU Khan, NA Bhatti","ACM WebConf (WWW), 2026",2026,
 See Me If You Can: A Multi-Layer Protocol for Bystander Privacy with Consent-Based Restoration,"Y Khawaja, S Rehman, A Ponticello, D Bhardwaj, K Krombholz, MH Alizai, ...","ACM CHI, 2026",2026,
 "Now You See Me, Now You Don't: Consent-Driven Privacy for Smart Glasses","Y Khawaja, E Nabeel, S Humayun, E Javed, K Krombholz, MH Alizai, ...","IEEE PerCom, 2026",2026,
-Kissan-Dost: Bridging the Last Mile in Smallholder Precision Agriculture with Conversational IoT,"MS Ali, DU Khan, LI Ahmad, U Irfan, M Mustafa, NA Bhatti, MH Alizai","arXiv preprint arXiv:2602.08593, 2026",2026,
-LLM-Enhanced Wearables for Comprehensible Health Guidance in LMICs,"MS Ahsan, AS Shaikh, M Zahid, U Irfan, M Mustafa, NA Bhatti, MH Alizai","arXiv preprint arXiv:2602.08701, 2026",2026,
-Glitch in Time: Exploiting Temporal Misalignment of IMU For Eavesdropping,"A Najeeb, A Rafay, NA Bhatti, MH Alizai","ACM ASIA Conference on Computer and Communications Security (AsiaCCS), 2025",2025,
+LLM-Enhanced Wearables for Comprehensible Health Guidance in LMICs,"M Shaharyar Ahsan, A Shahzad Shaikh, M Zahid, U Irfan, M Mustafa, ...","arXiv e-prints, arXiv: 2602.08701, 2026",2026,
+Kissan-Dost: Bridging the Last Mile in Smallholder Precision Agriculture with Conversational IoT,"M Saad Ali, DU Khan, L Intizar Ahmad, U Irfan, M Mustafa, NA Bhatti, ...","arXiv e-prints, arXiv: 2602.08593, 2026",2026,
 PortScout: A Communication Flow-Based Approach to Detect Port Scanning Evasion Attacks,"M Sangeen, NA Bhatti, K Kifayat","IEEE International Conference on Communications (ICC 2025), 3045-3050, 2025",2025,
 CheckMate: LLM-Powered Approximate Intermittent Computing,"ARI Sayyid-Ali, A Rafay, MA Soomro, MH Alizai, NA Bhatti","ACM Conference on Embedded Networked Sensor Systems (SenSys), 2025",2025,
 "Usage-centered, efficient, and sustainable: an IoT-driven transformation of water heaters","HH Chaudhry, RM Raja, MA Zahid, N Zaffar, MH Alizai, NA Bhatti","Data Centric Engineering (DCE) 5, 36, 2024",2024,
