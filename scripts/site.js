@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 document.addEventListener('DOMContentLoaded', () => {
   const bindClickablePanel = (panel, options = {}) => {
     const {
@@ -53,6 +55,36 @@ document.addEventListener('DOMContentLoaded', () => {
       openLink('_blank');
     });
   };
+
+  const currentYear = String(new Date().getFullYear());
+  document.querySelectorAll('.js-current-year').forEach((node) => {
+    node.textContent = currentYear;
+  });
+
+  const revealNodes = Array.from(document.querySelectorAll('[data-reveal]'));
+  if (revealNodes.length) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealNodes.forEach((node) => node.classList.add('is-visible'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.18,
+        rootMargin: '0px 0px -48px 0px',
+      });
+
+      revealNodes.forEach((node) => observer.observe(node));
+    }
+  }
 
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-navigation');
