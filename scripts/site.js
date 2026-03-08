@@ -61,6 +61,64 @@ document.addEventListener('DOMContentLoaded', () => {
     node.textContent = currentYear;
   });
 
+  const timelineRoots = document.querySelectorAll('.career-timeline');
+  timelineRoots.forEach((timeline) => {
+    const startYear = Number.parseFloat(timeline.dataset.startYear || '');
+    if (Number.isNaN(startYear)) {
+      return;
+    }
+
+    const nowYear = Number.parseInt(currentYear, 10);
+    const totalSpan = Math.max(nowYear - startYear, 1);
+    const toPercent = (yearValue) => `${((yearValue - startYear) / totalSpan) * 100}%`;
+
+    const educationStart = Number.parseFloat(timeline.dataset.educationStart || String(startYear));
+    const educationEnd = Number.parseFloat(timeline.dataset.educationEnd || String(startYear));
+    const professionalStart = Number.parseFloat(timeline.dataset.professionalStart || String(educationEnd));
+
+    timeline.style.setProperty('--education-start', toPercent(educationStart));
+    timeline.style.setProperty('--education-end', toPercent(Math.min(educationEnd, nowYear)));
+    timeline.style.setProperty('--professional-start', toPercent(Math.min(professionalStart, nowYear)));
+    timeline.style.setProperty('--professional-end', '100%');
+
+    timeline.querySelectorAll('.career-event').forEach((eventNode) => {
+      const start = Number.parseFloat(eventNode.dataset.start || '');
+      const endValue = eventNode.dataset.end === 'current'
+        ? nowYear
+        : Number.parseFloat(eventNode.dataset.end || '');
+
+      if (Number.isNaN(start) || Number.isNaN(endValue)) {
+        return;
+      }
+
+      const midpoint = start + ((endValue - start) / 2);
+      eventNode.style.setProperty('--midpoint', toPercent(midpoint));
+    });
+
+    const yearContainer = timeline.querySelector('.career-timeline-years');
+    if (!yearContainer) {
+      return;
+    }
+
+    yearContainer.textContent = '';
+
+    const step = totalSpan > 20 ? 4 : 3;
+    const labels = [startYear];
+    for (let year = startYear + step; year < nowYear; year += step) {
+      labels.push(year);
+    }
+    if (labels[labels.length - 1] !== nowYear) {
+      labels.push(nowYear);
+    }
+
+    labels.forEach((year) => {
+      const labelNode = document.createElement('span');
+      labelNode.textContent = String(year);
+      labelNode.style.setProperty('--year-position', toPercent(year));
+      yearContainer.appendChild(labelNode);
+    });
+  });
+
   const revealNodes = Array.from(document.querySelectorAll('[data-reveal]'));
   if (revealNodes.length) {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
