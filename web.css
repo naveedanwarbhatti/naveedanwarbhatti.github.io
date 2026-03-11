@@ -838,6 +838,32 @@ p {
   font-size: 1.05rem;
 }
 
+.funding-status {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 0.24rem 0.62rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.funding-status--in-progress {
+  background: linear-gradient(135deg, rgba(241, 164, 82, 0.22), rgba(217, 110, 50, 0.1));
+  color: #8c4a1a;
+  border-color: rgba(217, 110, 50, 0.22);
+}
+
+.funding-status--completed {
+  background: linear-gradient(135deg, rgba(80, 176, 125, 0.18), rgba(31, 122, 77, 0.08));
+  color: #1f7a4d;
+  border-color: rgba(31, 122, 77, 0.18);
+}
+
 .funding-meta {
   font-size: 0.88rem;
   color: var(--text-muted);
