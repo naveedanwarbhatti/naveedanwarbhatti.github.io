@@ -2706,6 +2706,16 @@ blockquote {
   color: #fff;
 }
 
+.home-page .career-note .sysnet-word {
+  color: #d6a23c;
+  transition: color 0.2s ease;
+}
+
+.home-page .career-note .sysnet-link:hover .sysnet-word,
+.home-page .career-note .sysnet-link:focus-visible .sysnet-word {
+  color: #8c5a24;
+}
+
 .hero-pill-row {
   display: flex;
   flex-wrap: wrap;
