@@ -4,8 +4,8 @@ HarvOS: Efficient code instrumentation for transiently-powered embedded sensing,
 Battery-less Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus,"M Afanasov, NA Bhatti, D Campagna, G Caslini, FM Centonze, K Dolui, ...","ACM Conference on Embedded Networked Sensor Systems (SenSys), 2020",2020,123
 Efficient Intermittent Computing with Differential Checkpointing,"S Ahmed, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","ACM SIGPLAN / SIGBED Conference on Languages, Compilers, and Tools for …, 2019",2019,92
 Efficient State Retention for Transiently-powered Embedded Sensing.,"NA Bhatti, L Mottola","International Conference on Embedded Wireless Systems and Networks (EWSN …, 2016",2016,74
-MUHAFIZ: IoT-based track recording vehicle for the damage analysis of the railway track,"AA Shah, NA Bhatti, K Dev, BS Chowdhry","IEEE Internet of Things Journal (IoT) 8 (11), 9397-9406, 2021",2021,58
-Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy,"DK Soother, SM Ujjan, K Dev, SA Khowaja, NA Bhatti, T Hussain","Journal of Parallel and Distributed Computing 160, 90-99, 2021",2021,56
+MUHAFIZ: IoT-based track recording vehicle for the damage analysis of the railway track,"AA Shah, NA Bhatti, K Dev, BS Chowdhry","IEEE Internet of Things Journal (IoT) 8 (11), 9397-9406, 2021",2021,59
+Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy,"DK Soother, SM Ujjan, K Dev, SA Khowaja, NA Bhatti, T Hussain","Journal of Parallel and Distributed Computing 160, 90-99, 2021",2021,58
 Comparative Analysis of Bio‑Inspired Algorithms for Underwater Wireless Sensor Networks,"SS Zehra, R Qureshi, K Dev, S Shahid, NA Bhatti","Wireless Personal Communications (WPC), Springer, 2020",2020,41
 The Betrayal of Constant Power× Time: Finding the Missing Joules of Transiently-Powered Computers,"S Ahmed, A Bakar, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","ACM SIGPLAN / SIGBED Conference on Languages, Compilers, and Tools for …, 2019",2019,38
 Fast and Energy-efficient State Checkpointing for Intermittent Computing,"S Ahmed, NA Bhatti, MH Alizai, JH Siddiqui, L Mottola","ACM Transactions on Embedded Computing Systems (TECS), 2020",2020,28
@@ -38,5 +38,4 @@ Poster Abstract: Towards Smaller Checkpoints for Better Intermittent Computing,"
 Poster: Compiler-assisted Automatic Checkpointing for Transiently-powered Embedded Devices,NA Bhatti,"International Conference on Embedded Wireless Systems and Networks (EWSN), 2017",2017,
 Back to the future: Sustainable transiently powered embedded systems: Ph. D. forum abstract,NA Bhatti,"International Conference on Information Processing in Sensor Networks (IPSN), 24, 2016",2016,
 Laser based energy distribution architecture for decoupling energy and sensing planes in WSN,"NA Bhatti, AA Syed, MH Alizai","International Journal of Distributed Sensor Networks 11 (9), 526858, 2015",2015,
-Safety of out-patient investigations and management of suspected pulmonary embolism (PE),"M Zahid, M O'gara, I Shafiq, S Mehmood, N Bhatti","European Respiratory Journal 38 (Suppl 55), 2014",2014,
 Long range RF-based ID (LRFID) System: Decoupling sensing and energy in sensor networks using energy transference,NA Bhatti,"National University of Computer and Emerging Sciences, 2013",2013,
