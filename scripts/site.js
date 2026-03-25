@@ -172,6 +172,94 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const parseSimpleCsv = (text) => {
+    const lines = text
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter((line) => line && !line.startsWith('#'));
+
+    if (lines.length < 2) {
+      return { headers: [], rows: [] };
+    }
+
+    const headers = lines[0].split(',').map((header) => header.trim());
+    const rows = lines.slice(1).map((line) => {
+      const parts = line.split(',').map((part) => part.trim());
+      return headers.reduce((row, header, index) => {
+        row[header] = parts[index] ?? '';
+        return row;
+      }, {});
+    });
+
+    return { headers, rows };
+  };
+
+  const loadHomeMetrics = () => {
+    const citationsTotalNode = document.getElementById('home-citations-total');
+    const citationsSinceNode = document.getElementById('home-citations-since');
+    const hIndexNode = document.getElementById('home-h-index');
+    const conferenceQualityNode = document.getElementById('home-conference-quality');
+    const journalQualityNode = document.getElementById('home-journal-quality');
+
+    if (!citationsTotalNode && !citationsSinceNode && !hIndexNode && !conferenceQualityNode && !journalQualityNode) {
+      return;
+    }
+
+    fetch('/data/publications_stats.csv')
+      .then((response) => (response.ok ? response.text() : Promise.reject(new Error('Failed to load publications_stats.csv'))))
+      .then((text) => {
+        const { headers, rows } = parseSimpleCsv(text);
+        const getMetricRow = (name) => rows.find((row) => (row.Metric || '').trim().toLowerCase() === name);
+        const citationsRow = getMetricRow('citations');
+        const hIndexRow = getMetricRow('h-index');
+        const sinceHeader = headers.find((header) => !['metric', 'all'].includes(header.toLowerCase()));
+
+        if (citationsRow?.All && citationsTotalNode) {
+          citationsTotalNode.textContent = citationsRow.All;
+        }
+
+        if (citationsRow && sinceHeader && citationsRow[sinceHeader] && citationsSinceNode) {
+          citationsSinceNode.textContent = `${citationsRow[sinceHeader]} ${sinceHeader.toLowerCase()}`;
+        }
+
+        if (hIndexRow?.All && hIndexNode) {
+          hIndexNode.textContent = hIndexRow.All;
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    fetch('/data/ranking_summary.csv')
+      .then((response) => (response.ok ? response.text() : Promise.reject(new Error('Failed to load ranking_summary.csv'))))
+      .then((text) => {
+        const { rows } = parseSimpleCsv(text);
+        const getRankingCount = (type, rank) => {
+          const match = rows.find((row) => (
+            (row.type || '').trim().toLowerCase() === type &&
+            (row.rank || '').trim().toUpperCase() === rank
+          ));
+          return match?.count || '';
+        };
+
+        const conferenceAStar = getRankingCount('conference', 'A*');
+        const journalQ1 = getRankingCount('journal', 'Q1');
+
+        if (conferenceAStar && conferenceQualityNode) {
+          conferenceQualityNode.textContent = `${conferenceAStar} A*`;
+        }
+
+        if (journalQ1 && journalQualityNode) {
+          journalQualityNode.textContent = `${journalQ1} Q1`;
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  loadHomeMetrics();
+
   const paperPanels = document.querySelectorAll('.paper-panel[data-url]');
 
   paperPanels.forEach((panel) => {
