@@ -1,3 +1,18 @@
+const currentScriptUrl = document.currentScript instanceof HTMLScriptElement && document.currentScript.src
+  ? document.currentScript.src
+  : null;
+
+const resolveSiteUrl = (path) => {
+  const normalizedPath = path.replace(/^\/+/, '');
+
+  if (currentScriptUrl) {
+    return new URL(`../${normalizedPath}`, currentScriptUrl).toString();
+  }
+
+  const fallbackPrefix = window.location.pathname.includes('/pages/') ? '../' : '';
+  return new URL(`${fallbackPrefix}${normalizedPath}`, document.baseURI).toString();
+};
+
 document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -205,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    fetch('/data/publications_stats.csv')
+    fetch(resolveSiteUrl('data/publications_stats.csv'))
       .then((response) => (response.ok ? response.text() : Promise.reject(new Error('Failed to load publications_stats.csv'))))
       .then((text) => {
         const { headers, rows } = parseSimpleCsv(text);
@@ -230,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error(error);
       });
 
-    fetch('/data/ranking_summary.csv')
+    fetch(resolveSiteUrl('data/ranking_summary.csv'))
       .then((response) => (response.ok ? response.text() : Promise.reject(new Error('Failed to load ranking_summary.csv'))))
       .then((text) => {
         const { rows } = parseSimpleCsv(text);

@@ -1,3 +1,18 @@
+const currentScriptUrl = document.currentScript instanceof HTMLScriptElement && document.currentScript.src
+  ? document.currentScript.src
+  : null;
+
+function resolveSiteUrl(path) {
+  const normalizedPath = path.replace(/^\/+/, '');
+
+  if (currentScriptUrl) {
+    return new URL(`../${normalizedPath}`, currentScriptUrl).toString();
+  }
+
+  const fallbackPrefix = window.location.pathname.includes('/pages/') ? '../' : '';
+  return new URL(`${fallbackPrefix}${normalizedPath}`, document.baseURI).toString();
+}
+
 /**
  * Renders the citation metrics table from CSV data.
  * @param {string} text - The CSV data as a string.
@@ -186,7 +201,7 @@ function rankToClass(rankRaw) {
 }
 
 /**
- * Renders Ranking Summary bars from /data/ranking_summary.csv
+ * Renders Ranking Summary bars from data/ranking_summary.csv
  * Expected CSV:
  *   type,rank,count
  *   conference,A*,5
@@ -284,8 +299,8 @@ function loadRankingSummary() {
   const host = document.getElementById('rank-summary');
   if (!host) return;
 
-  fetch('/data/ranking_summary.csv')
-    .then(res => res.ok ? res.text() : Promise.reject('Failed to load /data/ranking_summary.csv'))
+  fetch(resolveSiteUrl('data/ranking_summary.csv'))
+    .then(res => res.ok ? res.text() : Promise.reject('Failed to load data/ranking_summary.csv'))
     .then(text => {
       renderRankingSummary(text);
       syncStatisticsPanelHeight();
@@ -299,12 +314,12 @@ function loadRankingSummary() {
  * Main function to load all scholar-related data.
  */
 function loadScholarData() {
-  fetch('/data/publications_stats.csv')
+  fetch(resolveSiteUrl('data/publications_stats.csv'))
     .then(res => res.ok ? res.text() : Promise.reject('Failed to load publications_stats.csv'))
     .then(text => renderStatsTable(text))
     .catch(e => console.error(e));
 
-  fetch('/data/citation_history.csv')
+  fetch(resolveSiteUrl('data/citation_history.csv'))
     .then(res => {
       if (res.status === 404) return null;
       if (!res.ok) return Promise.reject('Failed to load citation_history.csv');
