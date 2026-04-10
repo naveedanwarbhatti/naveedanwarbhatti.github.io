@@ -4,15 +4,15 @@ interface MetricRow {
     Since2020: string;
 }
 
-const currentScriptUrl = document.currentScript instanceof HTMLScriptElement && document.currentScript.src
+const renderStatsScriptUrl = document.currentScript instanceof HTMLScriptElement && document.currentScript.src
     ? document.currentScript.src
     : null;
 
-function resolveSiteUrl(path: string): string {
+function resolveRenderStatsUrl(path: string): string {
     const normalizedPath = path.replace(/^\/+/, '');
 
-    if (currentScriptUrl) {
-        return new URL(`../${normalizedPath}`, currentScriptUrl).toString();
+    if (renderStatsScriptUrl) {
+        return new URL(`../${normalizedPath}`, renderStatsScriptUrl).toString();
     }
 
     const fallbackPrefix = window.location.pathname.includes('/pages/') ? '../' : '';
@@ -20,7 +20,7 @@ function resolveSiteUrl(path: string): string {
 }
 
 function loadStats() {
-    fetch(resolveSiteUrl('data/publications_stats.csv'))
+    fetch(resolveRenderStatsUrl('data/publications_stats.csv'))
         .then(res => res.text())
         .then(text => {
             const lines = text.trim().split(/\r?\n/);

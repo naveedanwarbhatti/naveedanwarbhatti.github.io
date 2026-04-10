@@ -1,12 +1,12 @@
-const currentScriptUrl = document.currentScript instanceof HTMLScriptElement && document.currentScript.src
+const renderStatsScriptUrl = document.currentScript instanceof HTMLScriptElement && document.currentScript.src
   ? document.currentScript.src
   : null;
 
-function resolveSiteUrl(path) {
+function resolveRenderStatsUrl(path) {
   const normalizedPath = path.replace(/^\/+/, '');
 
-  if (currentScriptUrl) {
-    return new URL(`../${normalizedPath}`, currentScriptUrl).toString();
+  if (renderStatsScriptUrl) {
+    return new URL(`../${normalizedPath}`, renderStatsScriptUrl).toString();
   }
 
   const fallbackPrefix = window.location.pathname.includes('/pages/') ? '../' : '';
@@ -299,7 +299,7 @@ function loadRankingSummary() {
   const host = document.getElementById('rank-summary');
   if (!host) return;
 
-  fetch(resolveSiteUrl('data/ranking_summary.csv'))
+  fetch(resolveRenderStatsUrl('data/ranking_summary.csv'))
     .then(res => res.ok ? res.text() : Promise.reject('Failed to load data/ranking_summary.csv'))
     .then(text => {
       renderRankingSummary(text);
@@ -314,12 +314,12 @@ function loadRankingSummary() {
  * Main function to load all scholar-related data.
  */
 function loadScholarData() {
-  fetch(resolveSiteUrl('data/publications_stats.csv'))
+  fetch(resolveRenderStatsUrl('data/publications_stats.csv'))
     .then(res => res.ok ? res.text() : Promise.reject('Failed to load publications_stats.csv'))
     .then(text => renderStatsTable(text))
     .catch(e => console.error(e));
 
-  fetch(resolveSiteUrl('data/citation_history.csv'))
+  fetch(resolveRenderStatsUrl('data/citation_history.csv'))
     .then(res => {
       if (res.status === 404) return null;
       if (!res.ok) return Promise.reject('Failed to load citation_history.csv');
