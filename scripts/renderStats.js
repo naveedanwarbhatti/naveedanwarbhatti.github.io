@@ -104,9 +104,7 @@ function renderCitationGraph(text) {
   if (!recentHistory.length) return;
 
   const maxCitations = Math.max(...recentHistory.map(d => d.citations));
-  const containerHeight = graphContainer.clientHeight || 100;
-  // Reserve vertical space for value + year labels and small gaps.
-  const graphHeight = Math.max(40, containerHeight - 34);
+  const maxBarHeight = 42;
 
   recentHistory.forEach(data => {
     const barItem = document.createElement('div');
@@ -116,8 +114,8 @@ function renderCitationGraph(text) {
 
     const bar = document.createElement('div');
     bar.className = 'graph-bar';
-    const barHeight = maxCitations > 0 ? (data.citations / maxCitations) * graphHeight : 0;
-    bar.style.height = `${barHeight}px`;
+    const barHeight = maxCitations > 0 ? Math.max(4, (data.citations / maxCitations) * maxBarHeight) : 0;
+    bar.style.height = `${Math.round(barHeight)}px`;
 
     const barLabel = document.createElement('span');
     barLabel.className = 'bar-label';
@@ -134,31 +132,6 @@ function renderCitationGraph(text) {
     graphContainer.appendChild(barItem);
   });
 
-  syncStatisticsPanelHeight();
-}
-
-/**
- * Shrinks the citation graph (if needed) so the Statistics panel ends where
- * the Ranking Summary panel ends.
- */
-function syncStatisticsPanelHeight() {
-  const scholarsPanel = document.querySelector('.panel-scholars');
-  const rankingPanel = document.querySelector('.panel-ranking');
-  const graphContainer = document.getElementById('citation-graph');
-
-  if (!scholarsPanel || !rankingPanel || !graphContainer) return;
-
-  // Reset any previous inline height before measuring.
-  graphContainer.style.height = '';
-
-  const overflow = Math.ceil(scholarsPanel.getBoundingClientRect().height - rankingPanel.getBoundingClientRect().height);
-  if (overflow <= 0) return;
-
-  const currentGraphHeight = graphContainer.getBoundingClientRect().height;
-  const minGraphHeight = 72;
-  const targetHeight = Math.max(minGraphHeight, Math.floor(currentGraphHeight - overflow));
-
-  graphContainer.style.height = `${targetHeight}px`;
 }
 
 /**
@@ -245,9 +218,9 @@ function renderRankingSummary(text) {
     const section = document.createElement('div');
     section.className = 'rank-section';
 
-    const h4 = document.createElement('h4');
-    h4.textContent = title;
-    section.appendChild(h4);
+    const heading = document.createElement('h3');
+    heading.textContent = title;
+    section.appendChild(heading);
 
     order.forEach(rank => {
       const count = countsMap.get(rank) ?? 0;
@@ -303,7 +276,6 @@ function loadRankingSummary() {
     .then(res => res.ok ? res.text() : Promise.reject('Failed to load data/ranking_summary.csv'))
     .then(text => {
       renderRankingSummary(text);
-      syncStatisticsPanelHeight();
     })
     .catch(() => {
       // Keep the placeholder text already in the HTML if fetch fails.
@@ -327,7 +299,6 @@ function loadScholarData() {
     })
     .then(text => {
       if (text) renderCitationGraph(text);
-      else syncStatisticsPanelHeight();
     })
     .catch(e => console.error(e));
 
@@ -335,4 +306,3 @@ function loadScholarData() {
 }
 
 document.addEventListener('DOMContentLoaded', loadScholarData);
-window.addEventListener('resize', syncStatisticsPanelHeight);

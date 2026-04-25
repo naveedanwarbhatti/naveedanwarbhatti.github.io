@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://naveedanwarbhatti.github.io/sitemap.xml

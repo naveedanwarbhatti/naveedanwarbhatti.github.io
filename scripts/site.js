@@ -71,93 +71,350 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const loadedScripts = new Map();
+
+  const loadScriptOnce = (src) => {
+    if (loadedScripts.has(src)) {
+      return loadedScripts.get(src);
+    }
+
+    const existing = Array.from(document.scripts).find((script) => script.src === src);
+    if (existing) {
+      const promise = Promise.resolve(existing);
+      loadedScripts.set(src, promise);
+      return promise;
+    }
+
+    const promise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      script.onload = () => resolve(script);
+      script.onerror = reject;
+      document.body.appendChild(script);
+    });
+
+    loadedScripts.set(src, promise);
+    return promise;
+  };
+
+  const loadedStylesheets = new Map();
+
+  const loadStylesheetOnce = (href) => {
+    if (loadedStylesheets.has(href)) {
+      return loadedStylesheets.get(href);
+    }
+
+    const existing = Array.from(document.styleSheets).find((sheet) => sheet.href === href);
+    if (existing) {
+      const promise = Promise.resolve(existing);
+      loadedStylesheets.set(href, promise);
+      return promise;
+    }
+
+    const promise = new Promise((resolve, reject) => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      link.onload = () => resolve(link);
+      link.onerror = reject;
+      document.head.appendChild(link);
+    });
+
+    loadedStylesheets.set(href, promise);
+    return promise;
+  };
+
+  const whenNearViewport = (target, callback, rootMargin = '700px 0px') => {
+    if (!target) {
+      return;
+    }
+
+    let hasRun = false;
+    const run = () => {
+      if (hasRun) {
+        return;
+      }
+      hasRun = true;
+      callback();
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      run();
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) {
+        return;
+      }
+      observer.disconnect();
+      run();
+    }, { rootMargin });
+
+    observer.observe(target);
+  };
+
+  const loadDeferredIframes = () => {
+    document.querySelectorAll('iframe[data-src]').forEach((frame) => {
+      const host = frame.closest('.embed-wrapper, .contact-panel--map') || frame;
+      whenNearViewport(host, () => {
+        if (!frame.dataset.src) {
+          return;
+        }
+        frame.src = frame.dataset.src;
+        frame.removeAttribute('data-src');
+      });
+    });
+  };
+
+  const titleInstagramIframes = () => {
+    document.querySelectorAll('.instagram-grid iframe').forEach((frame, index) => {
+      if (!frame.title) {
+        frame.title = `Instagram photography embed ${index + 1}`;
+      }
+    });
+  };
+
+  const loadInstagramEmbeds = () => {
+    const grid = document.querySelector('.instagram-grid');
+    if (!grid) {
+      return;
+    }
+
+    titleInstagramIframes();
+    if ('MutationObserver' in window) {
+      const observer = new MutationObserver(titleInstagramIframes);
+      observer.observe(grid, { childList: true, subtree: true });
+    }
+
+    whenNearViewport(grid, () => {
+      loadScriptOnce('https://www.instagram.com/embed.js')
+        .then(() => {
+          window.instgrm?.Embeds?.process?.();
+          window.setTimeout(titleInstagramIframes, 600);
+        })
+        .catch(() => {});
+    }, '900px 0px');
+  };
+
+  const loadVisitedMap = () => {
+    const mapNode = document.getElementById('chartdiv');
+    if (!mapNode) {
+      return;
+    }
+
+    const initMap = () => {
+      if (mapNode.dataset.mapReady === 'true' || !window.am5 || !window.am5map || !window.am5geodata_worldLow) {
+        return;
+      }
+
+      mapNode.dataset.mapReady = 'true';
+      window.am5.ready(() => {
+        const root = window.am5.Root.new('chartdiv');
+
+        if (window.am5themes_Animated) {
+          root.setThemes([
+            window.am5themes_Animated.new(root),
+          ]);
+        }
+
+        const chart = root.container.children.push(
+          window.am5map.MapChart.new(root, {
+            panX: 'none',
+            panY: 'none',
+            wheelX: 'none',
+            wheelY: 'none',
+            projection: window.am5map.geoMercator(),
+          }),
+        );
+
+        const polygonSeries = chart.series.push(
+          window.am5map.MapPolygonSeries.new(root, {
+            geoJSON: {
+              type: 'FeatureCollection',
+              features: window.am5geodata_worldLow.features.filter((feature) => feature.id !== 'AQ'),
+            },
+          }),
+        );
+
+        const visitedCountries = ['AT', 'DK', 'FI', 'FR', 'DE', 'IT', 'PK', 'PT', 'SE', 'TR', 'AE', 'US'];
+
+        polygonSeries.mapPolygons.template.adapters.add('fill', (fill, target) => {
+          if (visitedCountries.includes(target.dataItem.get('id'))) {
+            return window.am5.color(0xf39c12);
+          }
+          return window.am5.color(0xcccccc);
+        });
+
+        polygonSeries.mapPolygons.template.setAll({
+          tooltipText: '{name}',
+          strokeOpacity: 0.2,
+        });
+      });
+    };
+
+    whenNearViewport(mapNode, () => {
+      loadScriptOnce('https://cdn.amcharts.com/lib/5/index.js')
+        .then(() => loadScriptOnce('https://cdn.amcharts.com/lib/5/map.js'))
+        .then(() => loadScriptOnce('https://cdn.amcharts.com/lib/5/geodata/worldLow.js'))
+        .then(() => loadScriptOnce('https://cdn.amcharts.com/lib/5/themes/Animated.js'))
+        .then(initMap)
+        .catch(() => {});
+    }, '900px 0px');
+  };
+
+  const loadDeferredStatCounter = () => {
+    if (!window.sc_project || !window.sc_security) {
+      return;
+    }
+
+    const schedule = () => {
+      let hasLoaded = false;
+      const load = () => {
+        if (hasLoaded) {
+          return;
+        }
+        hasLoaded = true;
+        loadScriptOnce('https://www.statcounter.com/counter/counter.js').catch(() => {});
+      };
+
+      const loadWhenIdle = () => {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(load, { timeout: 8000 });
+        } else {
+          load();
+        }
+      };
+
+      ['pointerdown', 'keydown', 'scroll'].forEach((eventName) => {
+        window.addEventListener(eventName, loadWhenIdle, { once: true, passive: true });
+      });
+
+      window.setTimeout(loadWhenIdle, 12000);
+    };
+
+    if (document.readyState === 'complete') {
+      schedule();
+    } else {
+      window.addEventListener('load', schedule, { once: true });
+    }
+  };
+
+  const loadDeferredFontAwesome = () => {
+    let hasLoaded = false;
+    const load = () => {
+      if (hasLoaded) {
+        return;
+      }
+      hasLoaded = true;
+      loadStylesheetOnce('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css').catch(() => {});
+    };
+
+    ['pointerdown', 'keydown', 'scroll'].forEach((eventName) => {
+      window.addEventListener(eventName, load, { once: true, passive: true });
+    });
+
+    window.setTimeout(load, 10000);
+  };
+
   const currentYear = String(new Date().getFullYear());
   document.querySelectorAll('.js-current-year').forEach((node) => {
     node.textContent = currentYear;
   });
 
-  const timelineRoots = document.querySelectorAll('.career-timeline');
-  timelineRoots.forEach((timeline) => {
-    const startYear = Number.parseFloat(timeline.dataset.startYear || '');
-    if (Number.isNaN(startYear)) {
-      return;
+  const runWhenIdle = (callback, timeout = 1800) => {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(callback, { timeout });
+    } else {
+      window.setTimeout(callback, 0);
     }
+  };
 
-    const nowYear = Number.parseInt(currentYear, 10);
-    const totalSpan = Math.max(nowYear - startYear, 1);
-    const toPercent = (yearValue) => `${((yearValue - startYear) / totalSpan) * 100}%`;
-
-    const educationStart = Number.parseFloat(timeline.dataset.educationStart || String(startYear));
-    const educationEnd = Number.parseFloat(timeline.dataset.educationEnd || String(startYear));
-    const professionalStart = Number.parseFloat(timeline.dataset.professionalStart || String(educationEnd));
-
-    timeline.style.setProperty('--education-start', toPercent(educationStart));
-    timeline.style.setProperty('--education-end', toPercent(Math.min(educationEnd, nowYear)));
-    timeline.style.setProperty('--professional-start', toPercent(Math.min(professionalStart, nowYear)));
-    timeline.style.setProperty('--professional-end', '100%');
-
-    timeline.querySelectorAll('.career-event').forEach((eventNode) => {
-      const start = Number.parseFloat(eventNode.dataset.start || '');
-      const endValue = eventNode.dataset.end === 'current'
-        ? nowYear
-        : Number.parseFloat(eventNode.dataset.end || '');
-
-      if (Number.isNaN(start) || Number.isNaN(endValue)) {
+  runWhenIdle(() => {
+    const timelineRoots = document.querySelectorAll('.career-timeline');
+    timelineRoots.forEach((timeline) => {
+      const startYear = Number.parseFloat(timeline.dataset.startYear || '');
+      if (Number.isNaN(startYear)) {
         return;
       }
 
-      const midpoint = start + ((endValue - start) / 2);
-      eventNode.style.setProperty('--midpoint', toPercent(midpoint));
-    });
+      const nowYear = Number.parseInt(currentYear, 10);
+      const totalSpan = Math.max(nowYear - startYear, 1);
+      const toPercent = (yearValue) => `${((yearValue - startYear) / totalSpan) * 100}%`;
 
-    const yearContainer = timeline.querySelector('.career-timeline-years');
-    if (!yearContainer) {
-      return;
-    }
+      const educationStart = Number.parseFloat(timeline.dataset.educationStart || String(startYear));
+      const educationEnd = Number.parseFloat(timeline.dataset.educationEnd || String(startYear));
+      const professionalStart = Number.parseFloat(timeline.dataset.professionalStart || String(educationEnd));
 
-    yearContainer.textContent = '';
+      timeline.style.setProperty('--education-start', toPercent(educationStart));
+      timeline.style.setProperty('--education-end', toPercent(Math.min(educationEnd, nowYear)));
+      timeline.style.setProperty('--professional-start', toPercent(Math.min(professionalStart, nowYear)));
+      timeline.style.setProperty('--professional-end', '100%');
 
-    const step = totalSpan > 20 ? 4 : 3;
-    const labels = [startYear];
-    for (let year = startYear + step; year < nowYear; year += step) {
-      labels.push(year);
-    }
-    if (labels[labels.length - 1] !== nowYear) {
-      labels.push(nowYear);
-    }
+      timeline.querySelectorAll('.career-event').forEach((eventNode) => {
+        const start = Number.parseFloat(eventNode.dataset.start || '');
+        const endValue = eventNode.dataset.end === 'current'
+          ? nowYear
+          : Number.parseFloat(eventNode.dataset.end || '');
 
-    labels.forEach((year) => {
-      const labelNode = document.createElement('span');
-      labelNode.textContent = String(year);
-      labelNode.style.setProperty('--year-position', toPercent(year));
-      yearContainer.appendChild(labelNode);
-    });
-  });
+        if (Number.isNaN(start) || Number.isNaN(endValue)) {
+          return;
+        }
 
-  const revealNodes = Array.from(document.querySelectorAll('[data-reveal]'));
-  if (revealNodes.length) {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-      revealNodes.forEach((node) => node.classList.add('is-visible'));
-    } else {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          }
-
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        });
-      }, {
-        threshold: 0.18,
-        rootMargin: '0px 0px -48px 0px',
+        const midpoint = start + ((endValue - start) / 2);
+        eventNode.style.setProperty('--midpoint', toPercent(midpoint));
       });
 
-      revealNodes.forEach((node) => observer.observe(node));
+      const yearContainer = timeline.querySelector('.career-timeline-years');
+      if (!yearContainer) {
+        return;
+      }
+
+      yearContainer.textContent = '';
+
+      const step = totalSpan > 20 ? 4 : 3;
+      const labels = [startYear];
+      for (let year = startYear + step; year < nowYear; year += step) {
+        labels.push(year);
+      }
+      if (labels[labels.length - 1] !== nowYear) {
+        labels.push(nowYear);
+      }
+
+      labels.forEach((year) => {
+        const labelNode = document.createElement('span');
+        labelNode.textContent = String(year);
+        labelNode.style.setProperty('--year-position', toPercent(year));
+        yearContainer.appendChild(labelNode);
+      });
+    });
+
+    const revealNodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (revealNodes.length) {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        revealNodes.forEach((node) => node.classList.add('is-visible'));
+      } else {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          });
+        }, {
+          threshold: 0.18,
+          rootMargin: '0px 0px -48px 0px',
+        });
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
     }
-  }
+  });
 
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('primary-navigation');
@@ -186,6 +443,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  runWhenIdle(() => {
+    loadDeferredFontAwesome();
+    loadDeferredIframes();
+    loadInstagramEmbeds();
+    loadVisitedMap();
+    loadDeferredStatCounter();
+  }, 2200);
 
   const parseSimpleCsv = (text) => {
     const lines = text
@@ -273,84 +538,41 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  loadHomeMetrics();
+  runWhenIdle(() => {
+    loadHomeMetrics();
 
-  const paperPanels = document.querySelectorAll('.paper-panel[data-url]');
+    const paperPanels = document.querySelectorAll('.paper-panel[data-url]');
 
-  paperPanels.forEach((panel) => {
-    const { url, target = '_self', rel = '' } = panel.dataset;
-    bindClickablePanel(panel, { url, target, rel, blockedSelector: 'a' });
-  });
-
-  const mentoringPanels = document.querySelectorAll('#mentoring .student-list li');
-
-  mentoringPanels.forEach((panel) => {
-    const primaryLink = panel.querySelector('a:not(.resource-tag)');
-    const href = primaryLink?.getAttribute('href') ?? '';
-
-    if (!href || href.trim() === '' || href.trim() === '#') {
-      return;
-    }
-
-    panel.classList.add('is-clickable-panel');
-    panel.setAttribute('tabindex', '0');
-    panel.setAttribute('role', 'link');
-
-    const target = primaryLink.getAttribute('target') || '_self';
-    const rel = primaryLink.getAttribute('rel') || '';
-
-    bindClickablePanel(panel, {
-      url: href,
-      target,
-      rel,
-      blockedSelector: 'a',
+    paperPanels.forEach((panel) => {
+      const { url, target = '_self', rel = '' } = panel.dataset;
+      if (!url || url.trim() === '#' || panel.querySelector('.paper-panel-cover')) {
+        return;
+      }
+      bindClickablePanel(panel, { url, target, rel, blockedSelector: 'a' });
     });
-  });
 
-  const NAME_FULL = 'Naveed Anwar Bhatti';
-  const NAME_SHORT = 'Naveed Bhatti';
-  const nameNodes = [];
+    const mentoringPanels = document.querySelectorAll('#mentoring .student-list li');
 
-  const walker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_TEXT,
-    {
-      acceptNode(node) {
-        const parent = node.parentNode;
-        if (!node.nodeValue || (parent && (parent.nodeName === 'SCRIPT' || parent.nodeName === 'STYLE'))) {
-          return NodeFilter.FILTER_REJECT;
-        }
+    mentoringPanels.forEach((panel) => {
+      const primaryLink = panel.querySelector('a:not(.resource-tag)');
+      const href = primaryLink?.getAttribute('href') ?? '';
 
-        return node.nodeValue.includes(NAME_FULL)
-          ? NodeFilter.FILTER_ACCEPT
-          : NodeFilter.FILTER_SKIP;
-      },
-    },
-  );
+      if (!href || href.trim() === '' || href.trim() === '#') {
+        return;
+      }
 
-  while (walker.nextNode()) {
-    const node = walker.currentNode;
-    nameNodes.push({ node, original: node.nodeValue });
-  }
+      panel.classList.add('is-clickable-panel');
+      panel.setAttribute('tabindex', '0');
 
-  if (nameNodes.length) {
-    const applyNameVariant = () => {
-      const useShort = window.innerWidth <= 640;
-      nameNodes.forEach(({ node, original }) => {
-        node.nodeValue = useShort
-          ? original.replaceAll(NAME_FULL, NAME_SHORT)
-          : original;
+      const target = primaryLink.getAttribute('target') || '_self';
+      const rel = primaryLink.getAttribute('rel') || '';
+
+      bindClickablePanel(panel, {
+        url: href,
+        target,
+        rel,
+        blockedSelector: 'a',
       });
-    };
-
-    applyNameVariant();
-
-    let resizeTimeout;
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(applyNameVariant, 150);
-    };
-
-    window.addEventListener('resize', handleResize);
-  }
+    });
+  }, 2200);
 });

@@ -10,18 +10,21 @@
     <meta property="og:title" content="Publications | Naveed Anwar Bhatti">
     <meta property="og:description" content="Peer-reviewed publications, datasets, and scholarly impact from Naveed Anwar Bhatti’s work on cyber-physical systems and secure IoT.">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Naveed Anwar Bhatti">
     <meta property="og:url" content="https://naveedanwarbhatti.github.io/pages/publications.html">
-    <meta property="og:image" content="https://naveedanwarbhatti.github.io/assets/img/ID_pic.webp">
-    <meta property="og:image:width" content="1696">
-    <meta property="og:image:height" content="2528">
+    <link rel="canonical" href="https://naveedanwarbhatti.github.io/pages/publications.html">
+    <meta property="og:image" content="https://naveedanwarbhatti.github.io/assets/img/social-preview.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Publications | Naveed Anwar Bhatti">
     <meta name="twitter:description" content="Peer-reviewed publications, datasets, and scholarly impact from Naveed Anwar Bhatti’s work on cyber-physical systems and secure IoT.">
-    <meta name="twitter:image" content="https://naveedanwarbhatti.github.io/assets/img/ID_pic.webp">
+    <meta name="twitter:image" content="https://naveedanwarbhatti.github.io/assets/img/social-preview.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Space+Grotesk:wght@500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Space+Grotesk:wght@500;700&display=swap"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="stylesheet" href="../web.css">
     <link rel="icon" href="../assets/img/Sysnet.ico" type="image/x-icon">
     <script src="../scripts/site.js" defer></script>
@@ -98,6 +101,12 @@
             border-radius: 14px;
             padding: 6px;
         }
+        .stats-table-card{
+            min-height: 94px;
+        }
+        .citation-graph-container{
+            min-height: 118px;
+        }
 
         #stats-table{
             width: 100%;
@@ -149,13 +158,16 @@
         .graph-bar-item{
             flex: 1 1 0;
             min-width: 0;
+            height: 100%;
             display:flex;
             flex-direction: column;
             align-items: center;
+            justify-content: flex-end;
             gap: 2px;
         }
         .graph-bar{
             width: 100%;
+            min-height: 4px;
             border-radius: 8px;
             background: rgba(59, 130, 246, 0.55);
             box-shadow: inset 0 -1px 0 rgba(255,255,255,0.35);
@@ -218,6 +230,7 @@
             border-radius: 14px;
             padding: 8px;
         }
+        .rank-section h3,
         .rank-section h4{
             margin: 0 0 6px;
             font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -321,6 +334,7 @@
 
 </head>
 <body class="site-page publications-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
         <div class="nav-container">
             <div class="brand">
@@ -331,8 +345,8 @@
                     </div>
                 </a>
                 <span class="brand-divider" aria-hidden="true"></span>
-                <a class="brand-logo-link" href="https://lums.edu.pk/" target="_blank" rel="noopener">
-                    <img class="brand-logo" src="../assets/img/LUMS_logo.webp" alt="LUMS logo">
+                <a class="brand-logo-link" href="https://lums.edu.pk/" target="_blank" rel="noopener noreferrer">
+                    <img class="brand-logo" src="../assets/img/LUMS_logo_header.webp" height="55" width="220" alt="LUMS logo">
                 </a>
             </div>
             <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
@@ -343,17 +357,17 @@
             </button>
             <nav class="primary-nav">
                 <ul id="primary-navigation" class="nav-links">
-                    <li><a href="../index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
-                    <li><a class="active" href="../pages/publications.html"><i class="fa fa-book"></i><span>Publications</span></a></li>
-                    <li><a href="../pages/teaching.html"><i class="fa fa-tasks"></i><span>Activities</span></a></li>
-                    <li><a href="../pages/misc.html"><i class="fa fa-th-large"></i><span>Misc</span></a></li>
-                    <li><a href="../pages/contact.html"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
+                    <li><a href="../index.html"><i aria-hidden="true" class="fa fa-home"></i><span>Home</span></a></li>
+                    <li><a class="active" href="../pages/publications.html"><i aria-hidden="true" class="fa fa-book"></i><span>Publications</span></a></li>
+                    <li><a href="../pages/teaching.html"><i aria-hidden="true" class="fa fa-tasks"></i><span>Activities</span></a></li>
+                    <li><a href="../pages/misc.html"><i aria-hidden="true" class="fa fa-th-large"></i><span>Misc</span></a></li>
+                    <li><a href="../pages/contact.html"><i aria-hidden="true" class="fa fa-envelope"></i><span>Contact</span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="page-hero">
             <p class="section-kicker">Scholarship</p>
             <h1>Publications and scholarly impact</h1>
@@ -362,11 +376,12 @@
         <section class="content-section">
             <div class="content-card">
 
-                
+
+                <h2 class="sr-only">Publication metrics</h2>
                 <section class="stats-rank-grid">
                     <div class="panel-scholars" aria-label="Google Scholar statistics">
                         <div class="stats-title">
-                    <img class="stats-title-icon" src="../assets/img/google_scholar.webp" alt="Google Scholar icon">
+                    <img class="stats-title-icon" src="../assets/img/google_scholar.webp" height="225" width="225" alt="Google Scholar icon">
                             <div class="stats-title-text">
                                 <span class="stats-title-main">Statistics</span>
                                 <span class="stats-title-source">(powered by Google Scholar)</span>
@@ -376,14 +391,27 @@
                         <div class="stats-stack" id="scholar-stats-container">
                             <div class="stats-table-card">
                                 <table id="stats-table">
-                                    <thead><tr></tr></thead>
-                                    <tbody id="stats-table-body"></tbody>
+                                    <thead><tr><th>Metric</th><th>All</th><th>Since 2021</th></tr></thead>
+                                    <tbody id="stats-table-body">
+                                        <tr><td><a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Citations</a></td><td>1004</td><td>745</td></tr>
+                                        <tr><td><a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&amp;hl=en" target="_blank" rel="noopener">h-index</a></td><td>16</td><td>14</td></tr>
+                                        <tr><td><a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&amp;hl=en" target="_blank" rel="noopener">i10-index</a></td><td>16</td><td>14</td></tr>
+                                    </tbody>
                                 </table>
                             </div>
 
                             <div class="citation-graph-container">
                                 <div class="citation-graph-title">Citations per year</div>
-                                <div id="citation-graph"></div>
+                                <div id="citation-graph">
+                                    <div class="graph-bar-item"><span class="bar-label">60</span><div class="graph-bar" style="height:14px"></div><div class="year-label">2019</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="height:19px"></div><div class="year-label">2020</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="height:19px"></div><div class="year-label">2021</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">170</span><div class="graph-bar" style="height:41px"></div><div class="year-label">2022</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">163</span><div class="graph-bar" style="height:39px"></div><div class="year-label">2023</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">175</span><div class="graph-bar" style="height:42px"></div><div class="year-label">2024</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">137</span><div class="graph-bar" style="height:33px"></div><div class="year-label">2025</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">21</span><div class="graph-bar" style="height:5px"></div><div class="year-label">2026</div></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -391,14 +419,29 @@
                     <div class="panel-ranking" aria-label="Ranking summary">
                         <div class="rank-summary-header">
                             <div class="rank-summary-title">Ranking Summary</div>
-                            <a class="stats-action-link" href="https://dblp.org/pid/146/7880.html" target="_blank" rel="noopener" aria-label="Open DBLP profile">
+                            <a class="stats-action-link" href="https://dblp.org/pid/146/7880.html" target="_blank" rel="noopener noreferrer" aria-label="Open DBLP profile">
                                 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                 DBLP profile
                             </a>
                         </div>
 
                         <div id="rank-summary">
-                            <div class="rank-loading">Loading ranking summary…</div>
+                            <div class="rank-sections">
+                                <div class="rank-section">
+                                    <h3>Conference Ranking (CORE)</h3>
+                                    <div class="rank-row"><div class="rank-badge a_star">A*</div><div class="rank-bar-track"><div class="rank-bar-fill a_star" style="width:100%"></div></div><div class="rank-count">7 papers</div></div>
+                                    <div class="rank-row"><div class="rank-badge a">A</div><div class="rank-bar-track"><div class="rank-bar-fill a" style="width:57%"></div></div><div class="rank-count">4 papers</div></div>
+                                    <div class="rank-row"><div class="rank-badge b">B</div><div class="rank-bar-track"><div class="rank-bar-fill b" style="width:57%"></div></div><div class="rank-count">4 papers</div></div>
+                                    <div class="rank-row"><div class="rank-badge c">C</div><div class="rank-bar-track"><div class="rank-bar-fill c" style="width:14%"></div></div><div class="rank-count">1 paper</div></div>
+                                </div>
+                                <div class="rank-section">
+                                    <h3>Journal Ranking (SJR)</h3>
+                                    <div class="rank-row"><div class="rank-badge q1">Q1</div><div class="rank-bar-track"><div class="rank-bar-fill q1" style="width:100%"></div></div><div class="rank-count">5 papers</div></div>
+                                    <div class="rank-row"><div class="rank-badge q2">Q2</div><div class="rank-bar-track"><div class="rank-bar-fill q2" style="width:100%"></div></div><div class="rank-count">5 papers</div></div>
+                                    <div class="rank-row"><div class="rank-badge q3">Q3</div><div class="rank-bar-track"><div class="rank-bar-fill q3" style="width:0%"></div></div><div class="rank-count">0 papers</div></div>
+                                    <div class="rank-row"><div class="rank-badge q4">Q4</div><div class="rank-bar-track"><div class="rank-bar-fill q4" style="width:0%"></div></div><div class="rank-count">0 papers</div></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -408,122 +451,137 @@
                     <div class="publication-category category-conferences">
                         <h3>Conferences (19)</h3>
                         <ul class="modern-bullets">
-						
-						    <li class="paper-panel" role="link" tabindex="0" data-url="" data-target="_blank" data-rel="noopener noreferrer">
+
+						    <li class="paper-panel" data-url="" data-target="_blank" data-rel="noopener noreferrer">
                                 <div class="paper-title"><strong>See Me If You Can: A Multi-Layer Protocol for Bystander Privacy with Consent-Based Restoration</strong></div>
                                 <div class="pub-authors">Yaha Khawaja, Shirin Rehman, Alexander Ponticello, Divyanshu Bhardwaj, Katharina Krombholz, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>.</div>
                                 <div class="pub-meta"><em>ACM CHI 2026.</em> ICORE Rank <span class="core-rank rank-as">A*</span><span class="pub-link-group"><a class="pub-link-chip pub-link-chip--video" href="../thesis/chi2026.mp4" rel="noopener noreferrer" target="_blank">Video Presentation</a></span></div>
 
                             </li>
-							
-							<li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/doi/10.1145/3774904.3792278" data-target="_blank" data-rel="noopener noreferrer">
+
+							<li class="paper-panel" data-url="https://dl.acm.org/doi/10.1145/3774904.3792278" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/doi/10.1145/3774904.3792278" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Are LLM Web Search Engines Sustainable? A Web-Measurement Study of Real-Time Fetching"></a>
                                 <div class="paper-title"><strong>Are LLM Web Search Engines Sustainable? A Web-Measurement Study of Real-Time Fetching</strong></div>
                                 <div class="pub-authors">Abdur-Rahman Ibrahim Sayyid-Ali, Daanish Uddin Khan, and <strong>Naveed Anwar Bhatti</strong>.</div>
                                 <div class="pub-meta"><em>ACM WebConf (WWW) 2026.</em> ICORE Rank <span class="core-rank rank-as">A*</span></div>
 
                             </li>
-							
-                            <li class="paper-panel" role="link" tabindex="0" data-url="" data-target="_blank" data-rel="noopener noreferrer">
+
+                            <li class="paper-panel" data-url="" data-target="_blank" data-rel="noopener noreferrer">
                                 <div class="paper-title"><strong>Now You See Me, Now You Don't: Consent-Driven Privacy for Smart Glasses</strong></div>
                                 <div class="pub-authors">Yaha Khawaja, Eman Nabeel, Sana Humayun, Eruj Javed, Katharina Krombholz, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>.</div>
                                 <div class="pub-meta"><em>IEEE PerCom 2026.</em> ICORE Rank <span class="core-rank rank-as">A*</span><span class="pub-link-group"><a class="pub-link-chip pub-link-chip--teaser" href="https://youtu.be/gddJDfIvsjM?si=tmT0KjRvqDWW8PUT" rel="noopener noreferrer" target="_blank">Teaser</a><a class="pub-link-chip pub-link-chip--video" href="../thesis/percom2026.mp4" rel="noopener noreferrer" target="_blank">Video Presentation</a></span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="https://arxiv.org/abs/2602.08593" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="https://arxiv.org/abs/2602.08593" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://arxiv.org/abs/2602.08593" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Kissan-Dost: Bridging the Last Mile in Smallholder Precision Agriculture with Conversational IoT"></a>
                                 <div class="paper-title"><strong>Kissan-Dost: Bridging the Last Mile in Smallholder Precision Agriculture with Conversational IoT</strong></div>
                                 <div class="pub-authors">Muhammad Saad Ali, Daanish U Khan, Laiba Intizar Ahmad, Umer Irfan, Maryam Mustafa, <strong>Naveed Anwar Bhatti</strong>, and Muhammad Hamad Alizai.</div>
                                 <div class="pub-meta"><em>IEEE DCOSS 2026.</em> ICORE Rank <span class="core-rank rank-b">B</span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/doi/10.1145/3715014.3722056" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="https://dl.acm.org/doi/10.1145/3715014.3722056" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/doi/10.1145/3715014.3722056" target="_blank" rel="noopener noreferrer" aria-label="Open publication: CheckMate: LLM-Powered Approximate Intermittent Computing"></a>
                                 <div class="paper-title"><strong>CheckMate: LLM-Powered Approximate Intermittent Computing</strong></div>
                                 <div class="pub-authors">Abdur-Rahman Ibrahim Sayyid-Ali, Abdul Rafay, Abdullah Soomro, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>.</div>
                                 <div class="pub-meta"><em>ACM SenSys 2025.</em> ICORE Rank <span class="core-rank rank-as">A*</span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/doi/pdf/10.1145/3708821.3710825" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="https://dl.acm.org/doi/pdf/10.1145/3708821.3710825" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/doi/pdf/10.1145/3708821.3710825" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Glitch in Time: Exploiting Temporal Misalignment of IMU for Eavesdropping"></a>
                                 <div class="paper-title"><strong>Glitch in Time: Exploiting Temporal Misalignment of IMU for Eavesdropping</strong></div>
                                 <div class="pub-authors">Ahmed Najeeb, Muhammad Rafay, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>.</div>
                                 <div class="pub-meta"><em>ACM AsiaCCS 2025.</em> ICORE Rank <span class="core-rank rank-a">A</span></div>
 
                             </li>
-                              <li class="paper-panel" role="link" tabindex="0" data-url="#" data-target="_blank" data-rel="noopener noreferrer">
+                              <li class="paper-panel" data-url="#" data-target="_blank" data-rel="noopener noreferrer">
                                   <div class="paper-title"><strong>PortScout: A Communication Flow-Based Approach to Detect Port Scanning Evasion Attacks</strong></div>
                                   <div class="pub-authors">Muhammad Sangeen, <strong>Naveed Anwar Bhatti</strong>, and Kashif Kifayat.</div>
                                   <div class="pub-meta"><em>IEEE ICC 2025.</em></div>
 
                               </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="https://arxiv.org/abs/2410.07202" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="https://arxiv.org/abs/2410.07202" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://arxiv.org/abs/2410.07202" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Approxify: Automating Energy-Accuracy Trade-Offs in Batteryless IoT Devices"></a>
                                 <div class="paper-title"><strong>Approxify: Automating Energy-Accuracy Trade-Offs in Batteryless IoT Devices</strong></div>
                                 <div class="pub-authors">Muhammad Abdullah Soomro, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>.</div>
                                 <div class="pub-meta"><em>IEEE WCNC 2025.</em> ICORE Rank <span class="core-rank rank-b">B</span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="#" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="#" data-target="_blank" data-rel="noopener noreferrer">
                                 <div class="paper-title"><strong>FLEXFL: Flexible Federated Learning for Customized Network Architectures in 6G</strong></div>
                                 <div class="pub-authors">Sunder Ali Ali Khowaja, Ik Hyun Lee, Parus Khuwaja, <strong>Naveed Anwar Bhatti</strong>, Keshav Singh, Kapal Dev.</div>
                                 <div class="pub-meta"><em>IEEE WCNC 2025.</em> ICORE Rank <span class="core-rank rank-b">B</span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/doi/10.1145/3600100.3623743" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="https://dl.acm.org/doi/10.1145/3600100.3623743" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/doi/10.1145/3600100.3623743" target="_blank" rel="noopener noreferrer" aria-label="Open publication: From Waste to Watts: A Self-Sustaining Water Heating System Powered by a Thermoelectric Generator"></a>
                                 <div class="paper-title"><strong>From Waste to Watts: A Self-Sustaining Water Heating System Powered by a Thermoelectric Generator</strong></div>
                                 <div class="pub-authors">Chaudhry, Hassan Habib, Ramish Majeed Raja, Muhammad Azmeer Zahid, Nauman Zaffar, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>.</div>
                                 <div class="pub-meta"><em>ACM BuildSys 2024.</em></div>
 
                             </li>
-							
-							<li class="paper-panel" role="link" tabindex="0" data-url="https://link.springer.com/chapter/10.1007/978-3-031-63992-0_4" data-target="_blank" data-rel="noopener noreferrer">
+
+							<li class="paper-panel" data-url="https://link.springer.com/chapter/10.1007/978-3-031-63992-0_4" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://link.springer.com/chapter/10.1007/978-3-031-63992-0_4" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Shepard: Dynamic Placement of Microservices in the Edge-Cloud Continuum"></a>
                                 <div class="paper-title"><strong>Shepard: Dynamic Placement of Microservices in the Edge-Cloud Continuum</strong></div>
                                 <div class="pub-authors">Farhan Asghar, Tehreem Fatima, Junaid Haroon Siddiqui, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai</div>
                                 <div class="pub-meta"><em>EAI MobiQuitous 2023.</em> ICORE Rank <span class="core-rank rank-c">C</span> </div>
 
                             </li>
-							
-							
-                            <li class="paper-panel" role="link" tabindex="0" data-url="http://web.lums.edu.pk/~alizai/pubs/2020-empire-sensys.pdf" data-target="_blank" data-rel="noopener noreferrer">
+
+
+                            <li class="paper-panel" data-url="http://web.lums.edu.pk/~alizai/pubs/2020-empire-sensys.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="http://web.lums.edu.pk/~alizai/pubs/2020-empire-sensys.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Batteryless Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus"></a>
                                 <div class="paper-title"><strong>Batteryless Zero-maintenance Embedded Sensing at the Mithraeum of Circus Maximus</strong></div>
                                 <div class="pub-authors">Mikhail Afanasov, <strong>Naveed Anwar Bhatti</strong>, Dennis Campagna, Giacomo Caslini, Fabio Massimo Centonze, Koustabh Dolui, Andrea Maioli, Erica Barone, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola.</div>
                                 <div class="pub-meta"><em>ACM SenSys 2020.</em> ICORE Rank <span class="core-rank rank-as">A*</span><span class="pub-link-group"><a class="pub-link-chip pub-link-chip--teaser" href="https://youtu.be/zMxVpUo1U4s" rel="noopener noreferrer" target="_blank">Teaser</a><a class="pub-link-chip pub-link-chip--video" href="https://youtu.be/zkBYPeiGcyQ" rel="noopener noreferrer" target="_blank">Video Presentation</a></span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/doi/abs/10.1145/3417308.3430267" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="https://dl.acm.org/doi/abs/10.1145/3417308.3430267" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/doi/abs/10.1145/3417308.3430267" target="_blank" rel="noopener noreferrer" aria-label="Open publication: On Securing Persistent State in Intermittent Computing"></a>
                                 <div class="paper-title"><strong>On Securing Persistent State in Intermittent Computing</strong></div>
                                 <div class="pub-authors">Hafiz Areeb Asad, Erik Henricus Wouters, <strong>Naveed Anwar Bhatti</strong>, Luca Mottola, Thiemo Voigt.</div>
                                 <div class="pub-meta"><em>ACM ENSsys 2020.</em><span class="pub-link-group"><a class="pub-link-chip pub-link-chip--video" href="https://youtu.be/qVcJtpyNWyk" rel="noopener noreferrer" target="_blank">Video Presentation</a></span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="/assets/pdf/paper-dice-camera-ready.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="/assets/pdf/paper-dice-camera-ready.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="/assets/pdf/paper-dice-camera-ready.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Efficient Intermittent Computing with Differential Checkpointing"></a>
                                 <div class="paper-title"><strong>Efficient Intermittent Computing with Differential Checkpointing</strong></div>
                                 <div class="pub-authors">Saad Ahmed, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola.</div>
                                 <div class="pub-meta"><em>ACM LCTES 2019.</em> ICORE Rank <span class="core-rank rank-a">A</span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="/assets/pdf/paper-epic-camera-ready.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="/assets/pdf/paper-epic-camera-ready.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="/assets/pdf/paper-epic-camera-ready.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open publication: The Betrayal of Constant Power × Time: Finding the Missing Joules of Transiently-Powered Computer"></a>
                                 <div class="paper-title"><strong>The Betrayal of Constant Power × Time: Finding the Missing Joules of Transiently-Powered Computer</strong></div>
                                 <div class="pub-authors">Saad Ahmed, Abu Bakar, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui and Luca Mottola.</div>
                                 <div class="pub-meta"><em>ACM LCTES 2019.</em> ICORE Rank <span class="core-rank rank-a">A</span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="http://dl.acm.org/citation.cfm?id=3055082" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="http://dl.acm.org/citation.cfm?id=3055082" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="http://dl.acm.org/citation.cfm?id=3055082" target="_blank" rel="noopener noreferrer" aria-label="Open publication: HarvOS: Efficient Code Instrumentation for Transiently-powered Embedded Devices"></a>
                                 <div class="paper-title"><strong>HarvOS: Efficient Code Instrumentation for Transiently-powered Embedded Devices</strong></div>
                                 <div class="pub-authors"><strong>Naveed Anwar Bhatti</strong> and Luca Mottola.</div>
                                 <div class="pub-meta"><em>ACM IPSN 2017.</em> ICORE Rank <span class="core-rank rank-as">A*</span><span class="pub-link-group"><a class="pub-link-chip pub-link-chip--video" href="https://www.youtube.com/watch?v=XDZZ9Pnrs2E" rel="noopener noreferrer" target="_blank">Video Presentation</a></span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="https://www.sics.se/~luca/papers/bhatti16efficient.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="https://www.sics.se/~luca/papers/bhatti16efficient.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://www.sics.se/~luca/papers/bhatti16efficient.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Efficient State Retention for Transiently-powered Embedded Sensing"></a>
                                 <div class="paper-title"><strong>Efficient State Retention for Transiently-powered Embedded Sensing</strong></div>
                                 <div class="pub-authors"><strong>Naveed Anwar Bhatti</strong> and Luca Mottola.</div>
                                 <div class="pub-meta"><em>ACM EWSN 2016.</em> ICORE Rank <span class="core-rank rank-b">B</span></div>
 
                             </li>
-                            <li class="paper-panel" role="link" tabindex="0" data-url="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=7249162&amp;openedRefinements%3D*%26pageNumber%3D3%26rowsPerPage%3D100%26queryText%3D(control+plane+architecture)" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=7249162&amp;openedRefinements%3D*%26pageNumber%3D3%26rowsPerPage%3D100%26queryText%3D(control+plane+architecture)" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;amp;arnumber=7249162&amp;amp;openedRefinements%3D*%26pageNumber%3D3%26rowsPerPage%3D100%26queryText%3D(control+plane+architecture)" target="_blank" rel="noopener noreferrer" aria-label="Open publication: SDN-inspired, Real-time Botnet Detection and Flow-blocking at ISP and Enterprise-level"></a>
                                 <div class="paper-title"><strong>SDN-inspired, Real-time Botnet Detection and Flow-blocking at ISP and Enterprise-level</strong></div>
                                 <div class="pub-authors">Osama Haq, Zainab Abaid, <strong>Naveed Anwar Bhatti</strong>, Zaafar Ahmed and Affan A. Syed.</div>
                                 <div class="pub-meta"><em>IEEE ICC 2015.</em></div>
 
                             </li>
 
-                            <li class="paper-panel" role="link" tabindex="0" data-url="https://ieeexplore.ieee.org/iel7/6835794/6846727/06846758.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                            <li class="paper-panel" data-url="https://ieeexplore.ieee.org/iel7/6835794/6846727/06846758.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://ieeexplore.ieee.org/iel7/6835794/6846727/06846758.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Sensors with Lasers: Building a WSN power grid"></a>
                                 <div class="paper-title"><strong>Sensors with Lasers: Building a WSN power grid</strong></div>
                                 <div class="pub-authors"><strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, and Affan A. Syed.</div>
                                 <div class="pub-meta"><em>ACM IPSN 2014.</em> ICORE Rank <span class="core-rank rank-as">A*</span></div>
@@ -532,19 +590,21 @@
                             </li>
                         </ul>
                     </div>
-        
+
                     <div class="publication-category clear-float category-journals">
                         <h3>Transactions and Journals (11)</h3>
                 <ul class="modern-bullets">
-                  <li class="paper-panel" role="link" tabindex="0" data-url="https://www.cambridge.org/core/journals/data-centric-engineering/article/usagecentered-efficient-and-sustainable-an-iotdriven-transformation-of-water-heaters/BBDAB40414059D3BDBA5D3828F4F6999" data-target="_blank" data-rel="noopener noreferrer">
+                  <li class="paper-panel" data-url="https://www.cambridge.org/core/journals/data-centric-engineering/article/usagecentered-efficient-and-sustainable-an-iotdriven-transformation-of-water-heaters/BBDAB40414059D3BDBA5D3828F4F6999" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://www.cambridge.org/core/journals/data-centric-engineering/article/usagecentered-efficient-and-sustainable-an-iotdriven-transformation-of-water-heaters/BBDAB40414059D3BDBA5D3828F4F6999" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Usage-centered, efficient, and sustainable: an IoT-driven transformation of water heaters"></a>
                       <div class="paper-title"><strong>
                                     Usage-centered, efficient, and sustainable: an IoT-driven transformation of water heaters</strong></div>
                       <div class="pub-authors">Chaudhry, Hassan Habib, Ramish Majeed Raja, Muhammad Azmeer Zahid, Nauman Zaffar, Muhammad Hamad Alizai, and <strong>Naveed Anwar Bhatti</strong>.</div>
                       <div class="pub-meta"><em>Data-Centric Engineering (DCE), Cambridge Core</em>, Nov 2024. <span class="venue-metrics"> (Impact Factor = 2.4) <a href="https://www.scimagojr.com/journalsearch.php?q=21101065510&amp;tip=sid&amp;clean=0" rel="noopener noreferrer" target="_blank">SJR <span class="sjr-rank rank-q1">Q1</span></a> <a href="https://hjrs.hec.gov.pk/index.php?r=site%2Fresult&amp;id=885501#journal_result" rel="noopener noreferrer" target="_blank"><strong>(HJRS = X)</strong></a> <a href="../assets/pdf/kashif_sysarc.pdf" rel="noopener noreferrer" target="_blank">(PDF)</a> </span></div>
 
                   </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Blind-trust: Raising awareness of the dangers of using unsecured public Wi-Fi networks"></a>
                                     <div class="paper-title"><strong>
                                     Blind-trust: Raising awareness of the dangers of using unsecured public Wi-Fi networks</strong></div>
                                     <div class="pub-authors">Muhammad Sangeen, <strong>Naveed Anwar Bhatti</strong>, Kashif Kifayat, Abeer Abdullah Alsadhan and Haoda Wang.</div>
@@ -553,7 +613,8 @@
 
                                 </li>
 
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" data-target="_blank" data-rel="noopener noreferrer">
+                                <li class="paper-panel" data-url="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://www.sciencedirect.com/science/article/abs/pii/S1383762123000292" target="_blank" rel="noopener noreferrer" aria-label="Open publication: MOPTIC-SM: Sleep mode-enabled multi-optimized intermittent computing for Transiently Powered Systems"></a>
                                     <div class="paper-title"><strong>
                                     MOPTIC-SM: Sleep mode-enabled multi-optimized intermittent computing for Transiently Powered Systems</strong></div>
                                     <div class="pub-authors">Kashif Javed, <strong>Naveed Anwar Bhatti</strong>, Mohammad Imran.</div>
@@ -561,8 +622,9 @@
 
 
                                 </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://www.sciencedirect.com/science/article/abs/pii/S0743731521002033" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="https://www.sciencedirect.com/science/article/abs/pii/S0743731521002033" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://www.sciencedirect.com/science/article/abs/pii/S0743731521002033" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy"></a>
                                     <div class="paper-title"><strong>
                                     Towards soft real-time fault diagnosis for edge devices in industrial IoT using deep domain adaptation training strategy</strong></div>
                                     <div class="pub-authors">Dileep Kumar Soother, Sanaullah Mehran Ujjan, Kapal Dev, Sunder Ali Khowaja, <strong>Naveed Anwar Bhatti</strong>, Tanweer Hussain.</div>
@@ -571,7 +633,8 @@
 
                                 </li>
 
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://ieeexplore.ieee.org/abstract/document/9349626" data-target="_blank" data-rel="noopener noreferrer">
+                                <li class="paper-panel" data-url="https://ieeexplore.ieee.org/abstract/document/9349626" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://ieeexplore.ieee.org/abstract/document/9349626" target="_blank" rel="noopener noreferrer" aria-label="Open publication: MUHAFIZ: IoT-based Track Recording Vehicle for the Damage Analysis of the Railway Track"></a>
                                     <div class="paper-title"><strong>
                                     MUHAFIZ: IoT-based Track Recording Vehicle for the Damage Analysis of the Railway Track</strong></div>
                                     <div class="pub-authors">Ali Akbar Shah, <strong>Naveed Anwar Bhatti</strong>, Kapal Dev, B.S Chowdhry.</div>
@@ -579,8 +642,9 @@
 
 
                                 </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://www.sciencedirect.com/science/article/abs/pii/S1383762121000242" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="https://www.sciencedirect.com/science/article/abs/pii/S1383762121000242" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://www.sciencedirect.com/science/article/abs/pii/S1383762121000242" target="_blank" rel="noopener noreferrer" aria-label="Open publication: A Survey on Program-state Retention for Transiently-powered Systems"></a>
                                     <div class="paper-title"><strong>
                                     A Survey on Program-state Retention for Transiently-powered Systems</strong></div>
                                     <div class="pub-authors">Saad Ahmed, <strong>Naveed Anwar Bhatti</strong>, Martina Brachmann, Muhammad Hamad Alizai.</div>
@@ -588,8 +652,9 @@
 
 
                                 </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/doi/abs/10.1145/3391893" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="https://dl.acm.org/doi/abs/10.1145/3391893" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/doi/abs/10.1145/3391893" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Demystifying Energy Consumption Dynamics in Transiently-powered Computers"></a>
                                     <div class="paper-title"><strong>
                                     Demystifying Energy Consumption Dynamics in Transiently-powered Computers</strong></div>
                                     <div class="pub-authors">Saad Ahmed, Muhammad Nawaz, Abu Bakar, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola.</div>
@@ -597,8 +662,9 @@
 
 
                                 </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/doi/abs/10.1145/3391903" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="https://dl.acm.org/doi/abs/10.1145/3391903" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/doi/abs/10.1145/3391903" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Fast and Energy-efficient State Checkpointing for Intermittent Computing"></a>
                                     <div class="paper-title"><strong>
                                     Fast and Energy-efficient State Checkpointing for Intermittent Computing</strong></div>
                                     <div class="pub-authors">Saad Ahmed, <strong>Naveed Anwar Bhatti</strong>, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, Luca Mottola.</div>
@@ -606,8 +672,9 @@
 
 
                                 </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://link.springer.com/article/10.1007%2Fs11277-020-07418-8" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="https://link.springer.com/article/10.1007%2Fs11277-020-07418-8" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://link.springer.com/article/10.1007%2Fs11277-020-07418-8" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Comparative Analysis of Bio-Inspired Algorithms for Underwater Wireless Sensor Networks"></a>
                                     <div class="paper-title"><strong>
                                     Comparative Analysis of Bio-Inspired Algorithms for Underwater Wireless Sensor Networks</strong></div>
                                     <div class="pub-authors">Syeda Sundus Zehra, Rehan Qureshi, Kapal Dev, Saleem Shahid, <strong>Naveed Anwar Bhatti</strong>.</div>
@@ -615,8 +682,9 @@
 
 
                                 </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="http://dl.acm.org/citation.cfm?id=2915918" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="http://dl.acm.org/citation.cfm?id=2915918" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="http://dl.acm.org/citation.cfm?id=2915918" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Energy Harvesting and Wireless Transfer in Sensor Network Applications: Concepts and Experiences"></a>
                                     <div class="paper-title"><strong>
                                     Energy Harvesting and Wireless Transfer in Sensor Network Applications: Concepts and Experiences</strong></div>
                                     <div class="pub-authors"><strong>Naveed Anwar Bhatti</strong>, Hamad Alizai, Affan A. Syed and Luca Mottola.</div>
@@ -624,8 +692,9 @@
 
 
                                 </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="http://downloads.hindawi.com/journals/ijdsn/aip/526858.pdf" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="http://downloads.hindawi.com/journals/ijdsn/aip/526858.pdf" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="http://downloads.hindawi.com/journals/ijdsn/aip/526858.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Laser based Energy Distribution Architecture for Decoupling Energy and Sensing Planes in WSN"></a>
                                     <div class="paper-title"><strong>
                                     Laser based Energy Distribution Architecture for Decoupling Energy and Sensing Planes in WSN</strong></div>
                                     <div class="pub-authors"><strong>Naveed Anwar Bhatti</strong>, Affan A. Syed and Hamad Alizai.</div>
@@ -639,15 +708,17 @@
                     <div class="publication-category category-posters">
                         <h3>Posters (3)</h3>
                 <ul class="modern-bullets">
-                  <li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/citation.cfm?id=3207973" data-target="_blank" data-rel="noopener noreferrer">
+                  <li class="paper-panel" data-url="https://dl.acm.org/citation.cfm?id=3207973" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/citation.cfm?id=3207973" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Towards smaller checkpoints for better intermittent computing"></a>
                       <div class="paper-title"><strong>
                                     Towards smaller checkpoints for better intermittent computing</strong></div>
                       <div class="pub-authors">Saad Ahmed, Muhammad Hamad Alizai, Junaid Haroon Siddiqui, <strong>Naveed Anwar Bhatti</strong> and Luca Mottola.</div>
                       <div class="pub-meta"><em>IPSN 2018</em>, April 2018.</div>
 
                   </li>
-                    
-                                <li class="paper-panel" role="link" tabindex="0" data-url="https://dl.acm.org/doi/10.5555/3108009.3108039" data-target="_blank" data-rel="noopener noreferrer">
+
+                                <li class="paper-panel" data-url="https://dl.acm.org/doi/10.5555/3108009.3108039" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="https://dl.acm.org/doi/10.5555/3108009.3108039" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Compiler-assisted Automatic Checkpointing for Transiently-powered Embedded Devices"></a>
                                     <div class="paper-title"><strong>
                                     Compiler-assisted Automatic Checkpointing for Transiently-powered Embedded Devices</strong></div>
                                     <div class="pub-authors"><strong>Naveed Anwar Bhatti</strong> and Luca Mottola.</div>
@@ -656,7 +727,8 @@
 
                                 </li>
 
-                                <li class="paper-panel" role="link" tabindex="0" data-url="http://dl.acm.org/citation.cfm?id=2959379" data-target="_blank" data-rel="noopener noreferrer">
+                                <li class="paper-panel" data-url="http://dl.acm.org/citation.cfm?id=2959379" data-target="_blank" data-rel="noopener noreferrer">
+                                <a class="paper-panel-cover" href="http://dl.acm.org/citation.cfm?id=2959379" target="_blank" rel="noopener noreferrer" aria-label="Open publication: Back To The Future: Sustainable Transiently Powered Embedded Systems"></a>
                                     <div class="paper-title"><strong>
                                     Back To The Future: Sustainable Transiently Powered Embedded Systems</strong></div>
                                     <div class="pub-authors"><strong>Naveed Anwar Bhatti</strong>.</div>
@@ -666,9 +738,7 @@
                                 </li>
                             </ul>
               </div>
-                </section>
-    
-                <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0003-4115-9889" href="https://orcid.org/0000-0003-4115-9889" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-4115-9889</a></div>
+                <div itemscope itemtype="https://schema.org/Person"><a class="orcid-profile-link" itemprop="sameAs" content="https://orcid.org/0000-0003-4115-9889" href="https://orcid.org/0000-0003-4115-9889" target="_blank" rel="me noopener noreferrer"><span class="orcid-mark" aria-hidden="true">iD</span>https://orcid.org/0000-0003-4115-9889</a></div>
             </div>
         </section>
     </main>
@@ -676,10 +746,10 @@
     <footer>
         <div class="footer-container">
             <div class="social-links">
-                <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/naveedanwarbhatti" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i aria-hidden="true" class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/naveed-anwar-bhatti" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i aria-hidden="true" class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/naveed.alpha.needo/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+                <a href="https://github.com/naveedanwarbhatti" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i aria-hidden="true" class="fab fa-github"></i></a>
             </div>
             <p class="footer-note">© <span class="js-current-year">2026</span> Naveed Anwar Bhatti. All rights reserved.</p>
         </div>
@@ -692,12 +762,7 @@
     var sc_invisible=1;
     var sc_security="193c50ed";
     </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/9665684/0/193c50ed/1/" alt="Web Analytics"></a></div></noscript>
+    <noscript><div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank" rel="noopener noreferrer"><img class="statcounter" src="//c.statcounter.com/9665684/0/193c50ed/1/" height="1" width="1" alt="Web Analytics"></a></div></noscript>
     <!-- End of Statcounter Code -->
 </body>
 </html>
-
-
-
-
