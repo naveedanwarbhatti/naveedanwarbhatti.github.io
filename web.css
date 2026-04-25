@@ -2114,8 +2114,8 @@ footer {
 
 .misc-page .instagram-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(1rem, 2vw, 1.5rem);
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: clamp(0.45rem, 1vw, 0.75rem);
 }
 
 .misc-page .instagram-media {
@@ -2125,6 +2125,54 @@ footer {
   border: 1px solid rgba(79, 163, 199, 0.18) !important;
   box-shadow: 0 16px 32px rgba(31, 77, 108, 0.12);
   padding: 0 !important;
+}
+
+.misc-page .instagram-photo-grid {
+  align-items: stretch;
+}
+
+.misc-page .instagram-photo-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+  background: rgba(15, 39, 64, 0.08);
+  color: inherit;
+  box-shadow: 0 10px 20px rgba(15, 42, 71, 0.08);
+}
+
+.misc-page .instagram-photo-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.22s ease, filter 0.22s ease;
+}
+
+.misc-page .instagram-photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 39, 64, 0), rgba(15, 39, 64, 0.18));
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.misc-page .instagram-photo-card:hover img,
+.misc-page .instagram-photo-card:focus-visible img {
+  transform: scale(1.035);
+  filter: saturate(1.05);
+}
+
+.misc-page .instagram-photo-card:hover::after,
+.misc-page .instagram-photo-card:focus-visible::after {
+  opacity: 1;
+}
+
+.misc-page .instagram-photo-card:focus-visible {
+  outline: 3px solid rgba(79, 163, 199, 0.55);
+  outline-offset: 3px;
 }
 
 .misc-page .video-grid {
@@ -2209,6 +2257,8 @@ footer {
 
 .designwork-section {
   margin-top: 2rem;
+  position: relative;
+  overflow: visible;
 }
 
 .designwork-gallery {
@@ -2219,7 +2269,7 @@ footer {
 
 .designwork-item {
   margin: 0;
-  position: relative;
+  position: static;
 }
 
 .designwork-thumb {
@@ -2240,9 +2290,10 @@ footer {
 
 .designwork-item::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
-  background: rgba(15, 42, 71, 0.55);
+  border-radius: var(--radius-lg);
+  background: rgba(15, 42, 71, 0.46);
   opacity: 0;
   transition: opacity 0.2s ease;
   pointer-events: none;
@@ -2254,7 +2305,7 @@ footer {
 }
 
 .designwork-popup {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2265,8 +2316,8 @@ footer {
   box-shadow: 0 24px 60px rgba(15, 42, 71, 0.45);
   z-index: 999;
   pointer-events: none;
-  max-width: min(90vw, 70rem);
-  max-height: 90vh;
+  max-width: min(92%, 62rem);
+  max-height: min(82vh, 92%);
   overflow: hidden;
 }
 
@@ -2278,8 +2329,8 @@ footer {
   display: block;
   width: auto;
   height: auto;
-  max-width: min(88vw, 68rem);
-  max-height: 88vh;
+  max-width: min(100%, 60rem);
+  max-height: min(76vh, 42rem);
 }
 
 iframe {
@@ -4727,6 +4778,11 @@ main,
   .misc-page .video-grid,
   .misc-page .map-layout {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .misc-page .instagram-photo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
   }
 }
 

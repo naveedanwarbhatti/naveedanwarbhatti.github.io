@@ -182,6 +182,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    if (!grid.querySelector('.instagram-media')) {
+      return;
+    }
+
     titleInstagramIframes();
     if ('MutationObserver' in window) {
       const observer = new MutationObserver(titleInstagramIframes);

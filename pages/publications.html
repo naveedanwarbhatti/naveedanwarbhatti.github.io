@@ -115,6 +115,9 @@
         .citation-graph-container{
             min-height: 0;
             padding: 9px 10px 8px;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
             background:
                 linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(255, 255, 255, 0.94));
         }
@@ -164,8 +167,9 @@
             justify-content: space-between;
             align-items: stretch;
             width: 100%;
-            height: 86px;
+            height: auto;
             min-height: 0 !important;
+            flex: 1 1 auto;
             padding: 0 2px 1px;
             position: relative;
             isolation: isolate;
@@ -192,7 +196,7 @@
         }
         .graph-bar{
             width: min(100%, 28px);
-            height: var(--bar-height, 6px);
+            height: var(--bar-height, 8%);
             min-height: 4px;
             border-radius: 9px 9px 3px 3px;
             background: linear-gradient(180deg, #a9c8ff 0%, #6f9fee 100%);
@@ -433,14 +437,14 @@
                             <div class="citation-graph-container">
                                 <div class="citation-graph-title">Citations per year</div>
                                 <div id="citation-graph">
-                                    <div class="graph-bar-item"><span class="bar-label">60</span><div class="graph-bar" style="--bar-height:19px"></div><div class="year-label">2019</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="--bar-height:25px"></div><div class="year-label">2020</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="--bar-height:25px"></div><div class="year-label">2021</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">170</span><div class="graph-bar" style="--bar-height:55px"></div><div class="year-label">2022</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">163</span><div class="graph-bar" style="--bar-height:52px"></div><div class="year-label">2023</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">175</span><div class="graph-bar" style="--bar-height:56px"></div><div class="year-label">2024</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">137</span><div class="graph-bar" style="--bar-height:44px"></div><div class="year-label">2025</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">21</span><div class="graph-bar" style="--bar-height:7px"></div><div class="year-label">2026</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">60</span><div class="graph-bar" style="--bar-height:22%"></div><div class="year-label">2019</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="--bar-height:29%"></div><div class="year-label">2020</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="--bar-height:29%"></div><div class="year-label">2021</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">170</span><div class="graph-bar" style="--bar-height:62%"></div><div class="year-label">2022</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">163</span><div class="graph-bar" style="--bar-height:60%"></div><div class="year-label">2023</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">175</span><div class="graph-bar" style="--bar-height:64%"></div><div class="year-label">2024</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">137</span><div class="graph-bar" style="--bar-height:50%"></div><div class="year-label">2025</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">21</span><div class="graph-bar" style="--bar-height:8%"></div><div class="year-label">2026</div></div>
                                 </div>
                             </div>
                         </div>
