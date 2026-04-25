@@ -2129,6 +2129,7 @@ footer {
 
 .misc-page .instagram-photo-grid {
   align-items: stretch;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .misc-page .instagram-photo-card {
