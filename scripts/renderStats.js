@@ -104,7 +104,7 @@ function renderCitationGraph(text) {
   if (!recentHistory.length) return;
 
   const maxCitations = Math.max(...recentHistory.map(d => d.citations));
-  const maxBarHeight = 42;
+  const maxBarHeight = 56;
 
   recentHistory.forEach(data => {
     const barItem = document.createElement('div');
@@ -115,7 +115,7 @@ function renderCitationGraph(text) {
     const bar = document.createElement('div');
     bar.className = 'graph-bar';
     const barHeight = maxCitations > 0 ? Math.max(4, (data.citations / maxCitations) * maxBarHeight) : 0;
-    bar.style.height = `${Math.round(barHeight)}px`;
+    bar.style.setProperty('--bar-height', `${Math.round(barHeight)}px`);
 
     const barLabel = document.createElement('span');
     barLabel.className = 'bar-label';

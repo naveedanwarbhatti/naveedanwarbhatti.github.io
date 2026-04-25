@@ -37,11 +37,14 @@
             display:grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
-            align-items: start;
+            align-items: stretch;
             margin-top: 8px;
         }
         @media (max-width: 980px){
-            .stats-rank-grid{ grid-template-columns: 1fr; }
+            .stats-rank-grid{
+                grid-template-columns: 1fr;
+                align-items: start;
+            }
         }
 
         .panel-scholars,
@@ -53,11 +56,14 @@
             box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
             display: flex;
             flex-direction: column;
-            height: auto;
+            height: 100%;
         }
 
         /* tighter left stats panel */
-        .panel-scholars{ padding: 10px; }
+        .panel-scholars{
+            padding: 10px;
+            justify-content: flex-start;
+        }
 
 
         /* ===== Scholar stats (left) ===== */
@@ -90,7 +96,8 @@
             display:flex !important;
             flex-direction:column !important;
             align-items: stretch;
-            gap: 10px;
+            gap: 8px;
+            flex: 1 1 auto;
         }
         #scholar-stats-container > *{ width: 100%; }
 
@@ -99,13 +106,17 @@
             background: rgba(255,255,255,0.92);
             border: 1px solid rgba(15, 23, 42, 0.08);
             border-radius: 14px;
-            padding: 6px;
+            padding: 7px;
+            height: auto !important;
         }
         .stats-table-card{
-            min-height: 94px;
+            min-height: 0;
         }
         .citation-graph-container{
-            min-height: 118px;
+            min-height: 0;
+            padding: 9px 10px 8px;
+            background:
+                linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(255, 255, 255, 0.94));
         }
 
         #stats-table{
@@ -141,8 +152,9 @@
             font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
             font-weight: 800;
             color: #0f172a;
-            margin-bottom: 4px;
-            font-size: 0.90rem;
+            margin-bottom: 6px;
+            font-size: 0.84rem;
+            line-height: 1.1;
         }
 
         /* Bars: full-width, evenly distributed */
@@ -150,10 +162,23 @@
             display:flex;
             gap: 6px;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: stretch;
             width: 100%;
-            height: clamp(60px, 7.5vw, 70px);
-            padding: 0 2px 2px;
+            height: 86px;
+            min-height: 0 !important;
+            padding: 0 2px 1px;
+            position: relative;
+            isolation: isolate;
+        }
+        #citation-graph::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 18px;
+            height: 1px;
+            background: rgba(15, 23, 42, 0.12);
+            z-index: -1;
         }
         .graph-bar-item{
             flex: 1 1 0;
@@ -163,26 +188,31 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
-            gap: 2px;
+            gap: 3px;
         }
         .graph-bar{
-            width: 100%;
+            width: min(100%, 28px);
+            height: var(--bar-height, 6px);
             min-height: 4px;
-            border-radius: 8px;
-            background: rgba(59, 130, 246, 0.55);
-            box-shadow: inset 0 -1px 0 rgba(255,255,255,0.35);
+            border-radius: 9px 9px 3px 3px;
+            background: linear-gradient(180deg, #a9c8ff 0%, #6f9fee 100%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), 0 4px 9px rgba(83, 132, 222, 0.18);
         }
         .bar-label{
             font-weight: 850;
-            color: rgba(15, 23, 42, 0.55);
+            color: rgba(15, 23, 42, 0.56);
             font-size: 0.62rem;
             line-height: 1;
+            min-height: 0.7rem;
         }
         .year-label{
             font-weight: 850;
-            color: rgba(15, 23, 42, 0.60);
+            color: rgba(15, 23, 42, 0.58);
             font-size: 0.62rem;
             line-height: 1;
+        }
+        .graph-bar-item:nth-child(6) .graph-bar{
+            background: linear-gradient(180deg, #8db5ff 0%, #4f86df 100%);
         }
 
         /* ===== Ranking summary (right) – tighter ===== */
@@ -403,14 +433,14 @@
                             <div class="citation-graph-container">
                                 <div class="citation-graph-title">Citations per year</div>
                                 <div id="citation-graph">
-                                    <div class="graph-bar-item"><span class="bar-label">60</span><div class="graph-bar" style="height:14px"></div><div class="year-label">2019</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="height:19px"></div><div class="year-label">2020</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="height:19px"></div><div class="year-label">2021</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">170</span><div class="graph-bar" style="height:41px"></div><div class="year-label">2022</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">163</span><div class="graph-bar" style="height:39px"></div><div class="year-label">2023</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">175</span><div class="graph-bar" style="height:42px"></div><div class="year-label">2024</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">137</span><div class="graph-bar" style="height:33px"></div><div class="year-label">2025</div></div>
-                                    <div class="graph-bar-item"><span class="bar-label">21</span><div class="graph-bar" style="height:5px"></div><div class="year-label">2026</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">60</span><div class="graph-bar" style="--bar-height:19px"></div><div class="year-label">2019</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="--bar-height:25px"></div><div class="year-label">2020</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">79</span><div class="graph-bar" style="--bar-height:25px"></div><div class="year-label">2021</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">170</span><div class="graph-bar" style="--bar-height:55px"></div><div class="year-label">2022</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">163</span><div class="graph-bar" style="--bar-height:52px"></div><div class="year-label">2023</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">175</span><div class="graph-bar" style="--bar-height:56px"></div><div class="year-label">2024</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">137</span><div class="graph-bar" style="--bar-height:44px"></div><div class="year-label">2025</div></div>
+                                    <div class="graph-bar-item"><span class="bar-label">21</span><div class="graph-bar" style="--bar-height:7px"></div><div class="year-label">2026</div></div>
                                 </div>
                             </div>
                         </div>
