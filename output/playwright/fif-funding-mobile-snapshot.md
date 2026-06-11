@@ -1,0 +1,690 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Naveed Bhatti Assistant Professor" [ref=e622] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e6]:
+            - generic [ref=e7]: Naveed Bhatti
+            - generic [ref=e8]: Assistant Professor
+        - link "LUMS logo" [ref=e10] [cursor=pointer]:
+          - /url: https://lums.edu.pk/
+          - img "LUMS logo" [ref=e11]
+      - button "Toggle navigation" [ref=e623] [cursor=pointer]:
+        - generic [ref=e624]: Toggle navigation
+      - navigation:     
+  - main [ref=e34]:
+    - generic [ref=e35]:
+      - paragraph [ref=e36]: Activities
+      - heading "Teaching, funding, mentorship, and service" [level=1] [ref=e37]
+      - paragraph [ref=e38]: A snapshot of courses taught, funded projects, reviewing contributions, community tools, and student supervision across systems and security.
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - heading "Activities at a glance" [level=2] [ref=e41]
+        - paragraph [ref=e42]: I teach systems and cybersecurity courses and support the embedded systems community through reviewing and program committees.
+      - generic [ref=e43]:
+        - article [ref=e44]:
+          - heading "Teaching footprint" [level=3] [ref=e45]
+          - paragraph [ref=e46]: 14 distinct undergraduate and graduate courses taught since 2019 (Air University + LUMS).
+        - article [ref=e47]:
+          - heading "Competitive funding" [level=3] [ref=e48]
+          - paragraph [ref=e49]: Rs. 26.97 million in grants as PI since 2021 (NCCS + NRPU + FIF).
+        - article [ref=e50]:
+          - heading "Community service" [level=3] [ref=e51]
+          - paragraph [ref=e52]: Reviewing and program committee contributions across ACM, IEEE, Elsevier, and Springer venues.
+    - navigation "Activity shortcuts" [ref=e54]:
+      - link "Teaching" [ref=e55] [cursor=pointer]:
+        - /url: "#teaching"
+        - generic [ref=e56]: 
+        - generic [ref=e57]: Teaching
+      - link "Funding" [ref=e58] [cursor=pointer]:
+        - /url: "#funding"
+        - generic [ref=e59]: 
+        - generic [ref=e60]: Funding
+      - link "Service" [ref=e61] [cursor=pointer]:
+        - /url: "#service"
+        - generic [ref=e62]: 
+        - generic [ref=e63]: Service
+      - link "Tools" [ref=e64] [cursor=pointer]:
+        - /url: "#tool-community"
+        - generic [ref=e65]: 
+        - generic [ref=e66]: Tools
+      - link "Mentoring" [ref=e67] [cursor=pointer]:
+        - /url: "#mentoring"
+        - generic [ref=e68]: 
+        - generic [ref=e69]: Mentoring
+      - link "Outreach" [ref=e70] [cursor=pointer]:
+        - /url: "#outreach"
+        - generic [ref=e71]: 
+        - generic [ref=e72]: Outreach
+    - generic [ref=e74]:
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e78]: 
+          - heading "Teaching" [level=2] [ref=e80]
+        - list [ref=e81]:
+          - listitem [ref=e82]:
+            - generic [ref=e83]: 2026, 2025 & 2024
+            - paragraph [ref=e85]:
+              - strong [ref=e86]: Topics in IoT (CS-677)
+              - text: — Graduate seminar style course.
+          - listitem [ref=e87]:
+            - generic [ref=e88]: 2025, 2024 & 2023
+            - paragraph [ref=e90]:
+              - strong [ref=e91]: Operating Systems (CS-370)
+          - listitem [ref=e92]:
+            - generic [ref=e93]: "2023"
+            - paragraph [ref=e95]:
+              - link "Lecture slides available for Algorithms (CS-310)" [ref=e96] [cursor=pointer]:
+                - /url: /pages/algorithms.html
+                - generic [ref=e97]: 
+                - generic [ref=e98]: Slides
+              - strong [ref=e99]:
+                - link "Algorithms (CS-310)" [ref=e100] [cursor=pointer]:
+                  - /url: /pages/algorithms.html
+          - listitem [ref=e101]:
+            - generic [ref=e102]: "2023"
+            - paragraph [ref=e104]:
+              - link "Lecture slides available for Computer Organization and Assembly Language (CS-223)" [ref=e105] [cursor=pointer]:
+                - /url: /pages/coal.html
+                - generic [ref=e106]: 
+                - generic [ref=e107]: Slides
+              - strong [ref=e108]:
+                - link "Computer Organization and Assembly Language (CS-223)" [ref=e109] [cursor=pointer]:
+                  - /url: /pages/coal.html
+          - listitem [ref=e110]:
+            - generic [ref=e111]: 2023, 2021 & 2020
+            - paragraph [ref=e113]:
+              - link "Lecture slides available for Object Oriented Programming (CS-210)" [ref=e114] [cursor=pointer]:
+                - /url: /pages/oop.html
+                - generic [ref=e115]: 
+                - generic [ref=e116]: Slides
+              - strong [ref=e117]:
+                - link "Object Oriented Programming (CS-210)" [ref=e118] [cursor=pointer]:
+                  - /url: /pages/oop.html
+          - listitem [ref=e119]:
+            - generic [ref=e120]: "2022"
+            - paragraph [ref=e122]:
+              - strong [ref=e123]: Embedded Systems Security (CyS-367)
+          - listitem [ref=e124]:
+            - generic [ref=e125]: "2022"
+            - paragraph [ref=e127]:
+              - strong [ref=e128]: Critical Infrastructure Security (CyS-697)
+          - listitem [ref=e129]:
+            - generic [ref=e130]: 2022 & 2021
+            - paragraph [ref=e132]:
+              - strong [ref=e133]: Research Methodology (CS-692)
+          - listitem [ref=e134]:
+            - generic [ref=e135]: "2021"
+            - paragraph [ref=e137]:
+              - strong [ref=e138]: Cyber Security Tool Development (CyS-353)
+          - listitem [ref=e139]:
+            - generic [ref=e140]: "2020"
+            - paragraph [ref=e142]:
+              - strong [ref=e143]: Embedded Systems (CS-602)
+          - listitem [ref=e144]:
+            - generic [ref=e145]: "2020"
+            - paragraph [ref=e147]:
+              - strong [ref=e148]: Drone and Autonomous Vehicle Security (CS-634)
+          - listitem [ref=e149]:
+            - generic [ref=e150]: 2023, 2021 & 2020
+            - paragraph [ref=e152]:
+              - link "Lecture slides available for Introduction to Computing (CS-156)" [ref=e153] [cursor=pointer]:
+                - /url: /pages/itc.html
+                - generic [ref=e154]: 
+                - generic [ref=e155]: Slides
+              - strong [ref=e156]:
+                - link "Introduction to Computing (CS-156)" [ref=e157] [cursor=pointer]:
+                  - /url: /pages/itc.html
+          - listitem [ref=e158]:
+            - generic [ref=e159]: "2019"
+            - paragraph [ref=e161]:
+              - strong [ref=e162]: OOP and Data Structures (CS-200)
+          - listitem [ref=e163]:
+            - generic [ref=e164]: 2013 – 2011
+            - paragraph [ref=e166]:
+              - strong [ref=e167]: Teaching Assistant — EE522 Advanced Embedded Systems
+              - text: ", FAST-NUCES."
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e171]: 
+          - heading "Funding" [level=2] [ref=e173]
+        - generic [ref=e174]:
+          - article [ref=e175]:
+            - generic [ref=e176]: In Progress
+            - 'heading "Cleanify: AI-Based Waste Management" [level=3] [ref=e177]'
+            - paragraph [ref=e178]:
+              - text: NRPU Research Fund ·
+              - strong [ref=e179]: Rs. 9.5 Million
+              - text: · Principal Investigator (2024 – 2026)
+            - paragraph [ref=e180]: Batteryless IoT for sustainable urban services.
+            - link "Video" [ref=e182] [cursor=pointer]:
+              - /url: https://youtu.be/N8W5BROo5SU
+          - article [ref=e183]:
+            - generic [ref=e184]: In Progress
+            - 'heading "See Me If You Can: A Multi-Layer Protocol for Bystander Privacy with Consent-Based Restoration" [level=3] [ref=e185]'
+            - paragraph [ref=e186]:
+              - text: FIF 2026 Grant · FIF-1024 ·
+              - strong [ref=e187]: Rs. 1.5 Million
+              - text: · Principal Investigator (2026 – 2027)
+            - paragraph [ref=e188]: 12 months, from February 1, 2026 to January 31, 2027.
+          - article [ref=e189]:
+            - generic [ref=e190]: Completed
+            - 'heading "IoT and LLMs as Catalysts for Change: A Pilot Case Study in Agriculture with LLMs" [level=3] [ref=e191]'
+            - paragraph [ref=e192]:
+              - text: FIF 2024-25 Grant · FIF-0933 ·
+              - strong [ref=e193]: Rs. 1.0 Million
+              - text: · Principal Investigator (2024 – 2025)
+            - paragraph [ref=e194]: 12 months, from July 15, 2024 to July 14, 2025.
+          - article [ref=e195]:
+            - generic [ref=e196]: Completed
+            - 'heading "SCYDES: Self Cyber Defense Evaluation System" [level=3] [ref=e197]'
+            - paragraph [ref=e198]:
+              - text: NCCS Research Fund ·
+              - strong [ref=e199]: Rs. 14.972 Million
+              - text: · Principal Investigator (2021 – 2023)
+            - paragraph [ref=e200]: Automation for cyber ranges and national preparedness.
+            - link "Successful Closure Certificate" [ref=e202] [cursor=pointer]:
+              - /url: /assets/pdf/SCYDES.pdf
+          - article [ref=e203]:
+            - generic [ref=e204]: Completed
+            - heading "ReCyP:HER" [level=3] [ref=e205]
+            - paragraph [ref=e206]: Erasmus+ Research Fund · Research Associate (2021 – 2024)
+            - paragraph [ref=e207]: Human-centered cybersecurity capacity building for Pakistan.
+      - generic [ref=e208]:
+        - generic [ref=e209]:
+          - generic [ref=e211]: 
+          - generic [ref=e212]:
+            - heading "Service to the Community" [level=2] [ref=e213]
+            - paragraph [ref=e214]: Peer review, editorial support, and program committee leadership across premier venues.
+        - list [ref=e215]:
+          - listitem [ref=e216]:
+            - generic [ref=e217]: 2024-2025
+            - paragraph [ref=e219]:
+              - strong [ref=e220]: Distinguished Reviewers
+              - text: ","
+              - link "ACM Transactions on Internet of Things (TIoT)" [ref=e221] [cursor=pointer]:
+                - /url: https://dl.acm.org/journal/tiot/editorial-board#distinguished-reviewers
+              - text: .
+          - listitem [ref=e222]:
+            - generic [ref=e223]: "2024"
+            - paragraph [ref=e225]:
+              - strong [ref=e226]: Technical Program Committee
+              - text: ","
+              - link "ACM ENSsys 2024" [ref=e227] [cursor=pointer]:
+                - /url: https://www.enssys.org/2024/tpc.php
+              - text: .
+          - listitem [ref=e228]:
+            - generic [ref=e229]: "2022"
+            - paragraph [ref=e231]:
+              - strong [ref=e232]: Reviewer
+              - text: ", Elsevier"
+              - emphasis [ref=e233]: Computers & Security
+              - text: .
+          - listitem [ref=e234]:
+            - generic [ref=e235]: "2021"
+            - paragraph [ref=e237]:
+              - strong [ref=e238]: Reviewer
+              - text: ","
+              - emphasis [ref=e239]: ACM Computing Surveys
+              - text: .
+          - listitem [ref=e240]:
+            - generic [ref=e241]: "2020"
+            - paragraph [ref=e243]:
+              - strong [ref=e244]: Reviewer
+              - text: ","
+              - emphasis [ref=e245]: Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)
+              - text: .
+          - listitem [ref=e246]:
+            - generic [ref=e247]: "2019"
+            - paragraph [ref=e249]:
+              - strong [ref=e250]: Reviewer
+              - text: ","
+              - emphasis [ref=e251]: IEEE Transactions on Vehicular Technology (TVT)
+              - text: .
+          - listitem [ref=e252]:
+            - generic [ref=e253]: "2019"
+            - paragraph [ref=e255]:
+              - strong [ref=e256]: Reviewer
+              - text: ","
+              - emphasis [ref=e257]: IEEE Transactions on Very Large Scale Integration Systems (TVLSI)
+              - text: .
+          - listitem [ref=e258]:
+            - generic [ref=e259]: "2019"
+            - paragraph [ref=e261]:
+              - strong [ref=e262]: TPC Member
+              - text: ","
+              - link "IEEE ICPADS 2019" [ref=e263] [cursor=pointer]:
+                - /url: http://www.icpads2019.cn/tpc.html
+              - text: .
+          - listitem [ref=e264]:
+            - generic [ref=e265]: "2019"
+            - paragraph [ref=e267]:
+              - strong [ref=e268]: TPC Member
+              - text: ","
+              - link "Springer AlgoSensor 2019" [ref=e269] [cursor=pointer]:
+                - /url: https://algo2019.ak.in.tum.de/index.php/menue-algosensors/algosensors-overview
+              - text: .
+          - listitem [ref=e270]:
+            - generic [ref=e271]: "2019"
+            - paragraph [ref=e273]:
+              - strong [ref=e274]: TPC Member
+              - text: ","
+              - link "IEEE ISIOT 2019" [ref=e275] [cursor=pointer]:
+                - /url: https://sites.google.com/view/ISIoT2019/home/organizing-committee
+              - text: .
+          - listitem [ref=e276]:
+            - generic [ref=e277]: "2019"
+            - paragraph [ref=e279]:
+              - strong [ref=e280]: TPC Member
+              - text: ","
+              - link "ACM/IEEE IoTDI 2019 Posters & Demos" [ref=e281] [cursor=pointer]:
+                - /url: https://conferences.computer.org/iotDI/2019/#organizers
+              - text: .
+          - listitem [ref=e282]:
+            - generic [ref=e283]: 2019 & 2018
+            - paragraph [ref=e285]:
+              - strong [ref=e286]: Web & Social Chair
+              - text: ", ACM/IEEE"
+              - link "IPSN 2019" [ref=e287] [cursor=pointer]:
+                - /url: http://ipsn.acm.org/2019/organization.html
+              - text: "&"
+              - link "IPSN 2018" [ref=e288] [cursor=pointer]:
+                - /url: http://ipsn.acm.org/2018/organization.html
+              - text: .
+          - listitem [ref=e289]:
+            - generic [ref=e290]: "2019"
+            - paragraph [ref=e292]:
+              - strong [ref=e293]: Reviewer
+              - text: ","
+              - emphasis [ref=e294]: Springer Swarm Intelligence
+              - text: .
+          - listitem [ref=e295]:
+            - generic [ref=e296]: "2019"
+            - paragraph [ref=e298]:
+              - strong [ref=e299]: Reviewer
+              - text: ","
+              - emphasis [ref=e300]: IET Electronic Letters
+              - text: .
+          - listitem [ref=e301]:
+            - generic [ref=e302]: 2019, 2018 & 2016
+            - paragraph [ref=e304]:
+              - strong [ref=e305]: Reviewer
+              - text: ","
+              - emphasis [ref=e306]: IEEE Transactions on Sensor Networks (TOSN)
+              - text: .
+          - listitem [ref=e307]:
+            - generic [ref=e308]: "2015"
+            - paragraph [ref=e310]:
+              - strong [ref=e311]: Reviewer
+              - text: ","
+              - emphasis [ref=e312]: International Journal of Distributed Sensor Networks (IJDSN)
+              - text: .
+          - listitem [ref=e313]:
+            - generic [ref=e314]: "2015"
+            - paragraph [ref=e316]:
+              - strong [ref=e317]: Reviewer
+              - text: ", ACM Internetware 2015."
+      - generic [ref=e318]:
+        - generic [ref=e319]:
+          - generic [ref=e321]: 
+          - generic [ref=e322]:
+            - heading "Tool for the Community" [level=2] [ref=e323]
+            - paragraph [ref=e324]: A lightweight, open-source utility that saves time for researchers during evaluation, hiring, and self-assessment.
+        - generic [ref=e326]:
+          - generic [ref=e327]:
+            - heading "Google Scholar Venue Ranker (GSVR)" [level=3] [ref=e328]
+            - paragraph [ref=e329]:
+              - text: A free Chrome extension that augments Google Scholar profiles with
+              - strong [ref=e330]: year-aware CORE conference tiers
+              - text: and
+              - strong [ref=e331]: SJR journal quartiles
+              - text: ", so venue context is visible instantly—no manual lookups."
+            - list [ref=e332]:
+              - listitem [ref=e333]:
+                - generic [ref=e334]: 
+                - generic [ref=e335]:
+                  - strong [ref=e336]: "Year-aware venue quality context:"
+                  - text: CORE conference tiers (A*, A, B, C) and SJR quartiles (Q1–Q4) are shown inline while browsing.
+              - listitem [ref=e337]:
+                - generic [ref=e338]: 
+                - generic [ref=e339]:
+                  - strong [ref=e340]: "Smarter venue matching:"
+                  - text: DBLP-assisted name resolution helps map venue names to the right conference or journal entries.
+              - listitem [ref=e341]:
+                - generic [ref=e342]: 
+                - generic [ref=e343]:
+                  - strong [ref=e344]: "Instant profile-level snapshot:"
+                  - text: A compact ranking summary panel shows the overall distribution at a glance.
+            - generic "Tool links" [ref=e345]:
+              - link "Install Chrome Extension" [ref=e346] [cursor=pointer]:
+                - /url: https://chromewebstore.google.com/detail/google-scholar-venue-rank/egohghgpljdhkmcmllhncfndmkeilpfb
+                - generic [ref=e347]: 
+                - generic [ref=e348]: Install Chrome Extension
+              - link "View on GitHub" [ref=e349] [cursor=pointer]:
+                - /url: https://github.com/naveedanwarbhatti/Google-Scholar-Venue-Ranker
+                - generic [ref=e350]: 
+                - generic [ref=e351]: View on GitHub
+          - generic [ref=e352]:
+            - img "Google Scholar Venue Ranker showing inline venue badges and a ranking summary panel on a Google Scholar profile" [ref=e353]
+            - paragraph [ref=e354]: Inline rank badges + a summary breakdown panel integrated into Google Scholar.
+      - generic [ref=e355]:
+        - generic [ref=e356]:
+          - generic [ref=e358]: 
+          - generic [ref=e359]:
+            - heading "Awards & Achievements" [level=2] [ref=e360]
+            - paragraph [ref=e361]: Recognitions for scholarship, leadership, and community impact.
+        - list [ref=e362]:
+          - listitem [ref=e363]:
+            - generic [ref=e364]: "2022"
+            - paragraph [ref=e366]:
+              - strong [ref=e367]: Vice Chancellor Commendation Award
+              - text: ", Air University — Best Faculty."
+          - listitem [ref=e368]:
+            - generic [ref=e369]: "2018"
+            - paragraph [ref=e371]:
+              - strong [ref=e372]: ERCIM Alain Bensoussan Postdoctoral Fellowship
+              - text: .
+          - listitem [ref=e373]:
+            - generic [ref=e374]: "2016"
+            - paragraph [ref=e376]:
+              - strong [ref=e377]: Best Ph.D. Forum Presentation
+              - text: ", IPSN 2016."
+          - listitem [ref=e378]:
+            - generic [ref=e379]: "2014"
+            - paragraph [ref=e381]:
+              - strong [ref=e382]: Indigenous Ph.D. Scholarship
+              - text: ", Politecnico di Milano."
+          - listitem [ref=e383]:
+            - generic [ref=e384]: "2013"
+            - paragraph [ref=e386]:
+              - strong [ref=e387]: Gold Medal
+              - text: ", FAST-NUCES MSc Class of 2011."
+      - generic [ref=e388]:
+        - generic [ref=e389]:
+          - generic [ref=e391]: 
+          - generic [ref=e392]:
+            - heading "Mentoring & Supervision" [level=2] [ref=e393]
+            - paragraph [ref=e394]: Coaching scholars to explore resilient, secure, and human-aware computing.
+        - generic "Supervision summary" [ref=e395]:
+          - article [ref=e396]:
+            - paragraph [ref=e397]: Current Ph.D. mentees
+            - paragraph [ref=e398]: "1"
+          - article [ref=e399]:
+            - paragraph [ref=e400]: M.S. students supervised
+            - paragraph [ref=e401]: "4"
+          - article [ref=e402]:
+            - paragraph [ref=e403]: B.S. students supervised
+            - paragraph [ref=e404]: "30"
+        - generic [ref=e405]:
+          - article [ref=e406]:
+            - heading "Ph.D. Researchers" [level=3] [ref=e407]
+            - list [ref=e408]:
+              - listitem [ref=e409]:
+                - paragraph [ref=e410]:
+                  - strong [ref=e411]: Muhammad Tahir
+                  - text: "-"
+                  - img "LUMS logo" [ref=e413]
+                  - text: (2024 – 2028, in progress)
+                - paragraph [ref=e414]:
+                  - text: "Thesis:"
+                  - link "Privacy-Preserving Smart Glasses" [ref=e415] [cursor=pointer]:
+                    - /url: ""
+          - article [ref=e416]:
+            - heading "M.Sc. Graduates" [level=3] [ref=e417]
+            - list [ref=e418]:
+              - listitem [ref=e419]:
+                - paragraph [ref=e420]:
+                  - strong [ref=e421]: Asra Masood
+                  - text: "-"
+                  - generic [ref=e422]:
+                    - img "Air University logo" [ref=e423]
+                    - text: Air University
+                  - text: (2023)
+                - paragraph [ref=e424]:
+                  - text: "Thesis:"
+                  - 'link "FireFlow: Firewall State Synchronization using BGP Flowspec" [ref=e425] [cursor=pointer]':
+                    - /url: ""
+              - 'link "Kashif Javed - Air University logo Air University (2022) Thesis: MOPTIC-SM: Sleep Mode-enabled Multi-optimized Intermittent Computing for Transiently Powered Systems" [ref=e426] [cursor=pointer]':
+                - paragraph [ref=e427]:
+                  - strong [ref=e428]: Kashif Javed
+                  - text: "-"
+                  - generic [ref=e429]:
+                    - img "Air University logo" [ref=e430]
+                    - text: Air University
+                  - text: (2022)
+                - paragraph [ref=e431]:
+                  - text: "Thesis:"
+                  - 'link "MOPTIC-SM: Sleep Mode-enabled Multi-optimized Intermittent Computing for Transiently Powered Systems" [ref=e432]':
+                    - /url: /assets/pdf/kashif_sysarc.pdf
+              - 'link "Dragoș Perju - KTH logo KTH Royal Institute of Technology (2019) Thesis: Applying Memoization as an Approximation Technique for Transiently Powered Embedded Systems" [ref=e433] [cursor=pointer]':
+                - paragraph [ref=e434]:
+                  - strong [ref=e435]: Dragoș Perju
+                  - text: "-"
+                  - generic [ref=e436]:
+                    - img "KTH logo" [ref=e437]
+                    - text: KTH Royal Institute of Technology
+                  - text: (2019)
+                - paragraph [ref=e438]:
+                  - text: "Thesis:"
+                  - link "Applying Memoization as an Approximation Technique for Transiently Powered Embedded Systems" [ref=e439]:
+                    - /url: https://kth.diva-portal.org/smash/get/diva2:1343695/FULLTEXT01.pdf
+              - 'link "Erik Henricus Wouters - KTH logo KTH Royal Institute of Technology (2019) Thesis: Securing Intermittent Computing" [ref=e440] [cursor=pointer]':
+                - paragraph [ref=e441]:
+                  - strong [ref=e442]: Erik Henricus Wouters
+                  - text: "-"
+                  - generic [ref=e443]:
+                    - img "KTH logo" [ref=e444]
+                    - text: KTH Royal Institute of Technology
+                  - text: (2019)
+                - paragraph [ref=e445]:
+                  - text: "Thesis:"
+                  - link "Securing Intermittent Computing" [ref=e446]:
+                    - /url: https://www.diva-portal.org/smash/get/diva2:1333932/FULLTEXT01.pdf
+        - generic [ref=e447]:
+          - heading "Undergraduate Capstone Projects" [level=3] [ref=e448]
+          - generic [ref=e449]:
+            - generic [ref=e450]:
+              - heading "2026" [level=4] [ref=e451]
+              - list [ref=e452]:
+                - 'link "Yaha Khawaja, Shirin Rehman, Eman Nabeel, Sana Humayun, & Eruj Javed - LUMS logo See Me If You Can: A Multi-Layer Protocol for Bystander Privacy with Consent-Based Restoration" [ref=e453] [cursor=pointer]':
+                  - paragraph [ref=e454]:
+                    - strong [ref=e455]: Yaha Khawaja, Shirin Rehman, Eman Nabeel, Sana Humayun, & Eruj Javed
+                    - text: "-"
+                    - img "LUMS logo" [ref=e457]
+                  - paragraph [ref=e458]:
+                    - 'link "See Me If You Can: A Multi-Layer Protocol for Bystander Privacy with Consent-Based Restoration" [ref=e459]':
+                      - /url: https://dl.acm.org/doi/10.1145/3715014.3722056
+                - listitem [ref=e460]:
+                  - paragraph [ref=e461]:
+                    - strong [ref=e462]: Muhammad Taimor, Amna Iftikhar, Khuzaima bin Gulzar, & Muneeb ur Rehman
+                    - text: "-"
+                    - img "LUMS logo" [ref=e464]
+                  - paragraph [ref=e465]:
+                    - 'link "Cleanify: Batteryless Waste Management System" [ref=e466] [cursor=pointer]':
+                      - /url: ""
+            - generic [ref=e467]:
+              - heading "2025" [level=4] [ref=e468]
+              - list [ref=e469]:
+                - 'link "Abdur-Rahman Ibrahim Sayyid-Ali - LUMS logo CheckMate: LLM-Powered Approximate Intermittent Computing" [ref=e470] [cursor=pointer]':
+                  - paragraph [ref=e471]:
+                    - strong [ref=e472]: Abdur-Rahman Ibrahim Sayyid-Ali
+                    - text: "-"
+                    - img "LUMS logo" [ref=e474]
+                  - paragraph [ref=e475]:
+                    - text: "CheckMate:"
+                    - link "LLM-Powered Approximate Intermittent Computing" [ref=e476]:
+                      - /url: https://dl.acm.org/doi/10.1145/3715014.3722056
+                - link "Mohammad Shaharyar Ahsan, Areeba Shahzad Shaikh, & Maham Zahid - LUMS logo LLM-Enhanced Wearables for Comprehensible Health Guidance in LMICs" [ref=e477] [cursor=pointer]:
+                  - paragraph [ref=e478]:
+                    - strong [ref=e479]: Mohammad Shaharyar Ahsan, Areeba Shahzad Shaikh, & Maham Zahid
+                    - text: "-"
+                    - img "LUMS logo" [ref=e481]
+                  - paragraph [ref=e482]:
+                    - link "LLM-Enhanced Wearables for Comprehensible Health Guidance in LMICs" [ref=e483]:
+                      - /url: https://arxiv.org/abs/2602.08701
+                - 'link "Muhammad Saad Ali, Daanish U. Khan, & Laiba Intizar Ahmad - LUMS logo Kissan-Dost: Bridging the Last Mile in Smallholder Precision Agriculture with Conversational IoT" [ref=e484] [cursor=pointer]':
+                  - paragraph [ref=e485]:
+                    - strong [ref=e486]: Muhammad Saad Ali, Daanish U. Khan, & Laiba Intizar Ahmad
+                    - text: "-"
+                    - img "LUMS logo" [ref=e488]
+                  - paragraph [ref=e489]:
+                    - 'link "Kissan-Dost: Bridging the Last Mile in Smallholder Precision Agriculture with Conversational IoT" [ref=e490]':
+                      - /url: https://arxiv.org/abs/2602.08593
+            - generic [ref=e491]:
+              - heading "2024" [level=4] [ref=e492]
+              - list [ref=e493]:
+                - 'link "Muhammad Abdullah Soomro - LUMS logo Approxify: Automating Energy-Accuracy Trade-offs in Batteryless IoT Devices Poster" [ref=e494] [cursor=pointer]':
+                  - paragraph [ref=e495]:
+                    - strong [ref=e496]: Muhammad Abdullah Soomro
+                    - text: "-"
+                    - img "LUMS logo" [ref=e498]
+                  - paragraph [ref=e499]:
+                    - text: "Approxify:"
+                    - link "Automating Energy-Accuracy Trade-offs in Batteryless IoT Devices" [ref=e500]:
+                      - /url: https://ieeexplore.ieee.org/document/10978153/
+                  - link "Poster" [ref=e502]:
+                    - /url: /thesis/ewsn24_poster-ID.pptx.jpg
+                - 'link "Ahmed Najeeb & Abdul Rafay - LUMS logo Glitch in Time: Exploiting Temporal Misalignment of IMU for Eavesdropping" [ref=e503] [cursor=pointer]':
+                  - paragraph [ref=e504]:
+                    - strong [ref=e505]: Ahmed Najeeb & Abdul Rafay
+                    - text: "-"
+                    - img "LUMS logo" [ref=e507]
+                  - paragraph [ref=e508]:
+                    - text: "Glitch in Time:"
+                    - link "Exploiting Temporal Misalignment of IMU for Eavesdropping" [ref=e509]:
+                      - /url: https://dl.acm.org/doi/10.1145/3708821.3710825
+            - generic [ref=e510]:
+              - heading "2022" [level=4] [ref=e511]
+              - list [ref=e512]:
+                - 'link "Abdullah Khalid - Air University logo Air University VOICE SABER: Attacking Virtual Voice Assistants using Laser Video" [ref=e513] [cursor=pointer]':
+                  - paragraph [ref=e514]:
+                    - strong [ref=e515]: Abdullah Khalid
+                    - text: "-"
+                    - generic [ref=e516]:
+                      - img "Air University logo" [ref=e517]
+                      - text: Air University
+                  - paragraph [ref=e518]:
+                    - text: "VOICE SABER:"
+                    - link "Attacking Virtual Voice Assistants using Laser" [ref=e519]:
+                      - /url: /thesis/laser.pdf
+                  - link "Video" [ref=e521]:
+                    - /url: /thesis/laser.mp4
+                - 'link "Afeefa Ahmed & Asima Tahir - Air University logo Air University Responsify: PPID Spoofing and Automated Incident Response Poster Video" [ref=e522] [cursor=pointer]':
+                  - paragraph [ref=e523]:
+                    - strong [ref=e524]: Afeefa Ahmed & Asima Tahir
+                    - text: "-"
+                    - generic [ref=e525]:
+                      - img "Air University logo" [ref=e526]
+                      - text: Air University
+                  - paragraph [ref=e527]:
+                    - text: "Responsify:"
+                    - link "PPID Spoofing and Automated Incident Response" [ref=e528]:
+                      - /url: /thesis/Responsify.pdf
+                  - generic [ref=e529]:
+                    - link "Poster" [ref=e530]:
+                      - /url: /thesis/ppid.jpeg
+                    - link "Video" [ref=e531]:
+                      - /url: /thesis/responsify.mp4
+            - generic [ref=e532]:
+              - heading "2021" [level=4] [ref=e533]
+              - list [ref=e534]:
+                - 'link "Ans Nadeem & Rabeea Ahmed - Air University logo Air University Cleanify: Batteryless Waste Management System Video" [ref=e535] [cursor=pointer]':
+                  - paragraph [ref=e536]:
+                    - strong [ref=e537]: Ans Nadeem & Rabeea Ahmed
+                    - text: "-"
+                    - generic [ref=e538]:
+                      - img "Air University logo" [ref=e539]
+                      - text: Air University
+                  - paragraph [ref=e540]:
+                    - text: "Cleanify:"
+                    - link "Batteryless Waste Management System" [ref=e541]:
+                      - /url: /thesis/Cleanify.jpeg
+                  - link "Video" [ref=e543]:
+                    - /url: /thesis/Cleanify.mp4
+                - 'link "Arooba Sehar & Kanwal Naz - Air University logo Air University Etoile: IoT-based Sustainable Health Monitoring of Livestock Video" [ref=e544] [cursor=pointer]':
+                  - paragraph [ref=e545]:
+                    - strong [ref=e546]: Arooba Sehar & Kanwal Naz
+                    - text: "-"
+                    - generic [ref=e547]:
+                      - img "Air University logo" [ref=e548]
+                      - text: Air University
+                  - paragraph [ref=e549]:
+                    - text: "Etoile:"
+                    - link "IoT-based Sustainable Health Monitoring of Livestock" [ref=e550]:
+                      - /url: /thesis/Etoile.pdf
+                  - link "Video" [ref=e552]:
+                    - /url: /thesis/Etoile.mp4
+                - 'link "Minahil Ejaz & Iqra Bibi - Air University logo Air University Sustainable Water Flow Monitoring: System Design Video" [ref=e553] [cursor=pointer]':
+                  - paragraph [ref=e554]:
+                    - strong [ref=e555]: Minahil Ejaz & Iqra Bibi
+                    - text: "-"
+                    - generic [ref=e556]:
+                      - img "Air University logo" [ref=e557]
+                      - text: Air University
+                  - paragraph [ref=e558]:
+                    - text: "Sustainable Water Flow Monitoring:"
+                    - link "System Design" [ref=e559]:
+                      - /url: /thesis/Report-FYP-III.pdf
+                  - link "Video" [ref=e561]:
+                    - /url: /thesis/Prototype.mp4
+            - generic [ref=e562]:
+              - heading "2020" [level=4] [ref=e563]
+              - list [ref=e564]:
+                - 'link "Aizaz Ali & Zubair Bin Hamid - Air University logo Air University Smart Parking System for Air University: Design & Deployment Video" [ref=e565] [cursor=pointer]':
+                  - paragraph [ref=e566]:
+                    - strong [ref=e567]: Aizaz Ali & Zubair Bin Hamid
+                    - text: "-"
+                    - generic [ref=e568]:
+                      - img "Air University logo" [ref=e569]
+                      - text: Air University
+                  - paragraph [ref=e570]:
+                    - text: "Smart Parking System for Air University:"
+                    - link "Design & Deployment" [ref=e571]:
+                      - /url: /thesis/160644_160564_BSCS_VIII_(A).pdf
+                  - link "Video" [ref=e573]:
+                    - /url: /thesis/spark1.mp4
+      - generic [ref=e574]:
+        - generic [ref=e575]:
+          - generic [ref=e577]: 
+          - generic [ref=e578]:
+            - heading "Workshops & Talks" [level=2] [ref=e579]
+            - paragraph [ref=e580]: Sharing knowledge through tutorials, guest lectures, and maker-style engagements.
+        - list [ref=e581]:
+          - listitem [ref=e582]:
+            - generic [ref=e583]: "2018"
+            - paragraph [ref=e585]: Tutorial on Transiently Powered Embedded Systems — IPSN 2018, Porto, Portugal.
+          - listitem [ref=e586]:
+            - generic [ref=e587]: "2017"
+            - paragraph [ref=e589]: Invited talk on Transiently Powered Embedded Systems — RISE-SICS, Stockholm, Sweden.
+          - listitem [ref=e590]:
+            - generic [ref=e591]: "2016"
+            - paragraph [ref=e593]: Internet of Things Workshop — ComSys Lab, RWTH Aachen, Germany.
+          - listitem [ref=e594]:
+            - generic [ref=e595]: "2015"
+            - paragraph [ref=e597]: Interactive lecture on Embedded Sensing — Politecnico di Milano (Campus Bovisa).
+          - listitem [ref=e598]:
+            - generic [ref=e599]: "2015"
+            - paragraph [ref=e601]: Aerial drone showcase — Polifactory, Politecnico di Milano.
+          - listitem [ref=e602]:
+            - generic [ref=e603]: "2013"
+            - paragraph [ref=e605]: Tutorial labs on TelosB, mbed, and MSP430 platforms — EE522 Advanced Embedded Systems, FAST-NUCES.
+          - listitem [ref=e606]:
+            - generic [ref=e607]: "2012"
+            - paragraph [ref=e609]: Workshop on Bro NIDS deployment — CS411 Network Security, FAST-NUCES.
+  - contentinfo [ref=e610]:
+    - generic [ref=e611]:
+      - generic [ref=e612]:
+        - link "Google Scholar" [ref=e613] [cursor=pointer]:
+          - /url: https://scholar.google.com.pk/citations?user=6ZB86uYAAAAJ&hl=en
+          - generic [ref=e614]: 
+        - link "LinkedIn" [ref=e615] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/naveed-anwar-bhatti
+          - generic [ref=e616]: 
+        - link "Instagram" [ref=e617] [cursor=pointer]:
+          - /url: https://www.instagram.com/naveed.alpha.needo/?hl=en
+          - generic [ref=e618]: 
+        - link "GitHub" [ref=e619] [cursor=pointer]:
+          - /url: https://github.com/naveedanwarbhatti
+          - generic [ref=e620]: 
+      - paragraph [ref=e621]: © 2026 Naveed Bhatti. All rights reserved.

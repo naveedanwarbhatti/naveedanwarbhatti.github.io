@@ -1,3 +1,18 @@
+const renderStatsScriptUrl = document.currentScript instanceof HTMLScriptElement && document.currentScript.src
+  ? document.currentScript.src
+  : null;
+
+function resolveRenderStatsUrl(path) {
+  const normalizedPath = path.replace(/^\/+/, '');
+
+  if (renderStatsScriptUrl) {
+    return new URL(`../${normalizedPath}`, renderStatsScriptUrl).toString();
+  }
+
+  const fallbackPrefix = window.location.pathname.includes('/pages/') ? '../' : '';
+  return new URL(`${fallbackPrefix}${normalizedPath}`, document.baseURI).toString();
+}
+
 /**
  * Renders the citation metrics table from CSV data.
  * @param {string} text - The CSV data as a string.
@@ -89,9 +104,7 @@ function renderCitationGraph(text) {
   if (!recentHistory.length) return;
 
   const maxCitations = Math.max(...recentHistory.map(d => d.citations));
-  const containerHeight = graphContainer.clientHeight || 100;
-  // Reserve vertical space for value + year labels and small gaps.
-  const graphHeight = Math.max(40, containerHeight - 34);
+  const maxBarHeight = 64;
 
   recentHistory.forEach(data => {
     const barItem = document.createElement('div');
@@ -101,8 +114,8 @@ function renderCitationGraph(text) {
 
     const bar = document.createElement('div');
     bar.className = 'graph-bar';
-    const barHeight = maxCitations > 0 ? (data.citations / maxCitations) * graphHeight : 0;
-    bar.style.height = `${barHeight}px`;
+    const barHeight = maxCitations > 0 ? Math.max(6, (data.citations / maxCitations) * maxBarHeight) : 0;
+    bar.style.setProperty('--bar-height', `${Math.round(barHeight)}%`);
 
     const barLabel = document.createElement('span');
     barLabel.className = 'bar-label';
@@ -119,31 +132,6 @@ function renderCitationGraph(text) {
     graphContainer.appendChild(barItem);
   });
 
-  syncStatisticsPanelHeight();
-}
-
-/**
- * Shrinks the citation graph (if needed) so the Statistics panel ends where
- * the Ranking Summary panel ends.
- */
-function syncStatisticsPanelHeight() {
-  const scholarsPanel = document.querySelector('.panel-scholars');
-  const rankingPanel = document.querySelector('.panel-ranking');
-  const graphContainer = document.getElementById('citation-graph');
-
-  if (!scholarsPanel || !rankingPanel || !graphContainer) return;
-
-  // Reset any previous inline height before measuring.
-  graphContainer.style.height = '';
-
-  const overflow = Math.ceil(scholarsPanel.getBoundingClientRect().height - rankingPanel.getBoundingClientRect().height);
-  if (overflow <= 0) return;
-
-  const currentGraphHeight = graphContainer.getBoundingClientRect().height;
-  const minGraphHeight = 72;
-  const targetHeight = Math.max(minGraphHeight, Math.floor(currentGraphHeight - overflow));
-
-  graphContainer.style.height = `${targetHeight}px`;
 }
 
 /**
@@ -186,7 +174,7 @@ function rankToClass(rankRaw) {
 }
 
 /**
- * Renders Ranking Summary bars from /data/ranking_summary.csv
+ * Renders Ranking Summary bars from data/ranking_summary.csv
  * Expected CSV:
  *   type,rank,count
  *   conference,A*,5
@@ -230,9 +218,9 @@ function renderRankingSummary(text) {
     const section = document.createElement('div');
     section.className = 'rank-section';
 
-    const h4 = document.createElement('h4');
-    h4.textContent = title;
-    section.appendChild(h4);
+    const heading = document.createElement('h3');
+    heading.textContent = title;
+    section.appendChild(heading);
 
     order.forEach(rank => {
       const count = countsMap.get(rank) ?? 0;
@@ -284,11 +272,10 @@ function loadRankingSummary() {
   const host = document.getElementById('rank-summary');
   if (!host) return;
 
-  fetch('/data/ranking_summary.csv')
-    .then(res => res.ok ? res.text() : Promise.reject('Failed to load /data/ranking_summary.csv'))
+  fetch(resolveRenderStatsUrl('data/ranking_summary.csv'))
+    .then(res => res.ok ? res.text() : Promise.reject('Failed to load data/ranking_summary.csv'))
     .then(text => {
       renderRankingSummary(text);
-      syncStatisticsPanelHeight();
     })
     .catch(() => {
       // Keep the placeholder text already in the HTML if fetch fails.
@@ -299,12 +286,12 @@ function loadRankingSummary() {
  * Main function to load all scholar-related data.
  */
 function loadScholarData() {
-  fetch('/data/publications_stats.csv')
+  fetch(resolveRenderStatsUrl('data/publications_stats.csv'))
     .then(res => res.ok ? res.text() : Promise.reject('Failed to load publications_stats.csv'))
     .then(text => renderStatsTable(text))
     .catch(e => console.error(e));
 
-  fetch('/data/citation_history.csv')
+  fetch(resolveRenderStatsUrl('data/citation_history.csv'))
     .then(res => {
       if (res.status === 404) return null;
       if (!res.ok) return Promise.reject('Failed to load citation_history.csv');
@@ -312,7 +299,6 @@ function loadScholarData() {
     })
     .then(text => {
       if (text) renderCitationGraph(text);
-      else syncStatisticsPanelHeight();
     })
     .catch(e => console.error(e));
 
@@ -320,4 +306,3 @@ function loadScholarData() {
 }
 
 document.addEventListener('DOMContentLoaded', loadScholarData);
-window.addEventListener('resize', syncStatisticsPanelHeight);

@@ -1,0 +1,546 @@
+127.0.0.1 - - [25/Apr/2026 13:02:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:08] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:23] "GET /pages/misc.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /pages/publications.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/logo-high-resolution-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/ID_pic.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/Logo(High%20Resolution).webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/softups-logo2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/timeline/fast-seal-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/timeline/apsacs.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/timeline/fast-wordmark-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/LinkedIn_logo_initials.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/github.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/lamp-logo-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/SoftUPS_Logo2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/timeline/polimi.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/LAMP_LOGO.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/neslab2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/aulogo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/LUMS_logo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/Neslab2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/iugv-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/sam-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/iugv.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/sam.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/nascon-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/nascon.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/fastrack-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/fastrack.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/brain-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/brain.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/nascon2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/thumbs/nascon2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /scripts/renderStats.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /data/citation_history.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:24] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:03:27] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:54] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:54] "GET /assets/img/ID_pic.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:54] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:54] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:54] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:54] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/github.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/timeline/apsacs.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/timeline/fast-seal-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/timeline/fast-wordmark-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/timeline/polimi.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/LinkedIn_logo_initials.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/aulogo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:04:55] "GET /assets/img/LUMS_logo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:01] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 1543)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:05:24] "GET /pages/publications.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:24] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:24] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:24] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:24] "GET /scripts/renderStats.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:24] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:25] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:25] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:25] "GET /data/citation_history.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:25] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:31] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 34104)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /pages/misc.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/Logo(High%20Resolution).webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/SoftUPS_Logo2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/LAMP_LOGO.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/Neslab2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/sam.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/iugv.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/nascon.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/fastrack.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/brain.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/nascon2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/softups-logo2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/logo-high-resolution-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/lamp-logo-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/neslab2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/iugv-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/sam-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/nascon-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/fastrack-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/brain-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/thumbs/nascon2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:53] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:05:59] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 57721)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /pages/publications.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /assets/img/ID_pic.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /scripts/renderStats.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:47] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/github.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/LinkedIn_logo_initials.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /data/citation_history.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/timeline/apsacs.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/timeline/fast-seal-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/timeline/fast-wordmark-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/timeline/polimi.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/aulogo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/LUMS_logo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:48] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:50] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:55] "GET /robots.txt HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:07:55] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 30362)
+Exception occurred during processing of request from ('127.0.0.1', 21007)
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 19997)
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+----------------------------------------
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /pages/publications.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /scripts/renderStats.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /data/citation_history.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:09] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:13:15] "GET /web.css HTTP/1.1" 304 -
+127.0.0.1 - - [25/Apr/2026 13:13:15] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 41042)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /pages/publications.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /scripts/renderStats.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /data/citation_history.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:15:56] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:16:02] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 49890)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:20:58] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/ID_pic_hero.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/github.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/timeline/apsacs.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/timeline/polimi.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/aulogo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/timeline/fast-seal-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/LinkedIn_logo_initials.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/timeline/fast-wordmark-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /assets/img/LUMS_logo_timeline.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:20:59] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:21:00] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:21:04] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 63713)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:23:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:05] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:05] "GET /assets/img/ID_pic_hero.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:05] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:05] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:05] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/github.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/LinkedIn_logo_initials.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/timeline/apsacs.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/timeline/fast-seal-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/timeline/fast-wordmark-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/timeline/polimi.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/LUMS_logo_timeline.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /assets/img/aulogo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:06] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:23:13] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 38169)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:24:18] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:18] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:18] "GET /assets/img/ID_pic_hero.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:18] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:18] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:18] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:18] "GET /assets/img/github.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:18] "GET /assets/img/LinkedIn_logo_initials.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /assets/img/timeline/fast-seal-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /assets/img/timeline/apsacs.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /assets/img/timeline/fast-wordmark-crop.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /assets/img/timeline/polimi.svg HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /assets/img/aulogo.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /assets/img/LUMS_logo_timeline.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:19] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:24:24] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 43776)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /pages/publications.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /assets/img/google_scholar.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /scripts/renderStats.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /data/publications_stats.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /data/citation_history.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /data/ranking_summary.csv HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:45] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:25:51] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 36010)
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /pages/misc.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /web.css HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/LUMS_logo_header.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/Neslab2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /scripts/site.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/Logo(High%20Resolution).webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/LAMP_LOGO.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/SoftUPS_Logo2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/iugv.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/sam.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/nascon.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/fastrack.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/brain.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/nascon2.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:13] "GET /assets/img/Sysnet.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/neslab2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/lamp-logo-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/softups-logo2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/iugv-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/logo-high-resolution-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/sam-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/nascon-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/fastrack-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/brain-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:14] "GET /assets/img/thumbs/nascon2-thumb.webp HTTP/1.1" 200 -
+127.0.0.1 - - [25/Apr/2026 13:26:19] "GET /robots.txt HTTP/1.1" 200 -
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 29326)
+Exception occurred during processing of request from ('127.0.0.1', 36825)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\socketserver.py", line 692, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 1311, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\http\server.py", line 672, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\socketserver.py", line 761, in __init__
+    self.handle()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+  File "C:\Python312\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Python312\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------
+  File "C:\Python312\Lib\socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
